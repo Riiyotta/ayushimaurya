@@ -1,0 +1,93 @@
+{
+  "id": "utility.lock-modal",
+  "title": "Locked-project password dialog",
+  "description": "Dialog with a title, one line, a password input, an error line and an unlock button. The source's secret value is deliberately not recorded anywhere in this repo.",
+  "source": {
+    "id": "src.lock-modal",
+    "file": "index.html",
+    "tag": "div",
+    "selector": "div.lock-modal",
+    "lines": "627-640",
+    "citation": "index.html:627-640",
+    "observedIn": [
+      "index.html:627",
+      "projects.html:140"
+    ]
+  },
+  "semantic": {
+    "id": "utility.lock-modal",
+    "category": "UTILITY"
+  },
+  "retrievalEligible": false,
+  "retrievalReason": "Runtime dialog that gates locked case studies behind a client-side password; it is access UI, not content, and must never be retrieved or reproduced with its secret.",
+  "variants": [
+    "password"
+  ],
+  "content": {
+    "fields": {
+      "title": {
+        "type": "text",
+        "required": true,
+        "maxWords": 4,
+        "evidence": {
+          "selector": ".lock-modal-title",
+          "observedElements": 2,
+          "observedBlocks": 2
+        }
+      },
+      "body": {
+        "type": "text",
+        "required": true,
+        "maxWords": 8,
+        "evidence": {
+          "selector": ".lock-modal-body",
+          "observedElements": 2,
+          "observedBlocks": 2
+        }
+      },
+      "errorText": {
+        "type": "text",
+        "required": false,
+        "maxWords": 7,
+        "evidence": {
+          "selector": ".lock-modal-error",
+          "observedElements": 2,
+          "observedBlocks": 2
+        }
+      },
+      "submitLabel": {
+        "type": "text",
+        "required": true,
+        "maxWords": 2,
+        "evidence": {
+          "selector": ".lock-modal-submit",
+          "observedElements": 2,
+          "observedBlocks": 2
+        }
+      }
+    }
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.home",
+      "template.project-index"
+    ],
+    "overlayOnly": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "modal-pop"
+    ],
+    "default": "modal-pop"
+  },
+  "responsive": [],
+  "responsiveNote": "Centred panel at every width.",
+  "assetRoles": [],
+  "generatedAssetRoles": [],
+  "components": [
+    "primitive.button"
+  ],
+  "tokens": [
+    "color.surface.raised"
+  ]
+}

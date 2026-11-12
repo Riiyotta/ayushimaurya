@@ -1,0 +1,146 @@
+{
+  "id": "home.featured-project",
+  "title": "Featured side project",
+  "description": "Kicker + heading, then one card: looping demo video on the left, tag, title, paragraph, feature chips and a solid CTA that opens the live project.",
+  "source": {
+    "id": "src.section-ai-container",
+    "file": "index.html",
+    "tag": "section",
+    "selector": "section.ai.container",
+    "lines": "119-143",
+    "citation": "index.html:119-143",
+    "observedIn": [
+      "index.html:119"
+    ]
+  },
+  "semantic": {
+    "id": "home.featured-project",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "media-card"
+  ],
+  "content": {
+    "fields": {
+      "kicker": {
+        "type": "text",
+        "required": true,
+        "maxWords": 2,
+        "evidence": {
+          "selector": ".section-kicker",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 7,
+        "evidence": {
+          "selector": ".section-title",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "tag": {
+        "type": "text",
+        "required": false,
+        "maxWords": 3,
+        "evidence": {
+          "selector": ".ai-tag",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "title": {
+        "type": "text",
+        "required": true,
+        "maxWords": 2,
+        "evidence": {
+          "selector": ".ai-body h3",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "body": {
+        "type": "text",
+        "required": true,
+        "maxWords": 46,
+        "evidence": {
+          "selector": ".ai-body p",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "chips": {
+        "type": "textList",
+        "required": false,
+        "maxWords": 4,
+        "maxItems": 4,
+        "evidence": {
+          "selector": ".ai-chips li",
+          "observedElements": 4,
+          "observedBlocks": 1
+        }
+      },
+      "cta": {
+        "type": "link",
+        "required": true,
+        "maxWords": 4,
+        "evidence": {
+          "selector": ".ai-cta",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "media": {
+        "type": "asset",
+        "required": true,
+        "maxWords": 8,
+        "evidence": {
+          "selector": ".ai-media",
+          "attr": "aria-label",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      }
+    }
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.home"
+    ]
+  },
+  "motion": {
+    "allowedPatterns": [
+      "autoplay-loop-video",
+      "reveal-on-scroll"
+    ],
+    "default": "autoplay-loop-video"
+  },
+  "responsive": [
+    {
+      "breakpoint": "bp.tablet",
+      "query": "(max-width: 760px)",
+      "change": "stack-columns",
+      "cite": "css/ai-feature.css:75-78"
+    }
+  ],
+  "assetRoles": [
+    "media.side-project-demo"
+  ],
+  "generatedAssetRoles": [
+    "product.generated-visual"
+  ],
+  "components": [
+    "primitive.video-frame",
+    "primitive.chip",
+    "primitive.button"
+  ],
+  "tokens": [
+    "color.surface.raised",
+    "color.accent.primary",
+    "radius.card"
+  ]
+}

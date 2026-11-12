@@ -1,0 +1,33 @@
+{
+  "$description": "Breakpoints from the real @media queries (counts in extraction/measured-values.json#breakpointHistogram). 979/980px is the mobile/desktop split also used by js/main.js.",
+  "tokens": {
+    "bp.narrow": {
+      "value": "560px",
+      "cite": "css/cta.css:152"
+    },
+    "bp.mobile": {
+      "value": "640px",
+      "cite": "css/case.css:95"
+    },
+    "bp.tablet": {
+      "value": "760px",
+      "cite": "css/ai-feature.css:75"
+    },
+    "bp.nav": {
+      "value": "860px",
+      "cite": "css/styles.css:274"
+    },
+    "bp.content": {
+      "value": "900px",
+      "cite": "css/case.css:91"
+    },
+    "bp.desktop": {
+      "value": "980px",
+      "cite": "css/visit-clinic-v3.css:71"
+    },
+    "bp.wide": {
+      "value": "1024px",
+      "cite": "css/base.css:242"
+    }
+  }
+}

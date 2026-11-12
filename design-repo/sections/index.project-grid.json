@@ -1,0 +1,143 @@
+{
+  "id": "index.project-grid",
+  "title": "Project grid",
+  "description": "Grid of project cards: meta line, thumbnail or muted preview video, title, one outcome (big value + label) and a CTA.",
+  "source": {
+    "id": "src.section-container-mw-stack",
+    "file": "projects.html",
+    "tag": "section",
+    "selector": "section.container.mw-stack",
+    "lines": "57-128",
+    "citation": "projects.html:57-128",
+    "observedIn": [
+      "projects.html:57"
+    ]
+  },
+  "semantic": {
+    "id": "index.project-grid",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "card-grid"
+  ],
+  "content": {
+    "fields": {
+      "projects": {
+        "type": "list",
+        "required": true,
+        "maxItems": 10,
+        "evidence": {
+          "selector": ".mw-card",
+          "observedElements": 10,
+          "observedBlocks": 1
+        },
+        "item": {
+          "meta": {
+            "type": "text",
+            "required": true,
+            "maxWords": 3,
+            "evidence": {
+              "selector": ".mw-meta",
+              "observedElements": 10,
+              "observedBlocks": 10
+            }
+          },
+          "thumbnail": {
+            "type": "asset",
+            "required": true,
+            "maxWords": 15,
+            "evidence": {
+              "selector": "img, video",
+              "attr": "alt",
+              "observedElements": 10,
+              "observedBlocks": 10
+            }
+          },
+          "title": {
+            "type": "text",
+            "required": true,
+            "maxWords": 21,
+            "evidence": {
+              "selector": ".mw-title",
+              "observedElements": 10,
+              "observedBlocks": 10
+            }
+          },
+          "outcomeValue": {
+            "type": "text",
+            "required": false,
+            "maxWords": 2,
+            "evidence": {
+              "selector": ".mw-out b",
+              "observedElements": 8,
+              "observedBlocks": 8
+            }
+          },
+          "outcomeLabel": {
+            "type": "text",
+            "required": true,
+            "maxWords": 8,
+            "evidence": {
+              "selector": ".mw-out span",
+              "observedElements": 10,
+              "observedBlocks": 10
+            }
+          },
+          "link": {
+            "type": "link",
+            "required": true,
+            "maxWords": 4,
+            "evidence": {
+              "selector": ".mw-cta",
+              "observedElements": 10,
+              "observedBlocks": 10
+            }
+          }
+        }
+      }
+    }
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.project-index"
+    ]
+  },
+  "motion": {
+    "allowedPatterns": [
+      "reveal-on-scroll",
+      "autoplay-loop-video"
+    ],
+    "default": "reveal-on-scroll"
+  },
+  "responsive": [
+    {
+      "breakpoint": "bp.wide",
+      "query": "(max-width: 1023px)",
+      "change": "reduce-columns",
+      "cite": "css/base.css:76"
+    },
+    {
+      "breakpoint": "bp.mobile",
+      "query": "(max-width: 639px)",
+      "change": "stack-columns",
+      "cite": "css/base.css:77"
+    }
+  ],
+  "assetRoles": [
+    "product.thumbnail",
+    "product.case-study-video",
+    "product.case-study-screen"
+  ],
+  "generatedAssetRoles": [
+    "product.generated-visual"
+  ],
+  "components": [
+    "component.project-card"
+  ],
+  "tokens": [
+    "color.surface.raised",
+    "radius.card",
+    "color.accent.primary"
+  ]
+}

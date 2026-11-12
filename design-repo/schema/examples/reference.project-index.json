@@ -1,0 +1,309 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "reference",
+  "template": "template.project-index",
+  "route": "projects.html",
+  "theme": "night",
+  "meta": {
+    "title": "More Work — Ayushi Maurya",
+    "description": "Selected projects Ayushi Maurya has designed for startup and enterprise clients."
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "site-nav",
+      "content": {
+        "brandMark": {
+          "role": "brand.wordmark-logo",
+          "src": "assets/logo-ayushi-maurya-transparent.png",
+          "mediaType": "image",
+          "alt": "Ayushi Maurya"
+        },
+        "navLinks": [
+          {
+            "label": "My work",
+            "href": "projects.html",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "Resume",
+            "href": "resume.html",
+            "role": "link.internal-route"
+          }
+        ],
+        "themeToggle": true
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "section": "index.page-header",
+      "variant": "title-dek",
+      "content": {
+        "backLink": {
+          "label": "Home",
+          "href": "index.html",
+          "role": "link.internal-route"
+        },
+        "kicker": "ALL CASE STUDIES",
+        "title": "Everything I’ve worked on.",
+        "dek": "Healthcare products I've shipped, plus a few side projects and AI experiments. Open any card to see the problem and how I solved it. I'm available for hire.",
+        "contactLink": {
+          "label": "Contact me",
+          "href": "mailto:ayushimaurya108@gmail.com",
+          "role": "link.source-url"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "section": "index.project-grid",
+      "variant": "card-grid",
+      "content": {
+        "projects": [
+          {
+            "meta": "01 · Claims · AI",
+            "thumbnail": {
+              "role": "product.case-study-screen",
+              "src": "assets/case-studies/claims/claims-thumb.webp",
+              "mediaType": "image",
+              "alt": "AI claim approval dashboard"
+            },
+            "title": "Clearing claim backlogs by helping doctors review reimbursements with AI",
+            "outcomeValue": "−87%",
+            "outcomeLabel": "claim review time, 30 → 4 min",
+            "link": {
+              "label": "View case study",
+              "href": "#",
+              "role": "link.internal-route"
+            }
+          },
+          {
+            "meta": "02 · Concept",
+            "thumbnail": {
+              "role": "product.thumbnail",
+              "src": "assets/thumbs/uber-medium.gif",
+              "mediaType": "image",
+              "alt": "Solving drop-offs in Uber’s airport cab bookings"
+            },
+            "title": "Solving drop-offs in Uber’s airport cab bookings",
+            "outcomeLabel": "A concept study, written up on Medium",
+            "link": {
+              "label": "Read on Medium",
+              "href": "#",
+              "role": "link.internal-route"
+            }
+          },
+          {
+            "meta": "03 · Concept",
+            "thumbnail": {
+              "role": "product.thumbnail",
+              "src": "assets/thumbs-neutral/frustrations.webp",
+              "mediaType": "image",
+              "alt": "Solving user frustrations with a virtual wardrobe experience"
+            },
+            "title": "Solving user frustrations with a virtual wardrobe experience",
+            "outcomeLabel": "A concept study, shared as a Figma deck",
+            "link": {
+              "label": "View in Figma",
+              "href": "#",
+              "role": "link.internal-route"
+            }
+          },
+          {
+            "meta": "04 · Diagnostics",
+            "thumbnail": {
+              "role": "product.case-study-video",
+              "src": "assets/case-studies/hybrid/h01.mp4",
+              "mediaType": "video",
+              "alt": "Walkthrough of the hybrid diagnostic booking flow"
+            },
+            "title": "Giving users a real full-body checkup, not just blood tests sold as one",
+            "outcomeValue": "1 cart",
+            "outcomeLabel": "pathology + radiology, booked together",
+            "link": {
+              "label": "View case study",
+              "href": "#",
+              "role": "link.internal-route"
+            }
+          },
+          {
+            "meta": "05 · Family upsell",
+            "thumbnail": {
+              "role": "product.case-study-video",
+              "src": "assets/case-studies/family/family-flow-sm.mp4",
+              "mediaType": "video",
+              "alt": "Walkthrough of adding family members to a booked health checkup"
+            },
+            "title": "Growing lab revenue by letting employees extend their sponsored checkup to their family",
+            "outcomeValue": "32.6%",
+            "outcomeLabel": "of order-timeline visitors used it",
+            "link": {
+              "label": "View case study",
+              "href": "#",
+              "role": "link.internal-route"
+            }
+          },
+          {
+            "meta": "06 · Clinic",
+            "thumbnail": {
+              "role": "product.case-study-video",
+              "src": "assets/videos/vc-full-visit.mp4",
+              "mediaType": "video",
+              "alt": "Prototype video of the full clinic visit, from booking to pharmacy pickup"
+            },
+            "title": "Designing a 0→1 Digital Clinic experience by helping patients know where they are, what’s next and how long it will take",
+            "outcomeValue": "~100",
+            "outcomeLabel": "app bookings in one day",
+            "link": {
+              "label": "View case study",
+              "href": "#",
+              "role": "link.internal-route"
+            }
+          },
+          {
+            "meta": "07 · Referrals",
+            "thumbnail": {
+              "role": "product.thumbnail",
+              "src": "assets/thumbs-neutral/gift-cards.webp",
+              "mediaType": "image",
+              "alt": "Clinic Gift Cards: reward moment, Give ₹500 Get ₹500 referral page and gift card wallet"
+            },
+            "title": "Making clinic referrals feel like a real gift, not another coupon",
+            "outcomeValue": "↑ Orders",
+            "outcomeLabel": "more clinic orders and app downloads",
+            "link": {
+              "label": "View case study",
+              "href": "#",
+              "role": "link.internal-route"
+            }
+          },
+          {
+            "meta": "08 · AI experiment",
+            "thumbnail": {
+              "role": "product.case-study-video",
+              "src": "assets/case-studies/wallet/wallet.mp4",
+              "mediaType": "video",
+              "alt": "A leather wallet holding bank cards; drag a card up to pay"
+            },
+            "title": "Exploring how AI tools can speed up UI work, through a wallet card interaction",
+            "outcomeValue": "2–3 hrs",
+            "outcomeLabel": "designed and prototyped with Claude and Figma Make",
+            "link": {
+              "label": "View case study",
+              "href": "#",
+              "role": "link.internal-route"
+            }
+          },
+          {
+            "meta": "09 · Consultations",
+            "thumbnail": {
+              "role": "product.case-study-screen",
+              "src": "assets/clinic-consultation-flow.webp",
+              "mediaType": "image",
+              "alt": "Walkthrough of the merged clinic consultation flow"
+            },
+            "title": "Solving self-booking drop-offs in offline doctor consultations",
+            "outcomeValue": "↑ Retention",
+            "outcomeLabel": "higher user satisfaction and retention",
+            "link": {
+              "label": "View case study",
+              "href": "#",
+              "role": "link.internal-route"
+            }
+          },
+          {
+            "meta": "10 · Concept",
+            "thumbnail": {
+              "role": "product.case-study-video",
+              "src": "assets/case-studies/wardrobe/wardrobe.mp4",
+              "mediaType": "video",
+              "alt": "Walkthrough of the virtual wardrobe"
+            },
+            "title": "Making a wardrobe app feel like a real wardrobe, not a list of photos",
+            "outcomeValue": "3 weeks",
+            "outcomeLabel": "experimental prototype",
+            "link": {
+              "label": "View case study",
+              "href": "#",
+              "role": "link.internal-route"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "reveal-on-scroll",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "section": "conversion.closing",
+      "variant": "link-row",
+      "content": {
+        "heading": "If you'd like to work together, get in touch.",
+        "ctas": [
+          {
+            "label": "Go to home",
+            "href": "index.html",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "Get in touch",
+            "href": "mailto:ayushimaurya108@gmail.com",
+            "role": "link.source-url"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "reveal-on-scroll",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "full",
+      "content": {
+        "name": "Ayushi Maurya",
+        "role": "Product Designer",
+        "line": "Let's work together. I'd love to hear from you.",
+        "links": [
+          {
+            "label": "Email",
+            "href": "mailto:ayushimaurya108@gmail.com",
+            "role": "link.source-url"
+          },
+          {
+            "label": "LinkedIn",
+            "href": "https://www.linkedin.com/in/ayushi-maurya-7174b71ab/",
+            "role": "link.source-url"
+          },
+          {
+            "label": "Resume",
+            "href": "resume.html",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "More work",
+            "href": "projects.html",
+            "role": "link.internal-route"
+          }
+        ],
+        "copyright": "© Ayushi Maurya"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "id": "home.skills-index",
+  "title": "Skills index",
+  "description": "A label and a large-type list of skills; each line links to a related project and reveals a strip of thumbnails on hover.",
+  "source": {
+    "id": "src.section-sk",
+    "file": "index.html",
+    "tag": "section",
+    "selector": "section.sk",
+    "lines": "147-170",
+    "citation": "index.html:147-170",
+    "observedIn": [
+      "index.html:147"
+    ]
+  },
+  "semantic": {
+    "id": "home.skills-index",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "word-list"
+  ],
+  "content": {
+    "fields": {
+      "label": {
+        "type": "text",
+        "required": true,
+        "maxWords": 3,
+        "evidence": {
+          "selector": ".sk-label",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "skills": {
+        "type": "list",
+        "required": true,
+        "maxItems": 6,
+        "evidence": {
+          "selector": ".sk-line",
+          "observedElements": 6,
+          "observedBlocks": 1
+        },
+        "item": {
+          "words": {
+            "type": "text",
+            "required": true,
+            "maxWords": 3,
+            "joinMatches": true,
+            "evidence": {
+              "selector": ".sk-w",
+              "observedElements": 14,
+              "observedBlocks": 6
+            }
+          },
+          "link": {
+            "type": "link",
+            "required": true,
+            "maxWords": 7,
+            "evidence": {
+              "selector": ".sk-link",
+              "attr": "data-proj",
+              "observedElements": 6,
+              "observedBlocks": 6
+            }
+          },
+          "thumbnails": {
+            "type": "assets",
+            "required": false,
+            "maxWords": 0,
+            "maxItems": 3,
+            "evidence": {
+              "selector": ".sk-tile",
+              "observedElements": 18,
+              "observedBlocks": 6
+            }
+          }
+        }
+      }
+    }
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.home"
+    ]
+  },
+  "motion": {
+    "allowedPatterns": [
+      "reveal-on-scroll"
+    ],
+    "default": "reveal-on-scroll"
+  },
+  "responsive": [
+    {
+      "breakpoint": "bp.tablet",
+      "query": "(max-width: 760px), (hover: none)",
+      "change": "hide-element",
+      "cite": "css/skills.css:134-139"
+    }
+  ],
+  "assetRoles": [
+    "product.thumbnail",
+    "product.case-study-video"
+  ],
+  "generatedAssetRoles": [
+    "product.generated-visual"
+  ],
+  "components": [
+    "primitive.text-link"
+  ],
+  "tokens": [
+    "font.family.display",
+    "color.text.primary"
+  ]
+}

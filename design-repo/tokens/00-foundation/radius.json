@@ -1,0 +1,45 @@
+{
+  "$description": "Radius scale from the measured computed border-radius histogram (counts recorded); cited at a real declaration.",
+  "tokens": {
+    "radius.pill": {
+      "value": "999px",
+      "measuredCount": 203,
+      "cite": "css/cta.css:20"
+    },
+    "radius.xs": {
+      "value": "2px",
+      "measuredCount": 53,
+      "cite": "css/home-box-ad.css:219"
+    },
+    "radius.sm": {
+      "value": "4px",
+      "measuredCount": 41,
+      "cite": "css/family-ahc.css:58"
+    },
+    "radius.md": {
+      "value": "12px",
+      "measuredCount": 41,
+      "cite": "css/base.css:120"
+    },
+    "radius.card": {
+      "value": "20px",
+      "measuredCount": 57,
+      "cite": "css/ai-feature.css:20"
+    },
+    "radius.lg": {
+      "value": "16px",
+      "measuredCount": 25,
+      "cite": "css/base.css:351"
+    },
+    "radius.xl": {
+      "value": "24px",
+      "measuredCount": 0,
+      "cite": "css/base.css:52"
+    },
+    "radius.circle": {
+      "value": "50%",
+      "measuredCount": 138,
+      "cite": "css/case.css:13"
+    }
+  }
+}

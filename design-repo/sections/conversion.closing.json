@@ -1,0 +1,114 @@
+{
+  "id": "conversion.closing",
+  "title": "Closing call to action",
+  "description": "The last block before the footer: a thank-you or closing line and next steps (next case study, all work, get in touch).",
+  "source": {
+    "id": "src.section-oc-closing-container",
+    "file": "projects.html",
+    "tag": "section",
+    "selector": "section.oc-closing.container",
+    "lines": "130-136",
+    "citation": "projects.html:130-136",
+    "observedIn": [
+      "projects.html:130",
+      "resume.html:235",
+      "claim-approval.html:94",
+      "family-ahc.html:405",
+      "hybrid-diagnostic.html:262",
+      "offline-doctor-consultation.html:615",
+      "virtual-wardrobe.html:93",
+      "visit-clinic-gift-cards.html:144",
+      "visit-clinic.html:774",
+      "wallet-ui.html:92"
+    ]
+  },
+  "semantic": {
+    "id": "conversion.closing",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "thanks-cta",
+    "final-statement",
+    "link-row",
+    "cta-band"
+  ],
+  "content": {
+    "fields": {
+      "kicker": {
+        "type": "text",
+        "required": false,
+        "maxWords": 4,
+        "evidence": {
+          "selector": ".label, .eyebrow",
+          "observedElements": 2,
+          "observedBlocks": 2
+        }
+      },
+      "heading": {
+        "type": "text",
+        "required": false,
+        "maxWords": 12,
+        "evidence": {
+          "selector": "h2, .oc-closing-line, .v3-final-big",
+          "observedElements": 9,
+          "observedBlocks": 9
+        }
+      },
+      "text": {
+        "type": "text",
+        "required": false,
+        "maxWords": 33,
+        "evidence": {
+          "selector": ".cs2-end p, .end > p, .v3-final-text",
+          "observedElements": 8,
+          "observedBlocks": 7
+        }
+      },
+      "ctas": {
+        "type": "links",
+        "required": true,
+        "maxWords": 7,
+        "maxItems": 3,
+        "evidence": {
+          "selector": "a",
+          "observedElements": 20,
+          "observedBlocks": 10
+        }
+      }
+    }
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.project-index",
+      "template.resume",
+      "template.case-study-brief",
+      "template.case-study-chaptered"
+    ]
+  },
+  "motion": {
+    "allowedPatterns": [
+      "reveal-on-scroll",
+      "none"
+    ],
+    "default": "reveal-on-scroll"
+  },
+  "responsive": [
+    {
+      "breakpoint": "bp.narrow",
+      "query": "(max-width: 560px)",
+      "change": "stack-columns",
+      "cite": "css/cta.css:152-154"
+    }
+  ],
+  "assetRoles": [],
+  "generatedAssetRoles": [],
+  "components": [
+    "primitive.button",
+    "primitive.text-link"
+  ],
+  "tokens": [
+    "color.accent.primary",
+    "font.family.display"
+  ]
+}

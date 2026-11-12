@@ -1,0 +1,25 @@
+{
+  "$description": "Container, reading measure, nav height and the story page's wrap width.",
+  "tokens": {
+    "layout.container-max": {
+      "value": "1240px",
+      "cssProperty": "--container-max",
+      "cite": "css/styles.css:62"
+    },
+    "layout.measure": {
+      "value": "38rem",
+      "cssProperty": "--measure",
+      "cite": "css/styles.css:63"
+    },
+    "layout.nav-height": {
+      "value": "4.5rem",
+      "cssProperty": "--nav-height",
+      "cite": "css/styles.css:64"
+    },
+    "layout.story-wrap": {
+      "value": "1180px",
+      "cssProperty": "--wrap (story page)",
+      "cite": "css/oc-story.css:36"
+    }
+  }
+}

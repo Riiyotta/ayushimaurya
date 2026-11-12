@@ -1,0 +1,155 @@
+{
+  "id": "about.intro",
+  "title": "About-me intro",
+  "description": "Opens the personal band: label, title with the owner's first name, a sub line, an 'open my diary' invite and a three-photo strip with mood tags, over drifting clouds.",
+  "source": {
+    "id": "src.section-lw-hero",
+    "file": "index.html",
+    "tag": "section",
+    "selector": "section.lw-hero",
+    "lines": "177-242",
+    "citation": "index.html:177-242",
+    "observedIn": [
+      "index.html:177"
+    ]
+  },
+  "semantic": {
+    "id": "about.intro",
+    "category": "EDITORIAL"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "photo-strip"
+  ],
+  "content": {
+    "fields": {
+      "label": {
+        "type": "text",
+        "required": true,
+        "maxWords": 4,
+        "evidence": {
+          "selector": ".lw-diary-label",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "title": {
+        "type": "text",
+        "required": true,
+        "maxWords": 5,
+        "evidence": {
+          "selector": ".lw-title",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "sub": {
+        "type": "text",
+        "required": false,
+        "maxWords": 6,
+        "evidence": {
+          "selector": ".lw-hero-sub",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "invite": {
+        "type": "text",
+        "required": true,
+        "maxWords": 8,
+        "evidence": {
+          "selector": ".lw-invite-text",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "photos": {
+        "type": "list",
+        "required": true,
+        "maxItems": 3,
+        "evidence": {
+          "selector": ".lw-booth-frame",
+          "observedElements": 3,
+          "observedBlocks": 1
+        },
+        "item": {
+          "image": {
+            "type": "asset",
+            "required": true,
+            "maxWords": 11,
+            "evidence": {
+              "selector": "img",
+              "attr": "alt",
+              "observedElements": 3,
+              "observedBlocks": 3
+            }
+          },
+          "mood": {
+            "type": "text",
+            "required": true,
+            "maxWords": 2,
+            "evidence": {
+              "selector": ".lw-mood-tag",
+              "observedElements": 3,
+              "observedBlocks": 3
+            }
+          }
+        }
+      },
+      "caption": {
+        "type": "text",
+        "required": false,
+        "maxWords": 7,
+        "evidence": {
+          "selector": ".lw-booth-cap",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      }
+    }
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.home"
+    ]
+  },
+  "motion": {
+    "allowedPatterns": [
+      "reveal-on-scroll",
+      "ambient-drift"
+    ],
+    "default": "ambient-drift"
+  },
+  "responsive": [
+    {
+      "breakpoint": "bp.content",
+      "query": "(max-width: 960px)",
+      "change": "stack-columns",
+      "cite": "css/little-world.css:577-582"
+    },
+    {
+      "breakpoint": "bp.mobile",
+      "query": "(max-width: 720px)",
+      "change": "hide-element",
+      "cite": "css/little-world.css:583-596"
+    }
+  ],
+  "assetRoles": [
+    "person.portrait-photo",
+    "decor.cloud-illustration",
+    "icon.glyph"
+  ],
+  "generatedAssetRoles": [
+    "person.fictional-avatar",
+    "illustration.generated-decor",
+    "icon.glyph"
+  ],
+  "components": [
+    "primitive.icon-glyph"
+  ],
+  "tokens": [
+    "font.family.display",
+    "color.decor.pink",
+    "color.decor.purple"
+  ]
+}

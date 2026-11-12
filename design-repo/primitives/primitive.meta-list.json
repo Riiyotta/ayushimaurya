@@ -1,0 +1,15 @@
+{
+  "id": "primitive.meta-list",
+  "kind": "primitive",
+  "description": "Definition list of short term/value pairs (role, product, status, duration).",
+  "props": {
+    "items": "meta"
+  },
+  "tokens": [
+    "font.size.sm",
+    "color.text.secondary"
+  ],
+  "cites": [
+    "hybrid-diagnostic.html:59"
+  ]
+}

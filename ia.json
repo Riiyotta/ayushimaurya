@@ -1,0 +1,541 @@
+{
+  "$comment": "Hand-edited source of truth. IA.md and matrix.csv are generated from this file by build.mjs. Section sequences were read from the rendered DOM (direct children of <body> and <main>, then one level deeper for large wrappers) of the local mirror at 1440x900; routes are the 12 HTML pages the mirror serves.",
+  "meta": {
+    "source": "https://ayushimaurya.vercel.app (personal product-design portfolio)",
+    "mirror": "Local static mirror at this folder, served by serve.mjs; byte-identical HTML to the live site except self-hosted Google Fonts.",
+    "status": "measured-from-mirror",
+    "productionApproved": false,
+    "totalRoutes": 12,
+    "totalTemplates": 9,
+    "generatedBy": "ia-builder skill; DOM sequence captured with headless Chromium (Playwright)."
+  },
+  "categories": {
+    "CHROME": "Page furniture that frames content: skip link, header/bar, mobile menu, footer.",
+    "OVERLAY": "Hidden-by-default runtime UI opened by a click or timer: modals, lightboxes, viewers, hints.",
+    "HERO": "The page-opening block: title, positioning line and (on case studies) cover media.",
+    "WORK": "Blocks that list or showcase projects.",
+    "ABOUT": "Blocks about the person: skills, personal story, resume content.",
+    "CASE": "Case-study narrative blocks between the opener and the closing.",
+    "CTA": "Closing blocks that ask the reader to get in touch or move to another page."
+  },
+  "sections": {
+    "chrome.skip-link": {
+      "category": "CHROME",
+      "description": "Visually hidden 'Skip to content' anchor to #main, revealed on keyboard focus.",
+      "scope": "All 12 routes.",
+      "implementedBy": "a.skip-link (a.skip on the story template)"
+    },
+    "chrome.site-header": {
+      "category": "CHROME",
+      "description": "Top header: script-signature logo image linking home, 'My work' and 'Resume' links, a Day/Night theme toggle pill, and a 'Menu' button below the mobile breakpoint.",
+      "scope": "11 routes: every template except the scrollytelling case study.",
+      "implementedBy": "header.site-header · js/theme.js (Day/Night toggle), js/main.js (menu)"
+    },
+    "chrome.mobile-menu": {
+      "category": "CHROME",
+      "description": "Fixed, hidden-by-default full-screen navigation panel opened by the header's Menu button on narrow viewports.",
+      "scope": "11 routes, paired with chrome.site-header.",
+      "implementedBy": "div#mobile-menu.mobile-menu"
+    },
+    "chrome.site-footer": {
+      "category": "CHROME",
+      "description": "Dark footer: name and role, the 'Let's work together' line, Email / LinkedIn / Resume links, a 'More work' link, and a copyright line.",
+      "scope": "11 routes, paired with chrome.site-header.",
+      "implementedBy": "footer.site-footer.container"
+    },
+    "chrome.story-bar": {
+      "category": "CHROME",
+      "description": "Fixed top bar specific to the scrollytelling case study, with its own theme toggle and a thin reading-progress line above it.",
+      "scope": "1 route: the scrollytelling case study.",
+      "implementedBy": "header.bar + div.bar-progress · js/oc-story.js"
+    },
+    "chrome.story-footer": {
+      "category": "CHROME",
+      "description": "Minimal one-line footer (year only) closing the scrollytelling case study.",
+      "scope": "1 route: the scrollytelling case study.",
+      "implementedBy": "footer.foot"
+    },
+    "overlay.lock-modal": {
+      "category": "OVERLAY",
+      "description": "'This project is locked' password dialog shown when a locked project row or card is clicked; client-side gate only.",
+      "scope": "2 routes: home and the work index.",
+      "implementedBy": "div#lock-modal.lock-modal · js/lock.js"
+    },
+    "overlay.project-box-overlay": {
+      "category": "OVERLAY",
+      "description": "Fixed overlay that expands a project from the home project box into a larger view.",
+      "scope": "1 route: home.",
+      "implementedBy": "div#pbox-overlay.pbx-overlay · js/home-box.js"
+    },
+    "overlay.desktop-hint": {
+      "category": "OVERLAY",
+      "description": "Mobile-only dialog ('Drag through my name… open it on desktop'), mounted 500ms after load at widths up to 979px, auto-dismissed after 10s, suppressed for the session once closed.",
+      "scope": "1 route: home.",
+      "implementedBy": "js/main.js (creates div.desktop-hint)"
+    },
+    "overlay.booth-viewer": {
+      "category": "OVERLAY",
+      "description": "Photo viewer with previous/next/close controls for the photo-booth strip in the personal-story intro.",
+      "scope": "1 route: home.",
+      "implementedBy": "div#lw-booth-view.lw-booth-view · js/little-world.js"
+    },
+    "overlay.dreams-modal": {
+      "category": "OVERLAY",
+      "description": "'What I'm working towards' modal over a cloud backdrop, opened by the 'A peek into my dreams' button.",
+      "scope": "1 route: home.",
+      "implementedBy": "div#dreams.lw-dreams.lw-dreams-modal · js/little-world.js"
+    },
+    "overlay.image-lightbox": {
+      "category": "OVERLAY",
+      "description": "Click-to-enlarge viewer for case-study screenshots; three implementations of the same behaviour.",
+      "scope": "3 routes: the chaptered, gallery and scrollytelling case studies.",
+      "implementedBy": "div#cs2-lightbox / dialog#vx-lightbox / div.zoom"
+    },
+    "hero.home-intro": {
+      "category": "HERO",
+      "description": "Home opener: very large display-type name, role line, a three-line positioning statement, a one-line sub, and a 'See my work' arrow link, over a randomised field of short dashes.",
+      "scope": "1 route: home.",
+      "implementedBy": "section.hero.container · js/hero.js"
+    },
+    "hero.work-index-head": {
+      "category": "HERO",
+      "description": "Work-index opener: the 'Everything I've worked on.' heading with an intro line.",
+      "scope": "1 route: the work index.",
+      "implementedBy": "section.mw-head"
+    },
+    "hero.resume-head": {
+      "category": "HERO",
+      "description": "Resume opener: 'Resume' kicker, name, role, and a contact list (email, phone, LinkedIn).",
+      "scope": "1 route: the resume.",
+      "implementedBy": "resume.html > first section.section.container"
+    },
+    "hero.nda-heading": {
+      "category": "HERO",
+      "description": "NDA notice opener: 'All work' back link, 'This one is under NDA' title and a short explanation of why the project can't be shown.",
+      "scope": "1 route: the NDA notice.",
+      "implementedBy": "section.nda > a.cs-back, h1.nda-title, div.nda-body"
+    },
+    "hero.case-cover-short": {
+      "category": "HERO",
+      "description": "Short case-study cover: kicker, title, dek, a meta list and a looping video in a framed stage panel (optional action buttons), leading straight into a single chapter.",
+      "scope": "3 routes: the short case studies.",
+      "implementedBy": "section.cs2-hero.short"
+    },
+    "hero.case-cover-chaptered": {
+      "category": "HERO",
+      "description": "Chaptered case-study cover: kicker, title, dek, a meta list and a looping video in a side media panel, leading into a chapter navigation and seven chapters.",
+      "scope": "1 route: the chaptered case study.",
+      "implementedBy": "section.cs2-hero"
+    },
+    "hero.case-cover-longform": {
+      "category": "HERO",
+      "description": "Long-form case-study cover: one-sentence product framing as the title, meta and hero visual.",
+      "scope": "2 routes: the long-form case studies.",
+      "implementedBy": "section.v3-hero.v3-wrap#top"
+    },
+    "hero.story-cover": {
+      "category": "HERO",
+      "description": "Full-viewport scrollytelling opener ('The Doctor Finder') that hands off directly to the story panels.",
+      "scope": "1 route: the scrollytelling case study.",
+      "implementedBy": "section.hero (offline-doctor-consultation.html)"
+    },
+    "hero.campaign-cover": {
+      "category": "HERO",
+      "description": "Gallery case-study cover built around the campaign offer line ('Give ₹500, Get ₹500.').",
+      "scope": "1 route: the gallery case study.",
+      "implementedBy": "section.vx-hero"
+    },
+    "work.home-work-head": {
+      "category": "WORK",
+      "description": "Home work intro: 'All work' kicker, 'Problems I've worked on…' heading and a row of skill filter chips.",
+      "scope": "1 route: home.",
+      "implementedBy": "#work > div.pbx-head + div#filter-bar"
+    },
+    "work.project-box": {
+      "category": "WORK",
+      "description": "Interactive 'healthcare work box' showcasing projects, with pagination dots, a 'View more work' link and a numbered project index list beneath.",
+      "scope": "1 route: home.",
+      "implementedBy": "div#pbox.pbx + div.pbx-dots + div.pbx-more + div#pbox-index · js/home-box.js, js/data.js"
+    },
+    "work.ai-playground": {
+      "category": "WORK",
+      "description": "'My AI playground' block: heading plus playable AI-built project cards (e.g. a maths Jenga game) with looping video previews.",
+      "scope": "1 route: home.",
+      "implementedBy": "section#ai.ai"
+    },
+    "work.project-card-stack": {
+      "category": "WORK",
+      "description": "Vertical stack of 10 large numbered project cards (number · area tag, one-line outcome, thumbnail), revealed on scroll; some link to locked projects.",
+      "scope": "1 route: the work index.",
+      "implementedBy": "section.mw-stack > a.mw-card"
+    },
+    "about.skills-list": {
+      "category": "ABOUT",
+      "description": "'What I do' list of skill areas (0→1 product design, product strategy, AI product design, UX research…), each with a thumbnail or video preview.",
+      "scope": "1 route: home.",
+      "implementedBy": "section#skills.sk · js/skills.js"
+    },
+    "about.little-world-intro": {
+      "category": "ABOUT",
+      "description": "'A little world called Ayushi' personal-story opener with a photo-booth strip and craft photos, set on a torn-paper band.",
+      "scope": "1 route: home.",
+      "implementedBy": "section#lw-intro.lw-hero · js/little-world.js"
+    },
+    "about.diary": {
+      "category": "ABOUT",
+      "description": "Paged diary of personal chapters, shown as book spreads with page turning, plus short 'love' notes.",
+      "scope": "1 route: home.",
+      "implementedBy": "section#lw-diary.dy-stage · js/diary.js"
+    },
+    "about.to-be-continued": {
+      "category": "ABOUT",
+      "description": "Closing personal chapter ('chapter 05 · to be continued…') on a pastel cloud band, with the 'A peek into my dreams' button.",
+      "scope": "1 route: home.",
+      "implementedBy": "section#lw-ch5.lw-end"
+    },
+    "about.resume-summary": {
+      "category": "ABOUT",
+      "description": "Resume 'Professional Summary' paragraph.",
+      "scope": "1 route: the resume.",
+      "implementedBy": "section.cs-section[aria-labelledby=summary-heading]"
+    },
+    "about.resume-experience": {
+      "category": "ABOUT",
+      "description": "Resume 'Experience' list: roles with employer, dates and achievement bullets.",
+      "scope": "1 route: the resume.",
+      "implementedBy": "section.cs-section[aria-labelledby=experience-heading]"
+    },
+    "about.resume-skills": {
+      "category": "ABOUT",
+      "description": "Resume 'Skills' groups.",
+      "scope": "1 route: the resume.",
+      "implementedBy": "section.cs-section[aria-labelledby=skills-heading]"
+    },
+    "about.resume-education": {
+      "category": "ABOUT",
+      "description": "Resume 'Education' entry.",
+      "scope": "1 route: the resume.",
+      "implementedBy": "section.cs-section[aria-labelledby=education-heading]"
+    },
+    "about.resume-certifications": {
+      "category": "ABOUT",
+      "description": "Resume 'Certifications / Programs' list.",
+      "scope": "1 route: the resume.",
+      "implementedBy": "section.cs-section[aria-labelledby=certifications-heading]"
+    },
+    "case.nda-redacted-art": {
+      "category": "CASE",
+      "description": "Interactive redacted-page illustration that stays redacted as the cursor moves over it.",
+      "scope": "1 route: the NDA notice.",
+      "implementedBy": "section.nda > figure.nda-art"
+    },
+    "case.tldr": {
+      "category": "CASE",
+      "description": "Summary panel directly under a long-form cover ('The short version' / 'My role').",
+      "scope": "2 routes: the long-form case studies.",
+      "implementedBy": "section.v3-tldr#summary"
+    },
+    "case.chapter-nav": {
+      "category": "CASE",
+      "description": "Sticky in-page chapter navigation that tracks the chapter in view.",
+      "scope": "3 routes: the chaptered and long-form case studies.",
+      "implementedBy": "nav.cs2-nav / nav.v3-nav[data-chapter-nav]"
+    },
+    "case.chapter": {
+      "category": "CASE",
+      "description": "Numbered chapter ('01 At a glance', '03 Root cause'…) with heading, prose and figures; repeats with alternating tinted backgrounds on the chaptered page.",
+      "scope": "4 routes: one chapter on each short case study, seven on the chaptered one.",
+      "implementedBy": "section.cs2-ch (.tint variant)"
+    },
+    "case.longform-chapter": {
+      "category": "CASE",
+      "description": "Long-form chapter group (e.g. #idea, #bets, #system) made of several full-width bands in plain, tinted or dark variants: brief, problem, pains, bets, entry points, pricing tiers.",
+      "scope": "2 routes: the long-form case studies (six chapter groups each).",
+      "implementedBy": "main > div#<chapter> > section.v3-section (.v3-wrap/.v3-tint/.v3-dark)"
+    },
+    "case.scroll-console": {
+      "category": "CASE",
+      "description": "Scroll-driven walkthrough: a sticky phone/console panel on one side updates as numbered steps ('01 · Booked', '01 · Offer') scroll past on the other.",
+      "scope": "2 routes: the long-form case studies, inside one chapter group.",
+      "implementedBy": "section.v3-console-section[data-console] · js/visit-clinic-v3.js, js/family-ahc.js"
+    },
+    "case.story-panels": {
+      "category": "CASE",
+      "description": "Four-panel scrollytelling sequence ('Something's not right. Time to see a doctor.') ending in a one-line hand-off.",
+      "scope": "1 route: the scrollytelling case study.",
+      "implementedBy": "section.story[data-story] + p.story-end · js/oc-story.js"
+    },
+    "case.project-file": {
+      "category": "CASE",
+      "description": "Project 'file card' summarising the redesign (area, role, timeline) before the narrative starts.",
+      "scope": "1 route: the scrollytelling case study.",
+      "implementedBy": "section.file.wrap"
+    },
+    "case.story-section": {
+      "category": "CASE",
+      "description": "Standard narrative section on the scrollytelling page: a short headline ('Clients said it first.') with prose, figures or reveal cards; repeats.",
+      "scope": "1 route: the scrollytelling case study (seven instances).",
+      "implementedBy": "section.sec"
+    },
+    "case.network-fork": {
+      "category": "CASE",
+      "description": "Scroll-stepped diagram with its own step nav showing how two banners split the doctor network, followed by a short summary block.",
+      "scope": "1 route: the scrollytelling case study.",
+      "implementedBy": "section.fork[data-fork] + div.after-fork · js/oc-story.js"
+    },
+    "case.decision-cards": {
+      "category": "CASE",
+      "description": "'Six calls that shaped the flow': a run of numbered decision cards, each with its own header, rationale and screens.",
+      "scope": "1 route: the scrollytelling case study.",
+      "implementedBy": "section.sec#decisions > article.ds"
+    },
+    "case.campaign-brief": {
+      "category": "CASE",
+      "description": "'The goal' brief strip under the gallery cover.",
+      "scope": "1 route: the gallery case study.",
+      "implementedBy": "section.vx-brief"
+    },
+    "case.screen-gallery": {
+      "category": "CASE",
+      "description": "'The three screens' gallery: section head plus numbered screen cards (01 · Share …) that open in the lightbox.",
+      "scope": "1 route: the gallery case study.",
+      "implementedBy": "visit-clinic-gift-cards.html > main > section:nth-child(3)"
+    },
+    "cta.nda-walkthrough-ask": {
+      "category": "CTA",
+      "description": "'Ask for a walkthrough' prompt with an 'Available on request' line closing the NDA notice.",
+      "scope": "1 route: the NDA notice.",
+      "implementedBy": "section.nda > div.nda-ask + div.nda-cta"
+    },
+    "cta.case-end": {
+      "category": "CTA",
+      "description": "'Get in touch' close for chapter-style case studies: invitation line plus a 'Next: <project> →' link.",
+      "scope": "4 routes: the short and chaptered case studies.",
+      "implementedBy": "section.cs2-end"
+    },
+    "cta.longform-final": {
+      "category": "CTA",
+      "description": "Long-form close: a one-sentence takeaway, a short paragraph, then 'All work' and 'Talk about this project' links.",
+      "scope": "2 routes: the long-form case studies.",
+      "implementedBy": "section.v3-final"
+    },
+    "cta.story-end": {
+      "category": "CTA",
+      "description": "Scrollytelling close ('That's the booking, sorted') with onward links.",
+      "scope": "1 route: the scrollytelling case study.",
+      "implementedBy": "section.end.wrap"
+    },
+    "cta.closing-line": {
+      "category": "CTA",
+      "description": "Single centred line inviting the reader to get in touch.",
+      "scope": "1 route: the work index.",
+      "implementedBy": "section.oc-closing > p.oc-closing-line"
+    },
+    "cta.page-nav-footer": {
+      "category": "CTA",
+      "description": "Two-link pager: '← Go to home' and a forward link (contact or the next case study).",
+      "scope": "2 routes: the work index and the gallery case study.",
+      "implementedBy": "div.cs-nav-footer"
+    },
+    "cta.resume-cta": {
+      "category": "CTA",
+      "description": "Resume close: 'See the designs behind these projects.' with a link to the work.",
+      "scope": "1 route: the resume.",
+      "implementedBy": "resume.html > last section.section.container"
+    }
+  },
+  "templates": [
+    {
+      "id": "template.home",
+      "name": "Home",
+      "routeCount": 1,
+      "routes": [
+        "/index.html"
+      ],
+      "chrome": "site",
+      "sections": [
+        "chrome.skip-link",
+        "chrome.site-header",
+        "chrome.mobile-menu",
+        "hero.home-intro",
+        "work.home-work-head",
+        "work.project-box",
+        "work.ai-playground",
+        "about.skills-list",
+        "about.little-world-intro",
+        "about.diary",
+        "about.to-be-continued",
+        "chrome.site-footer",
+        "overlay.project-box-overlay",
+        "overlay.lock-modal",
+        "overlay.booth-viewer",
+        "overlay.dreams-modal",
+        "overlay.desktop-hint"
+      ]
+    },
+    {
+      "id": "template.work-index",
+      "name": "Work index",
+      "routeCount": 1,
+      "routes": [
+        "/projects.html"
+      ],
+      "chrome": "site",
+      "sections": [
+        "chrome.skip-link",
+        "chrome.site-header",
+        "chrome.mobile-menu",
+        "hero.work-index-head",
+        "work.project-card-stack",
+        "cta.closing-line",
+        "cta.page-nav-footer",
+        "overlay.lock-modal",
+        "chrome.site-footer"
+      ]
+    },
+    {
+      "id": "template.resume",
+      "name": "Resume",
+      "routeCount": 1,
+      "routes": [
+        "/resume.html"
+      ],
+      "chrome": "site",
+      "sections": [
+        "chrome.skip-link",
+        "chrome.site-header",
+        "chrome.mobile-menu",
+        "hero.resume-head",
+        "about.resume-summary",
+        "about.resume-experience",
+        "about.resume-skills",
+        "about.resume-education",
+        "about.resume-certifications",
+        "cta.resume-cta",
+        "chrome.site-footer"
+      ]
+    },
+    {
+      "id": "template.nda-notice",
+      "name": "NDA notice",
+      "routeCount": 1,
+      "routes": [
+        "/nda.html"
+      ],
+      "chrome": "site",
+      "sections": [
+        "chrome.skip-link",
+        "chrome.site-header",
+        "chrome.mobile-menu",
+        "hero.nda-heading",
+        "case.nda-redacted-art",
+        "cta.nda-walkthrough-ask",
+        "chrome.site-footer"
+      ]
+    },
+    {
+      "id": "template.case-study-short",
+      "name": "Case study — short (cover + one chapter)",
+      "routeCount": 3,
+      "routes": [
+        "/claim-approval.html",
+        "/virtual-wardrobe.html",
+        "/wallet-ui.html"
+      ],
+      "chrome": "site",
+      "sections": [
+        "chrome.skip-link",
+        "chrome.site-header",
+        "chrome.mobile-menu",
+        "hero.case-cover-short",
+        "case.chapter",
+        "cta.case-end",
+        "chrome.site-footer"
+      ]
+    },
+    {
+      "id": "template.case-study-chaptered",
+      "name": "Case study — chaptered",
+      "routeCount": 1,
+      "routes": [
+        "/hybrid-diagnostic.html"
+      ],
+      "chrome": "site",
+      "sections": [
+        "chrome.skip-link",
+        "chrome.site-header",
+        "chrome.mobile-menu",
+        "hero.case-cover-chaptered",
+        "case.chapter-nav",
+        "case.chapter",
+        "cta.case-end",
+        "overlay.image-lightbox",
+        "chrome.site-footer"
+      ]
+    },
+    {
+      "id": "template.case-study-longform",
+      "name": "Case study — long-form with scroll console",
+      "routeCount": 2,
+      "routes": [
+        "/visit-clinic.html",
+        "/family-ahc.html"
+      ],
+      "chrome": "site",
+      "sections": [
+        "chrome.skip-link",
+        "chrome.site-header",
+        "chrome.mobile-menu",
+        "hero.case-cover-longform",
+        "case.tldr",
+        "case.chapter-nav",
+        "case.longform-chapter",
+        "case.scroll-console",
+        "cta.longform-final",
+        "chrome.site-footer"
+      ]
+    },
+    {
+      "id": "template.case-study-scrollytelling",
+      "name": "Case study — scrollytelling",
+      "routeCount": 1,
+      "routes": [
+        "/offline-doctor-consultation.html"
+      ],
+      "chrome": "story",
+      "sections": [
+        "chrome.skip-link",
+        "chrome.story-bar",
+        "hero.story-cover",
+        "case.story-panels",
+        "case.project-file",
+        "case.story-section",
+        "case.network-fork",
+        "case.decision-cards",
+        "cta.story-end",
+        "overlay.image-lightbox",
+        "chrome.story-footer"
+      ]
+    },
+    {
+      "id": "template.case-study-gallery",
+      "name": "Case study — screen gallery",
+      "routeCount": 1,
+      "routes": [
+        "/visit-clinic-gift-cards.html"
+      ],
+      "chrome": "site",
+      "sections": [
+        "chrome.skip-link",
+        "chrome.site-header",
+        "chrome.mobile-menu",
+        "hero.campaign-cover",
+        "case.campaign-brief",
+        "case.screen-gallery",
+        "cta.page-nav-footer",
+        "overlay.image-lightbox",
+        "chrome.site-footer"
+      ]
+    }
+  ]
+}

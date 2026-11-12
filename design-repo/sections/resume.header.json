@@ -1,0 +1,126 @@
+{
+  "id": "resume.header",
+  "title": "Resume header",
+  "description": "Resume opener: kicker, name, role and a four-up contact/meta grid.",
+  "source": {
+    "id": "src.section-section-container",
+    "file": "resume.html",
+    "tag": "section",
+    "selector": "section.section.container",
+    "lines": "48-71",
+    "citation": "resume.html:48-71",
+    "observedIn": [
+      "resume.html:48"
+    ]
+  },
+  "semantic": {
+    "id": "resume.header",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "contact-meta"
+  ],
+  "content": {
+    "fields": {
+      "kicker": {
+        "type": "text",
+        "required": true,
+        "maxWords": 1,
+        "evidence": {
+          "selector": ".section-kicker",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "name": {
+        "type": "text",
+        "required": true,
+        "maxWords": 2,
+        "evidence": {
+          "selector": "h1",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "role": {
+        "type": "text",
+        "required": true,
+        "maxWords": 2,
+        "evidence": {
+          "selector": ".hero-role",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "contacts": {
+        "type": "meta",
+        "required": true,
+        "maxItems": 4,
+        "evidence": {
+          "selector": ".cs-meta > div",
+          "observedElements": 4,
+          "observedBlocks": 1
+        },
+        "item": {
+          "term": {
+            "type": "text",
+            "required": true,
+            "maxWords": 1,
+            "evidence": {
+              "selector": ".cs-meta-label",
+              "observedElements": 4,
+              "observedBlocks": 4
+            }
+          },
+          "value": {
+            "type": "text",
+            "required": true,
+            "maxWords": 1,
+            "evidence": {
+              "selector": ".cs-meta-value",
+              "observedElements": 4,
+              "observedBlocks": 4
+            }
+          }
+        }
+      }
+    }
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.resume"
+    ],
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none"
+  },
+  "responsive": [
+    {
+      "breakpoint": "bp.content",
+      "query": "(min-width: 700px)",
+      "change": "reduce-columns",
+      "cite": "css/styles.css:830-832"
+    },
+    {
+      "breakpoint": "bp.narrow",
+      "query": "(max-width: 560px)",
+      "change": "reduce-columns",
+      "cite": "css/dream-theme.css:172"
+    }
+  ],
+  "assetRoles": [],
+  "generatedAssetRoles": [],
+  "components": [
+    "primitive.meta-list",
+    "primitive.kicker"
+  ],
+  "tokens": [
+    "font.size.2xl",
+    "color.text.secondary"
+  ]
+}

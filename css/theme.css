@@ -1,0 +1,151 @@
+/* ==========================================================================
+   THEME — the Day / Night switch (loaded after everything else on each page)
+   Day is the site as designed. Night re-points the colour tokens, then fixes
+   the places that use fixed light colours. Purple stays the one accent.
+   ========================================================================== */
+
+/* ---------- the switch in the header ---------- */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 36px;
+  padding: 0 14px 0 12px;
+  margin-left: auto;
+  margin-right: 14px;
+  border-radius: 999px;
+  border: 1px solid var(--n-line, rgba(44, 41, 40, .16));
+  background: transparent;
+  color: var(--n-ink, #2c2928);
+  font: 600 13px/1 'Inter', system-ui, sans-serif;
+  cursor: pointer;
+  transition: border-color .2s ease, background-color .2s ease;
+}
+.theme-toggle:hover { border-color: var(--p, #6a4bd6); }
+.theme-toggle svg { width: 15px; height: 15px; color: var(--p, #6a4bd6); }
+@media (min-width: 860px) {
+  html .site-header .nav-links { margin-left: auto; }
+  .theme-toggle { margin-left: 24px; margin-right: 0; }
+}
+.theme-anim, .theme-anim * { transition: background-color .4s ease, color .4s ease, border-color .4s ease !important; }
+
+/* ==========================================================================
+   NIGHT
+   ========================================================================== */
+html[data-theme="night"] {
+  color-scheme: dark;
+  --ground: #141118;
+  --ground-tint: #1b1720;
+  --surface: #211c28;
+  --bg: #141118;
+  --color-off-white: #141118;
+  --color-grey-100: #1d1923;
+  --color-grey-200: #2a2432;
+  --color-border: rgba(255, 255, 255, .1);
+  --color-border-strong: rgba(255, 255, 255, .22);
+
+  --n-ink: #f1edf6;
+  --n-ink-2: #bdb6c7;
+  --n-ink-3: #8f879a;
+  --n-line: rgba(255, 255, 255, .12);
+  --n-line-2: rgba(255, 255, 255, .24);
+  --n-hover: #ffffff;
+  --text: #f1edf6;
+  --text-muted: #bdb6c7;
+  --text-faint: #8f879a;
+  --color-ink: #f1edf6;
+  --color-black: #f1edf6;
+
+  --p: #9b82f5;
+  --p-hover: #b39ff8;
+  --p-ink: #b9a6ff;
+  --p-tint: rgba(155, 130, 245, .16);
+  --p-line: rgba(155, 130, 245, .42);
+  --ok: #4fd18b;   --ok-tint: rgba(79, 209, 139, .14);
+  --warn: #f2b84b; --warn-tint: rgba(242, 184, 75, .14);
+  --err: #f07a72;  --err-tint: rgba(240, 122, 114, .14);
+  --info: #79b0f0; --info-tint: rgba(121, 176, 240, .14);
+}
+html[data-theme="night"] body { background: var(--ground) !important; color: var(--n-ink); }
+html[data-theme="night"] ::selection { background: rgba(155, 130, 245, .4); color: #fff; }
+
+/* header, menu, footer */
+html[data-theme="night"] .site-header { background: color-mix(in srgb, #141118 86%, transparent) !important; border-color: rgba(255, 255, 255, .08) !important; }
+html[data-theme="night"] .nav-brand img { filter: invert(1) hue-rotate(180deg) brightness(1.1); }
+html[data-theme="night"] .mobile-menu { background: #141118 !important; }
+html[data-theme="night"] .nav-links a, html[data-theme="night"] .nav-menu-btn, html[data-theme="night"] .mobile-menu a { color: var(--n-ink) !important; }
+html[data-theme="night"] .site-footer, html[data-theme="night"] .site-footer * { color: var(--n-ink-2); }
+html[data-theme="night"] .site-footer .footer-name { color: var(--n-ink); }
+
+/* ---------- hand fixes after the generated layer ---------- */
+/* dark panels drawn with the ink colour stay dark, a step above the ground */
+html[data-theme="night"] .v3-console { background: #221d29 !important; color: #eae8ee !important; border: 1px solid rgba(255, 255, 255, .08); }
+html[data-theme="night"] .v3-problem-card { background: #221d29 !important; color: #fff !important; border: 1px solid rgba(255, 255, 255, .08); }
+
+/* accent variables kept per section: lift the purples and greens so they read on the dark ground */
+html[data-theme="night"] .v3 { --acc: #9b82f5; --acc-2: #b39ff8; --acc-tint: rgba(155, 130, 245, .14); }
+html[data-theme="night"] .cs2 { --pink-deep: #b9a6ff; --lav-deep: #9b82f5; }
+html[data-theme="night"] .vc { --vc-accent: #9b82f5; --vc-tint: rgba(155, 130, 245, .14); }
+html[data-theme="night"] .fa { --fa-p: #9b82f5; --fa-p-tint: rgba(155, 130, 245, .16); --fa-ok: #4fd18b; --fa-ok-tint: rgba(79, 209, 139, .14); --fa-mute: #8f879a; --fa-line: rgba(255, 255, 255, .12); }
+html[data-theme="night"] .v3-k.fact { color: #6fd3a1 !important; }
+html[data-theme="night"] .v3-k.hyp { color: #f2b84b !important; }
+
+/* big ink panels and phone bezels stay dark (the generated layer inverts small ink fills instead) */
+html[data-theme="night"] :is(.v3-dark, .v3-ways-one, .vc-lesson) { background: #221d29 !important; color: var(--n-ink) !important; border: 1px solid rgba(255, 255, 255, .08); }
+html[data-theme="night"] :is(.vcw-phone, .oc-phone-shell, .mock-shell) { background: #0d0b10 !important; }
+html[data-theme="night"] .v3-pill.accent { background: var(--p) !important; border-color: var(--p) !important; color: #fff !important; }
+/* cards that take their colour from an inline --c */
+html[data-theme="night"] .cs2-card { background: var(--surface) !important; border-color: rgba(255, 255, 255, .08) !important; }
+
+/* ---------- home: "A little world called Ayushi" becomes a night sky ---------- */
+html[data-theme="night"] #about { --sec: #1f1830 !important; }
+html[data-theme="night"] #about .lw-hero {
+  background:
+    radial-gradient(42% 52% at 76% 50%, rgba(155, 130, 245, .28), transparent 72%),
+    radial-gradient(46% 40% at 8% 6%, rgba(231, 131, 159, .16), transparent 70%),
+    radial-gradient(40% 36% at 96% 96%, rgba(255, 214, 107, .08), transparent 70%),
+    linear-gradient(180deg, #1f1830 0%, #1a1527 52%, var(--ground) 100%) !important;
+}
+html[data-theme="night"] #about .lw-hero::after { mix-blend-mode: screen; opacity: .25; }
+html[data-theme="night"] #about .lw-hero .lw-cloud { opacity: .14; }
+html[data-theme="night"] #about :is(.lw-diary-label, .lw-hero-sub, .lw-hero .lw-anno, .lw-booth-cap) { color: var(--n-ink-2) !important; }
+html[data-theme="night"] #about .lw-diary-label::after { background: rgba(255, 255, 255, .25); }
+html[data-theme="night"] #about .lw-invite { background: rgba(33, 28, 40, .72) !important; }
+html[data-theme="night"] #about .lw-invite:hover { background: #2a2432 !important; }
+html[data-theme="night"] #about .lw-mood-tag { color: #2c2928; }
+
+/* ---------- home: the diary's paper stays paper (with dark ink) on the dark desk ---------- */
+html[data-theme="night"] #lw-diary :is(.dy-spreads, .lw-receipt, .lw-ticket, .lw-ticket-big, .lw-polaroid, .dy-love, .lw-photo, .dy-tab, .lw-printer-slot),
+html[data-theme="night"] #about :is(.lw-booth, .lw-mood-tag) {
+  --n-ink: #2c2928; --n-ink-2: #57514d; --n-ink-3: #8a837d; --n-line: rgba(44, 41, 40, .16);
+  --text: #2c2928; --text-muted: #57514d; --color-ink: #2c2928; --color-black: #2c2928; --ink: #2c2928; --ink-soft: #57514d;
+  --p: #6a4bd6; --p-ink: #5a3ec4; --p-tint: #efeafd;
+  color: #2c2928;
+}
+html[data-theme="night"] #lw-diary .dy-end-note { color: var(--n-ink-2) !important; }
+
+/* ---------- home: the work box ---------- */
+html[data-theme="night"] #work .filter-chip { background: transparent !important; color: var(--n-ink-2) !important; border-color: rgba(255, 255, 255, .16) !important; }
+html[data-theme="night"] #work .filter-chip:hover { color: var(--n-ink) !important; border-color: var(--p-line) !important; }
+html[data-theme="night"] #work .filter-chip[aria-pressed="true"] { background: var(--p) !important; border-color: var(--p) !important; color: #fff !important; }
+html[data-theme="night"] #work .pbx-more-btn { color: var(--n-ink) !important; }
+html[data-theme="night"] #work .pbx-more-btn:hover { background: var(--p) !important; border-color: var(--p) !important; color: #fff !important; }
+html[data-theme="night"] #lw-diary :is(.dy-arrow, .dy-x) { color: #2c2928 !important; }
+
+/* ---------- keep these exactly as in Day: the work box (and its detail sheet) and the dreams sky ---------- */
+html[data-theme="night"] :is(#pbox, .pbx-sheet, .pbx-overlay, #lw-ch5) {
+  color-scheme: light;
+  --n-ink: #2c2928; --n-ink-2: #57514d; --n-ink-3: #8a837d; --n-line: rgba(44, 41, 40, .16); --n-line-2: rgba(44, 41, 40, .3); --n-hover: #45403e;
+  --text: #2c2928; --text-muted: #57514d; --text-faint: #8a837d; --color-ink: #2c2928; --color-black: #2c2928;
+  --color-border: rgba(56, 52, 48, .12); --color-border-strong: rgba(56, 52, 48, .24);
+  --ground: #fafafa; --ground-tint: #f3f3f3; --surface: #ffffff; --bg: #fafafa;
+  --p: #6a4bd6; --p-hover: #5436bd; --p-ink: #5a3ec4; --p-tint: #efeafd; --p-line: rgba(106, 75, 214, .38);
+  --ok: #1f7a4f; --ok-tint: #e5f3eb; --warn: #9a6200; --warn-tint: #fdf2d9;
+  --ink: #2c2928; --ink-soft: #57514d;
+}
+html[data-theme="night"] #lw-ch5 { color: #2c2928; }
+html[data-theme="night"] #lw-ch5 .lw-dreams-btn { background: #6a4bd6 !important; border-color: #6a4bd6 !important; color: #fff !important; }
+html[data-theme="night"] .lw-dreams-close { color: #2c2928 !important; background: rgba(255, 255, 255, .92) !important; }
+/* the hero's speech bubble keeps its dark ink on the pastel fill */
+html[data-theme="night"] .hero-bubble { --ink: #3b3834; }
+html[data-theme="night"] .hero-bubble-text, html[data-theme="night"] .hero-bubble-text > b { color: #3b3834 !important; }

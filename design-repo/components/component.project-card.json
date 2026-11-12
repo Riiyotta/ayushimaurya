@@ -1,0 +1,23 @@
+{
+  "id": "component.project-card",
+  "kind": "component",
+  "description": "Project card: meta line, thumbnail/preview, title, outcome (big value + label), CTA; locked cards open the password dialog.",
+  "composes": [
+    "primitive.video-frame",
+    "primitive.text-link"
+  ],
+  "props": {
+    "meta": "text",
+    "title": "text",
+    "outcomeValue": "text",
+    "outcomeLabel": "text",
+    "locked": "boolean"
+  },
+  "tokens": [
+    "color.surface.raised",
+    "radius.card"
+  ],
+  "cites": [
+    "projects.html:58"
+  ]
+}

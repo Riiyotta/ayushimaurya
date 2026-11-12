@@ -1,0 +1,507 @@
+{
+  "version": "1.0.0",
+  "note": "One template per page purpose. Nodes are explicit slots (sections allowed in the slot, required, repeatable with min/max counts, allowed variants). The real classifier (extraction/classify_routes.py) checks that every route matches exactly its assigned template.",
+  "metaBudgets": {
+    "title": {
+      "maxWords": 8
+    },
+    "description": {
+      "maxWords": 31
+    },
+    "evidence": "max words of <title> / meta[name=description] over all 12 routes"
+  },
+  "templates": {
+    "template.home": {
+      "id": "template.home",
+      "title": "Home",
+      "purpose": "Portfolio home: name hero, work showcase, featured side project, skills index and an about-me band.",
+      "nodes": [
+        {
+          "slot": "header",
+          "sections": [
+            "shell.header"
+          ],
+          "required": true,
+          "repeatable": false,
+          "variants": {
+            "shell.header": [
+              "site-nav"
+            ]
+          }
+        },
+        {
+          "slot": "hero",
+          "sections": [
+            "home.hero"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "slot": "work",
+          "sections": [
+            "home.work-showcase"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "slot": "featured",
+          "sections": [
+            "home.featured-project"
+          ],
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "slot": "skills",
+          "sections": [
+            "home.skills-index"
+          ],
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "slot": "about-intro",
+          "sections": [
+            "about.intro"
+          ],
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "slot": "about-diary",
+          "sections": [
+            "about.diary"
+          ],
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "slot": "about-closing",
+          "sections": [
+            "about.closing"
+          ],
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "slot": "footer",
+          "sections": [
+            "shell.footer"
+          ],
+          "required": true,
+          "repeatable": false,
+          "variants": {
+            "shell.footer": [
+              "full"
+            ]
+          }
+        }
+      ],
+      "overlays": [
+        "utility.mobile-menu",
+        "utility.lock-modal",
+        "utility.desktop-hint",
+        "utility.media-lightbox",
+        "utility.dreams-overlay"
+      ],
+      "noHero": false,
+      "routes": [
+        "index.html"
+      ]
+    },
+    "template.project-index": {
+      "id": "template.project-index",
+      "title": "Project index",
+      "purpose": "Every project as a card grid under a short header, closing with a contact line.",
+      "nodes": [
+        {
+          "slot": "header",
+          "sections": [
+            "shell.header"
+          ],
+          "required": true,
+          "repeatable": false,
+          "variants": {
+            "shell.header": [
+              "site-nav"
+            ]
+          }
+        },
+        {
+          "slot": "hero",
+          "sections": [
+            "index.page-header"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "slot": "grid",
+          "sections": [
+            "index.project-grid"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "slot": "closing",
+          "sections": [
+            "conversion.closing"
+          ],
+          "required": true,
+          "repeatable": false,
+          "variants": {
+            "conversion.closing": [
+              "link-row",
+              "cta-band"
+            ]
+          }
+        },
+        {
+          "slot": "footer",
+          "sections": [
+            "shell.footer"
+          ],
+          "required": true,
+          "repeatable": false,
+          "variants": {
+            "shell.footer": [
+              "full"
+            ]
+          }
+        }
+      ],
+      "overlays": [
+        "utility.mobile-menu",
+        "utility.lock-modal"
+      ],
+      "noHero": false,
+      "routes": [
+        "projects.html"
+      ]
+    },
+    "template.resume": {
+      "id": "template.resume",
+      "title": "Resume",
+      "purpose": "A resume page: header with contacts, one section per resume part, and a call to see the work.",
+      "nodes": [
+        {
+          "slot": "header",
+          "sections": [
+            "shell.header"
+          ],
+          "required": true,
+          "repeatable": false,
+          "variants": {
+            "shell.header": [
+              "site-nav"
+            ]
+          }
+        },
+        {
+          "slot": "hero",
+          "sections": [
+            "resume.header"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "slot": "parts",
+          "sections": [
+            "resume.entry-group"
+          ],
+          "required": true,
+          "repeatable": true,
+          "minCount": 1,
+          "maxCount": 8
+        },
+        {
+          "slot": "closing",
+          "sections": [
+            "conversion.closing"
+          ],
+          "required": true,
+          "repeatable": false,
+          "variants": {
+            "conversion.closing": [
+              "cta-band",
+              "link-row"
+            ]
+          }
+        },
+        {
+          "slot": "footer",
+          "sections": [
+            "shell.footer"
+          ],
+          "required": true,
+          "repeatable": false,
+          "variants": {
+            "shell.footer": [
+              "full"
+            ]
+          }
+        }
+      ],
+      "overlays": [
+        "utility.mobile-menu"
+      ],
+      "noHero": false,
+      "routes": [
+        "resume.html"
+      ]
+    },
+    "template.notice": {
+      "id": "template.notice",
+      "title": "Protected-work notice",
+      "purpose": "A single notice page for work under NDA; no hero (the notice is the whole, compact page).",
+      "nodes": [
+        {
+          "slot": "header",
+          "sections": [
+            "shell.header"
+          ],
+          "required": true,
+          "repeatable": false,
+          "variants": {
+            "shell.header": [
+              "site-nav"
+            ]
+          }
+        },
+        {
+          "slot": "notice",
+          "sections": [
+            "notice.protected-work"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "slot": "footer",
+          "sections": [
+            "shell.footer"
+          ],
+          "required": true,
+          "repeatable": false,
+          "variants": {
+            "shell.footer": [
+              "full"
+            ]
+          }
+        }
+      ],
+      "overlays": [
+        "utility.mobile-menu"
+      ],
+      "noHero": true,
+      "routes": [
+        "nda.html"
+      ]
+    },
+    "template.case-study-brief": {
+      "id": "template.case-study-brief",
+      "title": "Case study (brief)",
+      "purpose": "A short or gated case study: opener, at most a summary, one or two content sections (one chapter, or a screen gallery), and a closing.",
+      "nodes": [
+        {
+          "slot": "header",
+          "sections": [
+            "shell.header"
+          ],
+          "required": true,
+          "repeatable": false,
+          "variants": {
+            "shell.header": [
+              "site-nav"
+            ]
+          }
+        },
+        {
+          "slot": "hero",
+          "sections": [
+            "casestudy.hero"
+          ],
+          "required": true,
+          "repeatable": false,
+          "variants": {
+            "casestudy.hero": [
+              "stage",
+              "cover"
+            ]
+          }
+        },
+        {
+          "slot": "summary",
+          "sections": [
+            "casestudy.summary"
+          ],
+          "required": false,
+          "repeatable": false,
+          "variants": {
+            "casestudy.summary": [
+              "brief-grid"
+            ]
+          }
+        },
+        {
+          "slot": "body",
+          "sections": [
+            "casestudy.chapter",
+            "casestudy.screen-gallery"
+          ],
+          "required": true,
+          "repeatable": true,
+          "minCount": 1,
+          "maxCount": 2
+        },
+        {
+          "slot": "closing",
+          "sections": [
+            "conversion.closing"
+          ],
+          "required": true,
+          "repeatable": false,
+          "variants": {
+            "conversion.closing": [
+              "thanks-cta",
+              "link-row"
+            ]
+          }
+        },
+        {
+          "slot": "footer",
+          "sections": [
+            "shell.footer"
+          ],
+          "required": true,
+          "repeatable": false,
+          "variants": {
+            "shell.footer": [
+              "full"
+            ]
+          }
+        }
+      ],
+      "overlays": [
+        "utility.mobile-menu",
+        "utility.media-lightbox"
+      ],
+      "noHero": false,
+      "routes": [
+        "claim-approval.html",
+        "virtual-wardrobe.html",
+        "wallet-ui.html",
+        "visit-clinic-gift-cards.html"
+      ]
+    },
+    "template.case-study-chaptered": {
+      "id": "template.case-study-chaptered",
+      "title": "Case study (chaptered, long-form)",
+      "purpose": "A long-form case study decomposed into chapters: opener, optional summary/storyboard prelude, optional chapter nav, three or more chapter-level sections (chapters, problem statement, decisions, scroll narratives), and a closing.",
+      "nodes": [
+        {
+          "slot": "header",
+          "sections": [
+            "shell.header"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "slot": "hero",
+          "sections": [
+            "casestudy.hero"
+          ],
+          "required": true,
+          "repeatable": false,
+          "variants": {
+            "casestudy.hero": [
+              "split-media",
+              "journey",
+              "poster"
+            ]
+          }
+        },
+        {
+          "slot": "prelude",
+          "sections": [
+            "casestudy.summary",
+            "casestudy.scroll-narrative"
+          ],
+          "required": false,
+          "repeatable": true,
+          "minCount": 0,
+          "maxCount": 2,
+          "variants": {
+            "casestudy.summary": [
+              "tldr-grid",
+              "flip-card"
+            ],
+            "casestudy.scroll-narrative": [
+              "panels"
+            ]
+          }
+        },
+        {
+          "slot": "chapter-nav",
+          "sections": [
+            "casestudy.chapter-nav"
+          ],
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "slot": "body",
+          "sections": [
+            "casestudy.chapter",
+            "casestudy.problem-statement",
+            "casestudy.decision",
+            "casestudy.scroll-narrative"
+          ],
+          "required": true,
+          "repeatable": true,
+          "minCount": 3,
+          "maxCount": 30
+        },
+        {
+          "slot": "closing",
+          "sections": [
+            "conversion.closing"
+          ],
+          "required": true,
+          "repeatable": false,
+          "variants": {
+            "conversion.closing": [
+              "thanks-cta",
+              "final-statement"
+            ]
+          }
+        },
+        {
+          "slot": "footer",
+          "sections": [
+            "shell.footer"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "overlays": [
+        "utility.mobile-menu",
+        "utility.media-lightbox",
+        "utility.reading-progress"
+      ],
+      "noHero": false,
+      "routes": [
+        "hybrid-diagnostic.html",
+        "visit-clinic.html",
+        "family-ahc.html",
+        "offline-doctor-consultation.html"
+      ]
+    }
+  }
+}

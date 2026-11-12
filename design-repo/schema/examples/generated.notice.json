@@ -1,0 +1,105 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "generated",
+  "template": "template.notice",
+  "route": "/private-study",
+  "theme": "night",
+  "meta": {
+    "title": "Confidential study, Rowan Vale",
+    "description": "A project Rowan Vale can only share privately."
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "site-nav",
+      "content": {
+        "brandMark": {
+          "role": "brand.placeholder-wordmark",
+          "src": "placeholder://wordmark/rowan-vale",
+          "mediaType": "image",
+          "alt": "Rowan Vale"
+        },
+        "navLinks": [
+          {
+            "label": "Projects",
+            "href": "projects.html",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "CV",
+            "href": "cv.html",
+            "role": "link.internal-route"
+          }
+        ],
+        "themeToggle": true
+      },
+      "motion": {
+        "pattern": "theme-crossfade",
+        "trigger": "tap",
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "section": "notice.protected-work",
+      "variant": "redacted-sheet",
+      "content": {
+        "backLink": {
+          "label": "All projects",
+          "href": "projects.html",
+          "role": "link.internal-route"
+        },
+        "title": "This study is confidential.",
+        "body": [
+          "The client asked me to keep the details off the public web.",
+          "Happy to share it in a private call."
+        ],
+        "artCaption": "Hover all you like, the ink stays put.",
+        "askLead": "Want the full story?",
+        "askBody": "I can walk you through the brief, the research and the outcome on a short call.",
+        "cta": {
+          "label": "Book a short call",
+          "href": "mailto:hello@rowan-vale.example?subject=Walkthrough",
+          "role": "link.placeholder-url"
+        },
+        "note": "Usually within days."
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "full",
+      "content": {
+        "name": "Rowan Vale",
+        "role": "Interaction Designer",
+        "line": "Have a knotty workflow? Send it my way.",
+        "links": [
+          {
+            "label": "Email",
+            "href": "mailto:hello@rowan-vale.example",
+            "role": "link.placeholder-url"
+          },
+          {
+            "label": "Projects",
+            "href": "projects.html",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "CV",
+            "href": "cv.html",
+            "role": "link.internal-route"
+          }
+        ],
+        "copyright": "© Rowan Vale"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    }
+  ]
+}

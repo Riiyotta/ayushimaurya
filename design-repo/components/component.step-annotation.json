@@ -1,0 +1,20 @@
+{
+  "id": "component.step-annotation",
+  "kind": "component",
+  "description": "Step article in a scroll narrative: screen + annotation (step label, patient needs / product does).",
+  "composes": [
+    "primitive.device-frame",
+    "primitive.kicker"
+  ],
+  "props": {
+    "label": "text",
+    "needs": "text",
+    "does": "text"
+  },
+  "tokens": [
+    "color.surface.raised"
+  ],
+  "cites": [
+    "visit-clinic.html:514"
+  ]
+}

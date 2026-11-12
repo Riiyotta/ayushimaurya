@@ -1,0 +1,29 @@
+{
+  "id": "component.card",
+  "kind": "component",
+  "description": "Labelled card: small label, bold title, one short paragraph; variants by intent (problem, solution, impact, constraint, signal).",
+  "composes": [
+    "primitive.kicker"
+  ],
+  "props": {
+    "label": "text",
+    "title": "text",
+    "text": "text",
+    "intent": [
+      "problem",
+      "solution",
+      "impact",
+      "constraint",
+      "signal",
+      "plain"
+    ]
+  },
+  "tokens": [
+    "color.surface.raised",
+    "radius.card",
+    "color.border.default"
+  ],
+  "cites": [
+    "claim-approval.html:78"
+  ]
+}

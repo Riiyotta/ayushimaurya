@@ -1,0 +1,938 @@
+/* ---- generated from the site stylesheets: do not edit by hand, re-run gen_night.py ---- */
+/* styles.css */
+html[data-theme="night"] .skip-link {
+  color: #17131b !important;
+}
+html[data-theme="night"] ::selection {
+  color: #17131b !important;
+}
+html[data-theme="night"] .nav-cta {
+  box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.6) !important;
+  color: #17131b !important;
+}
+html[data-theme="night"] .nav-cta:hover {
+  box-shadow: 0 12px 22px -10px rgba(0, 0, 0, 0.6) !important;
+}
+html[data-theme="night"] .filter-chip[aria-pressed="true"] {
+  color: #17131b !important;
+}
+html[data-theme="night"] .hero-bubble {
+  --ink: #e2dbe6;
+  --fill: #141016;
+}
+html[data-theme="night"] .nda-art-sheet {
+  background: #141016 !important;
+}
+html[data-theme="night"] .nda-art-row {
+  background: rgba(255, 255, 255, 0.16) !important;
+}
+html[data-theme="night"] .nda-art-tile {
+  background: rgba(255, 255, 255, 0.16) !important;
+}
+html[data-theme="night"] .nda-art-chart span {
+  background: rgba(255, 255, 255, 0.16) !important;
+}
+html[data-theme="night"] .nda-art-glyphs i {
+  background: rgba(33, 28, 40, 0.88) !important;
+}
+html[data-theme="night"] .nda-art-tile-inner i {
+  background: rgba(33, 28, 40, 0.9) !important;
+}
+html[data-theme="night"] .oc-band.dark {
+  color: #17131b !important;
+}
+html[data-theme="night"] .oc-num {
+  color: #17131b !important;
+}
+html[data-theme="night"] .oc-table th {
+  color: #17131b !important;
+}
+html[data-theme="night"] .oc-table tbody tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.032) !important;
+}
+html[data-theme="night"] .oc-callout.ink {
+  color: #17131b !important;
+}
+html[data-theme="night"] .oc-phone-shell {
+  box-shadow: 0 24px 48px -28px rgba(0, 0, 0, 0.6) !important;
+}
+html[data-theme="night"] .oc-phone-shell {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.14) inset,
+    0 26px 52px -26px rgba(0, 0, 0, 0.6) !important;
+}
+html[data-theme="night"] .oc-phone-screen {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3) inset !important;
+}
+html[data-theme="night"] .preview-mock .preview-shot {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3) inset !important;
+}
+html[data-theme="night"] .mock-shell {
+  border: 1px solid #43354a !important;
+  box-shadow: 0 18px 40px -30px rgba(0, 0, 0, 0.4) !important;
+}
+@media (min-width: 980px) {
+html[data-theme="night"] .project-row[data-previewing="true"] .project-row-link {
+  background: rgba(255, 255, 255, 0.032) !important;
+}
+}
+html[data-theme="night"] .lock-modal-backdrop {
+  background: rgba(255, 255, 255, 0.16) !important;
+}
+html[data-theme="night"] .lock-modal-panel {
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.56) !important;
+}
+html[data-theme="night"] .lock-modal-error {
+  color: #c4bfb9 !important;
+}
+html[data-theme="night"] .lock-modal-submit {
+  color: #17131b !important;
+}
+html[data-theme="night"] .desktop-hint-backdrop {
+  background: rgba(255, 255, 255, 0.16) !important;
+}
+html[data-theme="night"] .desktop-hint-panel {
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6) !important;
+  color: #17131b !important;
+}
+html[data-theme="night"] .desktop-hint-close:hover {
+  background: rgba(255, 255, 255, 0.07) !important;
+}
+html[data-theme="night"] .combo-dia-card {
+  box-shadow: 0 12px 28px -20px rgba(0, 0, 0, 0.6) !important;
+}
+html[data-theme="night"] .combo-dia-badge {
+  color: #17131b !important;
+}
+html[data-theme="night"] .claim-dia-chat-head {
+  color: #17131b !important;
+}
+html[data-theme="night"] .vc-lesson {
+  color: #17131b !important;
+}
+html[data-theme="night"] .vcw {
+  background: linear-gradient(#1d1720, #251e29) !important;
+}
+html[data-theme="night"] .vcw-badge {
+  background: linear-gradient(94deg, #272421 0%, #48394f 100%) !important;
+}
+html[data-theme="night"] .vcw-title {
+  color: #ece8ef !important;
+}
+html[data-theme="night"] .vcw-title em {
+  background: linear-gradient(90deg, #9f9589 20%, #3f3245 100%) !important;
+}
+html[data-theme="night"] .vcw-sub {
+  color: #c7b9ce !important;
+}
+html[data-theme="night"] .vcw-card {
+  background: #141016 !important;
+  box-shadow: 0 5px 19.9px rgba(0, 0, 0, 0.144) !important;
+}
+html[data-theme="night"] .vcw-label {
+  color: #c7b9ce !important;
+}
+html[data-theme="night"] .vcw-h {
+  background: linear-gradient(90deg, #9f9589 20%, #3f3245 100%) !important;
+}
+html[data-theme="night"] .vcw-desc {
+  color: #c7b9ce !important;
+}
+html[data-theme="night"] .vcw-points li {
+  color: #ece8ef !important;
+}
+html[data-theme="night"] .vcw-img.phone {
+  background: radial-gradient(120% 90% at 30% 20%, #362b3c 0%, #4e3e55 55%, #8f8477 100%) !important;
+}
+html[data-theme="night"] .vcw-phone {
+  box-shadow: 0 18px 36px -18px rgba(0, 0, 0, 0.6) !important;
+}
+html[data-theme="night"] .vcw-phone-screen {
+  background: #1d171f !important;
+}
+html[data-theme="night"] .vc-evo-step.warn {
+  background: #1a141c !important;
+  border-color: #574560 !important;
+}
+html[data-theme="night"] .vc-evo-step.warn .vc-evo-tag {
+  background: #261e2a !important;
+  color: #d8cddc !important;
+}
+/* case.css */
+html[data-theme="night"] .cs2 {
+  --pink: #1f1832;
+  --sky: #1a1429;
+  --butter: #1b151e;
+  --mint: #181327;
+  --line: rgba(255, 255, 255, 0.132);
+}
+html[data-theme="night"] .cs2-hero {
+  background: radial-gradient(40% 50% at 85% 30%, rgba(201, 184, 240, 0.175), transparent 70%), radial-gradient(35% 45% at 70% 80%, rgba(201, 184, 240, 0.15), transparent 70%) !important;
+}
+html[data-theme="night"] .cs2-kicker {
+  background: rgba(33, 28, 40, 0.7) !important;
+}
+html[data-theme="night"] .cs2-hero-media {
+  box-shadow: 0 40px 80px -40px rgba(0, 0, 0, 0.6) !important;
+}
+html[data-theme="night"] .cs2-nav a:hover {
+  background: rgba(201, 184, 240, 0.125) !important;
+}
+html[data-theme="night"] .cs2-nav a[aria-current="true"] {
+  color: #17131b !important;
+}
+html[data-theme="night"] .cs2-ch.tint {
+  background: linear-gradient(180deg, rgba(240, 234, 252, 0.275), rgba(253, 231, 238, 0.175)) !important;
+}
+html[data-theme="night"] .cs2-list li {
+  background: rgba(33, 28, 40, 0.7) !important;
+}
+html[data-theme="night"] .cs2-frame {
+  border: 1px solid #34294d !important;
+  background: #141016 !important;
+  box-shadow: 0 24px 50px -36px rgba(0, 0, 0, 0.6) !important;
+}
+html[data-theme="night"] .cs2-frame:hover {
+  box-shadow: 0 30px 60px -36px rgba(0, 0, 0, 0.6) !important;
+}
+html[data-theme="night"] .cs2-quote {
+  background: linear-gradient(135deg, rgba(201, 184, 240, 0.14), rgba(201, 184, 240, 0.16)) !important;
+}
+html[data-theme="night"] .cs2-card {
+  border: 1px solid rgba(255, 255, 255, 0.066) !important;
+}
+html[data-theme="night"] .cs2-btn.solid {
+  box-shadow: 0 14px 28px -16px rgba(0, 0, 0, 0.6) !important;
+  color: #17131b !important;
+}
+html[data-theme="night"] .cs2-btn.ghost {
+  background: rgba(33, 28, 40, 0.6) !important;
+}
+html[data-theme="night"] .cs2-lightbox {
+  background: rgba(255, 255, 255, 0.16) !important;
+}
+html[data-theme="night"] .cs2-lightbox button {
+  background: #141016 !important;
+}
+html[data-theme="night"] .cs2-stage {
+  border: 1px solid #34294d !important;
+  box-shadow: 0 40px 80px -46px rgba(0, 0, 0, 0.6) !important;
+}
+html[data-theme="night"] .cs2-chips span {
+  background: rgba(33, 28, 40, 0.75) !important;
+}
+html[data-theme="night"] .cs2-gate {
+  background: linear-gradient(135deg, rgba(201, 184, 240, 0.175), rgba(201, 184, 240, 0.2)) !important;
+}
+/* visit-clinic-v3.css */
+html[data-theme="night"] .v3 {
+  --ink: #f9f8fa;
+  --line: rgba(255, 255, 255, 0.132);
+  --line-2: rgba(255, 255, 255, 0.242);
+  --paper: #18131a;
+  --tint: #1d171f;
+}
+html[data-theme="night"] .v3-dark {
+  color: #17131b !important;
+}
+html[data-theme="night"] .v3-chapter.light::after {
+  background: rgba(255, 255, 255, 0.075) !important;
+}
+html[data-theme="night"] .v3-k.fact {
+  color: #c6e3d6 !important;
+}
+html[data-theme="night"] .v3-k.hyp {
+  color: #f1d2ae !important;
+}
+html[data-theme="night"] .v3-k.next {
+  color: #abc4e4 !important;
+}
+html[data-theme="night"] .v3-pill {
+  background: #141016 !important;
+}
+html[data-theme="night"] .v3-live {
+  color: #abe2c4 !important;
+}
+html[data-theme="night"] .v3-nav {
+  background: rgba(33, 28, 40, 0.85) !important;
+}
+html[data-theme="night"] .v3-nav a.is-active {
+  color: #17131b !important;
+}
+html[data-theme="night"] .v3-ba-row {
+  background: #141016 !important;
+}
+html[data-theme="night"] .v3-physical::before {
+  background: rgba(255, 255, 255, 0.125) !important;
+}
+html[data-theme="night"] .v3-physical li:nth-child(n+5):nth-child(-n+9)::before {
+  border-color: #3a325e !important;
+}
+html[data-theme="night"] .v3-chain li {
+  background: #141016 !important;
+}
+html[data-theme="night"] .v3-knew-col {
+  background: #141016 !important;
+}
+html[data-theme="night"] .v3-entry {
+  background: #141016 !important;
+}
+html[data-theme="night"] .v3-ways-one {
+  color: #17131b !important;
+}
+html[data-theme="night"] .v3-radius {
+  background: #141016 !important;
+}
+html[data-theme="night"] .v3-seg button[aria-pressed="true"] {
+  color: #17131b !important;
+}
+html[data-theme="night"] .v3-radius-svg .r-path-home {
+  stroke: #e4c19a !important;
+}
+html[data-theme="night"] .v3-radius-svg .r-badge-home rect {
+  stroke: #e4c19a !important;
+}
+html[data-theme="night"] .v3-radius-svg .r-badge-home text {
+  fill: #f1d2ae !important;
+}
+html[data-theme="night"] .v3-shot img {
+  box-shadow: 0 24px 50px -30px rgba(0, 0, 0, 0.56) !important;
+  background: #141016 !important;
+}
+html[data-theme="night"] .v3-view-stage {
+  background: #141016 !important;
+}
+html[data-theme="night"] .v3-pv-card {
+  background: linear-gradient(160deg, #3b1fa8, #5b3fd1 60%, #362c5c) !important;
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.6) !important;
+}
+html[data-theme="night"] .v3-pv-steps li.done::before {
+  background: #254e37 !important;
+  border-color: #37674c !important;
+}
+html[data-theme="night"] .v3-pv-steps li.now::before {
+  background: #141016 !important;
+}
+html[data-theme="night"] .v3-pv-next {
+  background: rgba(255, 255, 255, 0.07) !important;
+}
+html[data-theme="night"] .v3-tokens i {
+  background: #141016 !important;
+}
+html[data-theme="night"] .v3-me {
+  box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.6) !important;
+}
+html[data-theme="night"] .v3-console {
+  box-shadow: 0 30px 70px -40px rgba(0, 0, 0, 0.6) !important;
+  color: #17131b !important;
+}
+html[data-theme="night"] .v3-console-list li {
+  color: #c5b5cc !important;
+}
+html[data-theme="night"] .v3-console-list li::before {
+  color: #cfc3d5 !important;
+}
+html[data-theme="night"] .v3-phone img {
+  box-shadow: 0 30px 60px -34px rgba(0, 0, 0, 0.6) !important;
+}
+html[data-theme="night"] .v3-col .d {
+  background: #141016 !important;
+}
+html[data-theme="night"] .v3-col:hover .p,
+html[data-theme="night"] .v3-col:focus-visible .p {
+  color: #17131b !important;
+}
+html[data-theme="night"] .v3-peek {
+  background: #141016 !important;
+}
+html[data-theme="night"] .v3-flip {
+  background: #141016 !important;
+}
+html[data-theme="night"] .v3-flip[aria-pressed="true"] {
+  color: #17131b !important;
+}
+html[data-theme="night"] .v3-peek-face.front {
+  background: linear-gradient(160deg, #3b1fa8, #5b3fd1 70%, #362c5c) !important;
+}
+html[data-theme="night"] .v3-pf-btn {
+  background: #141016 !important;
+}
+html[data-theme="night"] .v3-copay span {
+  background: #141016 !important;
+}
+html[data-theme="night"] .v3-kiosk {
+  background: #141016 !important;
+}
+html[data-theme="night"] .v3-foot {
+  color: #c1b1c9 !important;
+}
+html[data-theme="night"] .v3-loop li {
+  background: #141016 !important;
+}
+html[data-theme="night"] .v3-pain-stage::before {
+  color: #dda89c !important;
+}
+html[data-theme="night"] .v3-tldr-grid {
+  background: #141016 !important;
+}
+html[data-theme="night"] .fp-sub {
+  fill: #c1b1c9 !important;
+}
+html[data-theme="night"] .v3-floor-phone {
+  background: linear-gradient(165deg, #3b1fa8 0%, #5b3fd1 55%, #362c5c 100%) !important;
+  border: 6px solid rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.6) !important;
+}
+html[data-theme="night"] .fpp-bar li {
+  background: rgba(255, 255, 255, 0.11) !important;
+}
+html[data-theme="night"] .fpp-bar li.on {
+  background: #141016 !important;
+}
+@media (max-width: 979px) {
+html[data-theme="night"] .v3-physical li.done::before {
+  background: #251f41 !important;
+  border-color: #3a325e !important;
+}
+html[data-theme="night"] .v3-physical li.now::before {
+  background: #141016 !important;
+  border-color: #362b3b !important;
+}
+}
+html[data-theme="night"] .v3-ext {
+  background: #141016 !important;
+}
+html[data-theme="night"] .v3-problem-card {
+  color: #17131b !important;
+}
+html[data-theme="night"] .v3-problem-card::after {
+  background: radial-gradient(circle, rgba(122, 92, 240, 0.225), transparent 65%) !important;
+}
+html[data-theme="night"] .v3-entry-card {
+  background: #141016 !important;
+}
+html[data-theme="night"] .v3-rank {
+  background: #141016 !important;
+  box-shadow: 0 30px 60px -40px rgba(0, 0, 0, 0.56) !important;
+}
+html[data-theme="night"] .v3-rank-logo {
+  background: #141016 !important;
+}
+html[data-theme="night"] .v3-rank.v3-rv.in ol li.me {
+  box-shadow: 0 16px 30px -18px rgba(0, 0, 0, 0.6) !important;
+}
+html[data-theme="night"] .v3-touchline li {
+  background: #141016 !important;
+}
+html[data-theme="night"] .v3-board img {
+  box-shadow: 0 30px 60px -40px rgba(0, 0, 0, 0.56) !important;
+}
+html[data-theme="night"] .v3-after-row p {
+  background: #141016 !important;
+}
+html[data-theme="night"] .v3-proto-phone {
+  box-shadow: 0 40px 80px -40px rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(255,255,255,.08) !important;
+}
+html[data-theme="night"] .v3-proto-btn {
+  background: rgba(255, 255, 255, 0.16) !important;
+}
+html[data-theme="night"] .v3-proto-btn[data-state="playing"] span {
+  border-left: 4px solid #362b3b !important;
+  border-right: 4px solid #362b3b !important;
+}
+html[data-theme="night"] .v3-proto-btn[data-state="paused"] span {
+  border-left: 11px solid #362b3b !important;
+}
+html[data-theme="night"] .v3-dev-frame,
+html[data-theme="night"] .v3-proto-phone {
+  box-shadow: 0 30px 60px -36px rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(255, 255, 255, 0.08) !important;
+}
+html[data-theme="night"] .v3-dev-frame img,
+html[data-theme="night"] .v3-proto-phone video {
+  background: #1a151d !important;
+}
+html[data-theme="night"] .v3-dev-frame,
+html[data-theme="night"] .v3-proto-phone {
+  background: #141016 !important;
+  border: 1px solid #43354a !important;
+  box-shadow: 0 18px 40px -30px rgba(0, 0, 0, 0.4) !important;
+}
+/* visuals.css */
+html[data-theme="night"] .vx-cover {
+  background: #201923 !important;
+  box-shadow: 0 30px 60px -40px rgba(0, 0, 0, 0.6) !important;
+}
+html[data-theme="night"] .vx-frame {
+  border: 1px solid #43354a !important;
+  box-shadow: 0 18px 40px -30px rgba(0, 0, 0, 0.56) !important;
+}
+html[data-theme="night"] .vx-frame:hover {
+  box-shadow: 0 26px 50px -30px rgba(0, 0, 0, 0.6) !important;
+}
+html[data-theme="night"] .vx-scroll-hint {
+  background: rgba(33, 28, 40, 0.92) !important;
+  color: #dfddf2 !important;
+}
+html[data-theme="night"] .vx-lightbox {
+  background: rgba(255, 255, 255, 0.16) !important;
+}
+html[data-theme="night"] .vx-lightbox-close {
+  background: #141016 !important;
+  color: #f5f2f6 !important;
+}
+/* dream-theme.css */
+html[data-theme="night"] .site-header {
+  background: color-mix(in srgb, #18131a 82%, transparent) !important;
+}
+html[data-theme="night"] .site-header::after {
+  background: linear-gradient(90deg, #2c2330, #2d2432 30%, #29212d 55%, #2e2432 78%, #322736) !important;
+}
+html[data-theme="night"] .nav-cta {
+  box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.6) !important;
+  color: #17131b !important;
+}
+html[data-theme="night"] .nav-cta:hover {
+  box-shadow: 0 14px 24px -12px rgba(0, 0, 0, 0.6) !important;
+}
+html[data-theme="night"] .nav-contact {
+  background: rgba(33, 28, 40, 0.75) !important;
+}
+html[data-theme="night"] .nav-contact:hover {
+  background: #141016 !important;
+}
+html[data-theme="night"] .mobile-menu {
+  background: linear-gradient(180deg, #18131a 0%, #1b161e 55%, #1b161e 100%) !important;
+}
+html[data-theme="night"] .filter-chip {
+  background: rgba(33, 28, 40, 0.6) !important;
+}
+html[data-theme="night"] .filter-chip[aria-pressed="true"] {
+  color: #17131b !important;
+}
+html[data-theme="night"] .hero::before {
+  background: radial-gradient(38% 46% at 78% 30%, rgba(216, 212, 208, 0.21), transparent 70%),
+    radial-gradient(34% 40% at 64% 70%, rgba(219, 215, 210, 0.2), transparent 70%),
+    radial-gradient(30% 36% at 92% 62%, rgba(33, 28, 40, 0.45), transparent 70%) !important;
+}
+html[data-theme="night"] .hero-bubble {
+  --ink: #e4dde8;
+}
+html[data-theme="night"] .lock-modal-panel {
+  background: #161218 !important;
+}
+html[data-theme="night"] .lock-modal-submit {
+  color: #17131b !important;
+}
+html[data-theme="night"] .v3 {
+  --ink: #e4dde8;
+  --line: rgba(255, 255, 255, 0.132);
+  --line-2: rgba(255, 255, 255, 0.242);
+  --paper: #19141b;
+  --tint: #1b151e;
+}
+html[data-theme="night"] .mock-shell {
+  border-color: #413347 !important;
+}
+/* home-box.css */
+html[data-theme="night"] .pbx-more-btn {
+  box-shadow: 0 14px 28px -16px rgba(0, 0, 0, 0.6) !important;
+  color: #17131b !important;
+}
+html[data-theme="night"] .pbx-more-btn:hover {
+  box-shadow: 0 18px 32px -16px rgba(0, 0, 0, 0.6) !important;
+}
+/* neutral.css */
+html[data-theme="night"] .v3 {
+  --acc-tint: rgba(255, 255, 255, 0.066);
+}
+html[data-theme="night"] .vc {
+  --vc-tint: rgba(255, 255, 255, 0.066);
+}
+html[data-theme="night"] ::selection {
+  background: #271f2a !important;
+}
+html[data-theme="night"] .nav-cta,
+html[data-theme="night"] .lock-modal-submit,
+html[data-theme="night"] .cs2-btn.solid,
+html[data-theme="night"] .dy-cover-open,
+html[data-theme="night"] .lw-dreams-btn,
+html[data-theme="night"] .lw-dreams-ctas .solid,
+html[data-theme="night"] .nda-btn,
+html[data-theme="night"] .nda-cta,
+html[data-theme="night"] .v3-proto-btn,
+html[data-theme="night"] .mobile-menu-cta,
+html[data-theme="night"] .ab-btn,
+html[data-theme="night"] .bd-btn {
+  color: #17131b !important;
+}
+html[data-theme="night"] .pbx-more-btn:hover {
+  color: #17131b !important;
+}
+html[data-theme="night"] .v3-pill.accent {
+  color: #17131b !important;
+}
+html[data-theme="night"] .filter-chip[aria-pressed="true"] {
+  color: #17131b !important;
+}
+html[data-theme="night"] .lw-invite {
+  background: #161118 !important;
+}
+html[data-theme="night"] .site-header {
+  background: color-mix(in srgb, #19141b 90%, transparent) !important;
+}
+html[data-theme="night"] .mobile-menu {
+  background: #19141b !important;
+}
+html[data-theme="night"] .lw-dreams-modal .lw-dreams-ctas .solid {
+  background: #231c26 !important;
+  color: #e9e4ec !important;
+  border-color: #413347 !important;
+}
+/* accents.css */
+html[data-theme="night"] ::selection {
+  background: #2d161d !important;
+  color: #e9e4ec !important;
+}
+html[data-theme="night"] #lw-diary .dy-end-note {
+  color: #c9bbd0 !important;
+}
+/* functional.css */
+html[data-theme="night"] ::selection {
+  background: #1a1429 !important;
+  color: #e9e4ec !important;
+}
+html[data-theme="night"] .cs2-card.is-problem,
+html[data-theme="night"] .cs2-card.is-solution,
+html[data-theme="night"] .cs2-card.is-impact,
+html[data-theme="night"] .cs2-card.is-constraint,
+html[data-theme="night"] .cs2-card.is-signal {
+  background: #161118 !important;
+}
+/* cta.css */
+html[data-theme="night"] .lw-dreams-modal .lw-dreams-ctas .ghost:hover {
+  background: rgba(236, 231, 223, 0.05) !important;
+  border-color: #413347 !important;
+}
+html[data-theme="night"] .lw-invite {
+  box-shadow: inset 0 0 0 var(--cta-border) var(--p-line, rgba(0, 0, 0, 0.6)) !important;
+}
+html[data-theme="night"] .lw-invite .lw-invite-text small {
+  color: #c7b9ce !important;
+}
+/* base.css */
+html[data-theme="night"] .cs2-card.is-problem,
+html[data-theme="night"] .cs2-card.is-solution,
+html[data-theme="night"] .cs2-card.is-constraint,
+html[data-theme="night"] .cs2-card.is-signal {
+  background: #141016 !important;
+}
+html[data-theme="night"] #work::before {
+  background: #141016 !important;
+  border: 1px solid rgba(255, 255, 255, 0.088) !important;
+  box-shadow: 0 -24px 48px -36px rgba(0, 0, 0, 0.448) !important;
+}
+html[data-theme="night"] .mw-stack .mw-item.mw-card {
+  border: 1px solid rgba(255, 255, 255, 0.077) !important;
+  background: #1c161f !important;
+}
+html[data-theme="night"] .mw-item::after {
+  background: radial-gradient(260px circle at var(--mx) var(--my), rgba(33, 28, 40, 0.9), transparent 70%) !important;
+}
+html[data-theme="night"] .mw-stack .mw-item.mw-card:hover,
+html[data-theme="night"] .mw-stack .mw-item.mw-card:focus-visible {
+  background: #1a141c !important;
+  border-color: rgba(255, 255, 255, 0.11) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.064), 0 24px 44px -24px rgba(0, 0, 0, 0.512) !important;
+}
+html[data-theme="night"] .mw-item .mw-thumb {
+  background: #231c26 !important;
+}
+html[data-theme="night"] .mw-meta {
+  color: #d5cada !important;
+}
+html[data-theme="night"] .mw-item .mw-title {
+  color: #e9e4ec !important;
+}
+html[data-theme="night"] .mw-item:hover .mw-title {
+  color: #e9e4ec !important;
+}
+html[data-theme="night"] .mw-item .mw-thumb.is-contain {
+  background: #221b25 !important;
+}
+html[data-theme="night"] .section-title em,
+html[data-theme="night"] .lw-hero .lw-title .lw-name,
+html[data-theme="night"] .hd-accent,
+html[data-theme="night"] .pbx-hint b,
+html[data-theme="night"] .mw-item .mw-title em,
+html[data-theme="night"] .lw-dreams-title em {
+  color: #c3b4cb !important;
+}
+html[data-theme="night"] .cs2 {
+  --pink: #1f1832;
+  --sky: #1a1429;
+  --butter: #1b151e;
+  --mint: #181327;
+}
+html[data-theme="night"] .cs2-title em,
+html[data-theme="night"] .cs2-h2 em,
+html[data-theme="night"] .cs2-end h2 em,
+html[data-theme="night"] .cs2-quote p em,
+html[data-theme="night"] .oc-title em,
+html[data-theme="night"] .v3 .v3-h1 em,
+html[data-theme="night"] .v3 .v3-h2 em,
+html[data-theme="night"] .v3 .v3-display em,
+html[data-theme="night"] .v3-statement span,
+html[data-theme="night"] .cs2-label b,
+html[data-theme="night"] .v3-chapter span,
+html[data-theme="night"] .v3-label.accent,
+html[data-theme="night"] .v3-bet-num,
+html[data-theme="night"] .cs2-quote small {
+  color: #aa9ddc !important;
+}
+html[data-theme="night"] .v3 {
+  --tint: #19141c;
+}
+html[data-theme="night"] .cs2-label b {
+  background: #1b151e !important;
+  color: #aa9ddc !important;
+}
+html[data-theme="night"] .vx-step {
+  color: #aa9ddc !important;
+}
+html[data-theme="night"] .cs2-list li::before {
+  background: #1b151e !important;
+  color: #aa9ddc !important;
+}
+html[data-theme="night"] .mw-out {
+  border-top: 1px solid rgba(255, 255, 255, 0.11) !important;
+}
+html[data-theme="night"] .mw-out b {
+  color: #e9e4ec !important;
+}
+html[data-theme="night"] .mw-out span {
+  color: #c7b9ce !important;
+}
+html[data-theme="night"] .vx-brief-item.vx-outcome {
+  background: #19141b !important;
+}
+html[data-theme="night"] .vx-brief-item.vx-outcome h2 {
+  color: #aa9ddc !important;
+}
+html[data-theme="night"] :is(.v3-dev-frame,
+html[data-theme="night"] .v3-proto-phone,
+html[data-theme="night"] .oc-phone-shell,
+html[data-theme="night"] .vx-frame {
+  border: 1px solid #43354a !important;
+  background-color: #141016 !important;
+  box-shadow: 0 18px 40px -30px rgba(0, 0, 0, 0.512) !important;
+}
+html[data-theme="night"] .cs2-btn .btn-ico {
+  background: #141016 !important;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.088) !important;
+}
+/* family-ahc.css */
+html[data-theme="night"] .fa {
+  --fa-p-tint: #1b151e;
+  --fa-ok-tint: #1f1922;
+  --fa-ink: #e9e4ec;
+  --fa-line: rgba(255, 255, 255, 0.11);
+}
+html[data-theme="night"] .fa-context-col {
+  background: #141016 !important;
+}
+html[data-theme="night"] .fa-mini-flow li::before {
+  background: #141016 !important;
+}
+html[data-theme="night"] .fa-panel {
+  background: #141016 !important;
+  box-shadow: 0 30px 60px -44px rgba(0, 0, 0, 0.6) !important;
+}
+html[data-theme="night"] .fa-lab-tags i.x {
+  background: #292214 !important;
+  color: #fbdfaf !important;
+}
+html[data-theme="night"] .fa-table {
+  background: #141016 !important;
+}
+html[data-theme="night"] .fa-th span:first-child {
+  color: #dfa09d !important;
+}
+html[data-theme="night"] .fa-screen {
+  background: #19141c !important;
+}
+html[data-theme="night"] .fa-card {
+  background: #141016 !important;
+}
+html[data-theme="night"] .fa-card.fa-ok span {
+  color: #c4d5cc !important;
+}
+html[data-theme="night"] .fa-tick::after {
+  border-right: 0.8cqw solid #362b3b !important;
+  border-bottom: 0.8cqw solid #362b3b !important;
+}
+html[data-theme="night"] .fa-tl {
+  background: #141016 !important;
+}
+html[data-theme="night"] .fa-tl li::before {
+  border: 0.6cqw solid #493a50 !important;
+  background: #141016 !important;
+}
+html[data-theme="night"] .fa-tl li + li::after {
+  border-left: 0.5cqw dashed #493a50 !important;
+}
+html[data-theme="night"] .fa-nudge-ico {
+  background: #141016 !important;
+}
+html[data-theme="night"] .fa-scrim {
+  background: rgba(255, 255, 255, 0.16) !important;
+}
+html[data-theme="night"] .fa-sheet {
+  background: #141016 !important;
+}
+html[data-theme="night"] .fa-grab {
+  background: #29212d !important;
+}
+html[data-theme="night"] .fa-member {
+  background: #141016 !important;
+}
+html[data-theme="night"] .fa-member[aria-pressed="true"] {
+  background: #161218 !important;
+}
+html[data-theme="night"] .fa-check {
+  border: 0.5cqw solid #493a50 !important;
+}
+html[data-theme="night"] .fa-member[aria-pressed="true"] .fa-check::after {
+  border-right: 0.6cqw solid #362b3b !important;
+  border-bottom: 0.6cqw solid #362b3b !important;
+}
+html[data-theme="night"] .fa-add-new {
+  border: 0.4cqw dashed #493a50 !important;
+}
+html[data-theme="night"] .fa-av.a1 {
+  background: #5c2c3a !important;
+}
+html[data-theme="night"] .fa-faces .fa-av {
+  border: 0.6cqw solid #362b3b !important;
+}
+html[data-theme="night"] .fa-tiers span {
+  background: #141016 !important;
+}
+html[data-theme="night"] .fa-cta.off {
+  background: #262139 !important;
+}
+html[data-theme="night"] .fa-ring-card,
+html[data-theme="night"] .fa-funnel {
+  background: rgba(255, 255, 255, 0.025) !important;
+}
+html[data-theme="night"] .fa-range-bar {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+html[data-theme="night"] .fa-range-bar i {
+  background: #211a36 !important;
+}
+html[data-theme="night"] .fa-fcol {
+  background: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.035) 0 6px, transparent 6px 12px) !important;
+}
+html[data-theme="night"] .fa-fcol i {
+  background: linear-gradient(180deg, #211a36, #382c5b) !important;
+}
+html[data-theme="night"] .fa-save {
+  background: #141016 !important;
+}
+html[data-theme="night"] .fa-check.on {
+  background: #2f2533 !important;
+  border-color: #493a50 !important;
+}
+html[data-theme="night"] .fa-check.on::after {
+  border-right: 0.6cqw solid #362b3b !important;
+  border-bottom: 0.6cqw solid #362b3b !important;
+}
+html[data-theme="night"] .fa-rc-col {
+  background: #141016 !important;
+}
+html[data-theme="night"] .fa-rc-col.is-rejected {
+  background: #18131a !important;
+}
+html[data-theme="night"] .fa-rc-col.is-shipped {
+  background: #18131b !important;
+}
+html[data-theme="night"] .is-rejected .fa-rc-tag span {
+  background: #251312 !important;
+  color: #dfa09d !important;
+}
+html[data-theme="night"] .is-shipped .fa-rc-tag span {
+  background: #1f1922 !important;
+  color: #beebd6 !important;
+}
+html[data-theme="night"] .is-rejected .fa-rc-points li::before {
+  color: #dfa09d !important;
+}
+html[data-theme="night"] .is-shipped .fa-rc-points li::before {
+  color: #beebd6 !important;
+}
+html[data-theme="night"] .fa-scroller {
+  background: #1a151d !important;
+}
+html[data-theme="night"] .fa-sp-bg {
+  color: #e5e4ee !important;
+}
+html[data-theme="night"] .fa-sp-bg .fa-back {
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
+html[data-theme="night"] .fa-sp-hero {
+  color: #cdc6ed !important;
+}
+html[data-theme="night"] .fa-sp-sheet {
+  background: #1a151d !important;
+}
+html[data-theme="night"] .fa-sp-head {
+  background: #141016 !important;
+  border-bottom: 0.3cqw solid #3d3143 !important;
+}
+html[data-theme="night"] .fa-sp-ico {
+  background: radial-gradient(circle at 50% 32%, #231e3d 0 28%, transparent 30%), radial-gradient(ellipse at 50% 100%, #1b172f 0 45%, transparent 47%) !important;
+}
+html[data-theme="night"] .fa-sp-band {
+  background: linear-gradient(180deg, #13271b 0%, #18131a 70%, #141016 100%) !important;
+}
+html[data-theme="night"] .fa-sp-band-sub {
+  color: #c5b5cc !important;
+}
+html[data-theme="night"] .fa-sp .fa-tiers span {
+  background: #141016 !important;
+  border: 0.35cqw solid #3d3143 !important;
+  color: #e0d8e4 !important;
+}
+html[data-theme="night"] .fa-sp .fa-tiers span b {
+  color: #a295e5 !important;
+}
+html[data-theme="night"] .fa-sp .fa-tiers em {
+  color: #c1b1c9 !important;
+}
+html[data-theme="night"] .fa-sp .fa-tiers span.on {
+  border-color: #4f437c !important;
+  background: #161218 !important;
+}
+html[data-theme="night"] .fa-sp .fa-member {
+  background: #141016 !important;
+}
+html[data-theme="night"] .fa-sp .fa-member[aria-pressed="true"] {
+  border-color: #4f437c !important;
+  background: #141016 !important;
+}
+html[data-theme="night"] .fa-sp .fa-av {
+  box-shadow: 0 0 0 0.6cqw #362b3b, 0 0 0 0.9cqw #3d3143 !important;
+}
+html[data-theme="night"] .fa-sp-tools i {
+  border: 0.35cqw solid #5d4e32 !important;
+  background: #19141b linear-gradient(135deg, transparent 42%, #6a4bd6 42% 54%, transparent 54%) center / 50% 50% no-repeat !important;
+}
+html[data-theme="night"] .fa-sp-tools i.del {
+  background: #171219 linear-gradient(#e0574d, #e0574d) center / 36% 46% no-repeat !important;
+  border-color: #54322d !important;
+}
+html[data-theme="night"] .fa-sp-add {
+  color: #a897e2 !important;
+}
+html[data-theme="night"] .fa-sp .fa-cta.off {
+  background: #221d3d !important;
+}

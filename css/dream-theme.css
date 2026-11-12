@@ -1,0 +1,172 @@
+/* ==========================================================================
+   DREAM THEME — the one visual system for the whole site.
+   Loaded last on every page. It only re-skins: colour, type, header,
+   buttons. Layouts stay as they are.
+
+   Colour   warm cream paper · plum ink · pastel accents used with restraint
+   Type     Outfit (all headings) · Inter (body/UI) ·
+            accent = Outfit italic in pink (no third typeface)
+   ========================================================================== */
+
+@import url('../assets/fonts/outfit.css');
+
+:root {
+  /* paper + ink */
+  --color-black: #383430;          /* plum ink replaces pure black everywhere */
+  --color-ink: #383430;
+  --color-white: #ffffff;
+  --color-off-white: #fff8ef;
+  --color-grey-100: #f8efe8;
+  --color-grey-200: #efe3dc;
+  --color-grey-300: #d6d2ce;
+  --color-grey-400: #a39aa3;
+  --color-grey-500: #6e6170;
+  --color-grey-600: #504b45;
+  --color-border: rgba(56, 52, 48, 0.12);
+  --color-border-strong: rgba(56, 52, 48, 0.24);
+  --bg: #fff8ef;
+  --surface: #fffdf8;
+  --text: #383430;
+  --text-muted: #6e6170;
+  --text-faint: #a39aa3;
+
+  /* pastel accents */
+  --d-pink: #dbd7d2;
+  --d-pink-deep: #bcb5ae;
+  --d-lav: #d8d4d0;
+  --d-lav-deep: #b0a89e;
+  --d-sky: #dedbd7;
+  --d-butter: #d2cdc7;
+  --d-mint: #d8d4cf;
+  --d-grad: linear-gradient(135deg, #bcb5ae 0%, #bfb8b0 100%);
+
+  /* type */
+  --font-display: 'Outfit', 'Inter', system-ui, sans-serif;
+  --font-hand: 'Outfit', 'Inter', system-ui, sans-serif;   /* the accent is a style, not a third font */
+}
+
+body { color: var(--text); background: var(--bg); }
+::selection { background: var(--d-pink); color: var(--text); }
+a:focus-visible, button:focus-visible, input:focus-visible, [tabindex]:focus-visible { outline-color: var(--d-lav-deep); }
+
+/* ---------- one display face for every heading ---------- */
+h1, h2,
+.hero-name, .hero-statement, .section-title, .oc-title, .oc-h2, .nda-title,
+.project-title, .mw-title, .lock-modal-title, .decision-title,
+.v3-h1, .v3-display, .v3-h2, .v3-h3, .v3-statement, .v3-problem-statement,
+.pbx-d-title, .footer-name, .footer-line, .vx-section-head h2, .vx-screen h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+.hero-name { font-weight: 600; line-height: 1.05; letter-spacing: -0.045em; }
+.hero-statement { font-weight: 400; line-height: 1.25; letter-spacing: -0.02em; }
+.section-title { line-height: 1.12; }
+.oc-title { line-height: 1.12; }
+.nda-title { line-height: 1.15; }
+
+/* the signature accent: a handwritten phrase inside a heading */
+.section-title em, .oc-title em, .v3 .v3-h1 em, .v3 .v3-h2 em, .v3 .v3-display em, .hd-accent {
+  font-family: var(--font-display);
+  font-weight: inherit;
+  font-style: italic;
+  font-size: 1em;
+  letter-spacing: -0.02em;
+  color: var(--d-pink-deep);
+}
+
+/* butter highlighter for one key phrase */
+.hl { background: linear-gradient(transparent 60%, var(--d-butter) 60%, var(--d-butter) 92%, transparent 92%); padding-inline: 0.05em; }
+
+.eyebrow { letter-spacing: 0.14em; color: var(--text-muted); }
+
+/* ---------- header (the dreamy edition, everywhere) ---------- */
+.site-header {
+  background: color-mix(in srgb, #faf9f8 82%, transparent);
+  backdrop-filter: saturate(150%) blur(12px);
+  border-bottom: 1px solid rgba(188, 181, 174, 0.22);
+}
+.site-header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: linear-gradient(90deg, #dbd7d2, #d8d4d0 30%, #dedbd7 55%, #d8d4cf 78%, #d2cdc7);
+  opacity: 0.75;
+  pointer-events: none;
+}
+.nav-links a { color: var(--text-muted); }
+.nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--text); border-color: var(--d-pink-deep); }
+.nav-cta {
+  background: var(--d-grad);
+  background-size: 160% 100%;
+  color: #fff;
+  box-shadow: 0 10px 20px -12px rgba(188, 181, 174, 0.9);
+  transition: background-position 0.5s ease, box-shadow 0.2s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.nav-cta:hover { opacity: 1; background-position: 100% 0; transform: translateY(-1px); box-shadow: 0 14px 24px -12px rgba(185, 178, 169, 0.9); }
+.nav-contact { background: rgba(255, 255, 255, 0.75); border-color: var(--d-pink); color: var(--text); }
+.nav-contact:hover { border-color: var(--d-pink-deep); background: #fff; }
+.mobile-menu { background: linear-gradient(180deg, #faf9f8 0%, #f4f3f2 55%, #f4f3f2 100%); }
+.mobile-menu-cta { border-color: var(--d-pink-deep); }
+
+/* ---------- controls ---------- */
+.filter-chip { background: rgba(255, 255, 255, 0.6); border-color: var(--color-border-strong); color: var(--text); }
+.filter-chip:hover { border-color: var(--d-pink-deep); }
+.filter-chip[aria-pressed="true"] { background: var(--text); border-color: var(--text); color: #fff8ef; }
+.btn-diagnose { border-bottom-color: var(--d-pink-deep); }
+.btn-diagnose:hover { color: var(--d-pink-deep); }
+.text-link:hover, .cs-back:hover, .footer-links a:hover { color: var(--d-pink-deep); }
+.more-work-cta { color: var(--text); border-color: var(--d-pink-deep); }
+
+/* ---------- hero: a soft dreamy glow behind the name ---------- */
+.hero { isolation: isolate; }
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: -10% 0 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(38% 46% at 78% 30%, rgba(216, 212, 208, 0.42), transparent 70%),
+    radial-gradient(34% 40% at 64% 70%, rgba(219, 215, 210, 0.4), transparent 70%),
+    radial-gradient(30% 36% at 92% 62%, rgba(222, 219, 215, 0.45), transparent 70%);
+}
+.hero-bubble { --ink: #383430; }
+
+/* ---------- footer ---------- */
+.site-footer { border-top-color: var(--color-border); }
+.footer-line { font-weight: 400; }
+
+/* ---------- lock modal ---------- */
+.lock-modal-panel { background: #fffdf8; }
+.lock-modal-submit { background: var(--d-grad); color: #fff; border: 0; }
+
+/* ---------- case study (v3): same palette, same ink ---------- */
+.v3 {
+  --acc: #a69d93;
+  --acc-2: #b9b2a9;
+  --acc-tint: rgba(185, 178, 169, 0.1);
+  --ink: #383430;
+  --muted: #6e6170;
+  --line: rgba(56, 52, 48, 0.12);
+  --line-2: rgba(56, 52, 48, 0.22);
+  --paper: #fff8ef;
+  --tint: #f5f4f2;
+}
+.v3-dark { background: #312e2b; }
+.v3 em { font-style: normal; }
+
+/* old visit-clinic page + gift cards page accents */
+.vc { --vc-accent: #a69d93; --vc-tint: rgba(185, 178, 169, 0.1); }
+.mock-shell { border-color: #e8e6e4; }
+/* the case-study hero sweep uses the butter highlighter like everywhere else */
+.v3 .v3-h1 em { background-image: linear-gradient(transparent 62%, var(--d-butter) 62%, var(--d-butter) 90%, transparent 90%); }
+.pbx-hint b { font-style: italic; font-weight: 600; color: var(--d-pink-deep); }
+
+/* resume / case-study meta row: long links wrap instead of pushing the page sideways */
+.cs-meta > div { min-width: 0; }
+.cs-meta-value { overflow-wrap: anywhere; }
+@media (max-width: 560px) { .cs-meta { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-5) var(--sp-4); } }

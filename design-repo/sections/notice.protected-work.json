@@ -1,0 +1,133 @@
+{
+  "id": "notice.protected-work",
+  "title": "Protected-work notice",
+  "description": "Single compact notice for a project under NDA: heading, two short lines, a decorative redacted document that stays redacted under the pointer, an ask block and a request-walkthrough CTA.",
+  "source": {
+    "id": "src.section-nda-container",
+    "file": "nda.html",
+    "tag": "section",
+    "selector": "section.nda.container",
+    "lines": "48-161",
+    "citation": "nda.html:48-161",
+    "observedIn": [
+      "nda.html:48"
+    ]
+  },
+  "semantic": {
+    "id": "notice.protected-work",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "redacted-sheet"
+  ],
+  "content": {
+    "fields": {
+      "backLink": {
+        "type": "link",
+        "required": false,
+        "maxWords": 3,
+        "evidence": {
+          "selector": ".cs-back",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "title": {
+        "type": "text",
+        "required": true,
+        "maxWords": 5,
+        "evidence": {
+          "selector": ".nda-title",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "body": {
+        "type": "textList",
+        "required": true,
+        "maxWords": 15,
+        "maxItems": 2,
+        "evidence": {
+          "selector": ".nda-body p",
+          "observedElements": 2,
+          "observedBlocks": 1
+        }
+      },
+      "artCaption": {
+        "type": "text",
+        "required": false,
+        "maxWords": 9,
+        "evidence": {
+          "selector": ".nda-art-caption",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "askLead": {
+        "type": "text",
+        "required": true,
+        "maxWords": 4,
+        "evidence": {
+          "selector": ".nda-ask-lead",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "askBody": {
+        "type": "text",
+        "required": true,
+        "maxWords": 16,
+        "evidence": {
+          "selector": ".nda-ask-body",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "cta": {
+        "type": "link",
+        "required": true,
+        "maxWords": 5,
+        "evidence": {
+          "selector": ".nda-btn",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "note": {
+        "type": "text",
+        "required": false,
+        "maxWords": 3,
+        "evidence": {
+          "selector": ".nda-note",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      }
+    }
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.notice"
+    ]
+  },
+  "motion": {
+    "allowedPatterns": [
+      "reveal-on-scroll",
+      "none"
+    ],
+    "default": "none"
+  },
+  "responsive": [],
+  "responsiveNote": "No breakpoint rule targets the notice; it is a single column at every width.",
+  "assetRoles": [],
+  "generatedAssetRoles": [],
+  "components": [
+    "primitive.button",
+    "primitive.text-link"
+  ],
+  "tokens": [
+    "font.family.display",
+    "color.accent.primary"
+  ]
+}

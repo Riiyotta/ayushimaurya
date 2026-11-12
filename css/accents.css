@@ -1,0 +1,46 @@
+/* ==========================================================================
+   ACCENTS — pastel pink, yellow and purple, used on purpose (loaded last)
+
+   Where colour lives
+     · the diary and its pages ............ full colour (cover, tabs, tickets,
+                                             tapes, stickers, accent words)
+     · the personal section around it ..... soft pastel skies + stickers
+                                             (text there stays charcoal)
+     · professional pages ................. neutral, with three small touches:
+                                             yellow highlighter, pastel card
+                                             tabs in the work box, pink selection
+   Buttons and body text are always charcoal / neutral (see neutral.css).
+   ========================================================================== */
+
+:root {
+  --a-pink: #f2b6c8;
+  --a-pink-deep: #d9728f;
+  --a-yellow: #ffe59a;
+  --a-purple: #c9b8f0;
+  --a-purple-deep: #7d64cf;
+}
+
+/* ---------- small touches on the professional pages ---------- */
+::selection { background: #f7d3de; color: #2c2928; }
+
+/* no marker-pen highlight on the hero line */
+.hl, .hero-statement .hl {
+  background: none !important;
+  background-image: none !important;
+}
+
+/* work box: the coloured band is the card's tab; the labels stay neutral */
+#work .pbx-card-k, .pbx-d-stat em { color: #8a837d !important; }
+
+/* ---------- the diary: full colour ---------- */
+.lw { --pink: #f7b6c8; --pink-deep: #e7839f; --lav: #c9b8f0; --lav-deep: #9d86dc; }
+#lw-diary .lw-h em,
+#lw-diary .lw-copy .lw-hand-line,
+#lw-diary .dy-run span:last-child { color: var(--accent, var(--a-pink-deep)) !important; }
+#lw-diary .dy-cover-plate em { color: var(--a-pink-deep) !important; }
+#lw-diary .dy-cover-sub { color: var(--a-purple-deep) !important; }
+#lw-diary .lw-diary-label i { color: var(--a-pink-deep) !important; }
+#lw-diary .dy-end-note { color: #6e6170 !important; }
+#lw-diary .lw-receipt .thanks { color: var(--a-pink-deep) !important; }
+/* little icons in the personal section keep their colour (icons, not text) */
+.lw-diary-label i { color: var(--a-pink-deep) !important; }

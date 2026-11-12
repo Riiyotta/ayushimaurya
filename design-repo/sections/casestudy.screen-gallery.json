@@ -1,0 +1,135 @@
+{
+  "id": "casestudy.screen-gallery",
+  "title": "Screen gallery",
+  "description": "A short head (title + one line) and a row of phone screens, each with a step label, a title and 3-4 design-rationale bullets; screens zoom into a lightbox.",
+  "source": {
+    "id": "src.section-container",
+    "file": "visit-clinic-gift-cards.html",
+    "tag": "section",
+    "selector": "section.container",
+    "lines": "86-142",
+    "citation": "visit-clinic-gift-cards.html:86-142",
+    "observedIn": [
+      "visit-clinic-gift-cards.html:86"
+    ]
+  },
+  "semantic": {
+    "id": "casestudy.screen-gallery",
+    "category": "MEDIA"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "phone-trio"
+  ],
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 3,
+        "evidence": {
+          "selector": ".vx-section-head h2",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "intro": {
+        "type": "text",
+        "required": false,
+        "maxWords": 19,
+        "evidence": {
+          "selector": ".vx-section-head p",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "screens": {
+        "type": "list",
+        "required": true,
+        "maxItems": 3,
+        "evidence": {
+          "selector": ".vx-screen",
+          "observedElements": 3,
+          "observedBlocks": 1
+        },
+        "item": {
+          "step": {
+            "type": "text",
+            "required": true,
+            "maxWords": 2,
+            "evidence": {
+              "selector": ".vx-step",
+              "observedElements": 3,
+              "observedBlocks": 3
+            }
+          },
+          "title": {
+            "type": "text",
+            "required": true,
+            "maxWords": 4,
+            "evidence": {
+              "selector": "h3",
+              "observedElements": 3,
+              "observedBlocks": 3
+            }
+          },
+          "points": {
+            "type": "textList",
+            "required": true,
+            "maxWords": 18,
+            "maxItems": 4,
+            "evidence": {
+              "selector": "li",
+              "observedElements": 12,
+              "observedBlocks": 3
+            }
+          },
+          "image": {
+            "type": "asset",
+            "required": true,
+            "maxWords": 24,
+            "evidence": {
+              "selector": "img",
+              "attr": "alt",
+              "observedElements": 3,
+              "observedBlocks": 3
+            }
+          }
+        }
+      }
+    }
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.case-study-brief"
+    ]
+  },
+  "motion": {
+    "allowedPatterns": [
+      "reveal-on-scroll"
+    ],
+    "default": "reveal-on-scroll"
+  },
+  "responsive": [
+    {
+      "breakpoint": "bp.content",
+      "query": "(max-width: 900px)",
+      "change": "stack-columns",
+      "cite": "css/visuals.css:162-167"
+    }
+  ],
+  "assetRoles": [
+    "product.case-study-screen"
+  ],
+  "generatedAssetRoles": [
+    "product.generated-visual"
+  ],
+  "components": [
+    "primitive.device-frame",
+    "primitive.image-frame"
+  ],
+  "tokens": [
+    "color.surface.raised",
+    "radius.card"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "utility.reading-progress",
+  "title": "Reading progress bar",
+  "description": "Thin fixed bar at the top of the story page that grows with scroll progress.",
+  "source": {
+    "id": "src.bar-progress",
+    "file": "offline-doctor-consultation.html",
+    "tag": "div",
+    "selector": "div.bar-progress",
+    "lines": "18-18",
+    "citation": "offline-doctor-consultation.html:18-18",
+    "observedIn": [
+      "offline-doctor-consultation.html:18"
+    ]
+  },
+  "semantic": {
+    "id": "utility.reading-progress",
+    "category": "UTILITY"
+  },
+  "retrievalEligible": false,
+  "retrievalReason": "Fixed progress indicator on the long-form story page; decorative runtime UI with no content.",
+  "variants": [
+    "top-bar"
+  ],
+  "content": {
+    "fields": {}
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.case-study-chaptered"
+    ],
+    "overlayOnly": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none"
+  },
+  "responsive": [],
+  "responsiveNote": "Same at every width.",
+  "assetRoles": [],
+  "generatedAssetRoles": [],
+  "components": [],
+  "tokens": [
+    "color.accent.primary"
+  ]
+}

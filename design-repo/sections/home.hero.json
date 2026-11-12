@@ -1,0 +1,129 @@
+{
+  "id": "home.hero",
+  "title": "Home name hero",
+  "description": "Page opener: very large display-font name, role, a one-line statement with a highlighted phrase, a support line and one anchor CTA over an interactive tick-mark canvas.",
+  "source": {
+    "id": "src.section-hero-container",
+    "file": "index.html",
+    "tag": "section",
+    "selector": "section.hero.container",
+    "lines": "68-84",
+    "citation": "index.html:68-84",
+    "observedIn": [
+      "index.html:68"
+    ]
+  },
+  "semantic": {
+    "id": "home.hero",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "name-field"
+  ],
+  "content": {
+    "fields": {
+      "name": {
+        "type": "text",
+        "required": true,
+        "maxWords": 2,
+        "evidence": {
+          "selector": ".hero-name",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "role": {
+        "type": "text",
+        "required": true,
+        "maxWords": 2,
+        "evidence": {
+          "selector": ".hero-role",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "statement": {
+        "type": "text",
+        "required": true,
+        "maxWords": 13,
+        "evidence": {
+          "selector": ".hero-statement",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "support": {
+        "type": "text",
+        "required": false,
+        "maxWords": 8,
+        "evidence": {
+          "selector": ".hero-support",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "cta": {
+        "type": "link",
+        "required": true,
+        "maxWords": 4,
+        "evidence": {
+          "selector": ".hero-cta a",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "backgroundImage": {
+        "type": "asset",
+        "required": false,
+        "maxWords": 0,
+        "evidence": {
+          "jsTemplate": "js/hero.js:314"
+        }
+      }
+    }
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.home"
+    ],
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "rise-in-on-load",
+      "interactive-canvas-field"
+    ],
+    "default": "rise-in-on-load"
+  },
+  "responsive": [
+    {
+      "breakpoint": "bp.mobile",
+      "query": "(max-width: 640px)",
+      "change": "resize-type",
+      "cite": "css/styles.css:376-380"
+    },
+    {
+      "breakpoint": "bp.content",
+      "query": "(min-width: 900px)",
+      "change": "reflow-spacing",
+      "cite": "css/styles.css:1344-1346"
+    }
+  ],
+  "assetRoles": [
+    "decor.hero-reveal-image"
+  ],
+  "generatedAssetRoles": [
+    "illustration.generated-decor"
+  ],
+  "components": [
+    "primitive.button",
+    "primitive.heading-display"
+  ],
+  "tokens": [
+    "font.family.display",
+    "font.size.hero",
+    "color.text.primary",
+    "color.accent.primary"
+  ]
+}

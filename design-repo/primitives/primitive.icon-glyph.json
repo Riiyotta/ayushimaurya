@@ -1,0 +1,25 @@
+{
+  "id": "primitive.icon-glyph",
+  "kind": "primitive",
+  "description": "Generic inline vector glyph from the page's symbol sprite (star, heart, sparkle, flower, note, cloud, moon).",
+  "props": {
+    "glyph": [
+      "star",
+      "heart",
+      "sparkle",
+      "flower",
+      "note",
+      "cloud",
+      "moon"
+    ],
+    "colorToken": "token"
+  },
+  "tokens": [
+    "color.decor.pink",
+    "color.decor.yellow",
+    "color.decor.purple"
+  ],
+  "cites": [
+    "index.html:37"
+  ]
+}

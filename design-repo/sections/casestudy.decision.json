@@ -1,0 +1,252 @@
+{
+  "id": "casestudy.decision",
+  "title": "Key decision(s)",
+  "description": "Design decisions: either one decision per section (numbered bet: heading, reasoning, screens, result) or a list of decision cards (before, decision, why, result).",
+  "source": {
+    "id": "src.section-v3-section-v3-wrap-v3-bet",
+    "file": "family-ahc.html",
+    "tag": "section",
+    "selector": "section.v3-section.v3-wrap.v3-bet",
+    "lines": "200-256",
+    "citation": "family-ahc.html:200-256",
+    "observedIn": [
+      "family-ahc.html:200",
+      "offline-doctor-consultation.html:375",
+      "visit-clinic.html:331",
+      "visit-clinic.html:382",
+      "visit-clinic.html:446"
+    ]
+  },
+  "semantic": {
+    "id": "casestudy.decision",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "single",
+    "list"
+  ],
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 8,
+        "evidence": {
+          "selector": "h2, h3.v3-h2",
+          "observedElements": 5,
+          "observedBlocks": 5
+        }
+      },
+      "lead": {
+        "type": "text",
+        "required": false,
+        "maxWords": 35,
+        "evidence": {
+          "selector": ".sec-head .lead",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "number": {
+        "type": "text",
+        "required": false,
+        "requiredForVariants": [
+          "single"
+        ],
+        "maxWords": 2,
+        "evidence": {
+          "selector": ".v3-bet-num",
+          "observedElements": 4,
+          "observedBlocks": 4
+        }
+      },
+      "steps": {
+        "type": "list",
+        "required": false,
+        "requiredForVariants": [
+          "single"
+        ],
+        "maxItems": 4,
+        "evidence": {
+          "selector": ".v3-evo li",
+          "observedElements": 8,
+          "observedBlocks": 2
+        },
+        "item": {
+          "label": {
+            "type": "text",
+            "required": true,
+            "maxWords": 2,
+            "evidence": {
+              "selector": ".v3-k",
+              "observedElements": 8,
+              "observedBlocks": 8
+            }
+          },
+          "title": {
+            "type": "text",
+            "required": true,
+            "maxWords": 5,
+            "evidence": {
+              "selector": "h4",
+              "observedElements": 8,
+              "observedBlocks": 8
+            }
+          },
+          "text": {
+            "type": "text",
+            "required": true,
+            "maxWords": 32,
+            "evidence": {
+              "selector": "p",
+              "observedElements": 8,
+              "observedBlocks": 8
+            }
+          }
+        }
+      },
+      "decisions": {
+        "type": "list",
+        "required": false,
+        "requiredForVariants": [
+          "list"
+        ],
+        "maxItems": 6,
+        "evidence": {
+          "selector": ".ds",
+          "observedElements": 6,
+          "observedBlocks": 1
+        },
+        "item": {
+          "number": {
+            "type": "text",
+            "required": true,
+            "maxWords": 1,
+            "evidence": {
+              "selector": ".ds-n",
+              "observedElements": 6,
+              "observedBlocks": 6
+            }
+          },
+          "title": {
+            "type": "text",
+            "required": true,
+            "maxWords": 10,
+            "evidence": {
+              "selector": ".ds-title",
+              "observedElements": 6,
+              "observedBlocks": 6
+            }
+          },
+          "hook": {
+            "type": "text",
+            "required": false,
+            "maxWords": 16,
+            "evidence": {
+              "selector": ".ds-hook",
+              "observedElements": 6,
+              "observedBlocks": 6
+            }
+          },
+          "rows": {
+            "type": "meta",
+            "required": true,
+            "maxItems": 3,
+            "evidence": {
+              "selector": ".ds-steps li",
+              "observedElements": 18,
+              "observedBlocks": 6
+            },
+            "item": {
+              "term": {
+                "type": "text",
+                "required": true,
+                "maxWords": 1,
+                "evidence": {
+                  "selector": ".label",
+                  "observedElements": 18,
+                  "observedBlocks": 18
+                }
+              },
+              "value": {
+                "type": "text",
+                "required": true,
+                "maxWords": 64,
+                "evidence": {
+                  "selector": "p",
+                  "observedElements": 18,
+                  "observedBlocks": 18
+                }
+              }
+            }
+          },
+          "result": {
+            "type": "text",
+            "required": false,
+            "maxWords": 34,
+            "evidence": {
+              "selector": ".ds-result",
+              "observedElements": 6,
+              "observedBlocks": 6
+            }
+          }
+        }
+      },
+      "figures": {
+        "type": "assets",
+        "required": false,
+        "maxWords": 29,
+        "maxItems": 18,
+        "evidence": {
+          "selector": "img",
+          "attr": "alt",
+          "observedElements": 26,
+          "observedBlocks": 4
+        }
+      }
+    }
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.case-study-chaptered"
+    ]
+  },
+  "motion": {
+    "allowedPatterns": [
+      "reveal-on-scroll",
+      "card-flip"
+    ],
+    "default": "reveal-on-scroll"
+  },
+  "responsive": [
+    {
+      "breakpoint": "bp.wide",
+      "query": "(max-width: 1100px)",
+      "change": "reduce-columns",
+      "cite": "css/oc-story.css:573"
+    },
+    {
+      "breakpoint": "bp.nav",
+      "query": "(max-width: 860px)",
+      "change": "stack-columns",
+      "cite": "css/oc-story.css:591-594"
+    }
+  ],
+  "assetRoles": [
+    "product.case-study-screen",
+    "product.case-study-video"
+  ],
+  "generatedAssetRoles": [
+    "product.generated-visual"
+  ],
+  "components": [
+    "component.decision-card",
+    "primitive.device-frame"
+  ],
+  "tokens": [
+    "color.surface.raised",
+    "color.status.ok",
+    "color.accent.primary"
+  ]
+}

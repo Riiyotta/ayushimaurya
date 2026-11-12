@@ -1,0 +1,220 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "reference",
+  "template": "template.resume",
+  "route": "resume.html",
+  "theme": "night",
+  "meta": {
+    "title": "Resume — Ayushi Maurya",
+    "description": "Resume of Ayushi Maurya, Product Designer with 5+ years of experience in B2B2C healthcare and consumer e-commerce."
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "site-nav",
+      "content": {
+        "brandMark": {
+          "role": "brand.wordmark-logo",
+          "src": "assets/logo-ayushi-maurya-transparent.png",
+          "mediaType": "image",
+          "alt": "Ayushi Maurya"
+        },
+        "navLinks": [
+          {
+            "label": "My work",
+            "href": "projects.html",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "Resume",
+            "href": "resume.html",
+            "role": "link.internal-route"
+          }
+        ],
+        "themeToggle": true
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "section": "resume.header",
+      "variant": "contact-meta",
+      "content": {
+        "kicker": "Resume",
+        "name": "Ayushi Maurya",
+        "role": "Product Designer",
+        "contacts": [
+          {
+            "term": "Email",
+            "value": "ayushimaurya108@gmail.com"
+          },
+          {
+            "term": "LinkedIn",
+            "value": "ayushi-maurya"
+          },
+          {
+            "term": "Portfolio",
+            "value": "ayushimaurya.vercel.app/projects.html"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "section": "resume.entry-group",
+      "variant": "summary",
+      "content": {
+        "label": "Professional Summary",
+        "paragraphs": [
+          "Product Designer with 5+ years of experience in B2B2C healthcare and consumer e-commerce. Solves complex UX problems end-to-end, from workflow discovery to high-fidelity design. Turns complex workflows into clear, easy-to-use experiences across web, iOS and Android, using data to guide design decisions. Uses AI tools, including Claude, to speed up prototyping and design exploration."
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "section": "resume.entry-group",
+      "variant": "experience",
+      "content": {
+        "label": "Experience",
+        "entries": [
+          {
+            "title": "Product Designer",
+            "organisation": "Visit Health — Employee Healthcare Platform",
+            "dates": "June 2022 – Present"
+          },
+          {
+            "title": "Designer",
+            "organisation": "Matra Skincare Essentials — E-commerce & Consumer Brand",
+            "dates": "March 2021 – June 2022"
+          }
+        ],
+        "bullets": [
+          "Own end-to-end UI/UX design for Visit Health's B2B2C healthcare platform across web, iOS and Android.",
+          "Simplify complex healthcare and booking workflows into clear user flows that cover edge cases and different user needs.",
+          "Identify UX friction points across enterprise workflows and redesign flows to reduce drop-offs and improve task completion.",
+          "Build high-fidelity prototypes and use funnel analysis to validate design decisions before handoff.",
+          "Partner with PMs and engineers on scope and delivery; mentor junior designers and lead design critiques.",
+          "Designed the website UI and led user and competitor research to improve product discovery and information hierarchy.",
+          "Applied research insights across the e-commerce website and other digital touchpoints to support customer engagement."
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "section": "resume.entry-group",
+      "variant": "skills",
+      "content": {
+        "label": "Skills"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "section": "resume.entry-group",
+      "variant": "education",
+      "content": {
+        "label": "Education",
+        "paragraphs": [
+          "Bachelor of Science — University of Delhi"
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "section": "resume.entry-group",
+      "variant": "certifications",
+      "content": {
+        "label": "Certifications / Programs",
+        "bullets": [
+          "UX Mentorship Program — Growth School",
+          "Design Thinking & Mobile UI Design — Interaction Design Foundation",
+          "Graphics & UI/UX Design — Dice Academy, Panchsheel"
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "section": "conversion.closing",
+      "variant": "cta-band",
+      "content": {
+        "kicker": "See it in practice",
+        "heading": "See the designs behind these projects.",
+        "ctas": [
+          {
+            "label": "View my work",
+            "href": "https://ayushimaurya.vercel.app/projects.html",
+            "role": "link.source-url"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "reveal-on-scroll",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "full",
+      "content": {
+        "name": "Ayushi Maurya",
+        "role": "Product Designer",
+        "line": "Let's work together. I'd love to hear from you.",
+        "links": [
+          {
+            "label": "Email",
+            "href": "mailto:ayushimaurya108@gmail.com",
+            "role": "link.source-url"
+          },
+          {
+            "label": "LinkedIn",
+            "href": "https://www.linkedin.com/in/ayushi-maurya-7174b71ab/",
+            "role": "link.source-url"
+          },
+          {
+            "label": "Resume",
+            "href": "resume.html",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "More work",
+            "href": "projects.html",
+            "role": "link.internal-route"
+          }
+        ],
+        "copyright": "© Ayushi Maurya"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    }
+  ]
+}

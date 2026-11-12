@@ -1,0 +1,174 @@
+/* ==========================================================================
+   CTA SYSTEM — one button style everywhere (loaded last on every page)
+
+   Primary    solid purple pill      the one main action in a view
+   Secondary  purple-outline pill    the alternative / going back
+   Tertiary   purple text + arrow    a quiet "next" step (no fill, no outline)
+   Text link  charcoal + purple underline, for inline links only
+   Sizes      default 48px tall; small (header, dialogs) 40px tall
+   Every button: same radius, font, weight, padding, arrow spacing, hover,
+   focus and pressed states. No lifts, bounces, gradients or shadows.
+   ========================================================================== */
+
+:root {
+  --cta-h: 48px;
+  --cta-h-sm: 40px;
+  --cta-px: 22px;
+  --cta-px-sm: 16px;
+  --cta-font: 600 15px/1 'Inter', system-ui, -apple-system, sans-serif;
+  --cta-font-sm: 600 14px/1 'Inter', system-ui, -apple-system, sans-serif;
+  --cta-radius: 999px;
+  --cta-border: 1.5px;
+  --cta-ease: 0.2s ease;
+}
+
+/* ---------- shared geometry ---------- */
+html .nav-cta, html .nav-contact, html .mobile-menu-cta, html .lock-modal-submit,
+html .cs2-btn, html .pbx-d-cta, html .pbx-more-btn, html .dy-cover-open, html .lw-dreams-btn,
+html .lw-dreams-ctas a, html .lw-dreams-ctas button, html .nda-btn, html .nda-cta, html .v3-ext,
+html .cs-nav-footer .text-link, html .v3-end-links .text-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  min-height: var(--cta-h) !important;
+  height: auto !important;
+  padding: 0 var(--cta-px) !important;
+  border-width: var(--cta-border) !important;
+  border-style: solid !important;
+  border-radius: var(--cta-radius) !important;
+  font: var(--cta-font) !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+  white-space: nowrap;
+  box-shadow: none !important;
+  transform: none !important;
+  cursor: pointer;
+  transition: background-color var(--cta-ease), border-color var(--cta-ease), color var(--cta-ease) !important;
+}
+/* small: header + dialogs */
+html .nav-cta, html .nav-contact, html .lock-modal-submit {
+  min-height: var(--cta-h-sm) !important;
+  padding: 0 var(--cta-px-sm) !important;
+  font: var(--cta-font-sm) !important;
+}
+
+/* ---------- primary ---------- */
+html .nav-cta, html .mobile-menu-cta, html .lock-modal-submit, html .cs2-btn.solid, html .pbx-d-cta, html .dy-cover-open,
+html .lw-dreams-btn, html .lw-dreams-ctas .solid, html .nda-btn, html .nda-cta,
+html .cs-nav-footer .text-link:last-child, html .v3-end-links .text-link:last-child {
+  background: var(--p, #6a4bd6) !important;
+  background-image: none !important;
+  border-color: var(--p, #6a4bd6) !important;
+  color: #ffffff !important;
+}
+html .nav-cta:hover, html .mobile-menu-cta:hover, html .lock-modal-submit:hover, html .cs2-btn.solid:hover, html .pbx-d-cta:hover,
+html .dy-cover-open:hover, html .lw-dreams-btn:hover, html .lw-dreams-ctas .solid:hover, html .nda-btn:hover, html .nda-cta:hover,
+html .cs-nav-footer .text-link:last-child:hover, html .v3-end-links .text-link:last-child:hover {
+  background: var(--p-hover, #5436bd) !important;
+  border-color: var(--p-hover, #5436bd) !important;
+  color: #ffffff !important;
+}
+
+/* ---------- secondary ---------- */
+html .nav-contact, html .cs2-btn.ghost, html .pbx-more-btn, html .lw-dreams-ctas .ghost, html .v3-ext,
+html .cs-nav-footer .text-link:first-child:not(:last-child), html .v3-end-links .text-link:first-child:not(:last-child) {
+  background: transparent !important;
+  background-image: none !important;
+  border-color: var(--p-line, rgba(106, 75, 214, 0.38)) !important;
+  color: var(--p-ink, #5a3ec4) !important;
+}
+html .nav-contact:hover, html .cs2-btn.ghost:hover, html .pbx-more-btn:hover, html .lw-dreams-ctas .ghost:hover, html .v3-ext:hover,
+html .cs-nav-footer .text-link:first-child:not(:last-child):hover, html .v3-end-links .text-link:first-child:not(:last-child):hover {
+  background: var(--p-tint, #efeafd) !important;
+  border-color: var(--p, #6a4bd6) !important;
+  color: var(--p-ink, #5a3ec4) !important;
+}
+
+/* ---------- pressed + focus (all) ---------- */
+html .nav-cta:active, html .nav-contact:active, html .cs2-btn:active, html .pbx-d-cta:active, html .pbx-more-btn:active,
+html .dy-cover-open:active, html .lw-dreams-btn:active, html .lw-dreams-ctas a:active, html .lw-dreams-ctas button:active,
+html .nda-btn:active, html .v3-ext:active, html .lock-modal-submit:active,
+html .cs-nav-footer .text-link:active, html .v3-end-links .text-link:active { transform: translateY(1px) !important; }
+html .nav-cta:focus-visible, html .nav-contact:focus-visible, html .cs2-btn:focus-visible, html .pbx-d-cta:focus-visible,
+html .pbx-more-btn:focus-visible, html .dy-cover-open:focus-visible, html .lw-dreams-btn:focus-visible,
+html .lw-dreams-ctas a:focus-visible, html .lw-dreams-ctas button:focus-visible, html .nda-btn:focus-visible,
+html .v3-ext:focus-visible, html .lock-modal-submit:focus-visible,
+html .cs-nav-footer .text-link:focus-visible, html .v3-end-links .text-link:focus-visible {
+  outline: 2px solid var(--p, #6a4bd6) !important;
+  outline-offset: 3px !important;
+}
+
+/* arrows inside buttons: same size, nudge on hover */
+html .nav-cta .arrow, html .cs2-btn span[aria-hidden], html .pbx-d-cta .arrow, html .pbx-more-btn .arrow,
+html .dy-cover-open span[aria-hidden], html .lw-dreams-btn span[aria-hidden], html .nda-btn span[aria-hidden] {
+  font-size: 1em; line-height: 1; transition: transform var(--cta-ease); }
+html .nav-cta:hover .arrow, html .cs2-btn:hover span[aria-hidden], html .pbx-d-cta:hover .arrow, html .pbx-more-btn:hover .arrow,
+html .dy-cover-open:hover span[aria-hidden], html .lw-dreams-btn:hover span[aria-hidden], html .nda-btn:hover span[aria-hidden] {
+  transform: translateX(3px);
+}
+html .lw-dreams-btn svg { width: 16px; height: 16px; }
+
+/* button rows: same spacing everywhere */
+html .cs2-ctas, html .cs-nav-footer, html .v3-end-links, html .lw-dreams-ctas, html .nda-ctas { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+html .cs-nav-footer, html .v3-end-links { justify-content: flex-start; }
+html .lock-modal-submit { width: 100%; }
+
+/* on dark grounds (the dreams night sky): secondary turns ivory, primary stays purple */
+html .lw-dreams-modal .lw-dreams-ctas .ghost, html .lw-dreams-modal .lw-dreams-ctas button.ghost {
+  color: #ece7df !important;
+  border-color: rgba(236, 231, 223, 0.45) !important;
+  background: transparent !important;
+}
+html .lw-dreams-modal .lw-dreams-ctas .ghost:hover { background: rgba(236, 231, 223, 0.1) !important; border-color: #ece7df !important; }
+html .lw-dreams-modal .lw-dreams-ctas .solid { background: var(--p, #6a4bd6) !important; border-color: var(--p, #6a4bd6) !important; color: #fff !important; }
+
+/* the diary invitation keeps its icon + two-line label, in the secondary style */
+html .lw-invite {
+  border-radius: var(--cta-radius) !important;
+  background: transparent !important;
+  box-shadow: inset 0 0 0 var(--cta-border) var(--p-line, rgba(106, 75, 214, 0.38)) !important;
+  color: var(--p-ink, #5a3ec4) !important;
+  transform: none !important;
+  transition: background-color var(--cta-ease), box-shadow var(--cta-ease) !important;
+}
+html .lw-invite:hover { background: var(--p-tint, #efeafd) !important; box-shadow: inset 0 0 0 var(--cta-border) var(--p, #6a4bd6) !important; }
+html .lw-invite .lw-invite-text { font: var(--cta-font) !important; color: var(--p-ink, #5a3ec4) !important; }
+html .lw-invite .lw-invite-text small { font: 500 12px/1.3 'Inter', system-ui, sans-serif !important; color: #6e6870 !important; }
+
+/* ---------- text links (inline, never buttons) ---------- */
+html .text-link, html .btn-diagnose, html .cs-back {
+  font-weight: 600;
+  color: var(--n-ink, #2c2928);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 6px;
+  text-decoration-color: var(--p-line, rgba(106, 75, 214, 0.38));
+}
+html .btn-diagnose { border-bottom: 0 !important; padding-bottom: 0 !important; }
+html .text-link:hover, html .btn-diagnose:hover, html .cs-back:hover { color: var(--p-ink, #5a3ec4) !important; text-decoration-color: var(--p, #6a4bd6); }
+
+@media (max-width: 560px) {
+  html .cs2-ctas a, html .cs-nav-footer .text-link, html .v3-end-links .text-link, html .lw-dreams-ctas a, html .lw-dreams-ctas button { flex: 1 1 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html [class*="cta"], html [class*="btn"] { transition: none !important; }
+}
+
+/* the diary cover button is absolutely placed; centre it without transforms (the shared style removes them) */
+html .dy-cover-open { left: 0 !important; right: 0 !important; margin-inline: auto !important; width: max-content !important; }
+
+/* ---------- tertiary: purple text + arrow, no fill or outline ---------- */
+html .cs2-btn.tertiary {
+  padding: 0 4px !important;
+  background: transparent !important;
+  border-color: transparent !important;
+  color: var(--p-ink, #5a3ec4) !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 1.5px !important;
+  text-underline-offset: 6px !important;
+  text-decoration-color: var(--p-line, rgba(106, 75, 214, 0.38)) !important;
+}
+html .cs2-btn.tertiary:hover { color: var(--p-hover, #5436bd) !important; text-decoration-color: var(--p, #6a4bd6) !important; }
+html .cs2-btn.tertiary span[aria-hidden] { text-decoration: none; display: inline-block; }

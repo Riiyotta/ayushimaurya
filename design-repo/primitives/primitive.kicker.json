@@ -1,0 +1,16 @@
+{
+  "id": "primitive.kicker",
+  "kind": "primitive",
+  "description": "Small uppercase or mono label above a heading (domain, status, section).",
+  "props": {
+    "text": "text",
+    "live": "boolean"
+  },
+  "tokens": [
+    "font.size.xs",
+    "color.text.secondary"
+  ],
+  "cites": [
+    "hybrid-diagnostic.html:56"
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "id": "casestudy.chapter-nav",
+  "title": "Case-study chapter nav",
+  "description": "Sticky row of anchor links to the case-study chapters; the chapter in view is highlighted.",
+  "source": {
+    "id": "src.nav-v3-nav",
+    "file": "family-ahc.html",
+    "tag": "nav",
+    "selector": "nav.v3-nav",
+    "lines": "94-101",
+    "citation": "family-ahc.html:94-101",
+    "observedIn": [
+      "family-ahc.html:94",
+      "hybrid-diagnostic.html:74",
+      "visit-clinic.html:111"
+    ]
+  },
+  "semantic": {
+    "id": "casestudy.chapter-nav",
+    "category": "NAVIGATION"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "anchor-list",
+    "sticky-pills"
+  ],
+  "content": {
+    "fields": {
+      "links": {
+        "type": "links",
+        "required": true,
+        "maxWords": 3,
+        "maxItems": 6,
+        "evidence": {
+          "selector": "a",
+          "observedElements": 18,
+          "observedBlocks": 3
+        }
+      }
+    }
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.case-study-chaptered"
+    ],
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "sticky-chapter-nav",
+      "none"
+    ],
+    "default": "sticky-chapter-nav"
+  },
+  "responsive": [
+    {
+      "breakpoint": "bp.mobile",
+      "query": "(max-width: 640px)",
+      "change": "compact-controls",
+      "cite": "css/visit-clinic-v3.css:481-489"
+    },
+    {
+      "breakpoint": "bp.mobile",
+      "query": "(max-width: 640px)",
+      "change": "compact-controls",
+      "cite": "css/case.css:95-102"
+    }
+  ],
+  "assetRoles": [],
+  "generatedAssetRoles": [],
+  "components": [
+    "primitive.chip",
+    "primitive.text-link"
+  ],
+  "tokens": [
+    "color.surface.page",
+    "color.accent.tint"
+  ]
+}

@@ -1,0 +1,114 @@
+/* ==========================================================================
+   NEUTRAL — the whole site in warm neutrals (loaded last on every page)
+   Text and calls-to-action never use pink or pastel: they're charcoal / grey.
+   Every former pastel/pink value in the CSS was converted to a warm grey of
+   the same lightness; this file re-points the accent tokens and fixes the
+   places where an accent colour was used for text or buttons.
+   ========================================================================== */
+
+:root {
+  --n-ink: #2c2928;      /* primary text, solid buttons */
+  --n-ink-2: #57514d;    /* secondary text, accent words */
+  --n-ink-3: #8a837d;    /* metadata */
+  --n-line: rgba(44, 41, 40, 0.16);
+  --n-line-2: rgba(44, 41, 40, 0.3);
+  --n-hover: #45403e;    /* solid button hover */
+
+  /* site tokens (dream-theme / styles) */
+  --text: var(--n-ink);
+  --text-muted: var(--n-ink-2);
+  --color-ink: var(--n-ink);
+  --color-black: var(--n-ink);
+  --d-pink-deep: var(--n-ink);
+  --d-lav-deep: var(--n-ink-2);
+  --d-grad: var(--n-ink);
+}
+/* section-scoped accent tokens → charcoal / grey */
+.lw { --ink: var(--n-ink); --ink-soft: var(--n-ink-2); --pink-deep: var(--n-ink); --lav-deep: var(--n-ink-2); }
+.cs2 { --pink-deep: var(--n-ink); --lav-deep: var(--n-ink-2); }
+.v3 { --acc: var(--n-ink); --acc-2: var(--n-ink); --acc-tint: rgba(44, 41, 40, 0.06); --ink: var(--n-ink); --muted: var(--n-ink-2); }
+.vc { --vc-accent: var(--n-ink); --vc-tint: rgba(44, 41, 40, 0.06); }
+.lw-ch, .dy-spread { --accent: var(--n-ink); }
+#work { --t: var(--n-ink); }
+
+::selection { background: #e6e1d9; color: var(--n-ink); }
+
+/* ---------- accent words: same face, italic, in charcoal ---------- */
+.section-title em, .oc-title em, .cs2-title em, .cs2-h2 em, .cs2-end h2 em, .cs2-quote p em,
+.v3 .v3-h1 em, .v3 .v3-h2 em, .v3 .v3-display em, .lw-h em, .lw-ch .lw-h em,
+.lw-hero .lw-title .lw-name, .lw-dreams-title em, .dy-cover-plate em, .hd-accent,
+.pbx-hint b, .lw-hero-sub .lw-hand, .lw-copy .lw-hand-line, .lw-tbc, .lw-allfound, .lw-receipt .thanks,
+.dy-cover-sub, .dy-run span:last-child, .lw-invite-text small, .lw-diary-label i, .dy-end-note,
+.lw-dream-num, .lw-dreams-kicker, .cs2-label, .cs2-label b, .cs2-quote small, .v3-chapter span, .v3-label.accent {
+  color: var(--n-ink) !important;
+}
+.lw-hero-sub .lw-hand, .lw-invite-text small, .dy-cover-sub, .lw-tbc, .dy-run span:last-child { color: var(--n-ink-2) !important; }
+/* the marker-pen highlight becomes a quiet grey underline band */
+.hl, .v3 .v3-h1 em { background-image: linear-gradient(transparent 64%, rgba(44, 41, 40, 0.1) 64%, rgba(44, 41, 40, 0.1) 90%, transparent 90%) !important; }
+.lw-hero .lw-title .lw-name::after { opacity: 0.35; filter: grayscale(1); }
+
+/* ---------- links ---------- */
+a, .text-link, .cs-back, .footer-links a, .nav-links a { color: inherit; }
+.text-link:hover, .cs-back:hover, .footer-links a:hover, .nav-links a:hover, .btn-diagnose:hover,
+.mw-feature-title a:hover, .combo-dia-link:hover { color: var(--n-ink) !important; text-decoration-color: var(--n-ink); }
+.nav-links a:hover, .nav-links a[aria-current="page"] { border-color: var(--n-ink); }
+.btn-diagnose { border-bottom-color: var(--n-ink) !important; color: var(--n-ink); }
+
+/* ---------- solid buttons: charcoal ---------- */
+.nav-cta, .lock-modal-submit, .cs2-btn.solid, .pbx-d-cta, .dy-cover-open, .lw-dreams-btn,
+.lw-dreams-ctas .solid, .nda-btn, .nda-cta, .v3-proto-btn, .mobile-menu-cta, .ab-btn, .bd-btn {
+  background: var(--n-ink) !important;
+  background-image: none !important;
+  color: #f6f2ec !important;
+  border-color: var(--n-ink) !important;
+  box-shadow: none !important;
+}
+.nav-cta:hover, .lock-modal-submit:hover, .cs2-btn.solid:hover, .pbx-d-cta:hover, .dy-cover-open:hover,
+.lw-dreams-btn:hover, .lw-dreams-ctas .solid:hover, .nda-btn:hover, .nda-cta:hover, .v3-proto-btn:hover {
+  background: var(--n-hover) !important;
+}
+.lw-dreams-btn svg { color: #f6f2ec !important; }
+
+/* ---------- outline buttons + chips: charcoal on transparent ---------- */
+.nav-contact, .cs2-btn.ghost, .pbx-more-btn, .lw-dreams-ctas .ghost, .lw-dreams-ctas button.ghost,
+.v3-pill, .v3-pf-btn, .vc-pill, .bd-chip, .more-work-cta, .lw-reprint, .lw-move-row button {
+  background: transparent !important;
+  background-image: none !important;
+  color: var(--n-ink) !important;
+  border-color: var(--n-line-2) !important;
+  box-shadow: none !important;
+}
+.nav-contact:hover, .cs2-btn.ghost:hover, .pbx-more-btn:hover, .lw-dreams-ctas .ghost:hover, .v3-pill:hover {
+  border-color: var(--n-ink) !important;
+}
+.pbx-more-btn:hover { background: var(--n-ink) !important; color: #f6f2ec !important; }
+.v3-pill.accent { background: var(--n-ink) !important; color: #f6f2ec !important; border-color: var(--n-ink) !important; }
+.v3-pill.q { color: var(--n-ink) !important; border-color: var(--n-ink) !important; }
+
+.filter-chip { color: var(--n-ink-2); border-color: var(--n-line-2); background: transparent; }
+.filter-chip:hover { border-color: var(--n-ink); color: var(--n-ink); }
+.filter-chip[aria-pressed="true"] { background: var(--n-ink) !important; border-color: var(--n-ink) !important; color: #f6f2ec !important; }
+
+/* the "Open my diary" invitation: a quiet outlined button */
+.lw-invite { background: #fffdf9 !important; color: var(--n-ink) !important; box-shadow: inset 0 0 0 1px var(--n-line-2) !important; }
+.lw-invite:hover { box-shadow: inset 0 0 0 1px var(--n-ink) !important; }
+
+/* focus rings */
+a:focus-visible, button:focus-visible, input:focus-visible, [tabindex]:focus-visible { outline-color: var(--n-ink) !important; }
+
+/* ---------- header: no pink tint, no rainbow line ---------- */
+.site-header { background: color-mix(in srgb, #fbf8f3 90%, transparent) !important; border-bottom: 1px solid var(--n-line) !important; }
+.site-header::after { display: none !important; }
+.mobile-menu { background: #fbf8f3 !important; }
+.hero::before { display: none; }
+
+/* ---------- on dark grounds (dreams night sky, dark case-study bands) accents are light, not charcoal ---------- */
+.lw-dreams-modal .lw-dreams-title em, .lw-dreams-modal .lw-dreams-kicker, .lw-dreams-modal .lw-dream-num,
+.lw-dreams-modal .lw-dream-title, .lw-dreams-modal .lw-dstar-label,
+.v3-dark em, .v3-dark .v3-h2 em, .v3-dark .v3-display em, .v3-dark .v3-chapter span, .v3-dark .v3-label.accent,
+.v3-chapter.light span {
+  color: #ece7df !important;
+}
+.lw-dreams-modal .lw-dreams-ctas .solid { background: #ece7df !important; color: #2c2928 !important; border-color: #ece7df !important; }
+.lw-dreams-modal .lw-dreams-ctas .ghost, .lw-dreams-modal .lw-dreams-ctas button.ghost { color: #ece7df !important; border-color: rgba(236, 231, 223, 0.4) !important; }
+.lw-dreams-modal .lw-dreams-kicker { border-color: rgba(236, 231, 223, 0.35) !important; }

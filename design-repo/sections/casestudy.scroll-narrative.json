@@ -1,0 +1,151 @@
+{
+  "id": "casestudy.scroll-narrative",
+  "title": "Scroll-driven narrative",
+  "description": "A pinned, scroll-driven walkthrough: a sticky status console beside step articles, a storyboard of panels with captions over a phone, or a stepper whose steps change a counter and message.",
+  "source": {
+    "id": "src.section-v3-console-section-v3-wrap",
+    "file": "family-ahc.html",
+    "tag": "section",
+    "selector": "section.v3-console-section.v3-wrap",
+    "lines": "281-319",
+    "citation": "family-ahc.html:281-319",
+    "observedIn": [
+      "family-ahc.html:281",
+      "offline-doctor-consultation.html:45",
+      "offline-doctor-consultation.html:139",
+      "visit-clinic.html:498"
+    ]
+  },
+  "semantic": {
+    "id": "casestudy.scroll-narrative",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "console",
+    "panels",
+    "stepper"
+  ],
+  "content": {
+    "fields": {
+      "statusList": {
+        "type": "textList",
+        "required": false,
+        "maxWords": 7,
+        "maxItems": 9,
+        "evidence": {
+          "selector": ".v3-console-list li",
+          "observedElements": 15,
+          "observedBlocks": 2
+        }
+      },
+      "steps": {
+        "type": "list",
+        "required": true,
+        "maxItems": 9,
+        "evidence": {
+          "selector": ".v3-step, [data-cap], .steps button",
+          "observedElements": 25,
+          "observedBlocks": 4
+        },
+        "item": {
+          "label": {
+            "type": "text",
+            "required": false,
+            "maxWords": 3,
+            "evidence": {
+              "selector": ".v3-mono, button:self",
+              "observedElements": 19,
+              "observedBlocks": 19
+            }
+          },
+          "title": {
+            "type": "text",
+            "required": false,
+            "maxWords": 8,
+            "evidence": {
+              "selector": "h3",
+              "observedElements": 6,
+              "observedBlocks": 6
+            }
+          },
+          "text": {
+            "type": "text",
+            "required": false,
+            "maxWords": 35,
+            "evidence": {
+              "selector": "p, dd",
+              "observedElements": 59,
+              "observedBlocks": 21
+            }
+          }
+        }
+      },
+      "messages": {
+        "type": "textList",
+        "required": false,
+        "maxWords": 18,
+        "maxItems": 4,
+        "evidence": {
+          "selector": "[data-msg]",
+          "observedElements": 4,
+          "observedBlocks": 1
+        }
+      },
+      "figures": {
+        "type": "assets",
+        "required": false,
+        "maxWords": 42,
+        "maxItems": 9,
+        "evidence": {
+          "selector": "img",
+          "attr": "alt",
+          "observedElements": 22,
+          "observedBlocks": 4
+        }
+      }
+    }
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.case-study-chaptered"
+    ]
+  },
+  "motion": {
+    "allowedPatterns": [
+      "scroll-console",
+      "scroll-pinned-panels",
+      "scroll-stepper"
+    ],
+    "default": "scroll-console"
+  },
+  "responsive": [
+    {
+      "breakpoint": "bp.desktop",
+      "query": "(max-width: 979px)",
+      "change": "unpin-sticky",
+      "cite": "css/visit-clinic-v3.css:328-335"
+    },
+    {
+      "breakpoint": "bp.tablet",
+      "query": "(max-width: 760px)",
+      "change": "shorten-scroll-track",
+      "cite": "css/oc-story.css:736-764"
+    }
+  ],
+  "assetRoles": [
+    "product.case-study-screen"
+  ],
+  "generatedAssetRoles": [
+    "product.generated-visual"
+  ],
+  "components": [
+    "component.step-annotation",
+    "primitive.device-frame"
+  ],
+  "tokens": [
+    "color.surface.raised",
+    "color.status.ok",
+    "color.accent.primary"
+  ]
+}

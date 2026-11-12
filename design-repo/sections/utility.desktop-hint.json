@@ -1,0 +1,60 @@
+{
+  "id": "utility.desktop-hint",
+  "title": "Desktop-hint dialog (mobile only)",
+  "description": "Small modal nudging phone visitors to open the home page on desktop.",
+  "source": {
+    "id": "src.desktop-hint",
+    "file": "js/main.js",
+    "tag": "desktop-hint",
+    "selector": "div.desktop-hint (created by script)",
+    "lines": "60-97",
+    "citation": "js/main.js:60-97"
+  },
+  "semantic": {
+    "id": "utility.desktop-hint",
+    "category": "UTILITY"
+  },
+  "retrievalEligible": false,
+  "retrievalReason": "Runtime dialog injected by script 500ms after load on narrow screens, auto-dismissed after 10s and remembered per session; utility UI only.",
+  "variants": [
+    "timed"
+  ],
+  "content": {
+    "fields": {
+      "text": {
+        "type": "text",
+        "required": true,
+        "maxWords": 15,
+        "evidence": {
+          "jsTemplate": "js/main.js:68"
+        }
+      }
+    }
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.home"
+    ],
+    "overlayOnly": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "modal-pop"
+    ],
+    "default": "modal-pop"
+  },
+  "responsive": [
+    {
+      "breakpoint": "bp.desktop",
+      "query": "(max-width: 979px)",
+      "change": "show-only-below",
+      "cite": "js/main.js:56"
+    }
+  ],
+  "assetRoles": [],
+  "generatedAssetRoles": [],
+  "components": [],
+  "tokens": [
+    "color.surface.raised"
+  ]
+}

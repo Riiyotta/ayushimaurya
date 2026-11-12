@@ -1,0 +1,152 @@
+{
+  "id": "about.diary",
+  "title": "About-me diary",
+  "description": "A closed book with a cover and chapter tabs; opening it shows two-page spreads per chapter (heading, short paragraphs, photos or a playful object).",
+  "source": {
+    "id": "src.section-dy-stage",
+    "file": "index.html",
+    "tag": "section",
+    "selector": "section.dy-stage",
+    "lines": "260-499",
+    "citation": "index.html:260-499",
+    "observedIn": [
+      "index.html:260"
+    ]
+  },
+  "semantic": {
+    "id": "about.diary",
+    "category": "EDITORIAL"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "book"
+  ],
+  "content": {
+    "fields": {
+      "coverTitle": {
+        "type": "text",
+        "required": true,
+        "maxWords": 3,
+        "evidence": {
+          "selector": ".dy-cover-plate strong",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "chapters": {
+        "type": "list",
+        "required": true,
+        "maxItems": 4,
+        "evidence": {
+          "selector": ".dy-tab",
+          "observedElements": 4,
+          "observedBlocks": 1
+        },
+        "item": {
+          "title": {
+            "type": "text",
+            "required": true,
+            "maxWords": 5,
+            "evidence": {
+              "selector": "span",
+              "observedElements": 4,
+              "observedBlocks": 4
+            }
+          }
+        }
+      },
+      "spreads": {
+        "type": "list",
+        "required": true,
+        "maxItems": 4,
+        "evidence": {
+          "selector": ".lw-ch-head",
+          "observedElements": 4,
+          "observedBlocks": 1
+        },
+        "item": {
+          "heading": {
+            "type": "text",
+            "required": true,
+            "maxWords": 6,
+            "evidence": {
+              "selector": "h3",
+              "observedElements": 4,
+              "observedBlocks": 4
+            }
+          }
+        }
+      },
+      "paragraphs": {
+        "type": "textList",
+        "required": false,
+        "maxWords": 27,
+        "maxItems": 11,
+        "evidence": {
+          "selector": ".lw-copy p",
+          "observedElements": 11,
+          "observedBlocks": 1
+        }
+      },
+      "photos": {
+        "type": "assets",
+        "required": false,
+        "maxWords": 15,
+        "maxItems": 6,
+        "evidence": {
+          "selector": "img",
+          "attr": "alt",
+          "observedElements": 6,
+          "observedBlocks": 1
+        }
+      },
+      "hint": {
+        "type": "text",
+        "required": false,
+        "maxWords": 6,
+        "evidence": {
+          "selector": ".dy-hint",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      }
+    }
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.home"
+    ]
+  },
+  "motion": {
+    "allowedPatterns": [
+      "reveal-on-scroll",
+      "card-flip"
+    ],
+    "default": "reveal-on-scroll"
+  },
+  "responsive": [
+    {
+      "breakpoint": "bp.tablet",
+      "query": "(max-width: 767px)",
+      "change": "compact-controls",
+      "cite": "css/diary-classic.css:162-167"
+    }
+  ],
+  "assetRoles": [
+    "person.lifestyle-photo",
+    "decor.cloud-illustration",
+    "icon.glyph"
+  ],
+  "generatedAssetRoles": [
+    "illustration.generated-decor",
+    "icon.glyph"
+  ],
+  "components": [
+    "primitive.icon-glyph"
+  ],
+  "tokens": [
+    "font.family.display",
+    "color.decor.yellow",
+    "color.decor.purple"
+  ]
+}

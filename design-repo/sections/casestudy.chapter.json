@@ -1,0 +1,268 @@
+{
+  "id": "casestudy.chapter",
+  "title": "Case-study chapter",
+  "description": "One heading-bounded chapter of a case study: number + label, heading with an emphasised phrase, short paragraphs, figures (zoomable screens), optional labelled cards, an optional pull quote, and on short case studies an optional contact gate.",
+  "source": {
+    "id": "src.section-cs2-ch",
+    "file": "claim-approval.html",
+    "tag": "section",
+    "selector": "section.cs2-ch",
+    "lines": "73-92",
+    "citation": "claim-approval.html:73-92",
+    "observedIn": [
+      "claim-approval.html:73",
+      "family-ahc.html:105",
+      "family-ahc.html:153",
+      "family-ahc.html:187",
+      "family-ahc.html:258",
+      "family-ahc.html:274",
+      "family-ahc.html:321",
+      "family-ahc.html:343",
+      "family-ahc.html:378",
+      "family-ahc.html:394",
+      "hybrid-diagnostic.html:88",
+      "hybrid-diagnostic.html:118",
+      "hybrid-diagnostic.html:132",
+      "hybrid-diagnostic.html:158",
+      "hybrid-diagnostic.html:182",
+      "hybrid-diagnostic.html:222",
+      "hybrid-diagnostic.html:240",
+      "offline-doctor-consultation.html:132",
+      "offline-doctor-consultation.html:181",
+      "offline-doctor-consultation.html:204",
+      "offline-doctor-consultation.html:243",
+      "offline-doctor-consultation.html:280",
+      "offline-doctor-consultation.html:354",
+      "offline-doctor-consultation.html:591",
+      "virtual-wardrobe.html:73",
+      "visit-clinic.html:123",
+      "visit-clinic.html:146",
+      "visit-clinic.html:176",
+      "visit-clinic.html:212",
+      "visit-clinic.html:245",
+      "visit-clinic.html:261",
+      "visit-clinic.html:325",
+      "visit-clinic.html:480",
+      "visit-clinic.html:553",
+      "visit-clinic.html:576",
+      "visit-clinic.html:619",
+      "visit-clinic.html:648",
+      "visit-clinic.html:733",
+      "visit-clinic.html:749",
+      "visit-clinic.html:764",
+      "wallet-ui.html:76"
+    ]
+  },
+  "semantic": {
+    "id": "casestudy.chapter",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "plain",
+    "tint",
+    "dark"
+  ],
+  "content": {
+    "fields": {
+      "label": {
+        "type": "text",
+        "required": false,
+        "maxWords": 6,
+        "evidence": {
+          "selector": ".cs2-label, .v3-chapter, .chapter, .v3-label",
+          "observedElements": 46,
+          "observedBlocks": 30
+        }
+      },
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 16,
+        "evidence": {
+          "selector": "h2",
+          "observedElements": 41,
+          "observedBlocks": 41
+        }
+      },
+      "paragraphs": {
+        "type": "textList",
+        "required": false,
+        "maxWords": 46,
+        "maxItems": 10,
+        "evidence": {
+          "selector": ".cs2-copy > p, .v3-split p, .sec-head .lead, .v3-section > p, .v3-wrap > p",
+          "observedElements": 85,
+          "observedBlocks": 34
+        }
+      },
+      "figures": {
+        "type": "assets",
+        "required": false,
+        "maxWords": 24,
+        "maxItems": 8,
+        "evidence": {
+          "selector": "img",
+          "attr": "alt",
+          "observedElements": 35,
+          "observedBlocks": 11
+        }
+      },
+      "cards": {
+        "type": "list",
+        "required": false,
+        "maxItems": 8,
+        "evidence": {
+          "selector": ".cs2-card, .three article, .v3-pain-list li, .watch article, .cs2-chips span",
+          "observedElements": 34,
+          "observedBlocks": 8
+        },
+        "item": {
+          "label": {
+            "type": "text",
+            "required": false,
+            "maxWords": 5,
+            "evidence": {
+              "selector": ".n, b, .v3-pain-stage",
+              "observedElements": 34,
+              "observedBlocks": 24
+            }
+          },
+          "title": {
+            "type": "text",
+            "required": false,
+            "maxWords": 8,
+            "evidence": {
+              "selector": "b, h3",
+              "observedElements": 22,
+              "observedBlocks": 19
+            }
+          },
+          "text": {
+            "type": "text",
+            "required": false,
+            "maxWords": 23,
+            "evidence": {
+              "selector": "p",
+              "observedElements": 27,
+              "observedBlocks": 27
+            }
+          }
+        }
+      },
+      "quote": {
+        "type": "text",
+        "required": false,
+        "maxWords": 31,
+        "evidence": {
+          "selector": ".cs2-quote p, .v3-statement",
+          "observedElements": 4,
+          "observedBlocks": 4
+        }
+      },
+      "gate": {
+        "type": "object",
+        "required": false,
+        "evidence": {
+          "selector": ".cs2-gate",
+          "observedElements": 1,
+          "observedBlocks": 1
+        },
+        "item": {
+          "heading": {
+            "type": "text",
+            "required": true,
+            "maxWords": 5,
+            "evidence": {
+              "selector": "h3",
+              "observedElements": 1,
+              "observedBlocks": 1
+            }
+          },
+          "text": {
+            "type": "text",
+            "required": true,
+            "maxWords": 12,
+            "evidence": {
+              "selector": "p",
+              "observedElements": 2,
+              "observedBlocks": 1
+            }
+          },
+          "ctas": {
+            "type": "links",
+            "required": true,
+            "maxWords": 2,
+            "maxItems": 2,
+            "evidence": {
+              "selector": "a",
+              "observedElements": 2,
+              "observedBlocks": 1
+            }
+          }
+        }
+      }
+    }
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.case-study-brief",
+      "template.case-study-chaptered"
+    ]
+  },
+  "motion": {
+    "allowedPatterns": [
+      "reveal-on-scroll",
+      "autoplay-loop-video",
+      "card-flip",
+      "none"
+    ],
+    "default": "reveal-on-scroll"
+  },
+  "responsive": [
+    {
+      "breakpoint": "bp.content",
+      "query": "(max-width: 900px)",
+      "change": "stack-columns",
+      "cite": "css/case.css:91-94"
+    },
+    {
+      "breakpoint": "bp.mobile",
+      "query": "(max-width: 640px)",
+      "change": "stack-columns",
+      "cite": "css/case.css:95-102"
+    },
+    {
+      "breakpoint": "bp.desktop",
+      "query": "(min-width: 980px)",
+      "change": "reduce-columns",
+      "cite": "css/visit-clinic-v3.css:71"
+    },
+    {
+      "breakpoint": "bp.wide",
+      "query": "(max-width: 1000px)",
+      "change": "reduce-columns",
+      "cite": "css/oc-story.css:726-735"
+    }
+  ],
+  "assetRoles": [
+    "product.case-study-screen",
+    "product.case-study-video"
+  ],
+  "generatedAssetRoles": [
+    "product.generated-visual"
+  ],
+  "components": [
+    "component.chapter-label",
+    "component.card",
+    "component.quote-block",
+    "component.contact-gate",
+    "primitive.image-frame"
+  ],
+  "tokens": [
+    "font.size.cs-h2",
+    "color.surface.tint",
+    "color.surface.inverse",
+    "color.accent.primary"
+  ]
+}

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>try{if(sessionStorage.getItem('site-theme')!=='day')document.documentElement.dataset.theme='night'}catch(e){document.documentElement.dataset.theme='night'}</script>
+<title>Hybrid Diagnostic Booking — Ayushi Maurya</title>
+<meta name="description" content="Redesigning a health app's diagnostic booking so users can book pathology and radiology tests together in one booking, with pathology at home or at a centre.">
+<script>document.documentElement.classList.add('has-js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/styles.css?v=n3">
+<link rel="stylesheet" href="css/case.css?v=p1">
+<link rel="stylesheet" href="css/dream-theme.css?v=n3">
+<link rel="stylesheet" href="css/neutral.css?v=4">
+<link rel="stylesheet" href="css/accents.css?v=2">
+<link rel="stylesheet" href="css/functional.css?v=2">
+<link rel="stylesheet" href="css/cta.css?v=3">
+<link rel="stylesheet" href="css/base.css?v=32">
+<link rel="stylesheet" href="css/theme-night.css?v=2">
+<link rel="stylesheet" href="css/theme.css?v=4">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="index.html"><img src="assets/logo-ayushi-maurya-transparent.png" alt="Ayushi Maurya"></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="projects.html">My work</a>
+      <a href="resume.html">Resume</a>
+    </nav>
+    <button class="nav-menu-btn" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu">
+      <span class="bars" aria-hidden="true"><span></span><span></span></span>
+      Menu
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" data-mobile-menu data-open="false">
+  <nav class="mobile-menu-links" aria-label="Mobile">
+    <a href="resume.html">Resume</a>
+    <a href="mailto:ayushimaurya108@gmail.com">Contact</a>
+  </nav>
+  <a class="mobile-menu-cta" href="projects.html">My work →</a>
+</div>
+
+<main id="main" class="cs2">
+
+  <!-- ================= HERO ================= -->
+  <section class="cs2-hero">
+    <div class="container">
+      <a class="cs-back" href="projects.html"><span aria-hidden="true">←</span> All work</a>
+      <div class="cs2-hero-grid">
+        <div>
+          <span class="cs2-kicker is-live reveal"><i aria-hidden="true"></i>Healthcare · Live</span>
+          <h1 class="cs2-title reveal">One booking for a <em>complete</em> full-body checkup</h1>
+          <p class="cs2-dek reveal">In most health apps, a "full body checkup" means blood tests with home sample collection, and nothing else. I redesigned the diagnostic booking flow so a full-body checkup includes radiology too. Users can book pathology and radiology in one booking, with pathology at home or at a centre.</p>
+          <dl class="cs2-meta reveal">
+            <div><dt>Product</dt><dd>Healthcare app</dd></div>
+            <div><dt>My role</dt><dd>Lead Product Designer</dd></div>
+            <div><dt>Focus</dt><dd>Strategy, empathy, flow design</dd></div>
+          </dl>
+        </div>
+        <div class="cs2-hero-media reveal">
+          <video autoplay muted loop playsinline preload="metadata" poster="assets/case-studies/hybrid/h01-poster.jpg" aria-label="The redesigned lab tests home and booking flow">
+            <source src="assets/case-studies/hybrid/h01.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="cs2-nav" aria-label="Case study sections">
+    <div class="container">
+      <ol>
+        <li><a href="#problem">Problem</a></li>
+        <li><a href="#root">Root cause</a></li>
+        <li><a href="#pattern">Inspiration</a></li>
+        <li><a href="#solution">Solution</a></li>
+        <li><a href="#journeys">Booking steps</a></li>
+        <li><a href="#impact">Status</a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- ================= 01 PROBLEM ================= -->
+  <section class="cs2-ch" id="problem">
+    <div class="container">
+      <span class="cs2-label reveal"><b style="--c:#f4f2f0">01</b>The problem</span>
+      <h2 class="cs2-h2 reveal">Most "full body checkups" left out <em>radiology</em></h2>
+      <div class="cs2-split">
+        <div class="cs2-copy reveal">
+          <p>Most health apps sell "full body checkup" packages that only include pathology tests with home sample collection. A complete checkup also needs radiology, and radiology can't be done at home.</p>
+          <p>This left users with two options, and neither was good:</p>
+          <ol class="cs2-list">
+            <li data-i="1" style="--c:#f4f2f0"><strong>Two separate bookings:</strong> pathology at home, radiology at a centre. Far more users completed pathology than radiology.</li>
+            <li data-i="2" style="--c:#f4f3f2"><strong>One combined package</strong> that needed a centre visit for everything, so users lost home collection.</li>
+          </ol>
+          <p style="margin-top:var(--sp-5)">Users who wanted home sample collection had to go to a centre and wait. That took time out of their day for something that should have been quick.</p>
+        </div>
+        <figure class="cs2-fig reveal">
+          <button class="cs2-frame" type="button" data-zoom><img src="assets/case-studies/hybrid/h03.webp" alt="Full body checkup today equals inconvenient choices: two separate bookings or one combined package that forces a centre visit" loading="lazy"></button>
+        </figure>
+      </div>
+
+      <div class="cs2-quote reveal">
+        <small>What I wanted to solve</small>
+        <p>How might we let users book a complete checkup, <em>pathology and radiology</em>, in a single booking, while still letting them choose home or centre for pathology?</p>
+      </div>
+      <figure class="cs2-fig cs2-wide reveal">
+        <button class="cs2-frame" type="button" data-zoom><img src="assets/case-studies/hybrid/h04.webp" alt="One booking, complete checkup, your choice: pathology at home or centre, radiology at centre" loading="lazy"></button>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= 02 CONSTRAINTS ================= -->
+  <section class="cs2-ch tint" id="constraints">
+    <div class="container">
+      <span class="cs2-label reveal"><b style="--c:#f4f3f2">02</b>Constraints</span>
+      <h2 class="cs2-h2 reveal">What made this <em>hard</em></h2>
+      <div class="cs2-cards">
+        <div class="cs2-card is-constraint reveal" style="--c:#f4f2f0"><span class="n">Partners</span><b>No single lab does both</b><p>No lab partner offers both home pathology collection and centre-based radiology together.</p></div>
+        <div class="cs2-card is-constraint reveal" style="--c:#f4f3f2"><span class="n">Physical</span><b>Radiology needs a centre</b><p>Radiology tests can't be performed at home. They need special machines.</p></div>
+        <div class="cs2-card is-constraint reveal" style="--c:#f4f3f2"><span class="n">Scheduling</span><b>No single time slot</b><p>A combined package can't have one time slot for both pathology and radiology.</p></div>
+        <div class="cs2-card is-constraint reveal" style="--c:#eceae7"><span class="n">Backend</span><b>Two orders underneath</b><p>Pathology and radiology come from different labs, so each runs as its own order with its own status.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 03 ROOT CAUSE ================= -->
+  <section class="cs2-ch" id="root">
+    <div class="container">
+      <span class="cs2-label reveal"><b style="--c:#f4f3f2">03</b>Root cause</span>
+      <h2 class="cs2-h2 reveal">The barrier was the <em>forced centre visit</em></h2>
+      <div class="cs2-split">
+        <div class="cs2-copy reveal">
+          <p>It started with funnel data. My PM noticed that packages with radiology converted noticeably worse than pathology-only packages. I went through the data with my PM to confirm the pattern, and it held.</p>
+          <p>These checkups are <strong>employer-covered benefits</strong>, so users don't pay for them. Cost wasn't the reason. Something else was stopping users from booking radiology.</p>
+          <p>The system assumed every booking was either fully at home or fully at a centre. When a package had both pathology and radiology, it couldn't split them. So it picked the stricter option and sent users to a centre for everything.</p>
+        </div>
+        <figure class="cs2-fig reveal">
+          <button class="cs2-frame" type="button" data-zoom><img src="assets/case-studies/hybrid/h05.webp" alt="The data showed a clear gap: pathology-only packages convert high, pathology plus radiology packages convert low" loading="lazy"></button>
+        </figure>
+      </div>
+      <figure class="cs2-fig cs2-wide reveal">
+        <button class="cs2-frame" type="button" data-zoom><img src="assets/case-studies/hybrid/h06.webp" alt="User at risk and business at risk: a fragmented journey hurts users and leaks revenue" loading="lazy"></button>
+      </figure>
+
+      <div class="cs2-quote reveal">
+        <small>Hypothesis</small>
+        <p>If we keep pathology at home, send users to a centre only for radiology, and put both in <em>one booking</em>, hybrid packages should complete at a rate closer to pathology-only packages.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 04 PATTERN ================= -->
+  <section class="cs2-ch tint" id="pattern">
+    <div class="container">
+      <span class="cs2-label reveal"><b style="--c:#eceae7">04</b>Borrowing a pattern</span>
+      <h2 class="cs2-h2 reveal">Booking two labs like a <em>round-trip flight</em></h2>
+      <div class="cs2-split">
+        <div class="cs2-copy reveal">
+          <p>The biggest challenge was on the partner side. No single lab partner offered both home pathology and centre radiology. So the fix had to combine two partner labs into one booking.</p>
+          <p>There was no existing pattern in diagnostics to borrow. A stakeholder suggested looking at how travel apps like MakeMyTrip handle round trips, where two separate flights are booked in one checkout.</p>
+          <p>We used the same model: <strong>two lab partners instead of two flights</strong>, combined into one order and priced as a single combo.</p>
+        </div>
+        <div>
+          <figure class="cs2-fig reveal">
+            <button class="cs2-frame" type="button" data-zoom><img src="assets/case-studies/hybrid/h07.webp" alt="A travel app showing outbound and return flights selected together" loading="lazy"></button>
+          </figure>
+          <figure class="cs2-fig reveal">
+            <button class="cs2-frame" type="button" data-zoom><img src="assets/case-studies/hybrid/h08.webp" alt="Flight fare options for a round trip, booked as one" loading="lazy"></button>
+            <figcaption>Inspiration: round-trip booking in a travel app.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 05 SOLUTION ================= -->
+  <section class="cs2-ch" id="solution">
+    <div class="container">
+      <span class="cs2-label reveal"><b style="--c:#f1efed">05</b>The solution</span>
+      <h2 class="cs2-h2 reveal">The redesigned <em>booking flow</em></h2>
+      <div class="cs2-two">
+        <figure class="cs2-fig reveal">
+          <button class="cs2-frame" type="button" data-zoom><img src="assets/case-studies/hybrid/h09.webp" alt="Before: packages with a single category, missed bundling opportunities and unclear lab information" loading="lazy"></button>
+          <figcaption>Before: single-category packages and little help choosing a lab.</figcaption>
+        </figure>
+        <figure class="cs2-fig reveal">
+          <button class="cs2-frame" type="button" data-zoom><img src="assets/case-studies/hybrid/h10.webp" alt="After: intent-based search, capability-first filtering, a hybrid slot picker and single checkout" loading="lazy"></button>
+          <figcaption>After: intent-based search, capability-first filtering, a hybrid slot picker and one checkout.</figcaption>
+        </figure>
+      </div>
+
+      <div class="cs2-split" style="margin-top:clamp(4rem,8vw,6rem)">
+        <div class="cs2-copy reveal">
+          <h3 class="cs2-h2" style="font-size:clamp(1.6rem,1.2rem + 1.6vw,2.3rem);margin:0">The <em>combo card</em></h3>
+          <p style="margin-top:var(--sp-4)">The Lab Listing screen is the core of the redesign. No single lab could do everything, so the screen shows around fifteen partner combinations instead. Each one pairs a pathology lab with a radiology lab, sorted by distance and shown as a single card.</p>
+          <p>Users were being asked to trust two lab brands at once, and some of them were unfamiliar. So I added trust signals to the card itself: <strong>NABL and ISO accreditation badges</strong> on each partner logo, and instant-confirmation tags.</p>
+          <p>In the backend, each combo was two separate sub-orders under one parent order. If one partner needed to reschedule, the other half of the booking was not affected.</p>
+        </div>
+        <figure class="cs2-fig reveal">
+          <button class="cs2-frame" type="button" data-zoom><img src="assets/case-studies/hybrid/h13.webp" alt="Select Lab Partners screen with Thyrocare and Apollo Diagnostics shown as one combo card" loading="lazy"></button>
+        </figure>
+      </div>
+      <div class="cs2-two">
+        <figure class="cs2-fig reveal">
+          <button class="cs2-frame" type="button" data-zoom><img src="assets/case-studies/hybrid/h11.webp" alt="Design decisions on the Labs home page: offer tags, lab network indicator, trust badges, hybrid packages, family profiles" loading="lazy"></button>
+          <figcaption>Labs home page decisions.</figcaption>
+        </figure>
+        <figure class="cs2-fig reveal">
+          <button class="cs2-frame" type="button" data-zoom><img src="assets/case-studies/hybrid/h12.webp" alt="Lab listing screen decisions: partner combo cards, fulfilment tags, dual-address alignment, test type segregation, lab details" loading="lazy"></button>
+          <figcaption>Lab listing decisions.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 06 TWO JOURNEYS ================= -->
+  <section class="cs2-ch tint" id="journeys">
+    <div class="container">
+      <span class="cs2-label reveal"><b style="--c:#f4f2f0">06</b>Slots, review and status</span>
+      <h2 class="cs2-h2 reveal">Two sets of steps in <em>one booking</em></h2>
+      <div class="cs2-split">
+        <div class="cs2-copy reveal">
+          <p>Slot selection, order review and order status follow the same idea. It is one order, with separate steps for pathology and radiology.</p>
+          <p>For slot selection, I reused the bottom sheet users already knew from single-package bookings. It has two tabs in order, <strong>pathology first, radiology second</strong>, and each one gets a tick when confirmed before the user moves on.</p>
+          <p>Order review and order status show both parts clearly, but always present them as a single booking.</p>
+        </div>
+        <figure class="cs2-fig reveal">
+          <button class="cs2-frame" type="button" data-zoom><img src="assets/case-studies/hybrid/h14.webp" alt="Slot selection, order review and order status screens for a combined pathology and radiology booking" loading="lazy"></button>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 07 WHERE IT STANDS ================= -->
+  <section class="cs2-ch" id="impact">
+    <div class="container">
+      <span class="cs2-label reveal"><b style="--c:#eceae7">07</b>Where it stands</span>
+      <h2 class="cs2-h2 reveal">Live, with <em>results still to come</em></h2>
+      <div class="cs2-split">
+        <div class="cs2-copy reveal">
+          <p>This flow is live, but it is not fully validated yet. I expect that one order with two guided steps, instead of two separate checkouts, will reduce drop-off.</p>
+          <p>Once it has been live for a while, these three signals will show whether it worked:</p>
+        </div>
+        <figure class="cs2-fig reveal">
+          <button class="cs2-frame" type="button" data-zoom><img src="assets/case-studies/hybrid/h15.webp" alt="Expected business impact: booking conversion, operational efficiency, package completion rates" loading="lazy"></button>
+          <figcaption>The business impact the redesign is aiming for.</figcaption>
+        </figure>
+      </div>
+      <div class="cs2-cards three">
+        <div class="cs2-card is-signal reveal" style="--c:#f4f2f0"><span class="n">Signal 01</span><b>Hybrid package adoption</b><p>Are more users choosing packages that include radiology?</p></div>
+        <div class="cs2-card is-signal reveal" style="--c:#f4f3f2"><span class="n">Signal 02</span><b>Fulfilment completion</b><p>Do both halves of the booking actually get completed?</p></div>
+        <div class="cs2-card is-signal reveal" style="--c:#f4f3f2"><span class="n">Signal 03</span><b>Less split-order drop-off</b><p>Do fewer users stop after pathology and skip radiology?</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs2-end">
+    <div class="container">
+      <h2 class="reveal">Thanks for reading about the <em>hybrid package</em> redesign</h2>
+      <p class="reveal">Building a healthcare super-app means solving a lot of logistics problems. This project was one of them.</p>
+      <div class="cs2-ctas reveal">
+        <a class="cs2-btn tertiary" href="visit-clinic.html">Next: Digital Clinic <span aria-hidden="true">→</span></a>
+        <a class="cs2-btn ghost" href="projects.html">Back to all work</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="cs2-lightbox" id="cs2-lightbox" hidden role="dialog" aria-modal="true" aria-label="Image preview">
+    <button type="button" aria-label="Close">✕</button>
+    <img src="" alt="">
+  </div>
+</main>
+
+<footer class="site-footer container">
+  <div class="footer-top">
+    <div>
+      <p class="footer-name">Ayushi Maurya</p>
+      <p class="footer-role">Product Designer</p>
+    </div>
+  </div>
+  <p class="footer-line">Let's work together. I'd love to hear from you.</p>
+  <nav class="footer-links" aria-label="Footer">
+    <a href="mailto:ayushimaurya108@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/ayushi-maurya-7174b71ab/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="resume.html">Resume</a>
+    <a href="projects.html">More work →</a>
+  </nav>
+  <p class="footer-meta">© <span id="year"></span> Ayushi Maurya</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/offline-consultation.js"></script>
+<script>
+(function () {
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // tap any figure to see it full size
+  const box = document.getElementById('cs2-lightbox');
+  const big = box.querySelector('img');
+  let last = null;
+  const close = () => { box.hidden = true; document.documentElement.style.overflow = ''; if (last) last.focus({ preventScroll: true }); };
+  document.querySelectorAll('[data-zoom]').forEach((b) => b.addEventListener('click', () => {
+    const img = b.querySelector('img');
+    last = b; big.src = img.currentSrc || img.src; big.alt = img.alt;
+    box.hidden = false; document.documentElement.style.overflow = 'hidden';
+    box.querySelector('button').focus({ preventScroll: true });
+  }));
+  box.addEventListener('click', (e) => { if (e.target !== big) close(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !box.hidden) close(); });
+
+  // section nav: glide to a section and highlight where you are
+  const links = [...document.querySelectorAll('.cs2-nav a')];
+  links.forEach((a) => a.addEventListener('click', (e) => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (!t) return;
+    e.preventDefault();
+    const navH = (document.querySelector('.site-header')?.offsetHeight || 64) + (document.querySelector('.cs2-nav')?.offsetHeight || 50);
+    window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - navH + 1, behavior: reduced ? 'auto' : 'smooth' });
+  }));
+  const sections = links.map((a) => document.querySelector(a.getAttribute('href')));
+  function mark() {
+    const y = window.innerHeight * 0.35;
+    let cur = -1;
+    sections.forEach((s, i) => { if (s && s.getBoundingClientRect().top < y) cur = i; });
+    links.forEach((a, i) => a.setAttribute('aria-current', String(i === cur)));
+    const active = links[cur];
+    const list = document.querySelector('.cs2-nav ol');
+    if (active && list.scrollWidth > list.clientWidth) list.scrollTo({ left: active.offsetLeft - 16, behavior: 'smooth' });
+  }
+  window.addEventListener('scroll', () => requestAnimationFrame(mark), { passive: true });
+  mark();
+})();
+</script>
+<script src="js/theme.js?v=3"></script>
+</body>
+</html>

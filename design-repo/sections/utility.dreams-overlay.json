@@ -1,0 +1,109 @@
+{
+  "id": "utility.dreams-overlay",
+  "title": "Dreams overlay",
+  "description": "Full-screen night-sky dialog: kicker, title, sub line, tappable stars revealing short dreams, an end line and two buttons.",
+  "source": {
+    "id": "src.lw-dreams",
+    "file": "index.html",
+    "tag": "div",
+    "selector": "div.lw-dreams.lw-dreams-modal",
+    "lines": "543-597",
+    "citation": "index.html:543-597",
+    "observedIn": [
+      "index.html:543"
+    ]
+  },
+  "semantic": {
+    "id": "utility.dreams-overlay",
+    "category": "UTILITY"
+  },
+  "retrievalEligible": false,
+  "retrievalReason": "Runtime full-screen dialog opened from the about-me closing; an interactive easter egg, not page content.",
+  "variants": [
+    "constellation"
+  ],
+  "content": {
+    "fields": {
+      "kicker": {
+        "type": "text",
+        "required": true,
+        "maxWords": 5,
+        "evidence": {
+          "selector": ".lw-dreams-kicker",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "title": {
+        "type": "text",
+        "required": true,
+        "maxWords": 4,
+        "evidence": {
+          "selector": ".lw-dreams-title",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "sub": {
+        "type": "text",
+        "required": false,
+        "maxWords": 13,
+        "evidence": {
+          "selector": ".lw-dreams-sub",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "endLine": {
+        "type": "text",
+        "required": false,
+        "maxWords": 13,
+        "evidence": {
+          "selector": ".lw-dreams-end p",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "ctas": {
+        "type": "links",
+        "required": false,
+        "maxWords": 3,
+        "maxItems": 1,
+        "evidence": {
+          "selector": ".lw-dreams-ctas a",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      }
+    }
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.home"
+    ],
+    "overlayOnly": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "modal-pop",
+      "ambient-drift"
+    ],
+    "default": "modal-pop"
+  },
+  "responsive": [],
+  "responsiveNote": "Scrolls inside the overlay at every width.",
+  "assetRoles": [
+    "icon.glyph"
+  ],
+  "generatedAssetRoles": [
+    "icon.glyph"
+  ],
+  "components": [
+    "primitive.button",
+    "primitive.icon-glyph"
+  ],
+  "tokens": [
+    "color.decor.yellow",
+    "color.decor.purple"
+  ]
+}

@@ -1,0 +1,369 @@
+/* ==========================================================================
+   BASE — neutral 98% white ground everywhere (loaded last on every page)
+   Page ground #fafafa, cards/surfaces white, quiet tints are neutral grey.
+   The diary keeps its pastel skies (they now fade into the neutral ground)
+   and the work box keeps its own matte palette.
+   ========================================================================== */
+
+:root {
+  --ground: #fafafa;
+  --ground-tint: #f3f3f3;
+  --color-off-white: var(--ground);
+  --bg: var(--ground);
+  --surface: #ffffff;
+}
+html, body { background: var(--ground) !important; }
+
+/* header + mobile menu */
+html .site-header { background: color-mix(in srgb, var(--ground) 90%, transparent) !important; }
+html .mobile-menu { background: var(--ground) !important; }
+
+/* home: the "about me" section and the diary's surroundings */
+html #about { background-color: var(--ground) !important; }
+html .lw { --cream: var(--ground); }
+html #lw-diary { background-color: var(--ground) !important; }
+
+/* case-study tokens + tinted bands */
+html .v3 { --paper: var(--ground); --tint: var(--ground-tint); }
+html .v3-section.v3-tint, html #entry { background-color: var(--ground-tint) !important; }
+html .oc-band.alt { background-color: var(--ground-tint) !important; }
+html .cs2-card.is-problem, html .cs2-card.is-solution, html .cs2-card.is-constraint, html .cs2-card.is-signal { background: #ffffff !important; }
+html .mw-thumb { background-color: var(--ground-tint) !important; }
+
+/* home: My Work sits on its own white sheet, so it reads as a new section after the hero */
+html #work { position: relative; isolation: isolate; }
+html #work::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: min(100vw, 1440px);
+  transform: translateX(-50%);
+  background: #ffffff;
+  border: 1px solid rgba(44, 41, 40, 0.08);
+  border-bottom: 0;
+  border-radius: 32px 32px 0 0;
+  box-shadow: 0 -24px 48px -36px rgba(44, 41, 40, 0.28);
+  pointer-events: none;
+}
+@media (max-width: 640px) {
+  html #work::before { border-radius: 24px 24px 0 0; }
+}
+
+/* one type system everywhere: Outfit for headings, Inter for text + labels (no monospace) */
+html .v3 { --mono: 'Inter', -apple-system, system-ui, sans-serif; }
+html .v3-mono, html .v3-kicker, html .v3-label, html .v3-chapter, html .v3-live, html .v3-meta-line, html .v3-hj-caption { font-variant-numeric: tabular-nums; }
+html .lw-receipt, html .token-box { font-family: 'Inter', -apple-system, system-ui, sans-serif !important; font-variant-numeric: tabular-nums; }
+/* the sheet is wider than the section's content; don't clip its rounded corners (the page itself clips sideways overflow) */
+html #work.pbx-section { overflow-x: visible !important; }
+
+/* ==========================================================================
+   MORE WORK: one even grid of same-size cards on a neutral surface
+   Hover / focus: the card lifts and tilts toward the cursor, a soft light
+   follows the pointer, the image zooms a touch and the button fills.
+   ========================================================================== */
+html .mw-stack {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 28px);
+  grid-auto-rows: 1fr;                       /* every card the same height */
+  align-items: stretch;
+  margin-bottom: var(--sp-9, 96px);
+  perspective: 1200px;
+}
+@media (max-width: 1023px) { html .mw-stack { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 639px) { html .mw-stack { grid-template-columns: minmax(0, 1fr); } }
+
+html .mw-stack .mw-item.mw-card {
+  --rx: 0deg; --ry: 0deg; --mx: 50%; --my: 50%;
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 12px 12px 22px;
+  border: 1px solid rgba(44, 41, 40, 0.07);
+  border-radius: 20px;
+  background: #f2f2f1;
+  color: inherit;
+  text-decoration: none;
+  transform: translateY(0) rotateX(var(--rx)) rotateY(var(--ry));
+  transform-style: preserve-3d;
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.9s ease, box-shadow 0.35s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+html .mw-item::after {                       /* soft light that follows the pointer */
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(260px circle at var(--mx) var(--my), rgba(255, 255, 255, 0.9), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+html .mw-stack .mw-item.mw-card:hover, html .mw-stack .mw-item.mw-card:focus-visible {
+  transform: translateY(-6px) rotateX(var(--rx)) rotateY(var(--ry));
+  background: #f6f6f5;
+  border-color: rgba(44, 41, 40, 0.1);
+  box-shadow: 0 2px 4px rgba(44, 41, 40, 0.04), 0 24px 44px -24px rgba(44, 41, 40, 0.32);
+}
+html .mw-item:hover::after, html .mw-item:focus-visible::after { opacity: 1; }
+html .mw-item:focus-visible { outline: 2px solid var(--p, #6a4bd6); outline-offset: 4px; }
+
+html .mw-item .mw-thumb {
+  order: -1;
+  aspect-ratio: 4 / 3;
+  border: 0;
+  border-radius: 12px;
+  background: #e7e7e5 !important;
+  box-shadow: none;
+}
+html .mw-item .mw-thumb img { transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1); }
+html .mw-item:hover .mw-thumb img, html .mw-item:focus-visible .mw-thumb img { transform: scale(1.05); }
+
+html .mw-meta, html .mw-num { display: inline; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; font-variant-numeric: tabular-nums; }
+html .mw-meta { order: 1; margin: 20px 10px 0; color: #57514d; }
+html .mw-num { order: 0; display: none; }
+html .mw-item .mw-title {
+  order: 2;
+  margin: 8px 10px 0;
+  font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+  font-size: clamp(1.1rem, 0.98rem + 0.4vw, 1.3rem);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  color: #2c2928;
+}
+html .mw-item .mw-title em { font-style: italic; font-weight: 500; color: var(--p-ink, #5a3ec4); }
+html .mw-item:hover .mw-title { color: #2c2928 !important; }
+
+html .mw-cta {
+  order: 3;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: auto 10px 0;                       /* pinned to the bottom so every card lines up */
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1.5px solid var(--p-line, rgba(106, 75, 214, 0.38));
+  border-radius: 999px;
+  font: 600 14px/1 'Inter', system-ui, sans-serif;
+  color: var(--p-ink, #5a3ec4);
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+html .mw-item .mw-title { margin-bottom: 22px; }
+html .mw-cta span { transition: transform 0.25s ease; }
+html .mw-item:hover .mw-cta, html .mw-item:focus-visible .mw-cta { background: var(--p, #6a4bd6); border-color: var(--p, #6a4bd6); color: #fff; }
+html .mw-item:hover .mw-cta span, html .mw-item:focus-visible .mw-cta span { transform: translateX(3px); }
+
+@media (prefers-reduced-motion: reduce) {
+  html .mw-item, html .mw-item .mw-thumb img { transition: none; }
+  html .mw-stack .mw-item.mw-card:hover, html .mw-stack .mw-item.mw-card:focus-visible { transform: none; }
+}
+/* walkthrough videos in the cards behave like the images */
+html .mw-item .mw-thumb video { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1); }
+html .mw-item .mw-thumb.is-contain video { object-fit: contain; }
+html .mw-item:hover .mw-thumb video, html .mw-item:focus-visible .mw-thumb video { transform: scale(1.05); }
+html .mw-item .mw-thumb.is-contain { background: #e9e9e7 !important; }
+
+/* no italics anywhere: accent words keep their colour but stay upright */
+html *, html *::before, html *::after { font-style: normal !important; }
+html .mw-item .mw-title em { font-weight: inherit; }
+
+/* accent words on the homepage + project cards: neutral grey (upright) */
+html .section-title em, html .lw-hero .lw-title .lw-name, html .hd-accent, html .pbx-hint b, html .mw-item .mw-title em,
+html .lw-dreams-title em {
+  color: #7a736e !important;
+}
+html .lw-dreams-modal .lw-dreams-title em { color: #d9d4ce !important; }
+
+/* ==========================================================================
+   CASE STUDIES: purple is the accent again, used to highlight
+   (title accent words, chapter numbers, labels, callouts, timelines and the
+   illustrations). Functional colours (green results, red problems) stay.
+   ========================================================================== */
+html .v3 { --acc: #5a3ec4; --acc-2: #6a4bd6; --acc-tint: rgba(106, 75, 214, 0.08); }
+html .cs2 { --pink: #d6c9f5; --pink-deep: #5a3ec4; --lav: #c9b8f0; --lav-deep: #6a4bd6; --sky: #e2d9fb; --butter: #efeafd; --mint: #e7e1fa; }
+html .cs2-title em, html .cs2-h2 em, html .cs2-end h2 em, html .cs2-quote p em, html .oc-title em,
+html .v3 .v3-h1 em, html .v3 .v3-h2 em, html .v3 .v3-display em, html .v3-statement span,
+html .cs2-label b, html .v3-chapter span, html .v3-label.accent, html .v3-bet-num, html .cs2-quote small {
+  color: #5a3ec4 !important;
+}
+html .v3-dark em, html .v3-dark .v3-h2 em, html .v3-dark .v3-display em, html .v3-dark .v3-chapter span, html .v3-chapter.light span,
+html .v3-dark .v3-statement span { color: #cbbdf6 !important; }
+/* no marker band behind accent words in case-study titles either */
+html .v3 .v3-h1 em { background-image: none !important; }
+html .v3-dark { background: #2f2636 !important; }   /* the original deep plum, not brown */
+html .v3 { --tint: #f4f1fb; }
+html .vc { --vc-accent: #6a4bd6; --vc-tint: rgba(106, 75, 214, 0.08); }
+html .v3-seg button[aria-pressed="true"] { background: var(--p, #6a4bd6); color: #fff; }
+/* the other case-study layouts: their highlight marks in purple */
+html .cs2-label b { background: #efeafd !important; color: #5a3ec4 !important; }
+html .oc-num, html .oc-dot { background: var(--p, #6a4bd6) !important; color: #fff !important; }
+html .vx-step { color: #5a3ec4 !important; }
+html .vx-craft-item { border-top-color: var(--p, #6a4bd6) !important; }
+html .cs2-list li::before { background: #efeafd !important; color: #5a3ec4 !important; }
+
+/* More Work cards: the outcome under the title (number + subtext) */
+html .mw-item .mw-title { margin-bottom: 0; }
+html .mw-out {
+  order: 3;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 8px;
+  margin: 14px 10px 22px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(44, 41, 40, 0.1);
+}
+html .mw-out b {
+  font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #2c2928;
+  white-space: nowrap;
+}
+html .mw-out span { font-size: 13.5px; line-height: 1.4; color: #6e6870; }
+html .mw-out.is-note span { font-size: 14px; }
+html .mw-cta { order: 4; }
+/* outcomes sit at the same height on every card in a row: anchored above the button */
+html .mw-out { flex-direction: column; align-items: flex-start; gap: 3px; margin-top: auto; }
+html .mw-item .mw-title { margin-bottom: 18px; }
+html .mw-cta { margin-top: 0 !important; }
+html .mw-out { min-height: 78px; box-sizing: border-box; justify-content: flex-start; }
+
+/* Gift Cards brief: four parts, the outcome highlighted */
+@media (min-width: 1024px) { html .vx-brief { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 641px) and (max-width: 1023px) { html .vx-brief { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+html .vx-brief-item.vx-outcome { background: #f4f1fd; border-color: rgba(106, 75, 214, 0.35); }
+html .vx-brief-item.vx-outcome h2 { color: #5a3ec4; }
+
+/* ==========================================================================
+   CASE STUDIES: one type scale for every case study
+   H1 page title · H2 section heading · H3 sub-heading · lead · body
+   (labels, captions and small UI text inside illustrations keep their sizes)
+   ========================================================================== */
+:root {
+  --cs-h1: clamp(2.4rem, 1.4rem + 3.6vw, 4.3rem);      /* ~68px at 1280 */
+  --cs-h2: clamp(1.85rem, 1.2rem + 1.9vw, 2.75rem);    /* ~44px */
+  --cs-h3: clamp(1.15rem, 1.02rem + 0.42vw, 1.4rem);   /* ~22px */
+  --cs-lead: clamp(1.08rem, 1rem + 0.35vw, 1.22rem);   /* ~19px */
+  --cs-body: 1.0625rem;                                 /* 17px */
+}
+html :is(main.cs2, main.v3, main.oc, main.vx) h1 {
+  font-size: var(--cs-h1) !important;
+  line-height: 1.04 !important;
+  letter-spacing: -0.035em !important;
+}
+html :is(main.cs2, main.v3, main.oc, main.vx) h2:not(.vx-brief-item h2) {
+  font-size: var(--cs-h2) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.03em !important;
+}
+html :is(main.cs2, main.v3, main.oc, main.vx) h3 {
+  font-size: var(--cs-h3) !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.015em !important;
+}
+html :is(main.cs2, main.v3, main.oc, main.vx) :is(.cs2-dek, .oc-dek, .v3-sub, .v3-lede) {
+  font-size: var(--cs-lead) !important;
+  line-height: 1.6 !important;
+}
+/* body paragraphs in the reading column: 17px everywhere */
+html main.v3 :is(.v3-split, .v3-pains-head, .v3-hero-intro, .v3-gx-copy, .v3-reflect, .v3-final) > div > p:not([class]),
+html main.v3 :is(.v3-split, .v3-pains-head, .v3-hero-intro, .v3-gx-copy) > p:not([class]) {
+  font-size: var(--cs-body);
+  line-height: 1.65;
+}
+/* decision / sub-section titles are styled as section headings (same size as H2) */
+html :is(main.cs2, main.v3, main.oc, main.vx) h3:is(.v3-h2, .cs2-h2) {
+  font-size: var(--cs-h2) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.03em !important;
+}
+/* the small headings inside cards and steps: one size */
+html :is(main.cs2, main.v3, main.oc, main.vx) h4 { font-size: 1.125rem !important; line-height: 1.3 !important; }
+
+/* phones: the same scale, with body text at 16px everywhere and card headings one step below sub-headings */
+@media (max-width: 640px) {
+  html main.cs2 .cs2-copy p:not([class]),
+  html main.oc :is(.oc-side-copy, .oc-problem-item) p:not([class]),
+  html main.vx .vx-section-head p:not([class]),
+  html main.v3 :is(.v3-split, .v3-pains-head, .v3-hero-intro, .v3-gx-copy, .v3-real-resp, .v3-ways-one) p:not([class]),
+  html main.v3 :is(.v3-split, .v3-gx-copy) > div > p:not([class]) {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+  }
+  html :is(main.cs2, main.v3, main.oc, main.vx) h4 { font-size: 1rem !important; }
+}
+
+/* ==========================================================================
+   ONE PHONE FRAME EVERYWHERE
+   White frame, thin edge, soft shadow, and the same corner roundness at any
+   size (the radius is a share of the phone's size, not a fixed pixel value).
+   ========================================================================== */
+html :is(.v3-dev-frame, .v3-proto-phone, .oc-phone-shell, .vx-frame, .pbx-d-frame.is-video.is-phone) {
+  padding: 0 !important;
+  border: 1px solid #dedce3 !important;
+  border-radius: 11% / 5.1% !important;
+  background-color: #ffffff;
+  background-image: none !important;
+  overflow: hidden !important;
+  box-shadow: 0 18px 40px -30px rgba(20, 10, 60, 0.32) !important;
+}
+html :is(.v3-dev-frame, .v3-proto-phone, .oc-phone-shell, .vx-frame, .pbx-d-frame.is-video.is-phone) :is(img, video, .oc-phone-screen, .fa-screen, .fa-scroller) {
+  border-radius: 0 !important;
+}
+html :is(.v3-dev-frame, .v3-proto-phone)::before, html .oc-phone-notch { display: none !important; }
+html .vx-frame { background-color: #0f0b24; }
+
+/* no sideways drag on phones: anything wider than the screen (like the off-to-the-side work box cards)
+   is clipped. clip, unlike hidden, doesn't turn body into a scroller, so sticky bars keep working. */
+@supports (overflow: clip) {
+  html, body { overflow-x: clip !important; }
+}
+
+/* phones: the project list under the work box scrolls sideways as a row of small cards */
+@media (max-width: 760px) {
+  html #work .pbx-index {
+    display: flex !important;
+    gap: 10px !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin-inline: -16px;
+    padding: 18px 16px 6px !important;
+    scroll-padding-inline: 16px;
+  }
+  html #work .pbx-index::-webkit-scrollbar { display: none; }
+  html #work .pbx-index button {
+    flex: 0 0 74%;
+    scroll-snap-align: start;
+    padding: 14px 14px 16px !important;
+    border: 1px solid #e7e4ec !important;
+    border-radius: 16px;
+    background: #fff !important;
+    box-shadow: 0 10px 24px -20px rgba(20, 10, 60, .35);
+  }
+}
+
+/* brand icons inside buttons (Gmail, LinkedIn): a small white chip so the logo colours read on any button */
+html .cs2-btn .btn-ico {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; margin: -4px 10px -4px -8px;
+  border-radius: 9px; background: #fff; box-shadow: 0 0 0 1px rgba(20, 10, 60, .08);
+  flex: none;
+}
+html .cs2-btn:has(.btn-ico) { display: inline-flex; align-items: center; }
+
+/* no underlines on any CTA: tertiary "next" buttons, text links and the back link */
+html .cs2-btn, html .cs2-btn.tertiary, html .cs2-btn.tertiary:hover,
+html .text-link, html .text-link:hover, html .btn-diagnose, html .btn-diagnose:hover,
+html .cs-back, html .cs-back:hover { text-decoration: none !important; }

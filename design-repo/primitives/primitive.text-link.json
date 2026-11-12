@@ -1,0 +1,16 @@
+{
+  "id": "primitive.text-link",
+  "kind": "primitive",
+  "description": "Inline text link with underline/arrow affordance.",
+  "props": {
+    "label": "text",
+    "href": "url",
+    "external": "boolean"
+  },
+  "tokens": [
+    "color.accent.ink"
+  ],
+  "cites": [
+    "visit-clinic-gift-cards.html:146"
+  ]
+}

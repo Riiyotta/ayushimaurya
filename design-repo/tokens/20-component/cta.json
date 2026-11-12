@@ -1,0 +1,35 @@
+{
+  "$description": "Button sizing from css/cta.css custom properties.",
+  "tokens": {
+    "component.cta.height": {
+      "value": "48px",
+      "cssProperty": "--cta-h",
+      "cite": "css/cta.css:14"
+    },
+    "component.cta.height-sm": {
+      "value": "40px",
+      "cssProperty": "--cta-h-sm",
+      "cite": "css/cta.css:15"
+    },
+    "component.cta.padding-x": {
+      "value": "22px",
+      "cssProperty": "--cta-px",
+      "cite": "css/cta.css:16"
+    },
+    "component.cta.padding-x-sm": {
+      "value": "16px",
+      "cssProperty": "--cta-px-sm",
+      "cite": "css/cta.css:17"
+    },
+    "component.cta.radius": {
+      "value": "999px",
+      "cssProperty": "--cta-radius",
+      "cite": "css/cta.css:20"
+    },
+    "component.cta.border": {
+      "value": "1.5px",
+      "cssProperty": "--cta-border",
+      "cite": "css/cta.css:21"
+    }
+  }
+}

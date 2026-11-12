@@ -1,0 +1,94 @@
+{
+  "id": "utility.mobile-menu",
+  "title": "Mobile menu overlay",
+  "description": "Full-screen menu opened from the header Menu button on narrow screens.",
+  "source": {
+    "id": "src.mobile-menu",
+    "file": "index.html",
+    "tag": "div",
+    "selector": "div.mobile-menu",
+    "lines": "58-64",
+    "citation": "index.html:58-64",
+    "observedIn": [
+      "index.html:58",
+      "projects.html:39",
+      "resume.html:38",
+      "nda.html:39",
+      "claim-approval.html:40",
+      "family-ahc.html:41",
+      "hybrid-diagnostic.html:40",
+      "virtual-wardrobe.html:40",
+      "visit-clinic-gift-cards.html:40",
+      "visit-clinic.html:40",
+      "wallet-ui.html:40"
+    ]
+  },
+  "semantic": {
+    "id": "utility.mobile-menu",
+    "category": "UTILITY"
+  },
+  "retrievalEligible": false,
+  "retrievalReason": "Runtime navigation overlay toggled by the menu button below 860px; it repeats header links and is not page content.",
+  "variants": [
+    "sheet"
+  ],
+  "content": {
+    "fields": {
+      "links": {
+        "type": "links",
+        "required": true,
+        "maxWords": 1,
+        "maxItems": 2,
+        "evidence": {
+          "selector": ".mobile-menu-links a",
+          "observedElements": 22,
+          "observedBlocks": 11
+        }
+      },
+      "cta": {
+        "type": "link",
+        "required": false,
+        "maxWords": 3,
+        "evidence": {
+          "selector": ".mobile-menu-cta",
+          "observedElements": 11,
+          "observedBlocks": 11
+        }
+      }
+    }
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.home",
+      "template.project-index",
+      "template.resume",
+      "template.notice",
+      "template.case-study-brief",
+      "template.case-study-chaptered"
+    ],
+    "overlayOnly": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "modal-pop",
+      "none"
+    ],
+    "default": "none"
+  },
+  "responsive": [
+    {
+      "breakpoint": "bp.nav",
+      "query": "(min-width: 860px)",
+      "change": "hide-element",
+      "cite": "css/styles.css:317-319"
+    }
+  ],
+  "assetRoles": [],
+  "generatedAssetRoles": [],
+  "components": [
+    "primitive.text-link"
+  ],
+  "tokens": [
+    "color.surface.page"
+  ]
+}

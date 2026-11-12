@@ -1,0 +1,306 @@
+{
+  "$description": "Raw colour values resolved from the real :root custom properties per theme (measure_sections.mjs styles). palette.night.* / palette.day.* are theme-bound; palette.shared.* are identical in both themes.",
+  "tokens": {
+    "palette.night.text-primary": {
+      "value": "#f1edf6",
+      "cssProperty": "--text",
+      "theme": "night",
+      "cite": "css/theme.css:53"
+    },
+    "palette.day.text-primary": {
+      "value": "#2c2928",
+      "cssProperty": "--text",
+      "theme": "day",
+      "cite": "css/theme.css:121"
+    },
+    "palette.night.text-secondary": {
+      "value": "#bdb6c7",
+      "cssProperty": "--text-muted",
+      "theme": "night",
+      "cite": "css/theme.css:54"
+    },
+    "palette.day.text-secondary": {
+      "value": "#57514d",
+      "cssProperty": "--text-muted",
+      "theme": "day",
+      "cite": "css/theme.css:121"
+    },
+    "palette.night.text-faint": {
+      "value": "#8f879a",
+      "cssProperty": "--text-faint",
+      "theme": "night",
+      "cite": "css/theme.css:55"
+    },
+    "palette.day.text-faint": {
+      "value": "#a39aa3",
+      "cssProperty": "--text-faint",
+      "theme": "day",
+      "cite": "css/dream-theme.css:31"
+    },
+    "palette.night.surface-page": {
+      "value": "#141118",
+      "cssProperty": "--bg",
+      "theme": "night",
+      "cite": "css/oc-story.css:7"
+    },
+    "palette.day.surface-page": {
+      "value": "#fafafa",
+      "cssProperty": "--bg",
+      "theme": "day",
+      "cite": "css/oc-story.css:40"
+    },
+    "palette.night.surface-tint": {
+      "value": "#1b1720",
+      "cssProperty": "--ground-tint",
+      "theme": "night",
+      "cite": "css/theme.css:38"
+    },
+    "palette.day.surface-tint": {
+      "value": "#f3f3f3",
+      "cssProperty": "--ground-tint",
+      "theme": "day",
+      "cite": "css/base.css:10"
+    },
+    "palette.night.surface-raised": {
+      "value": "#211c28",
+      "cssProperty": "--surface",
+      "theme": "night",
+      "cite": "css/theme.css:39"
+    },
+    "palette.day.surface-raised": {
+      "value": "#ffffff",
+      "cssProperty": "--surface",
+      "theme": "day",
+      "cite": "css/base.css:13"
+    },
+    "palette.night.border-default": {
+      "value": "rgba(255, 255, 255, .12)",
+      "cssProperty": "--n-line",
+      "theme": "night",
+      "cite": "css/theme.css:50"
+    },
+    "palette.day.border-default": {
+      "value": "rgba(44, 41, 40, 0.16)",
+      "cssProperty": "--n-line",
+      "theme": "day",
+      "cite": "css/neutral.css:13"
+    },
+    "palette.night.border-strong": {
+      "value": "rgba(255, 255, 255, .24)",
+      "cssProperty": "--n-line-2",
+      "theme": "night",
+      "cite": "css/theme.css:51"
+    },
+    "palette.day.border-strong": {
+      "value": "rgba(44, 41, 40, 0.3)",
+      "cssProperty": "--n-line-2",
+      "theme": "day",
+      "cite": "css/neutral.css:14"
+    },
+    "palette.night.action-hover": {
+      "value": "#ffffff",
+      "cssProperty": "--n-hover",
+      "theme": "night",
+      "cite": "css/theme.css:52"
+    },
+    "palette.day.action-hover": {
+      "value": "#45403e",
+      "cssProperty": "--n-hover",
+      "theme": "day",
+      "cite": "css/neutral.css:15"
+    },
+    "palette.night.accent-primary": {
+      "value": "#9b82f5",
+      "cssProperty": "--p",
+      "theme": "night",
+      "cite": "css/oc-story.css:15"
+    },
+    "palette.day.accent-primary": {
+      "value": "#6a4bd6",
+      "cssProperty": "--p",
+      "theme": "day",
+      "cite": "css/functional.css:15"
+    },
+    "palette.night.accent-hover": {
+      "value": "#b39ff8",
+      "cssProperty": "--p-hover",
+      "theme": "night",
+      "cite": "css/theme.css:60"
+    },
+    "palette.day.accent-hover": {
+      "value": "#5436bd",
+      "cssProperty": "--p-hover",
+      "theme": "day",
+      "cite": "css/functional.css:16"
+    },
+    "palette.night.accent-ink": {
+      "value": "#b9a6ff",
+      "cssProperty": "--p-ink",
+      "theme": "night",
+      "cite": "css/oc-story.css:16"
+    },
+    "palette.day.accent-ink": {
+      "value": "#5a3ec4",
+      "cssProperty": "--p-ink",
+      "theme": "day",
+      "cite": "css/functional.css:17"
+    },
+    "palette.night.accent-tint": {
+      "value": "rgba(155, 130, 245, .16)",
+      "cssProperty": "--p-tint",
+      "theme": "night",
+      "cite": "css/oc-story.css:17"
+    },
+    "palette.day.accent-tint": {
+      "value": "#efeafd",
+      "cssProperty": "--p-tint",
+      "theme": "day",
+      "cite": "css/functional.css:18"
+    },
+    "palette.night.accent-line": {
+      "value": "rgba(155, 130, 245, .42)",
+      "cssProperty": "--p-line",
+      "theme": "night",
+      "cite": "css/theme.css:63"
+    },
+    "palette.day.accent-line": {
+      "value": "rgba(106, 75, 214, 0.38)",
+      "cssProperty": "--p-line",
+      "theme": "day",
+      "cite": "css/functional.css:19"
+    },
+    "palette.night.status-ok": {
+      "value": "#4fd18b",
+      "cssProperty": "--ok",
+      "theme": "night",
+      "cite": "css/theme.css:64"
+    },
+    "palette.day.status-ok": {
+      "value": "#1f7a4f",
+      "cssProperty": "--ok",
+      "theme": "day",
+      "cite": "css/functional.css:21"
+    },
+    "palette.night.status-ok-tint": {
+      "value": "rgba(79, 209, 139, .14)",
+      "cssProperty": "--ok-tint",
+      "theme": "night",
+      "cite": "css/theme.css:64"
+    },
+    "palette.day.status-ok-tint": {
+      "value": "#e5f3eb",
+      "cssProperty": "--ok-tint",
+      "theme": "day",
+      "cite": "css/functional.css:21"
+    },
+    "palette.night.status-warn": {
+      "value": "#f2b84b",
+      "cssProperty": "--warn",
+      "theme": "night",
+      "cite": "css/theme.css:65"
+    },
+    "palette.day.status-warn": {
+      "value": "#9a6200",
+      "cssProperty": "--warn",
+      "theme": "day",
+      "cite": "css/functional.css:22"
+    },
+    "palette.night.status-warn-tint": {
+      "value": "rgba(242, 184, 75, .14)",
+      "cssProperty": "--warn-tint",
+      "theme": "night",
+      "cite": "css/theme.css:65"
+    },
+    "palette.day.status-warn-tint": {
+      "value": "#fdf2d9",
+      "cssProperty": "--warn-tint",
+      "theme": "day",
+      "cite": "css/functional.css:22"
+    },
+    "palette.night.status-err": {
+      "value": "#f07a72",
+      "cssProperty": "--err",
+      "theme": "night",
+      "cite": "css/theme.css:66"
+    },
+    "palette.day.status-err": {
+      "value": "#b93b34",
+      "cssProperty": "--err",
+      "theme": "day",
+      "cite": "css/functional.css:23"
+    },
+    "palette.night.status-err-tint": {
+      "value": "rgba(240, 122, 114, .14)",
+      "cssProperty": "--err-tint",
+      "theme": "night",
+      "cite": "css/theme.css:66"
+    },
+    "palette.day.status-err-tint": {
+      "value": "#fbe8e6",
+      "cssProperty": "--err-tint",
+      "theme": "day",
+      "cite": "css/functional.css:23"
+    },
+    "palette.night.status-info": {
+      "value": "#79b0f0",
+      "cssProperty": "--info",
+      "theme": "night",
+      "cite": "css/theme.css:67"
+    },
+    "palette.day.status-info": {
+      "value": "#2b67a8",
+      "cssProperty": "--info",
+      "theme": "day",
+      "cite": "css/functional.css:24"
+    },
+    "palette.night.status-info-tint": {
+      "value": "rgba(121, 176, 240, .14)",
+      "cssProperty": "--info-tint",
+      "theme": "night",
+      "cite": "css/theme.css:67"
+    },
+    "palette.day.status-info-tint": {
+      "value": "#e6eff9",
+      "cssProperty": "--info-tint",
+      "theme": "day",
+      "cite": "css/functional.css:24"
+    },
+    "palette.shared.decor-pink": {
+      "value": "#f2b6c8",
+      "cssProperty": "--a-pink",
+      "cite": "css/accents.css:16"
+    },
+    "palette.shared.decor-pink-deep": {
+      "value": "#d9728f",
+      "cssProperty": "--a-pink-deep",
+      "cite": "css/accents.css:17"
+    },
+    "palette.shared.decor-yellow": {
+      "value": "#ffe59a",
+      "cssProperty": "--a-yellow",
+      "cite": "css/accents.css:18"
+    },
+    "palette.shared.decor-purple": {
+      "value": "#c9b8f0",
+      "cssProperty": "--a-purple",
+      "cite": "css/accents.css:19"
+    },
+    "palette.shared.decor-purple-deep": {
+      "value": "#7d64cf",
+      "cssProperty": "--a-purple-deep",
+      "cite": "css/accents.css:20"
+    },
+    "palette.night.surface-inverse": {
+      "value": "#221d29",
+      "cssProperty": ".v3-dark background (night override)",
+      "theme": "night",
+      "cite": "css/theme.css:94"
+    },
+    "palette.day.surface-inverse": {
+      "value": "#2c2928",
+      "cssProperty": ".v3-dark background: var(--ink) (case-study scope, day)",
+      "theme": "day",
+      "cite": "css/visit-clinic-v3.css:25"
+    }
+  }
+}

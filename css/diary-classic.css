@@ -1,0 +1,170 @@
+/* ==========================================================================
+   THE DIARY — classic purple binder (loaded last on the homepage)
+   Saffiano-textured purple leather, gold binder rings, a lilac elastic band,
+   the name set vertically. Minimal, clean, no stickers.
+   Sizes on the cover use container units (cqh = 1% of the cover's height),
+   so the same cover scales from desktop to the phone modal.
+   ========================================================================== */
+
+#lw-diary {
+  --dy-leather:
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(-45deg, rgba(20, 6, 60, 0.07) 0 1px, transparent 1px 3px),
+    linear-gradient(165deg, #6a43cf 0%, #5631b6 48%, #4a28a1 100%);
+  --dy-board: var(--dy-leather);
+  --dy-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+/* a calm, neutral stage, like the product shot */
+#lw-diary.dy-stage:not(.is-modal) { background: var(--ground, #fafafa) !important; }
+
+/* the open book is bound in the same leather */
+#lw-diary .dy-body::before {
+  background: var(--dy-grain), var(--dy-leather);
+  box-shadow: 0 50px 90px -50px rgba(35, 15, 80, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+/* ---------- the cover ---------- */
+#lw-diary .dy-cover {
+  container-type: size;
+  border-radius: 6px 16px 16px 6px;
+  background: var(--dy-grain), var(--dy-leather);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+    0 14px 24px -14px rgba(20, 10, 50, 0.35),
+    0 44px 80px -40px rgba(35, 15, 80, 0.55);
+}
+#lw-diary .dy-cover::before { display: none; }                 /* no dashed stitching */
+#lw-diary .dy-cover::after {                                  /* soft shading at the bound edge */
+  width: 5%;
+  border-radius: 6px 0 0 6px;
+  background: linear-gradient(90deg, rgba(20, 8, 50, 0.32), transparent);
+}
+
+/* the old label card stays for screen readers only */
+#lw-diary .dy-cover-plate {
+  position: absolute !important;
+  width: 1px !important; height: 1px !important;
+  padding: 0 !important; margin: -1px !important;
+  overflow: hidden !important; clip: rect(0 0 0 0) !important; white-space: nowrap !important;
+  border: 0 !important; box-shadow: none !important;
+}
+
+/* gold binder rings on the left edge */
+#lw-diary .dy-rings {
+  position: absolute;
+  z-index: 2;
+  left: -3.6cqh;
+  top: 8%;
+  bottom: 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  pointer-events: none;
+}
+#lw-diary .dy-rings i {
+  position: relative;
+  display: block;
+  width: 7.4cqh;
+  height: 3.3cqh;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #fff3c4 0%, #ecca6c 22%, #c0922f 52%, #7f5b16 74%, #d8b456 100%);
+  box-shadow: 0 0.5cqh 0.9cqh -0.3cqh rgba(30, 15, 0, 0.45);
+}
+#lw-diary .dy-rings i::after {                                 /* the inside of the loop */
+  content: '';
+  position: absolute;
+  inset: 0.85cqh 1.15cqh;
+  border-radius: 999px;
+  /* see-through loop: the page behind on the left half, the leather on the right */
+  background:
+    linear-gradient(180deg, rgba(20, 8, 40, 0.28), rgba(20, 8, 40, 0) 60%),
+    linear-gradient(90deg, #ecebe8 0 46%, #4f2ba8 46% 100%);
+}
+#lw-diary .dy-rings i::before {                                /* the punched hole in the leather */
+  content: '';
+  position: absolute;
+  z-index: -1;
+  right: 0.2cqh;
+  top: 50%;
+  width: 2cqh;
+  height: 2cqh;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(15, 5, 35, 0.75) 40%, rgba(15, 5, 35, 0) 72%);
+}
+
+/* lilac elastic band */
+#lw-diary .dy-cover-band {
+  right: 11%;
+  width: 2.6cqh;
+  background: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 3px), linear-gradient(90deg, #8c74de, #a893ee 50%, #8c74de);
+  box-shadow: -0.4cqh 0 0.9cqh -0.3cqh rgba(20, 8, 60, 0.4), 0.3cqh 0 0.6cqh -0.3cqh rgba(20, 8, 60, 0.3);
+}
+
+/* the name, set vertically, reading up */
+#lw-diary .dy-cover-name {
+  position: absolute;
+  right: calc(11% + 2.6cqh + 4.5%);
+  bottom: 8%;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 14cqh;
+  line-height: 0.8;
+  letter-spacing: 0.01em;
+  color: #f4f1fb;
+  text-shadow: 0 1px 0 rgba(20, 8, 60, 0.25);
+  pointer-events: none;
+  user-select: none;
+}
+/* a small debossed line at the top */
+#lw-diary .dy-cover-kicker {
+  position: absolute;
+  top: 8%;
+  left: 11%;
+  font: 600 1.9cqh/1 'Inter', system-ui, sans-serif;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  text-shadow: 0 -1px 0 rgba(20, 8, 60, 0.35);
+  pointer-events: none;
+}
+
+/* the button: white on the leather, bottom-left, lined up with the top line */
+html #lw-diary .dy-cover .dy-cover-open {
+  left: 11% !important;
+  right: auto !important;
+  bottom: 8% !important;
+  margin: 0 !important;
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #4a28a1 !important;
+  box-shadow: 0 10px 22px -12px rgba(15, 5, 40, 0.6) !important;
+}
+html #lw-diary .dy-cover .dy-cover-open:hover { background: #f1ecff !important; border-color: #f1ecff !important; color: #4a28a1 !important; }
+html #lw-diary .dy-cover .dy-cover-open:focus-visible { outline-color: #ffffff !important; }
+
+/* ---------- chapter tabs: tonal lilac, not candy ---------- */
+#lw-diary .dy-tab { color: #3b2287; box-shadow: 4px 8px 16px -10px rgba(35, 15, 80, 0.45); }
+#lw-diary .dy-tab:nth-child(1) { background: #efeafd; }
+#lw-diary .dy-tab:nth-child(2) { background: #e2d9fb; }
+#lw-diary .dy-tab:nth-child(3) { background: #d3c6f6; }
+#lw-diary .dy-tab:nth-child(4) { background: #c3b2f0; }
+#lw-diary .dy-tab[aria-current] { background: #ffffff; }
+
+/* the bookmark ribbon: lilac, like the elastic band */
+#lw-diary .dy-ribbon { background: linear-gradient(90deg, #8c74de, #a893ee 50%, #8c74de); }
+
+/* the lilac bookmark ribbon peeks out of the closed diary too */
+/* phones: keep the rings inside the screen */
+@media (max-width: 767px) {
+  #lw-diary.dy-stage:not(.is-modal) .dy-book.is-closed .dy-body { padding-left: 3.5%; }
+  /* a narrower cover: smaller name and a small button so they never touch */
+  #lw-diary .dy-cover-name { font-size: 12cqh; right: calc(11% + 2.6cqh + 3.5%); }
+  html #lw-diary .dy-cover .dy-cover-open { min-height: 40px !important; padding: 0 16px !important; font: 600 14px/1 'Inter', system-ui, sans-serif !important; }
+}
+
+/* each chapter tab keeps its own width, so only the hovered one slides out */
+#lw-diary .dy-tabs { align-items: flex-start; }

@@ -1,0 +1,15 @@
+{
+  "id": "primitive.device-frame",
+  "kind": "primitive",
+  "description": "Rounded phone frame holding a screen image, optionally scrollable.",
+  "props": {
+    "asset": "asset",
+    "scrollable": "boolean"
+  },
+  "tokens": [
+    "radius.xl"
+  ],
+  "cites": [
+    "offline-doctor-consultation.html:150"
+  ]
+}

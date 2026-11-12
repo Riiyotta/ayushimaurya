@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "note": "Reviewed exceptions to the wrapper gate (extraction/wrapper_gate.py). An entry needs reviewedBy, a justification of 30+ characters, maxHeightPx above the measured height and measuredHeightPx equal to the current measurement; stale or over-cap entries fail. An agent reviewer must say so. status stays 'pending human review' until a person signs off.",
+  "entries": [
+    {
+      "route": "projects.html",
+      "section": "index.project-grid",
+      "index": 2,
+      "rule": "SHARE_FAIL",
+      "measuredHeightPx": 2690,
+      "maxHeightPx": 2900,
+      "reviewedBy": "design-repo extraction agent (agent attestation, not a human sign-off)",
+      "status": "pending human review",
+      "justification": "The project index page is a short header, one uniform grid of project cards and a one-line closing. The grid is already separated from the page header and the closing; splitting a uniform card grid into arbitrary chunks would invent boundaries the source does not have, so the grid legitimately holds 62% of the page at 1440px."
+    }
+  ]
+}

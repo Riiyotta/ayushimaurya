@@ -1,0 +1,125 @@
+{
+  "id": "casestudy.problem-statement",
+  "title": "Problem statement",
+  "description": "A card stating the problem in one sentence and the goal, followed by a numbered list of constraints.",
+  "source": {
+    "id": "src.section-v3-section-v3-wrap-v3-problem",
+    "file": "family-ahc.html",
+    "tag": "section",
+    "selector": "section.v3-section.v3-wrap.v3-problem",
+    "lines": "135-148",
+    "citation": "family-ahc.html:135-148",
+    "observedIn": [
+      "family-ahc.html:135",
+      "visit-clinic.html:195"
+    ]
+  },
+  "semantic": {
+    "id": "casestudy.problem-statement",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "statement-card"
+  ],
+  "content": {
+    "fields": {
+      "label": {
+        "type": "text",
+        "required": true,
+        "maxWords": 7,
+        "evidence": {
+          "selector": ".v3-problem-card .v3-label",
+          "observedElements": 2,
+          "observedBlocks": 2
+        }
+      },
+      "statement": {
+        "type": "text",
+        "required": true,
+        "maxWords": 27,
+        "evidence": {
+          "selector": ".v3-problem-statement",
+          "observedElements": 2,
+          "observedBlocks": 2
+        }
+      },
+      "goal": {
+        "type": "text",
+        "required": true,
+        "maxWords": 19,
+        "evidence": {
+          "selector": ".v3-problem-goal",
+          "observedElements": 2,
+          "observedBlocks": 2
+        }
+      },
+      "constraints": {
+        "type": "list",
+        "required": false,
+        "maxItems": 5,
+        "evidence": {
+          "selector": ".v3-challenges li",
+          "observedElements": 9,
+          "observedBlocks": 2
+        },
+        "item": {
+          "title": {
+            "type": "text",
+            "required": true,
+            "maxWords": 6,
+            "evidence": {
+              "selector": "b",
+              "observedElements": 9,
+              "observedBlocks": 9
+            }
+          },
+          "text": {
+            "type": "text",
+            "required": true,
+            "maxWords": 18,
+            "evidence": {
+              "selector": "span",
+              "observedElements": 9,
+              "observedBlocks": 9
+            }
+          }
+        }
+      }
+    }
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.case-study-chaptered"
+    ]
+  },
+  "motion": {
+    "allowedPatterns": [
+      "reveal-on-scroll"
+    ],
+    "default": "reveal-on-scroll"
+  },
+  "responsive": [
+    {
+      "breakpoint": "bp.wide",
+      "query": "(max-width: 1100px) and (min-width: 641px)",
+      "change": "reduce-columns",
+      "cite": "css/visit-clinic-v3.css:644-647"
+    },
+    {
+      "breakpoint": "bp.mobile",
+      "query": "(max-width: 640px)",
+      "change": "stack-columns",
+      "cite": "css/visit-clinic-v3.css:648-651"
+    }
+  ],
+  "assetRoles": [],
+  "generatedAssetRoles": [],
+  "components": [
+    "component.card"
+  ],
+  "tokens": [
+    "color.surface.raised",
+    "color.accent.primary"
+  ]
+}

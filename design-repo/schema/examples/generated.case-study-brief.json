@@ -1,0 +1,199 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "generated",
+  "template": "template.case-study-brief",
+  "route": "/dispatch-board",
+  "theme": "day",
+  "meta": {
+    "title": "Dispatch board, Rowan Vale",
+    "description": "How a route board let one dispatcher rebalance a regional van fleet in minutes."
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "site-nav",
+      "content": {
+        "brandMark": {
+          "role": "brand.placeholder-wordmark",
+          "src": "placeholder://wordmark/rowan-vale",
+          "mediaType": "image",
+          "alt": "Rowan Vale"
+        },
+        "navLinks": [
+          {
+            "label": "Projects",
+            "href": "projects.html",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "CV",
+            "href": "cv.html",
+            "role": "link.internal-route"
+          }
+        ],
+        "themeToggle": true
+      },
+      "motion": {
+        "pattern": "theme-crossfade",
+        "trigger": "tap",
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "section": "casestudy.hero",
+      "variant": "stage",
+      "content": {
+        "backLink": {
+          "label": "All projects",
+          "href": "projects.html",
+          "role": "link.internal-route"
+        },
+        "kicker": "Logistics · Shipped",
+        "title": "A dispatch board that rebalances routes in minutes",
+        "dek": "Dispatchers were moving parcels between vans by phone and spreadsheet. I designed a board where a late van, a sick driver or a surge of parcels becomes a drag-and-drop change.",
+        "meta": [
+          {
+            "term": "Product",
+            "value": "Dispatch board"
+          },
+          {
+            "term": "Role",
+            "value": "Lead designer"
+          },
+          {
+            "term": "Length",
+            "value": "Ten weeks"
+          }
+        ],
+        "media": {
+          "role": "product.generated-visual",
+          "src": "generated://video/dispatch-demo",
+          "mediaType": "video",
+          "alt": "Dragging parcels between two van lanes"
+        }
+      },
+      "motion": {
+        "pattern": "autoplay-loop-video",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "pause-media"
+      }
+    },
+    {
+      "section": "casestudy.chapter",
+      "variant": "plain",
+      "content": {
+        "label": "01 In short",
+        "heading": "From forty minutes to six per route change",
+        "cards": [
+          {
+            "label": "Problem",
+            "title": "Changes by phone",
+            "text": "Every reroute meant three calls and a spreadsheet edit."
+          },
+          {
+            "label": "Approach",
+            "title": "One shared board",
+            "text": "Vans became lanes, parcels became cards you can drag."
+          },
+          {
+            "label": "Result",
+            "title": "Six-minute reroutes",
+            "text": "Median time per change fell sharply in the pilot depot."
+          }
+        ],
+        "gate": {
+          "heading": "Want the long version?",
+          "text": "I'll happily walk you through it.",
+          "ctas": [
+            {
+              "label": "Email me",
+              "href": "mailto:hello@rowan-vale.example",
+              "role": "link.placeholder-url"
+            }
+          ]
+        }
+      },
+      "motion": {
+        "pattern": "reveal-on-scroll",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "static-visible"
+      },
+      "style": {
+        "surface": "color.surface.page",
+        "accent": "color.accent.primary"
+      }
+    },
+    {
+      "section": "conversion.closing",
+      "variant": "thanks-cta",
+      "content": {
+        "heading": "That's the short version",
+        "text": "Questions about routing, depots or drag-and-drop? I enjoy those.",
+        "ctas": [
+          {
+            "label": "Next: technician checklists",
+            "href": "field-checklists.html",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "All projects",
+            "href": "projects.html",
+            "role": "link.internal-route"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "reveal-on-scroll",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "full",
+      "content": {
+        "name": "Rowan Vale",
+        "role": "Interaction Designer",
+        "line": "Have a knotty workflow? Send it my way.",
+        "links": [
+          {
+            "label": "Email",
+            "href": "mailto:hello@rowan-vale.example",
+            "role": "link.placeholder-url"
+          },
+          {
+            "label": "Projects",
+            "href": "projects.html",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "CV",
+            "href": "cv.html",
+            "role": "link.internal-route"
+          }
+        ],
+        "copyright": "© Rowan Vale"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    }
+  ],
+  "overlays": [
+    {
+      "section": "utility.media-lightbox",
+      "variant": "image",
+      "content": {
+        "closeLabel": "Close"
+      },
+      "motion": {
+        "pattern": "modal-pop",
+        "trigger": "tap",
+        "reducedMotionFallback": "instant-state-change"
+      },
+      "retrievalEligible": false
+    }
+  ]
+}

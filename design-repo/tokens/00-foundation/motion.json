@@ -1,0 +1,70 @@
+{
+  "$description": "Durations and easings from real custom properties and real transition declarations.",
+  "tokens": {
+    "motion.duration.fast": {
+      "value": "150ms",
+      "cssProperty": "--dur-fast",
+      "cite": "css/styles.css:68"
+    },
+    "motion.duration.base": {
+      "value": "260ms",
+      "cssProperty": "--dur-base",
+      "cite": "css/styles.css:69"
+    },
+    "motion.duration.slow": {
+      "value": "420ms",
+      "cssProperty": "--dur-slow",
+      "cite": "css/styles.css:70"
+    },
+    "motion.duration.control": {
+      "value": "200ms",
+      "cssProperty": "--cta-ease (0.2s)",
+      "cite": "css/cta.css:22"
+    },
+    "motion.duration.theme": {
+      "value": "400ms",
+      "cite": "css/theme.css:30"
+    },
+    "motion.duration.reveal": {
+      "value": "600ms",
+      "cite": "css/styles.css:1794"
+    },
+    "motion.duration.reveal-long": {
+      "value": "700ms",
+      "cite": "css/oc-story.css:158"
+    },
+    "motion.duration.reveal-soft": {
+      "value": "900ms",
+      "cite": "css/little-world.css:89"
+    },
+    "motion.easing.standard": {
+      "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "cssProperty": "--ease",
+      "cite": "css/styles.css:67"
+    },
+    "motion.easing.soft": {
+      "value": "cubic-bezier(0.2, 0, 0, 1)",
+      "cssProperty": "--soft",
+      "cite": "css/little-world.css:31"
+    },
+    "motion.easing.story": {
+      "value": "cubic-bezier(.2, .9, .2, 1)",
+      "cssProperty": "--ease (story page)",
+      "cite": "css/oc-story.css:34"
+    },
+    "motion.easing.reveal": {
+      "value": "cubic-bezier(.2,.7,.2,1)",
+      "cite": "css/visit-clinic-v3.css:596"
+    },
+    "motion.easing.spring": {
+      "value": "cubic-bezier(.34, 1.4, .64, 1)",
+      "cssProperty": "--spring (story page)",
+      "cite": "css/oc-story.css:35"
+    },
+    "motion.easing.spring-playful": {
+      "value": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+      "cssProperty": "--spring (little-world scope)",
+      "cite": "css/little-world.css:30"
+    }
+  }
+}

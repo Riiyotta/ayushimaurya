@@ -1,0 +1,17 @@
+{
+  "id": "primitive.image-frame",
+  "kind": "primitive",
+  "description": "Zoomable figure frame (button) around a screen image, optional caption.",
+  "props": {
+    "asset": "asset",
+    "caption": "text",
+    "zoomable": "boolean"
+  },
+  "tokens": [
+    "radius.md",
+    "color.border.default"
+  ],
+  "cites": [
+    "hybrid-diagnostic.html:103"
+  ]
+}

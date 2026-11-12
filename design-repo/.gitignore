@@ -1,0 +1,18 @@
+# build artefacts and junk (BASELINE R14)
+design-repo.zip
+*.zip
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+desktop.ini
+__MACOSX/
+# browser captures / screenshots never belong in the repo
+.playwright-mcp/
+captures/
+screenshots/
+*.png
+*.jpg
+*.webp
+*.mp4
+node_modules/

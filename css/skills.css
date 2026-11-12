@@ -1,0 +1,144 @@
+/* What I do: giant skill lines. Hovering a line splits it at the word nearest the cursor
+   and opens a strip of three project shots in the gap. */
+html .sk {
+  --sk-fs: clamp(46px, 8.6vw, 156px);
+  --sk-tw: .82em;           /* every tile is the same size */
+  --sk-th: .96em;
+  --sk-gap: .07em;
+  --sk-ease: cubic-bezier(.2, .9, .2, 1);
+  --sk-spring: cubic-bezier(.34, 1.45, .64, 1);
+  position: relative;
+  overflow: hidden;
+  padding: clamp(72px, 9vw, 140px) 0 clamp(88px, 10vw, 160px);
+  background:
+    radial-gradient(60% 55% at 50% 42%, rgba(176, 150, 240, .26), transparent 70%),
+    radial-gradient(40% 40% at 85% 90%, rgba(203, 189, 246, .12), transparent 70%),
+    #2f2636;
+  color: #fff;
+  isolation: isolate;
+}
+html .sk-label {
+  margin: 0 auto clamp(28px, 4vw, 56px);
+  max-width: none;
+  text-align: center;
+  font: 500 12px/1 'Inter', system-ui, sans-serif;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: #cbbdf6;
+}
+html .sk-list { list-style: none; margin: 0; padding: 0; }
+html .sk-line {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transform: translateX(var(--px, 0px));
+}
+html .sk-line.is-open { position: relative; z-index: 2; }
+html .sk-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: .24em;
+  white-space: nowrap;
+  font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: var(--sk-fs);
+  line-height: 1.04;
+  letter-spacing: -.035em;
+  color: #fff;
+  text-decoration: none;
+  transition: color .45s var(--sk-ease);
+  outline: none;
+}
+html .sk-w {
+  display: inline-block;
+  transform: translateX(var(--dx, 0px));
+  transition: transform .45s var(--sk-ease);
+}
+
+/* the other lines step back while one is open */
+html .sk.has-open .sk-line:not(.is-open) .sk-link { color: rgba(255, 255, 255, .2); }
+html .sk-link:focus-visible .sk-w { text-decoration: underline; text-decoration-thickness: .04em; text-underline-offset: .12em; }
+
+/* the strip sits in the gap the words open; it slides along when the split point moves */
+html .sk-strip {
+  position: absolute;
+  top: 50%;
+  left: var(--sx, 50%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: left .45s var(--sk-ease);
+}
+html .sk-strip-in { display: flex; gap: var(--sk-gap); }
+html .sk-tile {
+  position: relative;
+  display: block;
+  flex: none;
+  width: var(--sk-tw);
+  height: var(--sk-th);
+  border-radius: .06em;
+  overflow: hidden;
+  background: #3d3346;
+  box-shadow: 0 .12em .3em -.12em rgba(8, 3, 24, .6);
+  transform: scale(.9);
+  opacity: 0;
+  transition: transform .2s var(--sk-ease), opacity .12s linear;
+}
+html .sk-tile img,
+html .sk-tile video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 0;
+  display: block;
+}
+html .sk-line.is-open .sk-tile {
+  transform: translateY(calc(var(--lift, 0) * -.08em)) scale(var(--s, 1)) rotate(var(--rz, 0deg));
+  opacity: 1;
+  /* one after another */
+  transition: transform .38s var(--sk-spring), opacity 0s;
+  transition-delay: calc(var(--j) * .11s);
+}
+/* once open, the tiles answer the cursor like a dock: the nearest grows and lifts, and each tilts toward it */
+html .sk-strip-in { transform: translateX(var(--nx, 0px)); transition: transform .5s var(--sk-ease); }
+html .sk-line.is-live .sk-tile { transition: transform .35s var(--sk-ease), opacity 0s; transition-delay: 0s; }
+html .sk-tile.is-hot { z-index: 1; }
+
+/* cursor pill */
+html .sk-pill {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 60;
+  pointer-events: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #fff;
+  color: #2f2636;
+  font: 500 13px/1 'Inter', system-ui, sans-serif;
+  white-space: nowrap;
+  box-shadow: 0 14px 30px -14px rgba(10, 4, 30, .55);
+  transform: translate3d(var(--mx, -200px), var(--my, -200px), 0) translate(18px, 20px) scale(.6);
+  opacity: 0;
+  transition: opacity .25s ease, transform .2s var(--sk-ease);
+}
+html .sk-pill.on {
+  opacity: 1;
+  transform: translate3d(var(--mx, -200px), var(--my, -200px), 0) translate(18px, 20px) scale(1);
+}
+html .sk-pill-a { color: #5a3ec4; }
+
+/* phones + touch: the strip drops below the line instead of splitting it */
+/* phones + touch: same split as desktop (the words get pushed past the edges, that's fine),
+   a slightly bigger type and tiles that sit in the line; no cursor pill */
+@media (max-width: 760px), (hover: none) {
+  html .sk { --sk-fs: clamp(34px, 10.4vw, 80px); --sk-tw: 1.1em; --sk-th: 1.28em; --sk-gap: .08em; }
+  html .sk-line + .sk-line { margin-top: .1em; }
+  html .sk-tile { border-radius: .08em; }
+  html .sk-pill { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html .sk-line { transform: none !important; }
+  html .sk-strip, html .sk-tile, html .sk-w, html .sk-link { transition-duration: .01s !important; transition-delay: 0s !important; }
+}

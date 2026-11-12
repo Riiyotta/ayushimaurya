@@ -1,0 +1,281 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "section-contract.schema.json",
+  "title": "Section contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "description",
+    "source",
+    "semantic",
+    "retrievalEligible",
+    "variants",
+    "content",
+    "constraints",
+    "motion",
+    "responsive",
+    "assetRoles",
+    "generatedAssetRoles",
+    "components",
+    "tokens"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z]+\\.[a-z0-9-]+$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "file",
+        "tag",
+        "selector",
+        "lines",
+        "citation"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^src\\."
+        },
+        "file": {
+          "type": "string"
+        },
+        "tag": {
+          "type": "string"
+        },
+        "selector": {
+          "type": "string"
+        },
+        "lines": {
+          "type": "string",
+          "pattern": "^[0-9]+(-[0-9]+)?$"
+        },
+        "citation": {
+          "type": "string",
+          "pattern": "^[^:]+:[0-9]+(-[0-9]+)?$"
+        },
+        "observedIn": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "semantic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "category"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "category": {
+          "enum": [
+            "SHELL",
+            "HERO",
+            "NAVIGATION",
+            "SUMMARY",
+            "CONTENT",
+            "EDITORIAL",
+            "MEDIA",
+            "CONVERSION",
+            "UTILITY"
+          ]
+        }
+      }
+    },
+    "retrievalEligible": {
+      "type": "boolean"
+    },
+    "retrievalReason": {
+      "type": "string",
+      "minLength": 30
+    },
+    "variants": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "content": {
+      "type": "object",
+      "required": [
+        "fields"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "fields": {
+          "type": "object"
+        }
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "maxPerPage": {
+          "type": "integer"
+        },
+        "overlayOnly": {
+          "type": "boolean"
+        },
+        "usedByTemplates": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "motion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "allowedPatterns",
+        "default"
+      ],
+      "properties": {
+        "allowedPatterns": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "ambient-drift",
+              "autoplay-loop-video",
+              "box-open",
+              "card-flip",
+              "interactive-canvas-field",
+              "modal-pop",
+              "none",
+              "reveal-on-scroll",
+              "rise-in-on-load",
+              "scroll-console",
+              "scroll-pinned-panels",
+              "scroll-stepper",
+              "sticky-chapter-nav",
+              "theme-crossfade"
+            ]
+          }
+        },
+        "default": {
+          "enum": [
+            "ambient-drift",
+            "autoplay-loop-video",
+            "box-open",
+            "card-flip",
+            "interactive-canvas-field",
+            "modal-pop",
+            "none",
+            "reveal-on-scroll",
+            "rise-in-on-load",
+            "scroll-console",
+            "scroll-pinned-panels",
+            "scroll-stepper",
+            "sticky-chapter-nav",
+            "theme-crossfade"
+          ]
+        }
+      }
+    },
+    "responsive": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "breakpoint",
+          "query",
+          "change",
+          "cite"
+        ],
+        "properties": {
+          "breakpoint": {
+            "type": "string",
+            "pattern": "^bp\\."
+          },
+          "query": {
+            "type": "string"
+          },
+          "change": {
+            "enum": [
+              "swap-nav-for-menu",
+              "hide-element",
+              "resize-type",
+              "reflow-spacing",
+              "horizontal-scroll",
+              "resize-element",
+              "stack-columns",
+              "reduce-columns",
+              "compact-controls",
+              "unpin-sticky",
+              "shorten-scroll-track",
+              "show-only-below"
+            ]
+          },
+          "cite": {
+            "type": "string",
+            "pattern": "^[^:]+:[0-9]+(-[0-9]+)?$"
+          }
+        }
+      }
+    },
+    "responsiveNote": {
+      "type": "string"
+    },
+    "assetRoles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "generatedAssetRoles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tokens": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "retrievalEligible": {
+            "const": false
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "retrievalReason"
+        ]
+      }
+    }
+  ]
+}

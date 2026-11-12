@@ -1,0 +1,138 @@
+{
+  "id": "resume.entry-group",
+  "title": "Resume entry group",
+  "description": "One heading-bounded resume part: a side label, then paragraphs, role entries (title, organisation, dates, bullets, key projects) or bullet lists.",
+  "source": {
+    "id": "src.section-cs-section",
+    "file": "resume.html",
+    "tag": "section",
+    "selector": "section.cs-section",
+    "lines": "73-80",
+    "citation": "resume.html:73-80",
+    "observedIn": [
+      "resume.html:73",
+      "resume.html:82",
+      "resume.html:183",
+      "resume.html:213",
+      "resume.html:222"
+    ]
+  },
+  "semantic": {
+    "id": "resume.entry-group",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "summary",
+    "experience",
+    "skills",
+    "education",
+    "certifications"
+  ],
+  "content": {
+    "fields": {
+      "label": {
+        "type": "text",
+        "required": true,
+        "maxWords": 2,
+        "evidence": {
+          "selector": ".cs-section-label",
+          "observedElements": 5,
+          "observedBlocks": 5
+        }
+      },
+      "paragraphs": {
+        "type": "textList",
+        "required": false,
+        "maxWords": 54,
+        "maxItems": 1,
+        "evidence": {
+          "selector": ".cs-section-body > p",
+          "observedElements": 2,
+          "observedBlocks": 2
+        }
+      },
+      "entries": {
+        "type": "list",
+        "required": false,
+        "maxItems": 2,
+        "evidence": {
+          "selector": ".cs-section-body > .decision-card",
+          "observedElements": 2,
+          "observedBlocks": 1
+        },
+        "item": {
+          "title": {
+            "type": "text",
+            "required": true,
+            "maxWords": 8,
+            "evidence": {
+              "selector": ".decision-title",
+              "observedElements": 5,
+              "observedBlocks": 2
+            }
+          },
+          "organisation": {
+            "type": "text",
+            "required": false,
+            "maxWords": 19,
+            "evidence": {
+              "selector": ".decision-row-value",
+              "observedElements": 11,
+              "observedBlocks": 2
+            }
+          },
+          "dates": {
+            "type": "text",
+            "required": false,
+            "maxWords": 4,
+            "evidence": {
+              "selector": ".decision-row-label",
+              "observedElements": 11,
+              "observedBlocks": 2
+            }
+          }
+        }
+      },
+      "bullets": {
+        "type": "textList",
+        "required": false,
+        "maxWords": 18,
+        "maxItems": 7,
+        "evidence": {
+          "selector": "li",
+          "observedElements": 10,
+          "observedBlocks": 2
+        }
+      }
+    }
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.resume"
+    ]
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none"
+  },
+  "responsive": [
+    {
+      "breakpoint": "bp.content",
+      "query": "(min-width: 800px)",
+      "change": "stack-columns",
+      "cite": "css/styles.css:851-856"
+    }
+  ],
+  "assetRoles": [],
+  "generatedAssetRoles": [],
+  "components": [
+    "component.decision-card"
+  ],
+  "tokens": [
+    "color.text.secondary",
+    "color.border.default"
+  ]
+}

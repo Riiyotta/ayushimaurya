@@ -1,0 +1,88 @@
+{
+  "id": "about.closing",
+  "title": "About-me closing",
+  "description": "'To be continued' band: a glowing door, a small kicker, a closing sentence and a button that opens the dreams overlay, over a cloud bank.",
+  "source": {
+    "id": "src.section-lw-end-lw-torn",
+    "file": "index.html",
+    "tag": "section",
+    "selector": "section.lw-end.lw-torn",
+    "lines": "502-539",
+    "citation": "index.html:502-539",
+    "observedIn": [
+      "index.html:502"
+    ]
+  },
+  "semantic": {
+    "id": "about.closing",
+    "category": "EDITORIAL"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "door"
+  ],
+  "content": {
+    "fields": {
+      "kicker": {
+        "type": "text",
+        "required": true,
+        "maxWords": 5,
+        "evidence": {
+          "selector": ".lw-tbc",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 10,
+        "evidence": {
+          "selector": ".lw-h-end",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "cta": {
+        "type": "link",
+        "required": true,
+        "maxWords": 6,
+        "evidence": {
+          "selector": ".lw-dreams-btn",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      }
+    }
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.home"
+    ]
+  },
+  "motion": {
+    "allowedPatterns": [
+      "ambient-drift",
+      "reveal-on-scroll"
+    ],
+    "default": "ambient-drift"
+  },
+  "responsive": [],
+  "responsiveNote": "No breakpoint-specific rule targets this band outside the diary modal; the cloud bank scales with viewport width.",
+  "assetRoles": [
+    "decor.cloud-illustration",
+    "icon.glyph"
+  ],
+  "generatedAssetRoles": [
+    "illustration.generated-decor",
+    "icon.glyph"
+  ],
+  "components": [
+    "primitive.button",
+    "primitive.icon-glyph"
+  ],
+  "tokens": [
+    "font.family.display",
+    "color.decor.yellow"
+  ]
+}

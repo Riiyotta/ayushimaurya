@@ -1,0 +1,260 @@
+{
+  "version": "1.0.0",
+  "licensing": "The source is a real, living person's portfolio showing real employer/client product work. Generated pages must never reproduce the owner's name, wordmark, photographs, contact details or URLs, nor the employer's or clients' product screens, videos, product names or copy. Generators must not fabricate look-alikes of any of these either (blocked-for-generation). Use the generation-safe substitutes.",
+  "availabilityEnum": [
+    "reference-only",
+    "generation-safe",
+    "blocked-for-generation"
+  ],
+  "placeholderSources": {
+    "asset": "^(placeholder|generated|user-supplied)://",
+    "url": "reserved domains only: *.example, *.invalid, example.com, example.org, example.net"
+  },
+  "notApplicable": {
+    "rating.placeholder": "The source has no ratings, reviews or testimonials, so no rating role or rating field exists."
+  },
+  "roles": {
+    "brand.wordmark-logo": {
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "description": "The source owner's script-signature wordmark image used as the header brand.",
+      "appliesTo": "asset",
+      "generationSafeSubstitutes": [
+        "brand.placeholder-wordmark",
+        "brand.user-supplied-mark"
+      ],
+      "pathPatterns": [
+        "^assets/logo-"
+      ],
+      "evidence": [
+        "index.html:46"
+      ]
+    },
+    "person.portrait-photo": {
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "description": "Real personal photographs of the portfolio owner (photo-strip).",
+      "appliesTo": "asset",
+      "generationSafeSubstitutes": [
+        "person.fictional-avatar",
+        "illustration.generated-decor"
+      ],
+      "pathPatterns": [
+        "^assets/little-world/booth-"
+      ],
+      "evidence": [
+        "index.html:216"
+      ]
+    },
+    "person.lifestyle-photo": {
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "description": "Real personal craft/lifestyle photographs inside the diary.",
+      "appliesTo": "asset",
+      "generationSafeSubstitutes": [
+        "illustration.generated-decor"
+      ],
+      "pathPatterns": [
+        "^assets/little-world/craft-"
+      ],
+      "evidence": [
+        "index.html:311"
+      ]
+    },
+    "decor.hero-reveal-image": {
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "description": "Raster image revealed under the home hero by a pointer brush (content not verified as non-identifying, so blocked).",
+      "appliesTo": "asset",
+      "generationSafeSubstitutes": [
+        "illustration.generated-decor"
+      ],
+      "pathPatterns": [
+        "^assets/hero-collage"
+      ],
+      "evidence": [
+        "js/hero.js:314"
+      ]
+    },
+    "product.case-study-screen": {
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "description": "Real product screens from the owner's employer/client work and concept work (case-study figures, galleries, device frames).",
+      "appliesTo": "asset",
+      "generationSafeSubstitutes": [
+        "product.generated-visual"
+      ],
+      "pathPatterns": [
+        "^assets/case-studies/.*\\.(webp|png|jpg|gif)$",
+        "^assets/screens/",
+        "^assets/visuals/",
+        "^assets/clinic-consultation-flow"
+      ],
+      "evidence": [
+        "hybrid-diagnostic.html:103",
+        "visit-clinic-gift-cards.html:63"
+      ]
+    },
+    "product.case-study-video": {
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "description": "Real product walkthrough videos and their posters.",
+      "appliesTo": "asset",
+      "generationSafeSubstitutes": [
+        "product.generated-visual"
+      ],
+      "pathPatterns": [
+        "^assets/case-studies/.*\\.mp4$",
+        "^assets/videos/"
+      ],
+      "evidence": [
+        "hybrid-diagnostic.html:67"
+      ]
+    },
+    "product.thumbnail": {
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "description": "Project thumbnails (project grid, skill strips) showing real product UI.",
+      "appliesTo": "asset",
+      "generationSafeSubstitutes": [
+        "product.generated-visual"
+      ],
+      "pathPatterns": [
+        "^assets/thumbs",
+        "^assets/skills/t-"
+      ],
+      "evidence": [
+        "projects.html:60",
+        "index.html:151"
+      ]
+    },
+    "media.side-project-demo": {
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "description": "Screen recordings of the owner's own side projects and research artefacts.",
+      "appliesTo": "asset",
+      "generationSafeSubstitutes": [
+        "product.generated-visual"
+      ],
+      "pathPatterns": [
+        "^assets/skills/.*\\.mp4$"
+      ],
+      "evidence": [
+        "index.html:126"
+      ]
+    },
+    "decor.cloud-illustration": {
+      "availability": "reference-only",
+      "generationPolicy": "must-reuse-exact",
+      "description": "Decorative cloud cut-outs used in the about-me band (reference reconstruction only).",
+      "appliesTo": "asset",
+      "generationSafeSubstitutes": [
+        "illustration.generated-decor"
+      ],
+      "pathPatterns": [
+        "^assets/clouds/"
+      ],
+      "evidence": [
+        "index.html:178"
+      ]
+    },
+    "icon.glyph": {
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "Generic geometric glyphs (star, heart, sparkle, flower, note, cloud, moon) drawn as inline vector symbols.",
+      "appliesTo": "asset",
+      "generationSafeSubstitutes": [],
+      "pathPatterns": [
+        "^glyph:"
+      ],
+      "evidence": [
+        "index.html:35"
+      ]
+    },
+    "brand.placeholder-wordmark": {
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "A text wordmark for the generated site's own fictional owner, set in the display font.",
+      "appliesTo": "asset",
+      "generationSafeSubstitutes": [],
+      "pathPatterns": [
+        "^placeholder://"
+      ],
+      "evidence": []
+    },
+    "brand.user-supplied-mark": {
+      "availability": "generation-safe",
+      "generationPolicy": "user-supplied",
+      "description": "A mark the requesting user supplies for their own site.",
+      "appliesTo": "asset",
+      "generationSafeSubstitutes": [],
+      "pathPatterns": [
+        "^user-supplied://"
+      ],
+      "evidence": []
+    },
+    "person.fictional-avatar": {
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "Illustrated or initials avatar of a fictional person; never a likeness of a real person.",
+      "appliesTo": "asset",
+      "generationSafeSubstitutes": [],
+      "pathPatterns": [
+        "^(generated|placeholder)://"
+      ],
+      "evidence": []
+    },
+    "product.generated-visual": {
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "Newly generated screens/video of a fictional product; must not imitate the source's product UI or brand.",
+      "appliesTo": "asset",
+      "generationSafeSubstitutes": [],
+      "pathPatterns": [
+        "^(generated|placeholder)://"
+      ],
+      "evidence": []
+    },
+    "illustration.generated-decor": {
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "Newly generated decorative illustration (clouds, stickers, paper textures) in the site's pastel accent palette.",
+      "appliesTo": "asset",
+      "generationSafeSubstitutes": [],
+      "pathPatterns": [
+        "^(generated|placeholder)://"
+      ],
+      "evidence": []
+    },
+    "link.source-url": {
+      "availability": "reference-only",
+      "generationPolicy": "must-not-fabricate",
+      "description": "A real external URL or address of the source (social profiles, email, live prototypes, employer pages, articles).",
+      "appliesTo": "link",
+      "generationSafeSubstitutes": [
+        "link.placeholder-url"
+      ]
+    },
+    "link.internal-route": {
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "A relative link to a page or anchor inside the same site.",
+      "appliesTo": "link",
+      "generationSafeSubstitutes": []
+    },
+    "link.placeholder-url": {
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "An external link or email on a reserved domain only (*.example, *.invalid, example.com/.org/.net).",
+      "appliesTo": "link",
+      "generationSafeSubstitutes": []
+    },
+    "copy.original": {
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "Every text field of a generated page is original copy; enforced by the GENERATED_MODE_COPY/CTA/BRAND/PERSON rules.",
+      "appliesTo": "copy",
+      "generationSafeSubstitutes": []
+    }
+  }
+}

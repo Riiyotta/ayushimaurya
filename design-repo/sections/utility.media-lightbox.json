@@ -1,0 +1,72 @@
+{
+  "id": "utility.media-lightbox",
+  "title": "Media lightbox",
+  "description": "Modal viewer for a zoomed image, phone screen, photo strip frame or a project detail sheet.",
+  "source": {
+    "id": "src.cs2-lightbox",
+    "file": "hybrid-diagnostic.html",
+    "tag": "div",
+    "selector": "div.cs2-lightbox",
+    "lines": "273-276",
+    "citation": "hybrid-diagnostic.html:273-276",
+    "observedIn": [
+      "hybrid-diagnostic.html:273"
+    ]
+  },
+  "semantic": {
+    "id": "utility.media-lightbox",
+    "category": "UTILITY"
+  },
+  "retrievalEligible": false,
+  "retrievalReason": "Runtime overlay that enlarges a figure, a phone screen, a photo or a project preview already present on the page; duplicate media, not content.",
+  "variants": [
+    "image",
+    "screen",
+    "photo",
+    "project-sheet"
+  ],
+  "content": {
+    "fields": {
+      "closeLabel": {
+        "type": "text",
+        "required": true,
+        "maxWords": 1,
+        "evidence": {
+          "selector": "button",
+          "attr": "aria-label",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      }
+    }
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.home",
+      "template.case-study-brief",
+      "template.case-study-chaptered"
+    ],
+    "overlayOnly": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "modal-pop"
+    ],
+    "default": "modal-pop"
+  },
+  "responsive": [],
+  "responsiveNote": "Fills the viewport at every width.",
+  "assetRoles": [
+    "product.case-study-screen",
+    "person.portrait-photo"
+  ],
+  "generatedAssetRoles": [
+    "product.generated-visual"
+  ],
+  "components": [
+    "primitive.image-frame"
+  ],
+  "tokens": [
+    "color.surface.page"
+  ]
+}

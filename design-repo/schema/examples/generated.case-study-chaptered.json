@@ -1,0 +1,367 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "generated",
+  "template": "template.case-study-chaptered",
+  "route": "/field-checklists",
+  "theme": "night",
+  "meta": {
+    "title": "Field checklists, Rowan Vale",
+    "description": "A long-form study of offline checklists for maintenance technicians working without signal."
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "site-nav",
+      "content": {
+        "brandMark": {
+          "role": "brand.placeholder-wordmark",
+          "src": "placeholder://wordmark/rowan-vale",
+          "mediaType": "image",
+          "alt": "Rowan Vale"
+        },
+        "navLinks": [
+          {
+            "label": "Projects",
+            "href": "projects.html",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "CV",
+            "href": "cv.html",
+            "role": "link.internal-route"
+          }
+        ],
+        "themeToggle": true
+      },
+      "motion": {
+        "pattern": "theme-crossfade",
+        "trigger": "tap",
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "section": "casestudy.hero",
+      "variant": "split-media",
+      "content": {
+        "backLink": {
+          "label": "All projects",
+          "href": "projects.html",
+          "role": "link.internal-route"
+        },
+        "kicker": "Field work · Pilot",
+        "title": "Checklists that keep working three floors underground",
+        "dek": "Maintenance crews lost work whenever signal dropped. I designed an offline-first checklist app that saves every tick locally and syncs once the technician is back above ground.",
+        "meta": [
+          {
+            "term": "Product",
+            "value": "Technician app"
+          },
+          {
+            "term": "Role",
+            "value": "Lead designer"
+          }
+        ],
+        "media": {
+          "role": "product.generated-visual",
+          "src": "generated://video/checklist-walkthrough",
+          "mediaType": "video",
+          "alt": "Ticking items with no signal"
+        }
+      },
+      "motion": {
+        "pattern": "reveal-on-scroll",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "section": "casestudy.summary",
+      "variant": "tldr-grid",
+      "content": {
+        "cells": [
+          {
+            "label": "In brief",
+            "text": "Offline checklists for crews who work where phones lose signal."
+          },
+          {
+            "label": "My part",
+            "text": "Lead designer with one researcher and three engineers."
+          },
+          {
+            "label": "Early signal",
+            "text": "No lost checklists across a six-week pilot."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "reveal-on-scroll",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "section": "casestudy.chapter-nav",
+      "variant": "anchor-list",
+      "content": {
+        "links": [
+          {
+            "label": "Context",
+            "href": "#context",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "Problem",
+            "href": "#problem",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "Decision",
+            "href": "#decision",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "Walkthrough",
+            "href": "#walkthrough",
+            "role": "link.internal-route"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "sticky-chapter-nav",
+        "trigger": "scroll-progress",
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "section": "casestudy.chapter",
+      "variant": "plain",
+      "content": {
+        "label": "01 Context",
+        "heading": "Plant rooms, car parks and lift shafts",
+        "paragraphs": [
+          "Technicians spend most of a shift in places built to block radio waves.",
+          "Paper forms came back damp, late or not at all."
+        ],
+        "figures": [
+          {
+            "role": "product.generated-visual",
+            "src": "generated://screens/plant-room-map",
+            "mediaType": "image",
+            "alt": "Sketch of a plant room route"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "reveal-on-scroll",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "section": "casestudy.problem-statement",
+      "variant": "statement-card",
+      "content": {
+        "label": "What we set out to fix",
+        "statement": "Technicians lose completed work when signal drops, so supervisors cannot trust what was actually checked.",
+        "goal": "Every tick is saved the moment it happens, with or without signal.",
+        "constraints": [
+          {
+            "title": "Gloves on",
+            "text": "Targets had to work with thick work gloves."
+          },
+          {
+            "title": "Old phones",
+            "text": "Crews carry five-year-old handsets with little storage."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "reveal-on-scroll",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "section": "casestudy.chapter",
+      "variant": "tint",
+      "content": {
+        "label": "02 Research",
+        "heading": "Three ride-alongs, one recurring moment",
+        "paragraphs": [
+          "The same pause happened every time: a technician holding a phone up, looking for a single bar."
+        ],
+        "quote": "If it does not save down here, I write it on my hand."
+      },
+      "motion": {
+        "pattern": "reveal-on-scroll",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "static-visible"
+      },
+      "style": {
+        "surface": "color.surface.tint"
+      }
+    },
+    {
+      "section": "casestudy.decision",
+      "variant": "single",
+      "content": {
+        "heading": "Save locally first, sync later",
+        "number": "Decision 01",
+        "steps": [
+          {
+            "label": "Idea",
+            "title": "Live sync",
+            "text": "Keep every checklist in sync with the office as it is filled in."
+          },
+          {
+            "label": "Reality",
+            "title": "No signal",
+            "text": "Most checks happen where the phone cannot reach the network."
+          },
+          {
+            "label": "Shipped",
+            "title": "Local-first",
+            "text": "Ticks save on the phone and upload in the background later."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "reveal-on-scroll",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "static-visible"
+      },
+      "style": {
+        "accent": "color.accent.primary",
+        "radius": "radius.card"
+      }
+    },
+    {
+      "section": "casestudy.scroll-narrative",
+      "variant": "console",
+      "content": {
+        "statusList": [
+          "Arrive",
+          "Start checklist",
+          "Offline",
+          "Back online",
+          "Synced"
+        ],
+        "steps": [
+          {
+            "label": "01 · Arrive",
+            "text": "The app opens the right checklist from the job sheet."
+          },
+          {
+            "label": "02 · Offline",
+            "text": "A quiet banner says work is saving on the phone."
+          },
+          {
+            "label": "03 · Synced",
+            "text": "A single tick confirms the office has every answer."
+          }
+        ],
+        "figures": [
+          {
+            "role": "product.generated-visual",
+            "src": "generated://screens/offline-banner",
+            "mediaType": "image",
+            "alt": "Offline banner on a checklist"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "scroll-console",
+        "trigger": "scroll-progress",
+        "reducedMotionFallback": "show-all-steps"
+      }
+    },
+    {
+      "section": "casestudy.chapter",
+      "variant": "plain",
+      "content": {
+        "label": "03 Pilot",
+        "heading": "Six weeks with two crews",
+        "paragraphs": [
+          "Supervisors stopped calling to ask whether a room had been checked."
+        ]
+      },
+      "motion": {
+        "pattern": "reveal-on-scroll",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "section": "conversion.closing",
+      "variant": "final-statement",
+      "content": {
+        "heading": "Good field software assumes the field is hostile.",
+        "text": "The interface mattered less than deciding that the phone, not the server, holds the truth until it can share it.",
+        "ctas": [
+          {
+            "label": "All projects",
+            "href": "projects.html",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "Talk it through",
+            "href": "mailto:hello@rowan-vale.example",
+            "role": "link.placeholder-url"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "reveal-on-scroll",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "full",
+      "content": {
+        "name": "Rowan Vale",
+        "role": "Interaction Designer",
+        "line": "Have a knotty workflow? Send it my way.",
+        "links": [
+          {
+            "label": "Email",
+            "href": "mailto:hello@rowan-vale.example",
+            "role": "link.placeholder-url"
+          },
+          {
+            "label": "Projects",
+            "href": "projects.html",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "CV",
+            "href": "cv.html",
+            "role": "link.internal-route"
+          }
+        ],
+        "copyright": "© Rowan Vale"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    }
+  ],
+  "overlays": [
+    {
+      "section": "utility.media-lightbox",
+      "variant": "screen",
+      "content": {
+        "closeLabel": "Close"
+      },
+      "motion": {
+        "pattern": "modal-pop",
+        "trigger": "tap",
+        "reducedMotionFallback": "instant-state-change"
+      },
+      "retrievalEligible": false
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "id": "home.work-showcase",
+  "title": "Work showcase (project box)",
+  "description": "Section kicker + two-part heading, a hint line, category filter chips and a 3D 'box' of project cards rendered from a data file; locked projects open a password dialog; a link to the full project index.",
+  "source": {
+    "id": "src.section-pbx-section-container",
+    "file": "index.html",
+    "tag": "section",
+    "selector": "section.pbx-section.container",
+    "lines": "86-115",
+    "citation": "index.html:86-115",
+    "observedIn": [
+      "index.html:86"
+    ]
+  },
+  "semantic": {
+    "id": "home.work-showcase",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "project-box"
+  ],
+  "content": {
+    "fields": {
+      "kicker": {
+        "type": "text",
+        "required": true,
+        "maxWords": 2,
+        "evidence": {
+          "selector": ".section-kicker",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 9,
+        "evidence": {
+          "selector": ".section-title",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "hint": {
+        "type": "text",
+        "required": false,
+        "maxWords": 10,
+        "evidence": {
+          "selector": ".pbx-hint",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "filters": {
+        "type": "textList",
+        "required": false,
+        "maxWords": 5,
+        "maxItems": 5,
+        "evidence": {
+          "jsField": "js/data.js:label",
+          "observed": 5,
+          "cite": "js/data.js:9"
+        }
+      },
+      "projects": {
+        "type": "list",
+        "required": true,
+        "maxItems": 19,
+        "evidence": {
+          "jsCount": "js/data.js:slug",
+          "observed": 19,
+          "cite": "js/data.js:9"
+        },
+        "item": {
+          "title": {
+            "type": "text",
+            "required": true,
+            "maxWords": 10,
+            "evidence": {
+              "jsField": "js/data.js:title",
+              "observed": 25,
+              "cite": "js/data.js:28"
+            }
+          },
+          "oneLiner": {
+            "type": "text",
+            "required": false,
+            "maxWords": 18,
+            "evidence": {
+              "jsField": "js/data.js:oneLiner",
+              "observed": 8,
+              "cite": "js/data.js:37"
+            }
+          },
+          "locked": {
+            "type": "boolean",
+            "required": true
+          },
+          "link": {
+            "type": "link",
+            "required": true,
+            "maxWords": 3,
+            "evidence": {
+              "jsTemplate": "js/home-box.js:313"
+            }
+          },
+          "preview": {
+            "type": "asset",
+            "required": false,
+            "maxWords": 0,
+            "evidence": {
+              "jsTemplate": "js/home-box.js:297"
+            }
+          }
+        }
+      },
+      "moreLink": {
+        "type": "link",
+        "required": false,
+        "maxWords": 4,
+        "evidence": {
+          "selector": ".pbx-more-btn",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      }
+    }
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.home"
+    ]
+  },
+  "motion": {
+    "allowedPatterns": [
+      "box-open",
+      "reveal-on-scroll"
+    ],
+    "default": "box-open"
+  },
+  "responsive": [
+    {
+      "breakpoint": "bp.tablet",
+      "query": "(max-width: 760px)",
+      "change": "horizontal-scroll",
+      "cite": "css/base.css:333-355"
+    },
+    {
+      "breakpoint": "bp.mobile",
+      "query": "(max-width: 640px)",
+      "change": "resize-element",
+      "cite": "css/home-box-ad.css:276-291"
+    }
+  ],
+  "assetRoles": [
+    "product.case-study-video",
+    "product.case-study-screen",
+    "product.thumbnail"
+  ],
+  "generatedAssetRoles": [
+    "product.generated-visual"
+  ],
+  "components": [
+    "component.project-card",
+    "primitive.chip",
+    "primitive.button"
+  ],
+  "tokens": [
+    "color.surface.raised",
+    "color.accent.primary",
+    "radius.card"
+  ]
+}

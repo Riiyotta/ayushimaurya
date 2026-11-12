@@ -1,0 +1,173 @@
+{
+  "$description": "Semantic colour roles; each resolves to a foundation palette token per theme (reference, never a duplicated value).",
+  "tokens": {
+    "color.text.primary": {
+      "themes": {
+        "night": "{palette.night.text-primary}",
+        "day": "{palette.day.text-primary}"
+      }
+    },
+    "color.text.secondary": {
+      "themes": {
+        "night": "{palette.night.text-secondary}",
+        "day": "{palette.day.text-secondary}"
+      }
+    },
+    "color.text.faint": {
+      "themes": {
+        "night": "{palette.night.text-faint}",
+        "day": "{palette.day.text-faint}"
+      }
+    },
+    "color.surface.page": {
+      "themes": {
+        "night": "{palette.night.surface-page}",
+        "day": "{palette.day.surface-page}"
+      }
+    },
+    "color.surface.tint": {
+      "themes": {
+        "night": "{palette.night.surface-tint}",
+        "day": "{palette.day.surface-tint}"
+      }
+    },
+    "color.surface.raised": {
+      "themes": {
+        "night": "{palette.night.surface-raised}",
+        "day": "{palette.day.surface-raised}"
+      }
+    },
+    "color.border.default": {
+      "themes": {
+        "night": "{palette.night.border-default}",
+        "day": "{palette.day.border-default}"
+      }
+    },
+    "color.border.strong": {
+      "themes": {
+        "night": "{palette.night.border-strong}",
+        "day": "{palette.day.border-strong}"
+      }
+    },
+    "color.action.hover": {
+      "themes": {
+        "night": "{palette.night.action-hover}",
+        "day": "{palette.day.action-hover}"
+      }
+    },
+    "color.accent.primary": {
+      "themes": {
+        "night": "{palette.night.accent-primary}",
+        "day": "{palette.day.accent-primary}"
+      }
+    },
+    "color.accent.hover": {
+      "themes": {
+        "night": "{palette.night.accent-hover}",
+        "day": "{palette.day.accent-hover}"
+      }
+    },
+    "color.accent.ink": {
+      "themes": {
+        "night": "{palette.night.accent-ink}",
+        "day": "{palette.day.accent-ink}"
+      }
+    },
+    "color.accent.tint": {
+      "themes": {
+        "night": "{palette.night.accent-tint}",
+        "day": "{palette.day.accent-tint}"
+      }
+    },
+    "color.accent.line": {
+      "themes": {
+        "night": "{palette.night.accent-line}",
+        "day": "{palette.day.accent-line}"
+      }
+    },
+    "color.status.ok": {
+      "themes": {
+        "night": "{palette.night.status-ok}",
+        "day": "{palette.day.status-ok}"
+      }
+    },
+    "color.status.ok-tint": {
+      "themes": {
+        "night": "{palette.night.status-ok-tint}",
+        "day": "{palette.day.status-ok-tint}"
+      }
+    },
+    "color.status.warn": {
+      "themes": {
+        "night": "{palette.night.status-warn}",
+        "day": "{palette.day.status-warn}"
+      }
+    },
+    "color.status.warn-tint": {
+      "themes": {
+        "night": "{palette.night.status-warn-tint}",
+        "day": "{palette.day.status-warn-tint}"
+      }
+    },
+    "color.status.err": {
+      "themes": {
+        "night": "{palette.night.status-err}",
+        "day": "{palette.day.status-err}"
+      }
+    },
+    "color.status.err-tint": {
+      "themes": {
+        "night": "{palette.night.status-err-tint}",
+        "day": "{palette.day.status-err-tint}"
+      }
+    },
+    "color.status.info": {
+      "themes": {
+        "night": "{palette.night.status-info}",
+        "day": "{palette.day.status-info}"
+      }
+    },
+    "color.status.info-tint": {
+      "themes": {
+        "night": "{palette.night.status-info-tint}",
+        "day": "{palette.day.status-info-tint}"
+      }
+    },
+    "color.decor.pink": {
+      "themes": {
+        "night": "{palette.shared.decor-pink}",
+        "day": "{palette.shared.decor-pink}"
+      }
+    },
+    "color.decor.pink-deep": {
+      "themes": {
+        "night": "{palette.shared.decor-pink-deep}",
+        "day": "{palette.shared.decor-pink-deep}"
+      }
+    },
+    "color.decor.yellow": {
+      "themes": {
+        "night": "{palette.shared.decor-yellow}",
+        "day": "{palette.shared.decor-yellow}"
+      }
+    },
+    "color.decor.purple": {
+      "themes": {
+        "night": "{palette.shared.decor-purple}",
+        "day": "{palette.shared.decor-purple}"
+      }
+    },
+    "color.decor.purple-deep": {
+      "themes": {
+        "night": "{palette.shared.decor-purple-deep}",
+        "day": "{palette.shared.decor-purple-deep}"
+      }
+    },
+    "color.surface.inverse": {
+      "themes": {
+        "night": "{palette.night.surface-inverse}",
+        "day": "{palette.day.surface-inverse}"
+      }
+    }
+  }
+}

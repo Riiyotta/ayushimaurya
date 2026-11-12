@@ -1,0 +1,173 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "generated",
+  "template": "template.project-index",
+  "route": "/projects",
+  "theme": "day",
+  "meta": {
+    "title": "Projects, Rowan Vale",
+    "description": "Every project Rowan Vale has shipped or tested, from courier dispatch to offline checklists."
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "site-nav",
+      "content": {
+        "brandMark": {
+          "role": "brand.placeholder-wordmark",
+          "src": "placeholder://wordmark/rowan-vale",
+          "mediaType": "image",
+          "alt": "Rowan Vale"
+        },
+        "navLinks": [
+          {
+            "label": "Projects",
+            "href": "projects.html",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "CV",
+            "href": "cv.html",
+            "role": "link.internal-route"
+          }
+        ],
+        "themeToggle": true
+      },
+      "motion": {
+        "pattern": "theme-crossfade",
+        "trigger": "tap",
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "section": "index.page-header",
+      "variant": "title-dek",
+      "content": {
+        "backLink": {
+          "label": "Home",
+          "href": "/",
+          "role": "link.internal-route"
+        },
+        "kicker": "Every project",
+        "title": "Work, all of it.",
+        "dek": "Shipped tools, unshipped experiments and a few research notes. Each card opens the problem, the constraints and what changed.",
+        "contactLink": {
+          "label": "Write to me",
+          "href": "mailto:hello@rowan-vale.example",
+          "role": "link.placeholder-url"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "section": "index.project-grid",
+      "variant": "card-grid",
+      "content": {
+        "projects": [
+          {
+            "meta": "01 · Logistics",
+            "thumbnail": {
+              "role": "product.generated-visual",
+              "src": "generated://thumbs/dispatch",
+              "mediaType": "image",
+              "alt": "Route board with coloured van lanes"
+            },
+            "title": "Letting one dispatcher rebalance forty vans before lunch",
+            "outcomeValue": "−40%",
+            "outcomeLabel": "time spent rebalancing routes",
+            "link": {
+              "label": "Open the study",
+              "href": "dispatch-board.html",
+              "role": "link.internal-route"
+            }
+          },
+          {
+            "meta": "02 · Field work",
+            "thumbnail": {
+              "role": "product.generated-visual",
+              "src": "generated://thumbs/checklists",
+              "mediaType": "image",
+              "alt": "Phone showing a checklist offline"
+            },
+            "title": "Checklists that keep working three floors underground",
+            "outcomeLabel": "a pilot with two maintenance crews",
+            "link": {
+              "label": "Open the study",
+              "href": "field-checklists.html",
+              "role": "link.internal-route"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "reveal-on-scroll",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "static-visible"
+      },
+      "style": {
+        "radius": "radius.card",
+        "gap": "space.6"
+      }
+    },
+    {
+      "section": "conversion.closing",
+      "variant": "link-row",
+      "content": {
+        "heading": "Got a messy process? We could map it together.",
+        "ctas": [
+          {
+            "label": "Back home",
+            "href": "/",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "Email me",
+            "href": "mailto:hello@rowan-vale.example",
+            "role": "link.placeholder-url"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "reveal-on-scroll",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "full",
+      "content": {
+        "name": "Rowan Vale",
+        "role": "Interaction Designer",
+        "line": "Have a knotty workflow? Send it my way.",
+        "links": [
+          {
+            "label": "Email",
+            "href": "mailto:hello@rowan-vale.example",
+            "role": "link.placeholder-url"
+          },
+          {
+            "label": "Projects",
+            "href": "projects.html",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "CV",
+            "href": "cv.html",
+            "role": "link.internal-route"
+          }
+        ],
+        "copyright": "© Rowan Vale"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    }
+  ]
+}

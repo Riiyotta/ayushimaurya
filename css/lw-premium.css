@@ -1,0 +1,142 @@
+/* ==========================================================================
+   LITTLE WORLD — premium pass (loaded last on the homepage)
+   Softer dawn light instead of a candy gradient, a quiet editorial eyebrow,
+   copy and photo strip side by side, a printed photo strip that glows,
+   fewer and smaller decorations. Every interaction stays as it was.
+   ========================================================================== */
+
+/* ---------- light: a soft dawn with a faint paper grain ---------- */
+#about { --sec: #fbf2f6 !important; }   /* the torn edge matches the top of the sky */
+#about .lw-hero {
+  min-height: 0;
+  padding: clamp(4.5rem, 8vw, 7.5rem) 0 clamp(4.5rem, 8vw, 7rem);
+  background:
+    radial-gradient(42% 52% at 76% 50%, rgba(214, 201, 245, 0.55), transparent 72%),
+    radial-gradient(46% 40% at 8% 6%, rgba(247, 198, 212, 0.42), transparent 70%),
+    radial-gradient(40% 36% at 96% 96%, rgba(255, 231, 163, 0.22), transparent 70%),
+    linear-gradient(180deg, #fbf2f6 0%, #f6f1fc 52%, var(--ground, #fafafa) 100%);
+}
+#about .lw-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.35 0 0 0 0 0.3 0 0 0 0 0.45 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* clouds: fewer, softer, further away */
+#about .lw-hero .lw-cloud { opacity: 0.6; filter: blur(0.4px) saturate(0.9); }
+#about .lw-hero .lw-cloud:nth-of-type(2), #about .lw-hero .lw-cloud:nth-of-type(4) { display: none; }
+#about .lw-hero .lw-star { color: #fff; opacity: 0.8; }
+#about .lw-hero .lw-star:nth-of-type(2n) { display: none; }
+
+/* ---------- copy ---------- */
+#about .lw-hero-grid {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: center;
+}
+/* eyebrow: the same quiet caps as the rest of the site, with a small heart and a hairline */
+#about .lw-diary-label {
+  gap: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  backdrop-filter: none;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: #57514d;
+}
+#about .lw-diary-label i { width: 14px; height: 14px; }
+#about .lw-diary-label::after { content: ''; width: 40px; height: 1px; margin-left: 4px; background: rgba(44, 41, 40, 0.25); }
+
+#about .lw-hero .lw-title {
+  margin-top: 22px;
+  max-width: 11ch;
+  font-size: clamp(2.6rem, 1.5rem + 4.2vw, 5.2rem);
+  line-height: 1;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+#about .lw-hero .lw-title .lw-name::after { display: none; }
+#about .lw-hero-sub {
+  margin-top: 22px;
+  max-width: 26rem;
+  font-size: clamp(1.05rem, 0.98rem + 0.35vw, 1.25rem);
+  color: #57514d;
+}
+#about .lw-invite { margin-top: 34px; background: rgba(255, 255, 255, 0.72) !important; backdrop-filter: blur(8px); }
+#about .lw-invite:hover { background: #fff !important; }
+
+/* ---------- the photo strip: a printed strip that glows softly ---------- */
+#about .lw-booth-zone { width: min(100%, 360px); display: grid; justify-items: center; }
+#about .lw-booth-zone::before {           /* halo */
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 118%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(201, 184, 240, 0.55), rgba(247, 198, 212, 0.25) 60%, transparent);
+  filter: blur(8px);
+  z-index: -1;
+  pointer-events: none;
+}
+#about .lw-booth-zone::after {            /* a fine orbit line */
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 104%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%) rotate(-12deg) scaleY(0.92);
+  border-radius: 50%;
+  border: 1px solid rgba(106, 75, 214, 0.16);
+  z-index: -1;
+  pointer-events: none;
+}
+#about .lw-booth {
+  width: clamp(184px, 16vw, 224px);
+  padding: 10px 10px 12px;
+  border-radius: 6px;
+  background: #fff;
+  transform: rotate(-3deg);
+  box-shadow:
+    0 1px 2px rgba(58, 46, 57, 0.06),
+    0 14px 28px -14px rgba(58, 46, 57, 0.28),
+    0 44px 80px -36px rgba(106, 75, 214, 0.4);
+}
+#about .lw-booth:hover { transform: rotate(-1.5deg) translateY(-6px); }
+#about .lw-booth-frame { border-radius: 3px; }
+#about .lw-booth-frame + .lw-booth-frame { margin-top: 7px; }
+#about .lw-booth-cap { margin-top: 11px; font-size: 0.82rem; color: #6e6870; }
+
+/* stickers: smaller and calmer */
+#about .lw-hero-sticker { width: calc(var(--w, 44px) * 0.8); }
+#about .lw-hero .lw-anno { color: #57514d; }
+
+/* ---------- side by side down to tablets ---------- */
+@media (min-width: 761px) and (max-width: 960px) {
+  #about .lw-hero-grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); }
+  #about .lw-booth-zone { margin-top: 0; }
+  #about .lw-hero .lw-anno { display: none; }
+}
+@media (max-width: 760px) {
+  #about .lw-hero { padding: 4rem 0 4.5rem; }
+  #about .lw-hero-grid { grid-template-columns: minmax(0, 1fr); gap: 3.5rem; }
+  #about .lw-hero .lw-title { max-width: none; }
+  #about .lw-booth-zone { margin-top: 0; }
+  #about .lw-booth { width: min(62vw, 240px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  #about .lw-booth:hover { transform: rotate(-3deg); }
+}
+#about .lw-diary-label i { display: none; }   /* no heart before the label */
+#about .lw-invite .lw-invite-text { text-align: left; }   /* both lines start at the same edge */

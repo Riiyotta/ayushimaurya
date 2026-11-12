@@ -1,0 +1,16 @@
+{
+  "id": "component.stat-row",
+  "kind": "component",
+  "description": "Row of headline numbers with short labels.",
+  "composes": [],
+  "props": {
+    "items": "list"
+  },
+  "tokens": [
+    "font.family.display",
+    "color.accent.primary"
+  ],
+  "cites": [
+    "visit-clinic.html:104"
+  ]
+}

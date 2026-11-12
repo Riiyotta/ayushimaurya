@@ -1,0 +1,110 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "reference",
+  "template": "template.notice",
+  "route": "nda.html",
+  "theme": "night",
+  "meta": {
+    "title": "Under NDA — Ayushi Maurya",
+    "description": "This project is protected under an NDA. Contact Ayushi Maurya for a private walkthrough."
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "site-nav",
+      "content": {
+        "brandMark": {
+          "role": "brand.wordmark-logo",
+          "src": "assets/logo-ayushi-maurya-transparent.png",
+          "mediaType": "image",
+          "alt": "Ayushi Maurya"
+        },
+        "navLinks": [
+          {
+            "label": "My work",
+            "href": "projects.html",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "Resume",
+            "href": "resume.html",
+            "role": "link.internal-route"
+          }
+        ],
+        "themeToggle": true
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "section": "notice.protected-work",
+      "variant": "redacted-sheet",
+      "content": {
+        "backLink": {
+          "label": "All work",
+          "href": "projects.html",
+          "role": "link.internal-route"
+        },
+        "title": "This one is under NDA. 👀",
+        "body": [
+          "This project is under an NDA, so I can't share the full case study publicly.",
+          "I can still share the details one-on-one."
+        ],
+        "artCaption": "Move your cursor over the page. It stays redacted.",
+        "askLead": "Ask for a walkthrough",
+        "askBody": "I'm happy to walk you through the whole project privately, from the problem to the results.",
+        "cta": {
+          "label": "Get a private walkthrough",
+          "href": "mailto:ayushimaurya108@gmail.com?subject=Private%20walkthrough%20request",
+          "role": "link.source-url"
+        },
+        "note": "Available on request."
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "full",
+      "content": {
+        "name": "Ayushi Maurya",
+        "role": "Product Designer",
+        "line": "Let's work together. I'd love to hear from you.",
+        "links": [
+          {
+            "label": "Email",
+            "href": "mailto:ayushimaurya108@gmail.com",
+            "role": "link.source-url"
+          },
+          {
+            "label": "LinkedIn",
+            "href": "https://www.linkedin.com/in/ayushi-maurya-7174b71ab/",
+            "role": "link.source-url"
+          },
+          {
+            "label": "Resume",
+            "href": "resume.html",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "More work",
+            "href": "projects.html",
+            "role": "link.internal-route"
+          }
+        ],
+        "copyright": "© Ayushi Maurya"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    }
+  ]
+}

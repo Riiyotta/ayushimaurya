@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "note": "How a PageSpec may reference tokens. PageSpec nodes carry an optional closed `style` object (slots below) and optional motion durationToken/easingToken. Values must be catalog ids (tokens/llm/token-catalog.json). Category names are the catalog's own `category` values; verify_all checks they resolve.",
+  "slots": {
+    "surface": {"category": "color", "prefixes": ["color.surface.", "palette."]},
+    "text": {"category": "color", "prefixes": ["color.text.", "palette."]},
+    "accent": {"category": "color", "prefixes": ["color.accent.", "color.decor.", "color.status.", "palette."]},
+    "paddingBlock": {"category": "spacing", "prefixes": ["space."]},
+    "gap": {"category": "spacing", "prefixes": ["space."]},
+    "radius": {"category": "radius", "prefixes": ["radius."]},
+    "headingFont": {"category": "fontFamily", "prefixes": ["font.family."]},
+    "bodyFont": {"category": "fontFamily", "prefixes": ["font.family."]}
+  },
+  "motionTokens": {"durationToken": "motionDuration", "easingToken": "motionEasing"},
+  "supportedFonts": ["font.family.display", "font.family.text"],
+  "rawValueRestrictions": {
+    "color": "no hex, rgb(a), hsl(a), color(), oklch() or named colours: TOKEN_RAW_COLOR",
+    "spacing": "no px/rem/em/%/vh/vw numbers or clamp()/calc(): TOKEN_ARBITRARY_SPACING",
+    "radius": "no raw lengths: TOKEN_ARBITRARY_SPACING",
+    "fontFamily": "only font.family.display (Outfit) or font.family.text (Inter): TOKEN_UNSUPPORTED_FONT"
+  },
+  "themeBinding": {
+    "rule": "palette.night.* tokens are valid only with theme night, palette.day.* only with theme day (TOKEN_THEME_MISMATCH); semantic color.* tokens resolve per theme and are valid in both.",
+    "themes": ["night", "day"],
+    "default": "night"
+  },
+  "pageLocalScopes": {
+    "story.*": "tokens of the long-form story page (offline-doctor-consultation.html loads only css/oc-story.css); used by section/component contracts, not assignable through PageSpec style slots",
+    "casestudy.*": "scope tokens of the chaptered case-study layout; contract-level only",
+    "component.*": "button sizing; contract-level only"
+  }
+}

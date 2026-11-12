@@ -1,0 +1,19 @@
+{
+  "id": "component.chapter-label",
+  "kind": "component",
+  "description": "Chapter number chip + label above a chapter heading.",
+  "composes": [
+    "primitive.kicker"
+  ],
+  "props": {
+    "number": "text",
+    "label": "text"
+  },
+  "tokens": [
+    "font.size.xs",
+    "color.text.secondary"
+  ],
+  "cites": [
+    "hybrid-diagnostic.html:90"
+  ]
+}

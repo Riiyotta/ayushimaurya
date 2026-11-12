@@ -1,0 +1,19 @@
+{
+  "id": "component.quote-block",
+  "kind": "component",
+  "description": "Pull quote with a small label (What I wanted to solve / Hypothesis / What I learned) and an emphasised phrase.",
+  "composes": [
+    "primitive.kicker"
+  ],
+  "props": {
+    "label": "text",
+    "text": "text"
+  },
+  "tokens": [
+    "color.accent.tint",
+    "font.family.display"
+  ],
+  "cites": [
+    "hybrid-diagnostic.html:107"
+  ]
+}

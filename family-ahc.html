@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>try{if(sessionStorage.getItem('site-theme')!=='day')document.documentElement.dataset.theme='night'}catch(e){document.documentElement.dataset.theme='night'}</script>
+<title>Family Health Checkups Case Study — Ayushi Maurya</title>
+<meta name="description" content="How I added a family health checkup offer to an employer-sponsored booking, without making the original booking harder.">
+<script>document.documentElement.classList.add('has-js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/styles.css?v=n3">
+<link rel="stylesheet" href="css/visit-clinic-v3.css?v=p1">
+<link rel="stylesheet" href="css/dream-theme.css?v=n3">
+<link rel="stylesheet" href="css/neutral.css?v=4">
+<link rel="stylesheet" href="css/accents.css?v=2">
+<link rel="stylesheet" href="css/functional.css?v=2">
+<link rel="stylesheet" href="css/cta.css?v=3">
+<link rel="stylesheet" href="css/base.css?v=32">
+<link rel="stylesheet" href="css/family-ahc.css?v=18">
+<link rel="stylesheet" href="css/theme-night.css?v=2">
+<link rel="stylesheet" href="css/theme.css?v=4">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="index.html"><img src="assets/logo-ayushi-maurya-transparent.png" alt="Ayushi Maurya"></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="projects.html">My work</a>
+      <a href="resume.html">Resume</a>
+    </nav>
+    <button class="nav-menu-btn" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu">
+      <span class="bars" aria-hidden="true"><span></span><span></span></span>
+      Menu
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" data-mobile-menu data-open="false">
+  <nav class="mobile-menu-links" aria-label="Mobile">
+    <a href="resume.html">Resume</a>
+    <a href="mailto:ayushimaurya108@gmail.com">Contact</a>
+  </nav>
+  <a class="mobile-menu-cta" href="projects.html">My work →</a>
+</div>
+
+<main id="main" class="v3 fa">
+
+  <!-- ============ HERO ============ -->
+  <section class="v3-hero v3-wrap" id="top">
+    <a class="v3-back" href="projects.html"><span aria-hidden="true">←</span> All work</a>
+    <div class="fa-hero-top">
+      <div class="fa-hero-text">
+        <p class="v3-kicker">Family health checkups · 2026</p>
+        <h1 class="v3-h1">Letting employees add their family to <em>the checkup they've already booked</em></h1>
+        <p class="v3-sub">An offer to add family members to an employer-sponsored annual health checkup, placed after the booking so it doesn't get in the way.</p>
+      </div>
+      <figure class="v3-proto fa-hero-proto" data-proto>
+        <div class="v3-proto-phone">
+          <video muted loop playsinline preload="metadata" poster="assets/case-studies/family/f1-order-status.webp" aria-label="Walkthrough of the shipped flow: the family offer on the order status, the benefits sheet, selecting family members with tiered prices, adding a new patient and the order review"><source src="assets/case-studies/family/family-flow.mp4" type="video/mp4"></video>
+          <button type="button" class="v3-proto-btn" aria-label="Play walkthrough" data-state="paused"><span aria-hidden="true"></span></button>
+        </div>
+        <figcaption><span class="v3-mono">Shipped flow · 0:43</span>From the offer on the order to the order review.</figcaption>
+      </figure>
+    </div>
+
+
+    <div class="v3-hero-intro">
+      <p>The company gives employees a sponsored annual health checkup (AHC). Many of them also want checkups for their parents or partner. I designed a way to add family members to the same home visit, at a family price, without slowing down the employee's own booking.</p>
+    </div>
+  </section>
+
+  <section class="v3-tldr v3-wrap" id="summary" aria-label="The short version">
+    <div class="v3-tldr-grid">
+      <div class="v3-tldr-cell">
+        <p class="v3-label">My role</p>
+        <p><b>End-to-end Product Designer</b><br>From the first booking concept to the post-booking flow, patient selection and tiered pricing.</p>
+      </div>
+      <div class="v3-tldr-cell">
+        <p class="v3-label">Key decisions</p>
+        <ol class="v3-tldr-list"><li><a href="#decision">Offer family after booking, not during it</a></li><li><a href="#flow">Add them to the same visit, not a new order</a></li><li><a href="#tiers-h">Show family prices as clear tiers</a></li></ol>
+      </div>
+      <div class="v3-tldr-cell">
+        <p class="v3-label">Early results</p>
+        <p class="v3-tldr-nums fa-tldr-nums"><b>32.6%</b> adoption<br><b>18.9%</b> conversion rate</p>
+        <p class="v3-tiny">Product analytics, Sep 19 – Oct 18, 2026.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- sticky chapter nav -->
+  <nav class="v3-nav" aria-label="Case study chapters" data-chapter-nav>
+    <a href="#brief" data-nav="brief">The brief</a>
+    <a href="#research" data-nav="research">Research</a>
+    <a href="#decision" data-nav="decision">Key decision</a>
+    <a href="#flow" data-nav="flow">The flow</a>
+    <a href="#results" data-nav="results">Results</a>
+    <a href="#learnings" data-nav="learnings">Learnings</a>
+  </nav>
+
+  <!-- ============ 01 · THE BRIEF ============ -->
+  <div id="brief" data-chapter="brief">
+    <section class="v3-section v3-wrap">
+      <p class="v3-chapter"><span>01</span> The brief</p>
+      <div class="v3-split">
+        <div>
+          <h2 class="v3-h2">A health benefit that stops at the employee</h2>
+          <p>An employer-sponsored AHC covers the employee. But people don't only care about their own health. Business data showed that some users also wanted checkups for their family.</p>
+          <p>The company wanted to grow lab revenue by selling paid AHC packages to those family members.</p>
+          <p class="v3-callout-line">The hard part was the timing: introducing the offer without getting in the way of the employee's own booking.</p>
+        </div>
+        <div class="v3-knew">
+          <div class="v3-knew-col">
+            <p class="v3-label">For users</p>
+            <ul>
+              <li>Book checkups for family with less back-and-forth</li>
+              <li>Use the same home visit they already booked</li>
+              <li>Pay a family price, and only for the extra members</li>
+            </ul>
+          </div>
+          <div class="v3-knew-col learn">
+            <p class="v3-label accent">For the business</p>
+            <ul>
+              <li>More paid AHC bookings</li>
+              <li>More lab revenue from each sponsored booking</li>
+              <li>A higher average order value</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="v3-section v3-wrap v3-problem" aria-labelledby="problem-h">
+      <div class="v3-problem-card">
+        <p class="v3-label">The problem we set out to solve</p>
+        <h2 class="v3-problem-statement" id="problem-h">How might we help employees extend their sponsored checkup to their family, and open a new revenue stream, without making the original booking harder?</h2>
+        <p class="v3-problem-goal"><span>The goal</span>Keep the sponsored booking simple, then make adding family feel like a natural next step.</p>
+      </div>
+      <p class="v3-label v3-challenges-label">Constraints</p>
+      <ol class="v3-challenges">
+        <li><b>The sponsored booking comes first</b><span>Employees should finish their own booking without making pricing decisions they don't need.</span></li>
+        <li><b>Every lab prices differently</b><span>Lab partners have their own prices and their own family discounts.</span></li>
+        <li><b>One visit, not a new order</b><span>Family members had to join the lab and home visit the employee already chose.</span></li>
+        <li><b>Real patient profiles</b><span>The flow had to support picking saved family profiles, adding a new patient, and paying for extra members.</span></li>
+      </ol>
+    </section>
+  </div>
+
+  <!-- ============ 02 · RESEARCH ============ -->
+  <div id="research" data-chapter="research">
+    <section class="v3-section v3-tint">
+      <div class="v3-wrap v3-split">
+        <div>
+          <p class="v3-chapter"><span>02</span> Research</p>
+          <h2 class="v3-h2">Competitors sell family discounts before booking</h2>
+          <p>I looked at how PharmEasy, Healthians and Tata 1mg offer family discounts. All three show them before the booking, while people are still shopping for a checkup.</p>
+          <p>Our users arrive differently. They come to use a benefit their employer already paid for, not to shop. Copying the same placement would add a decision before their main task was done.</p>
+          <p class="v3-small">Based on business data and competitor analysis. We didn't run user interviews or usability tests for this project.</p>
+        </div>
+        <div class="fa-context" aria-label="Where each kind of user starts">
+          <div class="fa-context-col">
+            <p class="v3-mono">Competitor apps</p>
+            <ol class="fa-mini-flow"><li>Browse packages</li><li class="hl">Family discount</li><li>Pick a lab</li><li>Book</li></ol>
+            <p class="v3-small">Shopping for a checkup. A discount helps them decide.</p>
+          </div>
+          <div class="fa-context-col me">
+            <p class="v3-mono">Our users</p>
+            <ol class="fa-mini-flow"><li>Use my sponsored AHC</li><li>Pick a lab</li><li>Book</li><li class="hl">Add family?</li></ol>
+            <p class="v3-small">Using a benefit. The offer works better once the booking is done.</p>
+          </div>
+        </div>
+      </div>
+      <div class="v3-wrap fa-comp">
+        <p class="v3-label">What competitors do</p>
+        <div class="v3-devs fa-comp-devs">
+          <figure class="v3-dev m"><div class="v3-dev-frame"><img src="assets/case-studies/family/comp-1.webp" alt="Competitor app: Select Package Members screen with price tiers for 1 to 4 members and an Add 1 more, pay less per person offer" loading="lazy"></div><figcaption><b>Member tiers on the package.</b> 1 to 4 members, priced per person, before booking.</figcaption></figure>
+          <figure class="v3-dev m"><div class="v3-dev-frame"><img src="assets/case-studies/family/comp-2.webp" alt="Competitor app: Give your loved ones the best care sheet with 1, 2 and 3 member plans and a family coupon" loading="lazy"></div><figcaption><b>A family plan picker.</b> 1, 2 or 3 members, with a family coupon.</figcaption></figure>
+          <figure class="v3-dev m"><div class="v3-dev-frame"><img src="assets/case-studies/family/comp-3.webp" alt="Competitor app: cart with a patient count on each test and a buy-one-get-one offer for two patients" loading="lazy"></div><figcaption><b>Patients per test, in the cart.</b> Plus a buy-one-get-one offer.</figcaption></figure>
+          <figure class="v3-dev m is-bottom"><div class="v3-dev-frame"><img src="assets/case-studies/family/comp-4.webp" alt="Competitor website: package page with 20, 30 and 35 percent off for 2, 3 and 4 or more members" loading="lazy"></div><figcaption><b>Multi-member discounts on the page.</b> 20–35% off for 2 to 4+ members.</figcaption></figure>
+        </div>
+        <p class="v3-takeaway">All four ask about family before the first booking is done. For someone using a sponsored benefit, that's one more decision in the way.</p>
+      </div>
+    </section>
+
+    <section class="v3-section v3-wrap">
+      <div class="v3-split">
+        <div>
+          <h2 class="v3-h2">The hypothesis</h2>
+          <p class="v3-lede">Let the employee finish the sponsored booking first. Then offer a simple way to add family to that same visit.</p>
+        </div>
+        <ol class="v3-chain"><li>Book my sponsored AHC</li><li>See the offer on my order</li><li>Add family to the same visit</li></ol>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ 03 · KEY DECISION ============ -->
+  <div id="decision" data-chapter="decision">
+    <section class="v3-section v3-wrap v3-bet" aria-labelledby="bet1">
+      <p class="v3-chapter"><span>03</span> Key decision</p>
+      <p class="v3-bet-num v3-mono">Decision 01</p>
+      <h3 class="v3-h2" id="bet1">Offer family after the booking, not during it</h3>
+
+      <ol class="v3-evo">
+        <li><span class="v3-k hyp">First idea</span><h4>Add family while booking</h4><p>A "Booking for family?" block on the package page with 1, 2 and 3+ member prices, then lab cards showing what you'd pay for everyone.</p></li>
+        <li class="reality"><span class="v3-k fact">Problem</span><h4>Too many decisions at once</h4><p>Users would have to compare labs, different prices and discounts, and covered versus paid members, just to book their own checkup.</p></li>
+        <li><span class="v3-k dec">Decision</span><h4>Split the two tasks</h4><p>The employee books their sponsored AHC first. The family offer appears afterwards, on the order timeline.</p></li>
+        <li class="final"><span class="v3-k dec">Shipped</span><h4>A post-booking add-on</h4><p>The lab is already chosen, so family pricing is a separate, smaller decision.</p></li>
+      </ol>
+
+      <div class="fa-rc" aria-label="The rejected concept compared with the shipped concept">
+        <div class="fa-rc-col is-rejected">
+          <p class="fa-rc-tag"><span>Rejected concept</span></p>
+          <h4>Family pricing during booking</h4>
+          <div class="fa-rc-phones">
+            <figure class="v3-dev m"><div class="v3-dev-frame"><img data-autoscroll src="assets/case-studies/family/r1-package-family.webp" alt="Rejected concept: package details page with a Booking for family block showing prices for 1, 2 and 3 or more members" loading="lazy"></div><figcaption><b>Package page.</b> Family prices before anything is booked.</figcaption></figure>
+            <figure class="v3-dev m"><div class="v3-dev-frame"><img data-autoscroll src="assets/case-studies/family/r2-lab-partners.webp" alt="Rejected concept: lab partner list where every lab shows the price for 2 members and the saving" loading="lazy"></div><figcaption><b>Lab list.</b> Every lab priced for the whole family.</figcaption></figure>
+          </div>
+          <ul class="fa-rc-points">
+            <li>Decide on family before booking your own checkup</li>
+            <li>Compare labs on family prices, not just on convenience</li>
+            <li><b>3 choices</b> before your own booking is done</li>
+          </ul>
+        </div>
+        <div class="fa-rc-col is-shipped">
+          <p class="fa-rc-tag"><span>Shipped concept</span></p>
+          <h4>Family offer after booking</h4>
+          <div class="fa-rc-phones">
+            <figure class="v3-dev m"><div class="v3-dev-frame"><img data-autoscroll src="assets/case-studies/family/f1-order-status.webp" alt="Shipped: order status with a Get family tested in this visit card under the booking" loading="lazy"></div><figcaption><b>Order status.</b> The offer appears once the booking is done.</figcaption></figure>
+            <figure class="v3-dev m"><div class="v3-dev-frame"><img src="assets/case-studies/family/f3-select-patient.webp" alt="Shipped: Select Patient sheet with family price tiers for the same visit" loading="lazy"></div><figcaption><b>Select patient.</b> Family tiers for the same lab and slot.</figcaption></figure>
+          </div>
+          <ul class="fa-rc-points">
+            <li>Book your own checkup with one choice: the lab</li>
+            <li>See the family offer on the order, with the time left before pickup</li>
+            <li><b>1 choice</b> before your own booking is done</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="fa-why">
+        <p class="v3-label v3-challenges-label">Why I rejected the first concept</p>
+        <ol class="v3-challenges">
+          <li><b>The user's intent is their own checkup</b><span>The AHC is sponsored, so people come to book their free package first. That's the goal they arrive with.</span></li>
+          <li><b>More steps before that goal</b><span>Asking about family in the middle of booking adds steps between the user and the checkup they came for.</span></li>
+          <li><b>Pricing gets complicated fast</b><span>Every lab has its own family price and offer. Showing each one for every member count on a single lab listing page makes it hard to read, and hard to manage.</span></li>
+        </ol>
+      </div>
+
+      <dl class="v3-trade">
+        <div><dt>Options</dt><dd><ul><li>Add family during package and lab selection</li><li>Offer family after the sponsored booking</li></ul></dd></div>
+        <div><dt>Chose</dt><dd><b>Offer family after booking, on the order timeline, reusing the chosen lab and visit</b></dd></div>
+        <div><dt>Trade-off</dt><dd>Users see family pricing later in the journey. In return, the sponsored booking stays simple.</dd></div>
+      </dl>
+      <p class="v3-takeaway">I didn't add more information to help with a complex decision. I moved the decision to a better moment.</p>
+    </section>
+
+    <section class="v3-section v3-tint">
+      <div class="v3-wrap">
+        <h2 class="v3-h2">What changed between the two versions</h2>
+        <div class="fa-table" role="table" aria-label="First idea compared with the shipped approach">
+          <div class="fa-tr fa-th" role="row"><span role="columnheader">First idea</span><span role="columnheader">Shipped</span></div>
+          <div class="fa-tr" role="row"><span role="cell">Add family during package selection</span><span role="cell">Offer family after booking</span></div>
+          <div class="fa-tr" role="row"><span role="cell">Compare labs and family prices together</span><span role="cell">Choose the lab for the sponsored AHC first</span></div>
+          <div class="fa-tr" role="row"><span role="cell">Weigh many price combinations upfront</span><span role="cell">Show family pricing in its own add-on flow</span></div>
+          <div class="fa-tr" role="row"><span role="cell">Upsell before the main task is done</span><span role="cell">Offer it on the order timeline</span></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ 04 · THE FLOW ============ -->
+  <div id="flow" data-chapter="flow">
+    <section class="v3-section v3-wrap">
+      <p class="v3-chapter"><span>04</span> The flow</p>
+      <h2 class="v3-display">From one booking<br>to a family visit</h2>
+      <p class="v3-lede">The shipped flow, screen by screen. The tracker on the side shows where the user is.</p>
+      <p class="v3-small">Screens from the live product. Phone numbers are blurred.</p>
+    </section>
+
+    <section class="v3-console-section v3-wrap" data-console>
+      <aside class="v3-console" aria-live="polite">
+        <div class="v3-console-head"><span class="v3-mono">ORDER 001</span><span class="v3-live"><i></i>LIVE</span></div>
+        <ol class="v3-console-list">
+          <li data-s="0">Offer<span>On the order status</span></li>
+          <li data-s="1">Benefits<span>What happens when you extend</span></li>
+          <li data-s="2">Select<span>Family price tiers</span></li>
+          <li data-s="3">Add<span>A new family member</span></li>
+          <li data-s="4">Selected<span>Savings shown live</span></li>
+          <li data-s="5">Review<span>Pay only for the add-ons</span></li>
+        </ol>
+      </aside>
+      <div class="v3-console-steps">
+        <article class="v3-step" data-step="0">
+          <figure class="v3-dev l v3-phone"><div class="v3-dev-frame"><img data-autoscroll src="assets/case-studies/family/f1-order-status.webp" alt="Order status with a card: Get family tested in this visit. Same slot, same address, no extra trip. Add before pickup tomorrow at 9 AM, 18 hours left. Add 1 more member for 2,800 rupees instead of 4,000, save up to 30%" loading="lazy"></div></figure>
+          <div class="v3-anno"><p class="v3-mono">01 · Offer</p><dl><dt>User needs</dt><dd>To know the option exists, while there's still time.</dd><dt>Product does</dt><dd>"Get family tested in this visit" sits on the order status, under the booking. It says what stays the same (slot, address, no extra trip) and how long is left before the pickup.</dd></dl><p class="v3-proves">Shows: the offer appears where the booking already lives.</p></div>
+        </article>
+        <article class="v3-step" data-step="1">
+          <figure class="v3-dev l v3-phone"><div class="v3-dev-frame"><img src="assets/case-studies/family/f2-benefits.webp" alt="Bottom sheet: What happens when you extend. Same visit, same address. Family pricing discounts. Pay only for new members. Your existing lab and slot" loading="lazy"></div></figure>
+          <div class="v3-anno"><p class="v3-mono">02 · Benefits</p><dl><dt>User needs</dt><dd>To understand what extending means.</dd><dt>Product does</dt><dd>Three short points: one trip for the whole family, a family price, and no double charge for the booking that's already covered. The lab and slot are shown, so nothing has to be picked again.</dd></dl></div>
+        </article>
+        <article class="v3-step" data-step="2">
+          <figure class="v3-dev l v3-phone"><div class="v3-dev-frame"><img src="assets/case-studies/family/f3-select-patient.webp" alt="Select Patient sheet: add family member to this visit, with price tiers for 1, 2 and 3 extra members, and the existing patient already included" loading="lazy"></div></figure>
+          <div class="v3-anno"><p class="v3-mono">03 · Select</p><dl><dt>User needs</dt><dd>To see the cost before choosing anyone.</dd><dt>Product does</dt><dd>Price tiers for 1, 2 and 3 extra members, each with the price per person. The employee is already in the list and can't be removed.</dd></dl></div>
+        </article>
+        <article class="v3-step" data-step="3">
+          <figure class="v3-dev l v3-phone"><div class="v3-dev-frame"><img src="assets/case-studies/family/f4-add-patient.webp" alt="Add Patient sheet with a relationship picker: mother, daughter, son, father, father-in-law, mother-in-law" loading="lazy"></div></figure>
+          <div class="v3-anno"><p class="v3-mono">04 · Add</p><dl><dt>User needs</dt><dd>To add someone who isn't saved yet.</dd><dt>Product does</dt><dd>A short form that starts with the relationship, so adding a parent or child is a couple of taps.</dd></dl></div>
+        </article>
+        <article class="v3-step" data-step="4">
+          <figure class="v3-dev l v3-phone"><div class="v3-dev-frame"><img src="assets/case-studies/family/f5-members-selected.webp" alt="Two members selected, You are saving 1,200 rupees, with the selected family members highlighted" loading="lazy"></div></figure>
+          <div class="v3-anno"><p class="v3-mono">05 · Selected</p><dl><dt>User needs</dt><dd>To know the saving is real.</dd><dt>Product does</dt><dd>"2 members selected" and "You are saving ₹1200" update as people are picked.</dd></dl><p class="v3-proves">Shows: the price is never a surprise.</p></div>
+        </article>
+        <article class="v3-step" data-step="5">
+          <figure class="v3-dev l v3-phone"><div class="v3-dev-frame"><img data-autoscroll src="assets/case-studies/family/f6-order-review.webp" alt="Order review: the same lab, pickup address and slot; the existing member marked Paid; two add-on members marked Newly Added; family package price for 2 extra members" loading="lazy"></div></figure>
+          <div class="v3-anno"><p class="v3-mono">06 · Review</p><dl><dt>User needs</dt><dd>To see exactly what they're paying for.</dd><dt>Product does</dt><dd>Same lab, address and slot. The employee is marked "Paid", the family are "Newly Added", and the bill only covers the add-ons.</dd></dl><p class="v3-proves">Shows: one visit for the whole family.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="v3-section v3-tint" aria-labelledby="tiers-h">
+      <div class="v3-wrap v3-split">
+        <div>
+          <h2 class="v3-h2" id="tiers-h">Family pricing, in tiers</h2>
+          <p>The more family members join the visit, the lower the price per person. The tiers sit at the top of the patient list, so the cost is clear before anyone is picked.</p>
+          <ul class="v3-why">
+            <li><b>+1 member:</b> ₹4,000</li>
+            <li><b>+2 members:</b> ₹6,800, or ₹3,400 each</li>
+            <li><b>+3 members:</b> ₹9,600, or ₹3,200 each</li>
+          </ul>
+          <p class="v3-small">Prices from the shipped screens, for the Full Body Premium Plus package.</p>
+        </div>
+        <div class="fa-tier-devs is-single">
+          <figure class="v3-dev l"><div class="v3-dev-frame"><img src="assets/case-studies/family/f5-members-selected.webp" alt="Shipped Select Patient sheet: 2 members selected, You are saving 1200 rupees, with tiers for 1, 2 and 3 extra members" loading="lazy"></div><figcaption><b>Shipped screen.</b> 2 members selected, saving ₹1200.</figcaption></figure>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ 05 · RESULTS ============ -->
+  <div id="results" data-chapter="results">
+    <section class="v3-section v3-dark v3-launch">
+      <div class="v3-wrap">
+        <p class="v3-chapter light"><span>05</span> Results</p>
+        <h2 class="v3-display light">Early results</h2>
+        <p class="v3-light-text">The feature is live. From product analytics, Sep 19 – Oct 18, 2026.</p>
+
+        <div class="fa-results fa-results-simple">
+          <div class="fa-ring-card" data-fa-ring>
+            <div class="fa-ring-wrap">
+              <svg viewBox="0 0 120 120" class="fa-ring" aria-hidden="true">
+                <circle cx="60" cy="60" r="50" class="trk"/>
+                <circle cx="60" cy="60" r="50" class="val" style="--p:32.6"/>
+              </svg>
+              <div class="fa-ring-num"><b data-count="32.6" data-dec="1">32.6</b><span>%</span></div>
+            </div>
+            <p class="fa-stat-k">Adoption</p>
+            <p class="fa-ring-label">of users who opened their order timeline started the family flow</p>
+          </div>
+          <div class="fa-ring-card" data-fa-ring>
+            <div class="fa-ring-wrap">
+              <svg viewBox="0 0 120 120" class="fa-ring" aria-hidden="true">
+                <circle cx="60" cy="60" r="50" class="trk"/>
+                <circle cx="60" cy="60" r="50" class="val" style="--p:18.9"/>
+              </svg>
+              <div class="fa-ring-num"><b data-count="18.9" data-dec="1">18.9</b><span>%</span></div>
+            </div>
+            <p class="fa-stat-k">Conversion rate</p>
+            <p class="fa-ring-label">of people who tapped the offer went on to add a new family member</p>
+          </div>
+        </div>
+
+        <p class="v3-foot">Revenue and average order value haven't been measured yet.</p>
+      </div>
+    </section>
+
+    <section class="v3-section v3-wrap">
+      <div class="v3-split">
+        <div>
+          <h2 class="v3-h2">What I'd want to learn next</h2>
+          <p>The offer gets noticed. The next step is to make sure it turns into family bookings, without hurting the sponsored booking.</p>
+          <ul class="v3-next">
+            <li><span class="v3-k next">Next question</span>How can adding a family member get quicker, so more people finish?</li>
+            <li><span class="v3-k next">Next question</span>Does the offer bring in new family bookings and revenue, without affecting the sponsored booking?</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ 06 · LEARNINGS ============ -->
+  <div id="learnings" data-chapter="learnings">
+    <section class="v3-section v3-wrap v3-reflect">
+      <p class="v3-chapter"><span>06</span> Learnings</p>
+      <h2 class="v3-h2">What I took from this project</h2>
+      <ol class="v3-reflect-list">
+        <li>Design for the way people arrive. A pattern that works for shoppers may not work for someone using an employer benefit.</li>
+        <li>Sometimes the fix isn't more information. It's moving the decision to a better moment.</li>
+        <li>Reusing what the user already chose, here the lab and the visit, makes an extra purchase feel small.</li>
+        <li>Shipping is the start. The funnel showed exactly where to look next.</li>
+      </ol>
+    </section>
+
+    <section class="v3-final v3-wrap">
+      <p class="v3-final-big">Book your own checkup first.<br><span>Then bring your family along.</span></p>
+      <p class="v3-final-text">I split one crowded decision into two simple ones: the employee books their sponsored checkup, then adds family to the same visit at a family price.</p>
+      <div class="v3-end-links">
+        <a class="text-link" href="projects.html">← All work</a>
+        <a class="text-link" href="mailto:ayushimaurya108@gmail.com">Talk about this project →</a>
+      </div>
+    </section>
+  </div>
+
+</main>
+
+<footer class="site-footer container">
+  <div class="footer-top">
+    <div>
+      <p class="footer-name">Ayushi Maurya</p>
+      <p class="footer-role">Product Designer</p>
+    </div>
+  </div>
+  <p class="footer-line">Let's work together. I'd love to hear from you.</p>
+  <nav class="footer-links" aria-label="Footer">
+    <a href="mailto:ayushimaurya108@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/ayushi-maurya-7174b71ab/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="resume.html">Resume</a>
+    <a href="projects.html">More work →</a>
+  </nav>
+  <p class="footer-meta">© <span id="year"></span> Ayushi Maurya</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/offline-consultation.js"></script>
+<script src="js/visit-clinic-v3.js?v=2"></script>
+<script src="js/family-ahc.js?v=5"></script>
+<script src="js/theme.js?v=3"></script>
+</body>
+</html>

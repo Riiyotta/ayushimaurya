@@ -1,0 +1,121 @@
+{
+  "$description": "Page-local token set of the long-form story case study (it loads only css/oc-story.css); same Night-default/Day mechanism.",
+  "tokens": {
+    "story.surface.page": {
+      "themes": {
+        "night": "#141118",
+        "day": "#fafafa"
+      },
+      "cssProperty": "--bg (story page)",
+      "cite": "css/oc-story.css:7"
+    },
+    "story.surface.alt": {
+      "themes": {
+        "night": "#1b1720",
+        "day": "#f1f0f3"
+      },
+      "cssProperty": "--bg-2 (story page)",
+      "cite": "css/oc-story.css:8"
+    },
+    "story.surface.card": {
+      "themes": {
+        "night": "#221d29",
+        "day": "#ffffff"
+      },
+      "cssProperty": "--card (story page)",
+      "cite": "css/oc-story.css:9"
+    },
+    "story.surface.card-2": {
+      "themes": {
+        "night": "#2a2432",
+        "day": "#f6f4f9"
+      },
+      "cssProperty": "--card-2 (story page)",
+      "cite": "css/oc-story.css:10"
+    },
+    "story.text.primary": {
+      "themes": {
+        "night": "#f4f1f8",
+        "day": "#2c2928"
+      },
+      "cssProperty": "--ink (story page)",
+      "cite": "css/oc-story.css:12"
+    },
+    "story.text.secondary": {
+      "themes": {
+        "night": "#bdb6c7",
+        "day": "#57514d"
+      },
+      "cssProperty": "--ink-2 (story page)",
+      "cite": "css/oc-story.css:13"
+    },
+    "story.text.faint": {
+      "themes": {
+        "night": "#8a8295",
+        "day": "#8a837d"
+      },
+      "cssProperty": "--ink-3 (story page)",
+      "cite": "css/oc-story.css:14"
+    },
+    "story.border": {
+      "themes": {
+        "night": "rgba(255, 255, 255, .09)",
+        "day": "rgba(44, 41, 40, .1)"
+      },
+      "cssProperty": "--line (story page)",
+      "cite": "css/oc-story.css:11"
+    },
+    "story.highlight": {
+      "themes": {
+        "night": "rgba(155, 130, 245, .42)",
+        "day": "rgba(106, 75, 214, .22)"
+      },
+      "cssProperty": "--hl (story page)",
+      "cite": "css/oc-story.css:21"
+    },
+    "story.paper": {
+      "themes": {
+        "night": "#f7f4ee",
+        "day": "#f7f4ee"
+      },
+      "cssProperty": "--paper (story page)",
+      "cite": "css/oc-story.css:22"
+    },
+    "story.paper-ink": {
+      "themes": {
+        "night": "#2c2928",
+        "day": "#2c2928"
+      },
+      "cssProperty": "--paper-ink (story page)",
+      "cite": "css/oc-story.css:23"
+    },
+    "story.warn": {
+      "themes": {
+        "night": "#f2915f",
+        "day": "#c2410c"
+      },
+      "cssProperty": "--warn (story page)",
+      "cite": "css/oc-story.css:19"
+    },
+    "story.font-size.hero": {
+      "value": "clamp(44px, 7.4vw, 108px)",
+      "cssProperty": "--fs-hero",
+      "cite": "css/oc-story.css:26"
+    },
+    "story.font-size.h2": {
+      "value": "clamp(30px, 4.4vw, 60px)",
+      "cssProperty": "--fs-h2",
+      "cite": "css/oc-story.css:27"
+    },
+    "story.font-size.h3": {
+      "value": "clamp(20px, 1.8vw, 26px)",
+      "cssProperty": "--fs-h3",
+      "cite": "css/oc-story.css:28"
+    },
+    "story.font-size.lead": {
+      "value": "clamp(17px, 1.35vw, 20px)",
+      "cssProperty": "--fs-lead",
+      "cite": "css/oc-story.css:29"
+    }
+  }
+}

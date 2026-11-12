@@ -1,0 +1,668 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "reference",
+  "template": "template.home",
+  "route": "index.html",
+  "theme": "night",
+  "meta": {
+    "title": "Ayushi Maurya — Product Designer",
+    "description": "Ayushi Maurya is a product designer with 5+ years of experience in healthcare and e-commerce. She makes complex products simple to use."
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "site-nav",
+      "content": {
+        "brandMark": {
+          "role": "brand.wordmark-logo",
+          "src": "assets/logo-ayushi-maurya-transparent.png",
+          "mediaType": "image",
+          "alt": "Ayushi Maurya"
+        },
+        "navLinks": [
+          {
+            "label": "My work",
+            "href": "projects.html",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "Resume",
+            "href": "resume.html",
+            "role": "link.internal-route"
+          }
+        ],
+        "themeToggle": true
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "section": "home.hero",
+      "variant": "name-field",
+      "content": {
+        "name": "Ayushi Maurya",
+        "role": "Product Designer",
+        "statement": "I design products for people who don't have time to figure things out.",
+        "support": "I make complex healthcare products easier to use.",
+        "cta": {
+          "label": "See my work",
+          "href": "#work",
+          "role": "link.internal-route"
+        }
+      },
+      "motion": {
+        "pattern": "rise-in-on-load",
+        "trigger": "load",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "section": "home.work-showcase",
+      "variant": "project-box",
+      "content": {
+        "kicker": "All work",
+        "heading": "Problems I've worked on, and how I solved them.",
+        "hint": "Real products that shipped. Pick a card to see more.",
+        "moreLink": {
+          "label": "View more work",
+          "href": "projects.html",
+          "role": "link.internal-route"
+        },
+        "projects": [
+          {
+            "title": "Health Claim Approval Dashboard",
+            "locked": true,
+            "link": {
+              "label": "View in detail",
+              "href": "claim-approval.html",
+              "role": "link.internal-route"
+            },
+            "oneLiner": "A redesign of how doctors review reimbursement claims, with AI help built into the review."
+          },
+          {
+            "title": "Hybrid Diagnostic Booking Flow",
+            "locked": false,
+            "link": {
+              "label": "View in detail",
+              "href": "hybrid-diagnostic.html",
+              "role": "link.internal-route"
+            },
+            "oneLiner": "Users can book pathology and radiology tests together in one booking, instead of two."
+          },
+          {
+            "title": "Digital Clinic",
+            "locked": false,
+            "link": {
+              "label": "View in detail",
+              "href": "visit-clinic.html",
+              "role": "link.internal-route"
+            },
+            "oneLiner": "Patients check in digitally, see their place in the queue and spend less time waiting at the clinic."
+          },
+          {
+            "title": "Offline Doctor Consultation",
+            "locked": false,
+            "link": {
+              "label": "View in detail",
+              "href": "offline-doctor-consultation.html",
+              "role": "link.internal-route"
+            },
+            "oneLiner": "Two separate ways to book an offline consultation, merged into one clear flow."
+          },
+          {
+            "title": "Add Patient to Previous Health Checkup",
+            "locked": false,
+            "link": {
+              "label": "View in detail",
+              "href": "projects.html",
+              "role": "link.internal-route"
+            },
+            "oneLiner": "Letting users add family members to a health checkup they already booked for themselves."
+          },
+          {
+            "title": "Clinic Gift Cards",
+            "locked": false,
+            "link": {
+              "label": "View in detail",
+              "href": "visit-clinic-gift-cards.html",
+              "role": "link.internal-route"
+            },
+            "oneLiner": "Visual and interaction design for a referral and gift card flow, from sharing to redeeming."
+          },
+          {
+            "title": "Family Health Checkups",
+            "locked": false,
+            "link": {
+              "label": "View in detail",
+              "href": "family-ahc.html",
+              "role": "link.internal-route"
+            },
+            "oneLiner": "Users add family members to the health checkup they already booked, at a family price."
+          },
+          {
+            "title": "Lab Test Booking Flow Revamp",
+            "locked": false,
+            "link": {
+              "label": "View in detail",
+              "href": "projects.html",
+              "role": "link.internal-route"
+            },
+            "oneLiner": "Simplifying the lab test booking journey to reduce friction and better match user intent."
+          },
+          {
+            "title": "0 → 1 Product Design",
+            "locked": false,
+            "link": {
+              "label": "View in detail",
+              "href": "projects.html",
+              "role": "link.internal-route"
+            }
+          },
+          {
+            "title": "Complex Problem Solving",
+            "locked": false,
+            "link": {
+              "label": "View in detail",
+              "href": "projects.html",
+              "role": "link.internal-route"
+            }
+          },
+          {
+            "title": "Business-Driven Design",
+            "locked": false,
+            "link": {
+              "label": "View in detail",
+              "href": "projects.html",
+              "role": "link.internal-route"
+            }
+          },
+          {
+            "title": "AI in Product Design",
+            "locked": false,
+            "link": {
+              "label": "View in detail",
+              "href": "projects.html",
+              "role": "link.internal-route"
+            }
+          },
+          {
+            "title": "Visual & Interaction Design",
+            "locked": false,
+            "link": {
+              "label": "View in detail",
+              "href": "projects.html",
+              "role": "link.internal-route"
+            }
+          },
+          {
+            "title": "Everything",
+            "locked": false,
+            "link": {
+              "label": "View in detail",
+              "href": "projects.html",
+              "role": "link.internal-route"
+            }
+          }
+        ],
+        "filters": [
+          "0 → 1 Product Design",
+          "Complex Problem Solving",
+          "Business-Driven Design",
+          "AI in Product Design",
+          "Visual & Interaction Design"
+        ]
+      },
+      "motion": {
+        "pattern": "box-open",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "section": "home.featured-project",
+      "variant": "media-card",
+      "content": {
+        "kicker": "AI space",
+        "heading": "My AI playground. Built, shipped and playable.",
+        "tag": "Featured · Vibe coded",
+        "title": "Maths Jenga",
+        "body": "A 3D tower of 54 numbered wooden blocks. Roll four dice and use the maths to find which block to pull, or switch the dice off and play classic Jenga. Two players take turns, and nobody wants to be the one who knocks the tower down.",
+        "chips": [
+          "3D tower",
+          "2 players",
+          "Dice maths or classic",
+          "Light and dark"
+        ],
+        "cta": {
+          "label": "Play Maths Jenga",
+          "href": "https://teeter-numbers.vercel.app/",
+          "role": "link.source-url"
+        },
+        "media": {
+          "role": "media.side-project-demo",
+          "src": "assets/skills/jenga.mp4",
+          "mediaType": "video",
+          "alt": "Play Maths Jenga (opens in a new tab)"
+        }
+      },
+      "motion": {
+        "pattern": "autoplay-loop-video",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "pause-media"
+      }
+    },
+    {
+      "section": "home.skills-index",
+      "variant": "word-list",
+      "content": {
+        "label": "What I do",
+        "skills": [
+          {
+            "words": "0→1 Product Design",
+            "link": {
+              "label": "Digital Clinic, Doctor Consultation & White-labelling",
+              "href": "visit-clinic.html",
+              "role": "link.internal-route"
+            },
+            "thumbnails": [
+              {
+                "role": "product.thumbnail",
+                "src": "assets/skills/t-vc-entry-points-2.webp",
+                "mediaType": "image"
+              },
+              {
+                "role": "product.thumbnail",
+                "src": "assets/skills/t-doctor-consult.webp",
+                "mediaType": "image"
+              },
+              {
+                "role": "product.thumbnail",
+                "src": "assets/skills/t-whitelabel.webp",
+                "mediaType": "image"
+              }
+            ]
+          },
+          {
+            "words": "Product Strategy",
+            "link": {
+              "label": "Uber, Wardrobe & Family health checkups",
+              "href": "family-ahc.html",
+              "role": "link.internal-route"
+            },
+            "thumbnails": [
+              {
+                "role": "product.thumbnail",
+                "src": "assets/skills/t-uber.webp",
+                "mediaType": "image"
+              },
+              {
+                "role": "product.thumbnail",
+                "src": "assets/skills/t-wardrobe-deck.webp",
+                "mediaType": "image"
+              },
+              {
+                "role": "product.thumbnail",
+                "src": "assets/skills/t-f1-order-status.webp",
+                "mediaType": "image"
+              }
+            ]
+          },
+          {
+            "words": "AI Product Design",
+            "link": {
+              "label": "Claim Approval Dashboard",
+              "href": "claim-approval.html",
+              "role": "link.internal-route"
+            },
+            "thumbnails": [
+              {
+                "role": "product.thumbnail",
+                "src": "assets/skills/t-ai-copilot.webp",
+                "mediaType": "image"
+              },
+              {
+                "role": "product.thumbnail",
+                "src": "assets/skills/t-ai-assistant.webp",
+                "mediaType": "image"
+              },
+              {
+                "role": "product.thumbnail",
+                "src": "assets/skills/t-ai-reviewing.webp",
+                "mediaType": "image"
+              }
+            ]
+          },
+          {
+            "words": "UX Research",
+            "link": {
+              "label": "Journey maps, competitors & user stories",
+              "href": "family-ahc.html",
+              "role": "link.internal-route"
+            },
+            "thumbnails": [
+              {
+                "role": "product.thumbnail",
+                "src": "assets/skills/t-journey-map.webp",
+                "mediaType": "image"
+              },
+              {
+                "role": "product.thumbnail",
+                "src": "assets/skills/t-comp-1.webp",
+                "mediaType": "image"
+              }
+            ]
+          },
+          {
+            "words": "Visual Design",
+            "link": {
+              "label": "Gift card, Smart Health Report & Abroad Education",
+              "href": "visit-clinic-gift-cards.html",
+              "role": "link.internal-route"
+            },
+            "thumbnails": [
+              {
+                "role": "product.thumbnail",
+                "src": "assets/skills/t-gift-card.webp",
+                "mediaType": "image"
+              },
+              {
+                "role": "product.thumbnail",
+                "src": "assets/skills/t-health-report.webp",
+                "mediaType": "image"
+              }
+            ]
+          },
+          {
+            "words": "Vibe Coding",
+            "link": {
+              "label": "Wardrobe, Wallet UI & Jenga",
+              "href": "projects.html",
+              "role": "link.internal-route"
+            },
+            "thumbnails": [
+              {
+                "role": "product.case-study-video",
+                "src": "assets/case-studies/wardrobe/wardrobe.mp4",
+                "mediaType": "video"
+              },
+              {
+                "role": "product.case-study-video",
+                "src": "assets/case-studies/wallet/wallet.mp4",
+                "mediaType": "video"
+              }
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "reveal-on-scroll",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "section": "about.intro",
+      "variant": "photo-strip",
+      "content": {
+        "label": "Know more about me",
+        "title": "A little world called Ayushi.",
+        "sub": "Designer by profession, curious by nature.",
+        "invite": "a few pages about me Open my diary",
+        "photos": [
+          {
+            "image": {
+              "role": "person.portrait-photo",
+              "src": "assets/little-world/booth-1.jpg",
+              "mediaType": "image",
+              "alt": "Ayushi in the snowy mountains, in a lilac puffer jacket"
+            },
+            "mood": "travel mood"
+          },
+          {
+            "image": {
+              "role": "person.portrait-photo",
+              "src": "assets/little-world/booth-2.jpg",
+              "mediaType": "image",
+              "alt": "Ayushi taking a mirror selfie at work in a houndstooth blazer"
+            },
+            "mood": "work mode"
+          },
+          {
+            "image": {
+              "role": "person.portrait-photo",
+              "src": "assets/little-world/booth-3.jpg",
+              "mediaType": "image",
+              "alt": "Ayushi smiling in sunglasses and a turquoise sweater"
+            },
+            "mood": "sunshine mood"
+          }
+        ],
+        "caption": "me in three moods · tap a photo"
+      },
+      "motion": {
+        "pattern": "ambient-drift",
+        "trigger": "time",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "section": "about.diary",
+      "variant": "book",
+      "content": {
+        "coverTitle": "Ayushi's little world",
+        "chapters": [
+          {
+            "title": "the girl who loved creating"
+          },
+          {
+            "title": "the plot twist"
+          },
+          {
+            "title": "the creative soul"
+          },
+          {
+            "title": "beyond the screens"
+          }
+        ],
+        "spreads": [
+          {
+            "heading": "The girl who loved creating"
+          },
+          {
+            "heading": "The unexpected plot twist"
+          },
+          {
+            "heading": "The creative soul I still am"
+          },
+          {
+            "heading": "Beyond the screens"
+          }
+        ],
+        "paragraphs": [
+          "Before I was a designer, I was the girl who joined in on everything creative: competitions, singing, dancing, music and art.",
+          "Being creative has been part of my life since I was little.",
+          "and I'm still that girl ♡",
+          "In class 12, I chose Science. It was a hard time in my life, and I wasn't sure which direction to take.",
+          "I looked into fashion design at NIFT, and I also cleared NATA, the architecture entrance exam. In the end, I dropped both and started with Communication Design.",
+          "From there I moved to UI/UX, and then to product design.",
+          "it wasn't a straight path ✿",
+          "Outside of work, I love learning new things, exploring ideas and having deep conversations.",
+          "I also find creativity in everyday life.",
+          "here's me, as a receipt →",
+          "Happy to chat, any time."
+        ],
+        "photos": [
+          {
+            "role": "person.lifestyle-photo",
+            "src": "assets/little-world/craft-1.jpg",
+            "mediaType": "image",
+            "alt": "A ribbed pink-marbled pot and a bubble-edged tray in soft light"
+          },
+          {
+            "role": "person.lifestyle-photo",
+            "src": "assets/little-world/craft-2.jpg",
+            "mediaType": "image",
+            "alt": "A pink marbled ribbed vase with hand-drawn black florals"
+          },
+          {
+            "role": "person.lifestyle-photo",
+            "src": "assets/little-world/craft-5.jpg",
+            "mediaType": "image",
+            "alt": "A painting of two faces beside a ukulele and an alarm clock on a shelf"
+          },
+          {
+            "role": "person.lifestyle-photo",
+            "src": "assets/little-world/craft-3.jpg",
+            "mediaType": "image",
+            "alt": "A ribbed jewellery bowl and lidded jar on a marbled tray"
+          },
+          {
+            "role": "person.lifestyle-photo",
+            "src": "assets/little-world/craft-4.jpg",
+            "mediaType": "image",
+            "alt": "A yellow ribbed vase with dried flowers and a matching lidded jar on a tray"
+          },
+          {
+            "role": "decor.cloud-illustration",
+            "src": "assets/clouds/cloud-small.webp",
+            "mediaType": "image"
+          }
+        ],
+        "hint": "tap “Open my diary” to begin ✿"
+      },
+      "motion": {
+        "pattern": "reveal-on-scroll",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "section": "about.closing",
+      "variant": "door",
+      "content": {
+        "kicker": "chapter 05 · to be continued…",
+        "heading": "I'm still growing into the person I want to be.",
+        "cta": {
+          "label": "A peek into my dreams",
+          "href": "#dreams",
+          "role": "link.internal-route"
+        }
+      },
+      "motion": {
+        "pattern": "ambient-drift",
+        "trigger": "time",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "full",
+      "content": {
+        "name": "Ayushi Maurya",
+        "role": "Product Designer",
+        "line": "Let's work together. I'd love to hear from you.",
+        "links": [
+          {
+            "label": "Email",
+            "href": "mailto:ayushimaurya108@gmail.com",
+            "role": "link.source-url"
+          },
+          {
+            "label": "LinkedIn",
+            "href": "https://www.linkedin.com/in/ayushi-maurya-7174b71ab/",
+            "role": "link.source-url"
+          },
+          {
+            "label": "Resume",
+            "href": "resume.html",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "More work",
+            "href": "projects.html",
+            "role": "link.internal-route"
+          }
+        ],
+        "copyright": "© Ayushi Maurya"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    }
+  ],
+  "overlays": [
+    {
+      "section": "utility.mobile-menu",
+      "variant": "sheet",
+      "retrievalEligible": false,
+      "content": {
+        "links": [
+          {
+            "label": "Resume",
+            "href": "resume.html",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "Contact",
+            "href": "mailto:ayushimaurya108@gmail.com",
+            "role": "link.source-url"
+          }
+        ],
+        "cta": {
+          "label": "My work",
+          "href": "projects.html",
+          "role": "link.internal-route"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "section": "utility.lock-modal",
+      "variant": "password",
+      "retrievalEligible": false,
+      "content": {
+        "title": "This project is locked",
+        "body": "Enter the password to view this case study.",
+        "errorText": "That's not the right password. Try again.",
+        "submitLabel": "Unlock →"
+      },
+      "motion": {
+        "pattern": "modal-pop",
+        "trigger": "tap",
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "section": "utility.dreams-overlay",
+      "variant": "constellation",
+      "retrievalEligible": false,
+      "content": {
+        "kicker": "A peek into my dreams",
+        "title": "What I'm working towards",
+        "sub": "Tap the glowing star to see a dream, then tap the next one.",
+        "endLine": "If you have a problem to solve, I'd love to hear about it.",
+        "ctas": [
+          {
+            "label": "Say hello",
+            "href": "mailto:ayushimaurya108@gmail.com",
+            "role": "link.source-url"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "modal-pop",
+        "trigger": "tap",
+        "reducedMotionFallback": "instant-state-change"
+      }
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "id": "index.page-header",
+  "title": "Project index header",
+  "description": "Opener of the project index: back link, kicker, large title with an emphasised phrase, a dek and a contact link.",
+  "source": {
+    "id": "src.section-container-mw-head",
+    "file": "projects.html",
+    "tag": "section",
+    "selector": "section.container.mw-head",
+    "lines": "49-55",
+    "citation": "projects.html:49-55",
+    "observedIn": [
+      "projects.html:49"
+    ]
+  },
+  "semantic": {
+    "id": "index.page-header",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "title-dek"
+  ],
+  "content": {
+    "fields": {
+      "backLink": {
+        "type": "link",
+        "required": false,
+        "maxWords": 2,
+        "evidence": {
+          "selector": ".cs-back",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "kicker": {
+        "type": "text",
+        "required": true,
+        "maxWords": 3,
+        "evidence": {
+          "selector": ".oc-kicker",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "title": {
+        "type": "text",
+        "required": true,
+        "maxWords": 4,
+        "evidence": {
+          "selector": "h1",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "dek": {
+        "type": "text",
+        "required": true,
+        "maxWords": 28,
+        "evidence": {
+          "selector": ".oc-dek",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "contactLink": {
+        "type": "link",
+        "required": false,
+        "maxWords": 3,
+        "evidence": {
+          "selector": ".cs-links a",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      }
+    }
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.project-index"
+    ],
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "reveal-on-scroll",
+      "none"
+    ],
+    "default": "none"
+  },
+  "responsive": [],
+  "responsiveNote": "Type scales through clamp() font tokens; no breakpoint rule targets this block.",
+  "assetRoles": [],
+  "generatedAssetRoles": [],
+  "components": [
+    "primitive.kicker",
+    "primitive.text-link",
+    "primitive.heading-display"
+  ],
+  "tokens": [
+    "font.size.3xl",
+    "color.text.primary"
+  ]
+}

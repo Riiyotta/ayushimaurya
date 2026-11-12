@@ -1,0 +1,135 @@
+{
+  "version": "1.0.0",
+  "note": "Closed set of motion patterns observed in the source; each pins its reduced-motion fallback (also pinned in schema/semantic_validate.py MOTION_FALLBACK). Global rule: every animation/transition collapses to ~0ms under prefers-reduced-motion.",
+  "globalReducedMotion": [
+    "css/styles.css:85"
+  ],
+  "patterns": {
+    "none": {
+      "reducedMotionFallback": "none",
+      "trigger": "load",
+      "description": "No motion.",
+      "cites": []
+    },
+    "rise-in-on-load": {
+      "reducedMotionFallback": "static-visible",
+      "trigger": "load",
+      "description": "Opener lines rise 12px and fade in on load, 700ms, staggered 60/160/260/360/460ms.",
+      "cites": [
+        "css/styles.css:1163",
+        "css/styles.css:1169"
+      ]
+    },
+    "reveal-on-scroll": {
+      "reducedMotionFallback": "static-visible",
+      "trigger": "viewport-enter",
+      "description": "Blocks fade and rise (14-26px) once when they enter the viewport (IntersectionObserver threshold 0.12-0.18).",
+      "cites": [
+        "css/styles.css:1794",
+        "js/offline-consultation.js:20",
+        "css/oc-story.css:158",
+        "css/visit-clinic-v3.css:596",
+        "css/little-world.css:89"
+      ]
+    },
+    "scroll-console": {
+      "reducedMotionFallback": "show-all-steps",
+      "trigger": "scroll-progress",
+      "description": "A sticky status console tracks which step article sits in the middle 10% of the viewport.",
+      "cites": [
+        "js/visit-clinic-v3.js:123",
+        "css/visit-clinic-v3.css:304"
+      ]
+    },
+    "scroll-pinned-panels": {
+      "reducedMotionFallback": "show-all-steps",
+      "trigger": "scroll-progress",
+      "description": "A pinned storyboard; scroll position advances panels and captions.",
+      "cites": [
+        "css/oc-story.css:198",
+        "js/oc-story.js:47"
+      ]
+    },
+    "scroll-stepper": {
+      "reducedMotionFallback": "show-all-steps",
+      "trigger": "scroll-progress",
+      "description": "A pinned stepper; scroll or step buttons advance a counter, dots and messages.",
+      "cites": [
+        "css/oc-story.css:282",
+        "js/oc-story.js:62"
+      ]
+    },
+    "ambient-drift": {
+      "reducedMotionFallback": "static-visible",
+      "trigger": "time",
+      "description": "Decorative clouds drift horizontally (65-120s linear loops) and stars twinkle.",
+      "cites": [
+        "css/little-world.css:108",
+        "css/little-world.css:124"
+      ]
+    },
+    "interactive-canvas-field": {
+      "reducedMotionFallback": "static-first-frame",
+      "trigger": "pointer",
+      "description": "Canvas tick-mark field rotates toward the pointer; reveal brush under the name.",
+      "cites": [
+        "js/hero.js:13",
+        "js/hero.js:143"
+      ]
+    },
+    "box-open": {
+      "reducedMotionFallback": "static-visible",
+      "trigger": "viewport-enter",
+      "description": "The 3D project box opens its lid when it approaches the viewport.",
+      "cites": [
+        "js/home-box.js:211",
+        "js/home-box.js:203"
+      ]
+    },
+    "card-flip": {
+      "reducedMotionFallback": "instant-state-change",
+      "trigger": "tap",
+      "description": "Cards flip on tap to show a second face.",
+      "cites": [
+        "css/oc-story.css:252",
+        "js/oc-story.js:112"
+      ]
+    },
+    "modal-pop": {
+      "reducedMotionFallback": "instant-state-change",
+      "trigger": "tap",
+      "description": "Dialogs scale/fade in.",
+      "cites": [
+        "css/styles.css:2372",
+        "css/case.css:88"
+      ]
+    },
+    "autoplay-loop-video": {
+      "reducedMotionFallback": "pause-media",
+      "trigger": "viewport-enter",
+      "description": "Muted looping product videos autoplay; reduced motion keeps the poster.",
+      "cites": [
+        "index.html:142",
+        "js/visit-clinic-v3.js:284"
+      ]
+    },
+    "sticky-chapter-nav": {
+      "reducedMotionFallback": "instant-state-change",
+      "trigger": "scroll-progress",
+      "description": "Sticky chapter nav highlights the chapter in view.",
+      "cites": [
+        "js/visit-clinic-v3.js:332",
+        "css/visit-clinic-v3.css:131"
+      ]
+    },
+    "theme-crossfade": {
+      "reducedMotionFallback": "instant-state-change",
+      "trigger": "tap",
+      "description": "Day/Night switch crossfades colours for 400ms.",
+      "cites": [
+        "css/theme.css:30",
+        "js/theme.js:25"
+      ]
+    }
+  }
+}

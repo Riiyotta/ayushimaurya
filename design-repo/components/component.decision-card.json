@@ -1,0 +1,21 @@
+{
+  "id": "component.decision-card",
+  "kind": "component",
+  "description": "Decision/entry card: number, title, labelled rows (before / decision / why / result, or problem / solution / impact).",
+  "composes": [
+    "primitive.kicker"
+  ],
+  "props": {
+    "number": "text",
+    "title": "text",
+    "rows": "meta"
+  },
+  "tokens": [
+    "color.surface.raised",
+    "color.status.ok"
+  ],
+  "cites": [
+    "offline-doctor-consultation.html:384",
+    "resume.html:87"
+  ]
+}

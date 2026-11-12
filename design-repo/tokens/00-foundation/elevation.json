@@ -1,0 +1,13 @@
+{
+  "$description": "Only elevation expressed as a token in the source (story page --shadow), per theme.",
+  "tokens": {
+    "elevation.story-card": {
+      "themes": {
+        "night": "0 24px 60px -30px rgba(0, 0, 0, .7)",
+        "day": "0 24px 50px -30px rgba(44, 41, 40, .35)"
+      },
+      "cssProperty": "--shadow (story page)",
+      "cite": "css/oc-story.css:24"
+    }
+  }
+}

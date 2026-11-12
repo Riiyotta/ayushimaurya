@@ -1,0 +1,196 @@
+{
+  "version": "1.0.0",
+  "note": "Every route the source serves, mapped exactly once. classifiedSequence is the classifier output at build time; classify_routes.py --check re-derives it.",
+  "routes": [
+    {
+      "route": "index.html",
+      "template": "template.home",
+      "classifiedSequence": [
+        "shell.header[site-nav]",
+        "home.hero[name-field]",
+        "home.work-showcase[project-box]",
+        "home.featured-project[media-card]",
+        "home.skills-index[word-list]",
+        "about.intro[photo-strip]",
+        "about.diary[book]",
+        "about.closing[door]",
+        "shell.footer[full]"
+      ]
+    },
+    {
+      "route": "projects.html",
+      "template": "template.project-index",
+      "classifiedSequence": [
+        "shell.header[site-nav]",
+        "index.page-header[title-dek]",
+        "index.project-grid[card-grid]",
+        "conversion.closing[link-row]",
+        "shell.footer[full]"
+      ]
+    },
+    {
+      "route": "resume.html",
+      "template": "template.resume",
+      "classifiedSequence": [
+        "shell.header[site-nav]",
+        "resume.header[contact-meta]",
+        "resume.entry-group[summary]",
+        "resume.entry-group[experience]",
+        "resume.entry-group[skills]",
+        "resume.entry-group[education]",
+        "resume.entry-group[certifications]",
+        "conversion.closing[cta-band]",
+        "shell.footer[full]"
+      ]
+    },
+    {
+      "route": "nda.html",
+      "template": "template.notice",
+      "classifiedSequence": [
+        "shell.header[site-nav]",
+        "notice.protected-work[redacted-sheet]",
+        "shell.footer[full]"
+      ]
+    },
+    {
+      "route": "claim-approval.html",
+      "template": "template.case-study-brief",
+      "classifiedSequence": [
+        "shell.header[site-nav]",
+        "casestudy.hero[stage]",
+        "casestudy.chapter[plain]",
+        "conversion.closing[thanks-cta]",
+        "shell.footer[full]"
+      ]
+    },
+    {
+      "route": "family-ahc.html",
+      "template": "template.case-study-chaptered",
+      "classifiedSequence": [
+        "shell.header[site-nav]",
+        "casestudy.hero[journey]",
+        "casestudy.summary[tldr-grid]",
+        "casestudy.chapter-nav[sticky-pills]",
+        "casestudy.chapter[plain]",
+        "casestudy.problem-statement[statement-card]",
+        "casestudy.chapter[tint]",
+        "casestudy.chapter[plain]",
+        "casestudy.decision[single]",
+        "casestudy.chapter[tint]",
+        "casestudy.chapter[plain]",
+        "casestudy.scroll-narrative[console]",
+        "casestudy.chapter[tint]",
+        "casestudy.chapter[dark]",
+        "casestudy.chapter[plain]",
+        "casestudy.chapter[plain]",
+        "conversion.closing[final-statement]",
+        "shell.footer[full]"
+      ]
+    },
+    {
+      "route": "hybrid-diagnostic.html",
+      "template": "template.case-study-chaptered",
+      "classifiedSequence": [
+        "shell.header[site-nav]",
+        "casestudy.hero[split-media]",
+        "casestudy.chapter-nav[anchor-list]",
+        "casestudy.chapter[plain]",
+        "casestudy.chapter[tint]",
+        "casestudy.chapter[plain]",
+        "casestudy.chapter[tint]",
+        "casestudy.chapter[plain]",
+        "casestudy.chapter[tint]",
+        "casestudy.chapter[plain]",
+        "conversion.closing[thanks-cta]",
+        "shell.footer[full]"
+      ]
+    },
+    {
+      "route": "offline-doctor-consultation.html",
+      "template": "template.case-study-chaptered",
+      "classifiedSequence": [
+        "shell.header[minimal-bar]",
+        "casestudy.hero[poster]",
+        "casestudy.scroll-narrative[panels]",
+        "casestudy.summary[flip-card]",
+        "casestudy.chapter[plain]",
+        "casestudy.scroll-narrative[stepper]",
+        "casestudy.chapter[plain]",
+        "casestudy.chapter[plain]",
+        "casestudy.chapter[plain]",
+        "casestudy.chapter[plain]",
+        "casestudy.chapter[plain]",
+        "casestudy.decision[list]",
+        "casestudy.chapter[plain]",
+        "conversion.closing[thanks-cta]",
+        "shell.footer[minimal]"
+      ]
+    },
+    {
+      "route": "virtual-wardrobe.html",
+      "template": "template.case-study-brief",
+      "classifiedSequence": [
+        "shell.header[site-nav]",
+        "casestudy.hero[stage]",
+        "casestudy.chapter[plain]",
+        "conversion.closing[thanks-cta]",
+        "shell.footer[full]"
+      ]
+    },
+    {
+      "route": "visit-clinic-gift-cards.html",
+      "template": "template.case-study-brief",
+      "classifiedSequence": [
+        "shell.header[site-nav]",
+        "casestudy.hero[cover]",
+        "casestudy.summary[brief-grid]",
+        "casestudy.screen-gallery[phone-trio]",
+        "conversion.closing[link-row]",
+        "shell.footer[full]"
+      ]
+    },
+    {
+      "route": "visit-clinic.html",
+      "template": "template.case-study-chaptered",
+      "classifiedSequence": [
+        "shell.header[site-nav]",
+        "casestudy.hero[journey]",
+        "casestudy.summary[tldr-grid]",
+        "casestudy.chapter-nav[sticky-pills]",
+        "casestudy.chapter[plain]",
+        "casestudy.chapter[dark]",
+        "casestudy.chapter[plain]",
+        "casestudy.problem-statement[statement-card]",
+        "casestudy.chapter[plain]",
+        "casestudy.chapter[plain]",
+        "casestudy.chapter[tint]",
+        "casestudy.chapter[plain]",
+        "casestudy.decision[single]",
+        "casestudy.decision[single]",
+        "casestudy.decision[single]",
+        "casestudy.chapter[plain]",
+        "casestudy.scroll-narrative[console]",
+        "casestudy.chapter[plain]",
+        "casestudy.chapter[plain]",
+        "casestudy.chapter[tint]",
+        "casestudy.chapter[plain]",
+        "casestudy.chapter[dark]",
+        "casestudy.chapter[plain]",
+        "casestudy.chapter[plain]",
+        "conversion.closing[final-statement]",
+        "shell.footer[full]"
+      ]
+    },
+    {
+      "route": "wallet-ui.html",
+      "template": "template.case-study-brief",
+      "classifiedSequence": [
+        "shell.header[site-nav]",
+        "casestudy.hero[stage]",
+        "casestudy.chapter[plain]",
+        "conversion.closing[thanks-cta]",
+        "shell.footer[full]"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "note": "Rhythm/position rules JSON Schema cannot express. Each rule id is implemented in schema/semantic_validate.py (GRAPH_RULES_IMPLEMENTED); verify_all.py fails if the two sets differ. Every rule was checked against the classifier's real per-route sequences (templates/routes.json classifiedSequence) when written; verify_all re-runs all of them over those sequences.",
+  "rules": [
+    {"id": "ONE_HERO", "severity": "error", "description": "Exactly one HERO-category section per page (the page opener).", "exceptions": ["template.notice: no hero; the protected-work notice is the whole compact page (templates.json noHero)"]},
+    {"id": "HERO_FOLLOWS_HEADER", "severity": "error", "description": "The HERO directly follows shell.header; HERO means the page-opening composition only.", "exceptions": []},
+    {"id": "SHELL_POSITION", "severity": "error", "description": "Exactly one shell.header (first) and one shell.footer (last).", "exceptions": []},
+    {"id": "CLOSING_PRECEDES_FOOTER", "severity": "error", "description": "conversion.closing appears at most once and directly before shell.footer (true on all 10 routes that have one; home and the notice page have none).", "exceptions": []},
+    {"id": "MAX_PER_PAGE", "severity": "error", "description": "Section contracts' constraints.maxPerPage (HERO sections, casestudy.summary, casestudy.chapter-nav: 1).", "exceptions": []},
+    {"id": "NO_CONSECUTIVE_SCROLL_NARRATIVES", "severity": "error", "description": "Two scroll-driven narratives are never adjacent (the story page separates its storyboard and stepper with other sections).", "exceptions": []},
+    {"id": "ADJACENT_SAME_TONE", "severity": "warn", "description": "Adjacent chapters should not share the same non-plain tone (tint/dark); the source alternates plain and tinted chapters.", "exceptions": []},
+    {"id": "MOTION_BUDGET", "severity": "warn", "description": "At most two pinned scroll narratives per page (the source maximum, on the story page).", "exceptions": []},
+    {"id": "OVERLAY_PLACEMENT", "severity": "error", "description": "Runtime UI sections (overlayOnly) are listed under overlays, never as in-flow nodes; overlays must be allowed by the template.", "exceptions": []},
+    {"id": "REDUCED_MOTION_FALLBACK", "severity": "error", "description": "Every node's motion.reducedMotionFallback equals the fallback pinned for its pattern (tokens/00-foundation/motion-patterns.json, MOTION_FALLBACK in the validator).", "exceptions": []}
+  ]
+}

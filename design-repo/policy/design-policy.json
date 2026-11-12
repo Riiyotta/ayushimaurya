@@ -1,0 +1,54 @@
+{
+  "policyId": "n0-design-constraints-common",
+  "policyVersion": "0.1.0",
+  "commonIrVersion": "0.5",
+  "enforcementMode": "hard-and-soft",
+  "classification": {
+    "category": "portfolio",
+    "domain": "personal-product-design-portfolio",
+    "decidedFrom": [
+      "12 static pages: a home page, a project index, a resume, an NDA notice and 8 case studies of one designer's work",
+      "no pricing, sign-up, trial, account, dashboard or checkout anywhere in the source",
+      "the only conversions are contact links (email, professional profile) and requests for a private walkthrough",
+      "content is one person's work history, case studies and an about-me band"
+    ],
+    "approval": {
+      "status": "defined-pending-architecture-review",
+      "architectureDecisionRecorded": false,
+      "proposedBy": "agent (design-repo extraction); not ratified by the owner",
+      "ratifiedBy": null,
+      "ratifiedAt": null
+    }
+  },
+  "generationRules": {
+    "modes": "PageSpec.mode is reference (faithful reconstruction, evidence only) or generated (a new page for someone else).",
+    "generated": [
+      "no source person name, contact detail, employer, product/case-study name or URL (GENERATED_MODE_PERSON / BRAND / URL)",
+      "no verbatim source copy or source call-to-action labels (GENERATED_MODE_COPY / CTA; fingerprints in policy/source-brand.json)",
+      "no source wordmark, photographs, product screens or videos; only generation-safe asset roles with placeholder://, generated:// or user-supplied:// sources (GENERATED_MODE_LOGO / ASSET)",
+      "external links only on reserved placeholder domains (*.example, *.invalid, example.com/.org/.net)"
+    ],
+    "always": [
+      "node sequences match their template; copy within measured word budgets; tokens from the catalog under the token policy",
+      "runtime UI (menus, dialogs, lightboxes, hints, progress bars) is never retrievable",
+      "every motion pattern carries its pinned reduced-motion fallback"
+    ]
+  },
+  "localExtension": {
+    "id": "portfolio-local-1",
+    "rules": [
+      "the client-side password gate of locked projects is described as a mechanism only; its secret is never recorded or generated",
+      "Night is the default theme; Day is the alternate (both schema-validated)",
+      "long-form case studies are decomposed into chapter-level sections; no section may hold a whole case study"
+    ]
+  },
+  "enforcedBy": {
+    "files": [
+      "tokens/llm/token-policy.json",
+      "compatibility/graph.json",
+      "schema/pagespec.schema.json",
+      "schema/semantic_validate.py"
+    ],
+    "contentHash": "sha256:247f5a7f34180e4cc3c5ccf629bc48ed1d53509e8b5b5163cfe8a9055f00235a"
+  }
+}

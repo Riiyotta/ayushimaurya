@@ -1,0 +1,20 @@
+{
+  "id": "primitive.theme-toggle",
+  "kind": "primitive",
+  "description": "Header switch between the Night (default) and Day themes; 36px pill, sun/moon glyph + label.",
+  "props": {
+    "theme": [
+      "night",
+      "day"
+    ]
+  },
+  "tokens": [
+    "radius.pill",
+    "color.accent.primary",
+    "motion.duration.theme"
+  ],
+  "cites": [
+    "js/theme.js:13",
+    "css/theme.css:8"
+  ]
+}

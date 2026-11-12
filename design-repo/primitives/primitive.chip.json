@@ -1,0 +1,16 @@
+{
+  "id": "primitive.chip",
+  "kind": "primitive",
+  "description": "Rounded tag/pill used for feature chips, filters and chapter-nav pills.",
+  "props": {
+    "text": "text",
+    "pressed": "boolean"
+  },
+  "tokens": [
+    "radius.pill",
+    "color.border.default"
+  ],
+  "cites": [
+    "index.html:133"
+  ]
+}

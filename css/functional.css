@@ -1,0 +1,127 @@
+/* ==========================================================================
+   FUNCTIONAL — purple is the primary colour; status colours carry meaning
+   (loaded last on every page)
+
+   Primary   purple ............ buttons, links, active + selected states,
+                                 focus rings, the accent word in headings
+   Success   green ............. results, outcomes, "after", live
+   Warning   amber ............. constraints, findings, edge cases, in testing / ongoing
+   Error     red ............... problems, pain points, "before"
+   Info      blue .............. signals to watch, neutral information
+   Each status colour has a strong tone (text, markers) and a tint (backgrounds).
+   ========================================================================== */
+
+:root {
+  --p: #6a4bd6;          /* primary purple (AA on white and on ivory) */
+  --p-hover: #5436bd;
+  --p-ink: #5a3ec4;      /* purple used as text */
+  --p-tint: #efeafd;
+  --p-line: rgba(106, 75, 214, 0.38);
+
+  --ok: #1f7a4f;   --ok-tint: #e5f3eb;
+  --warn: #9a6200; --warn-tint: #fdf2d9;
+  --err: #b93b34;  --err-tint: #fbe8e6;
+  --info: #2b67a8; --info-tint: #e6eff9;
+}
+::selection { background: #e2d9fb; color: #2c2928; }
+
+/* ==========================================================================
+   PRIMARY: PURPLE
+   ========================================================================== */
+/* solid buttons */
+html .nav-cta, html .lock-modal-submit, html .cs2-btn.solid, html .pbx-d-cta, html .dy-cover-open, html .lw-dreams-btn,
+html .nda-btn, html .nda-cta, html .v3-proto-btn, html .mobile-menu-cta, html .ab-btn, html .bd-btn {
+  background: var(--p) !important;
+  border-color: var(--p) !important;
+  color: #ffffff !important;
+}
+html .nav-cta:hover, html .lock-modal-submit:hover, html .cs2-btn.solid:hover, html .pbx-d-cta:hover, html .dy-cover-open:hover,
+html .lw-dreams-btn:hover, html .nda-btn:hover, html .nda-cta:hover, html .v3-proto-btn:hover {
+  background: var(--p-hover) !important;
+  border-color: var(--p-hover) !important;
+}
+html .lw-dreams-btn svg { color: #ffe59a !important; }
+
+/* outline buttons */
+html .nav-contact, html .cs2-btn.ghost, html .pbx-more-btn, html .v3-pill, html .v3-pf-btn, html .vc-pill, html .more-work-cta, html .lw-reprint, html .lw-move-row button {
+  color: var(--p-ink) !important;
+  border-color: var(--p-line) !important;
+}
+html .nav-contact:hover, html .cs2-btn.ghost:hover, html .v3-pill:hover, html .lw-move-row button:hover { border-color: var(--p) !important; background: var(--p-tint) !important; }
+html .pbx-more-btn:hover { background: var(--p) !important; border-color: var(--p) !important; color: #fff !important; }
+html .v3-pill.accent { background: var(--p) !important; border-color: var(--p) !important; color: #fff !important; }
+html .v3-pill.q { color: var(--p-ink) !important; border-color: var(--p) !important; }
+
+/* the diary invitation + filters + selected states */
+html .lw-invite { box-shadow: inset 0 0 0 1px var(--p-line) !important; }
+html .lw-invite:hover { box-shadow: inset 0 0 0 1px var(--p) !important; }
+html .filter-chip:hover { border-color: var(--p) !important; color: var(--p-ink) !important; }
+html .filter-chip[aria-pressed="true"] { background: var(--p) !important; border-color: var(--p) !important; color: #fff !important; }
+html .pbx-dots button.on { background: var(--p) !important; }
+html .cs2-nav a[aria-current="true"] { background: var(--p) !important; color: #fff !important; }
+html .dy-arrow:hover:not(:disabled) { border-color: var(--p) !important; color: var(--p-ink); }
+
+/* links */
+html .text-link:hover, html .cs-back:hover, html .footer-links a:hover, html .nav-links a:hover, html .btn-diagnose:hover,
+html .mw-card:hover .mw-title, html .combo-dia-link:hover { color: var(--p-ink) !important; }
+html .nav-links a:hover, html .nav-links a[aria-current="page"] { border-color: var(--p) !important; }
+html .btn-diagnose { border-bottom-color: var(--p) !important; }
+html .pbx-index button:hover b { color: var(--p-ink); }
+html .pbx-index i::after { background: var(--p) !important; }
+
+/* focus */
+html a:focus-visible, html button:focus-visible, html input:focus-visible, html [tabindex]:focus-visible { outline-color: var(--p) !important; }
+
+/* the accent word in a heading: purple italic (light grounds only; dark grounds keep ivory, the diary keeps its own colours) */
+html .section-title em, html .oc-title em, html .cs2-title em, html .cs2-h2 em, html .cs2-end h2 em, html .cs2-quote p em,
+html .v3 .v3-h1 em, html .v3 .v3-h2 em, html .v3 .v3-display em, html .lw-hero .lw-title .lw-name, html .hd-accent,
+html .pbx-hint b {
+  color: var(--p-ink) !important;
+}
+html .v3-dark em, html .v3-dark .v3-h2 em, html .v3-dark .v3-display em { color: #cbbdf6 !important; }
+html .cs2-label b, html .v3-chapter span, html .v3-label.accent { color: var(--p-ink) !important; }
+
+/* ==========================================================================
+   STATUS COLOURS
+   ========================================================================== */
+/* live / ongoing / in testing */
+.cs2-kicker.is-live i { background: var(--ok) !important; box-shadow: 0 0 0 3px var(--ok-tint) !important; }
+.cs2-kicker.is-ongoing i { background: #d99a1c !important; box-shadow: 0 0 0 3px var(--warn-tint) !important; }
+.fn-status { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; font-size: 0.85em; font-weight: 600; }
+.fn-status::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.fn-status.is-warn { background: var(--warn-tint); color: var(--warn); }
+.fn-status.is-ok { background: var(--ok-tint); color: var(--ok); }
+
+/* problem → solution → impact cards */
+.cs2-card.is-problem, .cs2-card.is-solution, .cs2-card.is-impact, .cs2-card.is-constraint, .cs2-card.is-signal { background: #fffdf9 !important; border-top-width: 3px !important; border-top-style: solid !important; }
+.cs2-card.is-problem { border-top-color: var(--err) !important; }
+.cs2-card.is-problem .n { color: var(--err) !important; }
+.cs2-card.is-solution { border-top-color: var(--p) !important; }
+.cs2-card.is-solution .n { color: var(--p-ink) !important; }
+.cs2-card.is-impact { border-top-color: var(--ok) !important; background: var(--ok-tint) !important; }
+.cs2-card.is-impact .n, .cs2-card.is-impact b { color: var(--ok) !important; }
+.cs2-card.is-constraint { border-top-color: #d99a1c !important; }
+.cs2-card.is-constraint .n { color: var(--warn) !important; }
+.cs2-card.is-signal { border-top-color: var(--info) !important; }
+.cs2-card.is-signal .n { color: var(--info) !important; }
+
+/* offline consultation: problem / findings / gaps / solution, before → after */
+.oc-eyebrow.is-problem { color: var(--err) !important; }
+.oc-eyebrow.is-warn { color: var(--warn) !important; }
+.oc-eyebrow.is-solution { color: var(--ok) !important; }
+.oc-callout.is-finding { background: var(--warn-tint) !important; border-left: 3px solid #d99a1c !important; }
+.oc-callout.is-finding .oc-callout-h { color: var(--warn) !important; }
+.oc-merge-label.is-before, .v3-label.is-before { color: var(--err) !important; }
+.oc-merge-label.is-after, .v3-label.is-after { color: var(--ok) !important; }
+
+/* digital clinic: pain points (red), results (green), what each step proves (green) */
+.v3-pain-list .v3-pain-stage { color: var(--err) !important; }
+.v3-pain-list li { border-left: 2px solid rgba(185, 59, 52, 0.35); padding-left: 14px; }
+.v3-tldr-nums b { color: var(--ok) !important; }
+.v3-dark .v3-nums b, .v3-nums b { color: #8fd3ad !important; }
+.v3-proves { color: var(--ok) !important; }
+.v3-proves::before { content: '✓  '; font-weight: 700; }
+
+/* in-page chapter nav (Digital Clinic) */
+html .v3-nav a.is-active { background: var(--p) !important; color: #fff !important; }
+html .v3-nav a:hover { color: var(--p-ink) !important; }

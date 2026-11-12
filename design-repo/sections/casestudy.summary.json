@@ -1,0 +1,136 @@
+{
+  "id": "casestudy.summary",
+  "title": "Case-study summary",
+  "description": "The short version of a case study: a grid of labelled cells (goal, role, decisions, outcome) and headline numbers, or a flip card whose back itemises the work.",
+  "source": {
+    "id": "src.section-v3-tldr-v3-wrap",
+    "file": "family-ahc.html",
+    "tag": "section",
+    "selector": "section.v3-tldr.v3-wrap",
+    "lines": "75-91",
+    "citation": "family-ahc.html:75-91",
+    "observedIn": [
+      "family-ahc.html:75",
+      "offline-doctor-consultation.html:92",
+      "visit-clinic-gift-cards.html:67",
+      "visit-clinic.html:88"
+    ]
+  },
+  "semantic": {
+    "id": "casestudy.summary",
+    "category": "SUMMARY"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "tldr-grid",
+    "brief-grid",
+    "flip-card"
+  ],
+  "content": {
+    "fields": {
+      "cells": {
+        "type": "list",
+        "required": true,
+        "maxItems": 4,
+        "evidence": {
+          "selector": ".v3-tldr-cell, .vx-brief-item, .flip-face",
+          "observedElements": 13,
+          "observedBlocks": 4
+        },
+        "item": {
+          "label": {
+            "type": "text",
+            "required": true,
+            "maxWords": 3,
+            "evidence": {
+              "selector": ".v3-label, h2, .label",
+              "observedElements": 13,
+              "observedBlocks": 13
+            }
+          },
+          "text": {
+            "type": "text",
+            "required": false,
+            "maxWords": 32,
+            "evidence": {
+              "selector": "p, h3",
+              "observedElements": 20,
+              "observedBlocks": 13
+            }
+          }
+        }
+      },
+      "stats": {
+        "type": "list",
+        "required": false,
+        "maxItems": 3,
+        "evidence": {
+          "selector": ".flip-stats > span",
+          "observedElements": 3,
+          "observedBlocks": 1
+        },
+        "item": {
+          "value": {
+            "type": "text",
+            "required": true,
+            "maxWords": 3,
+            "evidence": {
+              "selector": "b",
+              "observedElements": 3,
+              "observedBlocks": 3
+            }
+          },
+          "label": {
+            "type": "text",
+            "required": true,
+            "maxWords": 5,
+            "evidence": {
+              "selector": "span",
+              "observedElements": 3,
+              "observedBlocks": 3
+            }
+          }
+        }
+      }
+    }
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.case-study-brief",
+      "template.case-study-chaptered"
+    ],
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "reveal-on-scroll",
+      "card-flip"
+    ],
+    "default": "reveal-on-scroll"
+  },
+  "responsive": [
+    {
+      "breakpoint": "bp.nav",
+      "query": "(max-width: 860px)",
+      "change": "stack-columns",
+      "cite": "css/visit-clinic-v3.css:532-536"
+    },
+    {
+      "breakpoint": "bp.wide",
+      "query": "(min-width: 1024px)",
+      "change": "reduce-columns",
+      "cite": "css/base.css:242"
+    }
+  ],
+  "assetRoles": [],
+  "generatedAssetRoles": [],
+  "components": [
+    "component.stat-row",
+    "primitive.meta-list"
+  ],
+  "tokens": [
+    "color.surface.raised",
+    "color.border.default",
+    "color.accent.primary"
+  ]
+}

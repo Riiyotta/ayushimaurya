@@ -1,0 +1,20 @@
+{
+  "id": "component.contact-gate",
+  "kind": "component",
+  "description": "'See the full case study' gate: emoji, heading, one line and two contact buttons.",
+  "composes": [
+    "primitive.button"
+  ],
+  "props": {
+    "heading": "text",
+    "text": "text",
+    "ctas": "links"
+  },
+  "tokens": [
+    "color.surface.raised",
+    "radius.card"
+  ],
+  "cites": [
+    "claim-approval.html:82"
+  ]
+}

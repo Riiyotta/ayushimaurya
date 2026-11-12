@@ -1,0 +1,635 @@
+{
+  "version": "1.0.0",
+  "note": "Closed list of what a generator may set. verify_all checks parity with primitives/, components/, sections/ (no phantom entries, no orphans), with the PageSpec schema's node/motion/style properties, and that allowlistVersion in registry.manifest.json equals this version.",
+  "nodeProperties": [
+    "section",
+    "variant",
+    "retrievalEligible",
+    "content",
+    "motion",
+    "style"
+  ],
+  "motionProperties": [
+    "pattern",
+    "trigger",
+    "reducedMotionFallback",
+    "durationToken",
+    "easingToken"
+  ],
+  "styleSlots": [
+    "surface",
+    "text",
+    "accent",
+    "paddingBlock",
+    "gap",
+    "radius",
+    "headingFont",
+    "bodyFont"
+  ],
+  "primitives": [
+    "primitive.button",
+    "primitive.chip",
+    "primitive.device-frame",
+    "primitive.heading-display",
+    "primitive.icon-glyph",
+    "primitive.image-frame",
+    "primitive.kicker",
+    "primitive.meta-list",
+    "primitive.text-link",
+    "primitive.theme-toggle",
+    "primitive.video-frame"
+  ],
+  "components": [
+    "component.card",
+    "component.chapter-label",
+    "component.contact-gate",
+    "component.decision-card",
+    "component.project-card",
+    "component.quote-block",
+    "component.stat-row",
+    "component.step-annotation"
+  ],
+  "sections": [
+    {
+      "id": "about.closing",
+      "variants": [
+        "door"
+      ],
+      "retrievalEligible": true,
+      "settableContentFields": [
+        "cta",
+        "heading",
+        "kicker"
+      ],
+      "allowedMotion": [
+        "ambient-drift",
+        "reveal-on-scroll"
+      ],
+      "generatedAssetRoles": [
+        "illustration.generated-decor",
+        "icon.glyph"
+      ]
+    },
+    {
+      "id": "about.diary",
+      "variants": [
+        "book"
+      ],
+      "retrievalEligible": true,
+      "settableContentFields": [
+        "chapters",
+        "coverTitle",
+        "hint",
+        "paragraphs",
+        "photos",
+        "spreads"
+      ],
+      "allowedMotion": [
+        "reveal-on-scroll",
+        "card-flip"
+      ],
+      "generatedAssetRoles": [
+        "illustration.generated-decor",
+        "icon.glyph"
+      ]
+    },
+    {
+      "id": "about.intro",
+      "variants": [
+        "photo-strip"
+      ],
+      "retrievalEligible": true,
+      "settableContentFields": [
+        "caption",
+        "invite",
+        "label",
+        "photos",
+        "sub",
+        "title"
+      ],
+      "allowedMotion": [
+        "reveal-on-scroll",
+        "ambient-drift"
+      ],
+      "generatedAssetRoles": [
+        "person.fictional-avatar",
+        "illustration.generated-decor",
+        "icon.glyph"
+      ]
+    },
+    {
+      "id": "casestudy.chapter",
+      "variants": [
+        "plain",
+        "tint",
+        "dark"
+      ],
+      "retrievalEligible": true,
+      "settableContentFields": [
+        "cards",
+        "figures",
+        "gate",
+        "heading",
+        "label",
+        "paragraphs",
+        "quote"
+      ],
+      "allowedMotion": [
+        "reveal-on-scroll",
+        "autoplay-loop-video",
+        "card-flip",
+        "none"
+      ],
+      "generatedAssetRoles": [
+        "product.generated-visual"
+      ]
+    },
+    {
+      "id": "casestudy.chapter-nav",
+      "variants": [
+        "anchor-list",
+        "sticky-pills"
+      ],
+      "retrievalEligible": true,
+      "settableContentFields": [
+        "links"
+      ],
+      "allowedMotion": [
+        "sticky-chapter-nav",
+        "none"
+      ],
+      "generatedAssetRoles": []
+    },
+    {
+      "id": "casestudy.decision",
+      "variants": [
+        "single",
+        "list"
+      ],
+      "retrievalEligible": true,
+      "settableContentFields": [
+        "decisions",
+        "figures",
+        "heading",
+        "lead",
+        "number",
+        "steps"
+      ],
+      "allowedMotion": [
+        "reveal-on-scroll",
+        "card-flip"
+      ],
+      "generatedAssetRoles": [
+        "product.generated-visual"
+      ]
+    },
+    {
+      "id": "casestudy.hero",
+      "variants": [
+        "split-media",
+        "stage",
+        "journey",
+        "poster",
+        "cover"
+      ],
+      "retrievalEligible": true,
+      "settableContentFields": [
+        "backLink",
+        "dek",
+        "intro",
+        "journeySteps",
+        "kicker",
+        "links",
+        "media",
+        "meta",
+        "title"
+      ],
+      "allowedMotion": [
+        "reveal-on-scroll",
+        "autoplay-loop-video",
+        "scroll-console"
+      ],
+      "generatedAssetRoles": [
+        "product.generated-visual"
+      ]
+    },
+    {
+      "id": "casestudy.problem-statement",
+      "variants": [
+        "statement-card"
+      ],
+      "retrievalEligible": true,
+      "settableContentFields": [
+        "constraints",
+        "goal",
+        "label",
+        "statement"
+      ],
+      "allowedMotion": [
+        "reveal-on-scroll"
+      ],
+      "generatedAssetRoles": []
+    },
+    {
+      "id": "casestudy.screen-gallery",
+      "variants": [
+        "phone-trio"
+      ],
+      "retrievalEligible": true,
+      "settableContentFields": [
+        "heading",
+        "intro",
+        "screens"
+      ],
+      "allowedMotion": [
+        "reveal-on-scroll"
+      ],
+      "generatedAssetRoles": [
+        "product.generated-visual"
+      ]
+    },
+    {
+      "id": "casestudy.scroll-narrative",
+      "variants": [
+        "console",
+        "panels",
+        "stepper"
+      ],
+      "retrievalEligible": true,
+      "settableContentFields": [
+        "figures",
+        "messages",
+        "statusList",
+        "steps"
+      ],
+      "allowedMotion": [
+        "scroll-console",
+        "scroll-pinned-panels",
+        "scroll-stepper"
+      ],
+      "generatedAssetRoles": [
+        "product.generated-visual"
+      ]
+    },
+    {
+      "id": "casestudy.summary",
+      "variants": [
+        "tldr-grid",
+        "brief-grid",
+        "flip-card"
+      ],
+      "retrievalEligible": true,
+      "settableContentFields": [
+        "cells",
+        "stats"
+      ],
+      "allowedMotion": [
+        "reveal-on-scroll",
+        "card-flip"
+      ],
+      "generatedAssetRoles": []
+    },
+    {
+      "id": "conversion.closing",
+      "variants": [
+        "thanks-cta",
+        "final-statement",
+        "link-row",
+        "cta-band"
+      ],
+      "retrievalEligible": true,
+      "settableContentFields": [
+        "ctas",
+        "heading",
+        "kicker",
+        "text"
+      ],
+      "allowedMotion": [
+        "reveal-on-scroll",
+        "none"
+      ],
+      "generatedAssetRoles": []
+    },
+    {
+      "id": "home.featured-project",
+      "variants": [
+        "media-card"
+      ],
+      "retrievalEligible": true,
+      "settableContentFields": [
+        "body",
+        "chips",
+        "cta",
+        "heading",
+        "kicker",
+        "media",
+        "tag",
+        "title"
+      ],
+      "allowedMotion": [
+        "autoplay-loop-video",
+        "reveal-on-scroll"
+      ],
+      "generatedAssetRoles": [
+        "product.generated-visual"
+      ]
+    },
+    {
+      "id": "home.hero",
+      "variants": [
+        "name-field"
+      ],
+      "retrievalEligible": true,
+      "settableContentFields": [
+        "backgroundImage",
+        "cta",
+        "name",
+        "role",
+        "statement",
+        "support"
+      ],
+      "allowedMotion": [
+        "rise-in-on-load",
+        "interactive-canvas-field"
+      ],
+      "generatedAssetRoles": [
+        "illustration.generated-decor"
+      ]
+    },
+    {
+      "id": "home.skills-index",
+      "variants": [
+        "word-list"
+      ],
+      "retrievalEligible": true,
+      "settableContentFields": [
+        "label",
+        "skills"
+      ],
+      "allowedMotion": [
+        "reveal-on-scroll"
+      ],
+      "generatedAssetRoles": [
+        "product.generated-visual"
+      ]
+    },
+    {
+      "id": "home.work-showcase",
+      "variants": [
+        "project-box"
+      ],
+      "retrievalEligible": true,
+      "settableContentFields": [
+        "filters",
+        "heading",
+        "hint",
+        "kicker",
+        "moreLink",
+        "projects"
+      ],
+      "allowedMotion": [
+        "box-open",
+        "reveal-on-scroll"
+      ],
+      "generatedAssetRoles": [
+        "product.generated-visual"
+      ]
+    },
+    {
+      "id": "index.page-header",
+      "variants": [
+        "title-dek"
+      ],
+      "retrievalEligible": true,
+      "settableContentFields": [
+        "backLink",
+        "contactLink",
+        "dek",
+        "kicker",
+        "title"
+      ],
+      "allowedMotion": [
+        "reveal-on-scroll",
+        "none"
+      ],
+      "generatedAssetRoles": []
+    },
+    {
+      "id": "index.project-grid",
+      "variants": [
+        "card-grid"
+      ],
+      "retrievalEligible": true,
+      "settableContentFields": [
+        "projects"
+      ],
+      "allowedMotion": [
+        "reveal-on-scroll",
+        "autoplay-loop-video"
+      ],
+      "generatedAssetRoles": [
+        "product.generated-visual"
+      ]
+    },
+    {
+      "id": "notice.protected-work",
+      "variants": [
+        "redacted-sheet"
+      ],
+      "retrievalEligible": true,
+      "settableContentFields": [
+        "artCaption",
+        "askBody",
+        "askLead",
+        "backLink",
+        "body",
+        "cta",
+        "note",
+        "title"
+      ],
+      "allowedMotion": [
+        "reveal-on-scroll",
+        "none"
+      ],
+      "generatedAssetRoles": []
+    },
+    {
+      "id": "resume.entry-group",
+      "variants": [
+        "summary",
+        "experience",
+        "skills",
+        "education",
+        "certifications"
+      ],
+      "retrievalEligible": true,
+      "settableContentFields": [
+        "bullets",
+        "entries",
+        "label",
+        "paragraphs"
+      ],
+      "allowedMotion": [
+        "none"
+      ],
+      "generatedAssetRoles": []
+    },
+    {
+      "id": "resume.header",
+      "variants": [
+        "contact-meta"
+      ],
+      "retrievalEligible": true,
+      "settableContentFields": [
+        "contacts",
+        "kicker",
+        "name",
+        "role"
+      ],
+      "allowedMotion": [
+        "none"
+      ],
+      "generatedAssetRoles": []
+    },
+    {
+      "id": "shell.footer",
+      "variants": [
+        "full",
+        "minimal"
+      ],
+      "retrievalEligible": true,
+      "settableContentFields": [
+        "copyright",
+        "line",
+        "links",
+        "name",
+        "role"
+      ],
+      "allowedMotion": [
+        "none"
+      ],
+      "generatedAssetRoles": []
+    },
+    {
+      "id": "shell.header",
+      "variants": [
+        "site-nav",
+        "minimal-bar"
+      ],
+      "retrievalEligible": true,
+      "settableContentFields": [
+        "brandMark",
+        "navLinks",
+        "pillLabel",
+        "themeToggle"
+      ],
+      "allowedMotion": [
+        "none",
+        "theme-crossfade"
+      ],
+      "generatedAssetRoles": [
+        "brand.placeholder-wordmark",
+        "brand.user-supplied-mark"
+      ]
+    },
+    {
+      "id": "utility.desktop-hint",
+      "variants": [
+        "timed"
+      ],
+      "retrievalEligible": false,
+      "settableContentFields": [
+        "text"
+      ],
+      "allowedMotion": [
+        "modal-pop"
+      ],
+      "generatedAssetRoles": []
+    },
+    {
+      "id": "utility.dreams-overlay",
+      "variants": [
+        "constellation"
+      ],
+      "retrievalEligible": false,
+      "settableContentFields": [
+        "ctas",
+        "endLine",
+        "kicker",
+        "sub",
+        "title"
+      ],
+      "allowedMotion": [
+        "modal-pop",
+        "ambient-drift"
+      ],
+      "generatedAssetRoles": [
+        "icon.glyph"
+      ]
+    },
+    {
+      "id": "utility.lock-modal",
+      "variants": [
+        "password"
+      ],
+      "retrievalEligible": false,
+      "settableContentFields": [
+        "body",
+        "errorText",
+        "submitLabel",
+        "title"
+      ],
+      "allowedMotion": [
+        "modal-pop"
+      ],
+      "generatedAssetRoles": []
+    },
+    {
+      "id": "utility.media-lightbox",
+      "variants": [
+        "image",
+        "screen",
+        "photo",
+        "project-sheet"
+      ],
+      "retrievalEligible": false,
+      "settableContentFields": [
+        "closeLabel"
+      ],
+      "allowedMotion": [
+        "modal-pop"
+      ],
+      "generatedAssetRoles": [
+        "product.generated-visual"
+      ]
+    },
+    {
+      "id": "utility.mobile-menu",
+      "variants": [
+        "sheet"
+      ],
+      "retrievalEligible": false,
+      "settableContentFields": [
+        "cta",
+        "links"
+      ],
+      "allowedMotion": [
+        "modal-pop",
+        "none"
+      ],
+      "generatedAssetRoles": []
+    },
+    {
+      "id": "utility.reading-progress",
+      "variants": [
+        "top-bar"
+      ],
+      "retrievalEligible": false,
+      "settableContentFields": [],
+      "allowedMotion": [
+        "none"
+      ],
+      "generatedAssetRoles": []
+    }
+  ]
+}

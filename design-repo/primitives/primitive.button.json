@@ -1,0 +1,31 @@
+{
+  "id": "primitive.button",
+  "kind": "primitive",
+  "description": "Pill button (solid / ghost / tertiary) with optional trailing arrow; 48px tall (40px small), 22px inline padding, 999px radius, 600 weight 15px Inter.",
+  "props": {
+    "label": "text",
+    "href": "url",
+    "emphasis": [
+      "solid",
+      "ghost",
+      "tertiary"
+    ],
+    "trailingArrow": "boolean",
+    "size": [
+      "default",
+      "small"
+    ]
+  },
+  "tokens": [
+    "component.cta.height",
+    "component.cta.height-sm",
+    "component.cta.padding-x",
+    "component.cta.radius",
+    "component.cta.border",
+    "color.accent.primary"
+  ],
+  "cites": [
+    "css/cta.css:14",
+    "hybrid-diagnostic.html:267"
+  ]
+}

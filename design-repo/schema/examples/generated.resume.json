@@ -1,0 +1,179 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "generated",
+  "template": "template.resume",
+  "route": "/cv",
+  "theme": "night",
+  "meta": {
+    "title": "CV, Rowan Vale",
+    "description": "Experience, skills and education of Rowan Vale, interaction designer."
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "site-nav",
+      "content": {
+        "brandMark": {
+          "role": "brand.placeholder-wordmark",
+          "src": "placeholder://wordmark/rowan-vale",
+          "mediaType": "image",
+          "alt": "Rowan Vale"
+        },
+        "navLinks": [
+          {
+            "label": "Projects",
+            "href": "projects.html",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "CV",
+            "href": "cv.html",
+            "role": "link.internal-route"
+          }
+        ],
+        "themeToggle": true
+      },
+      "motion": {
+        "pattern": "theme-crossfade",
+        "trigger": "tap",
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "section": "resume.header",
+      "variant": "contact-meta",
+      "content": {
+        "kicker": "CV",
+        "name": "Rowan Vale",
+        "role": "Interaction Designer",
+        "contacts": [
+          {
+            "term": "Email",
+            "value": "hello@rowan-vale.example"
+          },
+          {
+            "term": "Site",
+            "value": "rowan-vale.example"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "section": "resume.entry-group",
+      "variant": "summary",
+      "content": {
+        "label": "Profile",
+        "paragraphs": [
+          "Interaction designer with eight years in logistics and field-service software. I turn tangled operational workflows into calm, testable tools, and I like working in the room with the people who use them."
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "section": "resume.entry-group",
+      "variant": "experience",
+      "content": {
+        "label": "Experience",
+        "entries": [
+          {
+            "title": "Senior Interaction Designer",
+            "organisation": "Northwind Freight (fictional), routing software",
+            "dates": "2021 to now"
+          },
+          {
+            "title": "Product Designer",
+            "organisation": "Larkspur Tools (fictional), maintenance apps",
+            "dates": "2017 to 2021"
+          }
+        ],
+        "bullets": [
+          "Led the redesign of route planning for a fleet of regional vans.",
+          "Ran fortnightly ride-alongs with drivers and dispatchers."
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "section": "resume.entry-group",
+      "variant": "skills",
+      "content": {
+        "label": "Skills",
+        "bullets": [
+          "Workflow mapping and service blueprints",
+          "Prototyping in code and in Figma-like tools",
+          "Usability testing in the field"
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "section": "conversion.closing",
+      "variant": "cta-band",
+      "content": {
+        "kicker": "In practice",
+        "heading": "The projects behind this CV.",
+        "ctas": [
+          {
+            "label": "Browse projects",
+            "href": "projects.html",
+            "role": "link.internal-route"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "reveal-on-scroll",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "full",
+      "content": {
+        "name": "Rowan Vale",
+        "role": "Interaction Designer",
+        "line": "Have a knotty workflow? Send it my way.",
+        "links": [
+          {
+            "label": "Email",
+            "href": "mailto:hello@rowan-vale.example",
+            "role": "link.placeholder-url"
+          },
+          {
+            "label": "Projects",
+            "href": "projects.html",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "CV",
+            "href": "cv.html",
+            "role": "link.internal-route"
+          }
+        ],
+        "copyright": "© Rowan Vale"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    }
+  ]
+}

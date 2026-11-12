@@ -1,0 +1,123 @@
+{
+  "id": "shell.header",
+  "title": "Site header",
+  "description": "Sticky top bar: brand mark, primary links, Day/Night switch; the long-form story page uses a minimal back-arrow bar with a title pill.",
+  "source": {
+    "id": "src.header-site-header",
+    "file": "index.html",
+    "tag": "header",
+    "selector": "header.site-header",
+    "lines": "44-56",
+    "citation": "index.html:44-56",
+    "observedIn": [
+      "index.html:44",
+      "projects.html:25",
+      "resume.html:24",
+      "nda.html:25",
+      "claim-approval.html:26",
+      "family-ahc.html:27",
+      "hybrid-diagnostic.html:26",
+      "offline-doctor-consultation.html:19",
+      "virtual-wardrobe.html:26",
+      "visit-clinic-gift-cards.html:26",
+      "visit-clinic.html:26",
+      "wallet-ui.html:26"
+    ]
+  },
+  "semantic": {
+    "id": "shell.header",
+    "category": "SHELL"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "site-nav",
+    "minimal-bar"
+  ],
+  "content": {
+    "fields": {
+      "brandMark": {
+        "type": "asset",
+        "required": false,
+        "maxWords": 2,
+        "evidence": {
+          "selector": ".nav-brand img",
+          "attr": "alt",
+          "observedElements": 11,
+          "observedBlocks": 11
+        }
+      },
+      "navLinks": {
+        "type": "links",
+        "required": false,
+        "maxWords": 2,
+        "maxItems": 2,
+        "evidence": {
+          "selector": ".nav-links a",
+          "observedElements": 22,
+          "observedBlocks": 11
+        }
+      },
+      "pillLabel": {
+        "type": "text",
+        "required": false,
+        "maxWords": 3,
+        "evidence": {
+          "selector": ".bar-pill",
+          "observedElements": 1,
+          "observedBlocks": 1
+        }
+      },
+      "themeToggle": {
+        "type": "boolean",
+        "required": true
+      }
+    }
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.home",
+      "template.project-index",
+      "template.resume",
+      "template.notice",
+      "template.case-study-brief",
+      "template.case-study-chaptered"
+    ]
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none",
+      "theme-crossfade"
+    ],
+    "default": "none"
+  },
+  "responsive": [
+    {
+      "breakpoint": "bp.nav",
+      "query": "(min-width: 860px)",
+      "change": "swap-nav-for-menu",
+      "cite": "css/styles.css:274-278"
+    },
+    {
+      "breakpoint": "bp.narrow",
+      "query": "(max-width: 560px)",
+      "change": "hide-element",
+      "cite": "css/oc-story.css:118"
+    }
+  ],
+  "assetRoles": [
+    "brand.wordmark-logo"
+  ],
+  "generatedAssetRoles": [
+    "brand.placeholder-wordmark",
+    "brand.user-supplied-mark"
+  ],
+  "components": [
+    "primitive.theme-toggle",
+    "primitive.text-link"
+  ],
+  "tokens": [
+    "color.surface.page",
+    "color.text.primary",
+    "layout.nav-height"
+  ]
+}

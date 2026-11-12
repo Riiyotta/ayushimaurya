@@ -1,0 +1,22 @@
+{
+  "id": "primitive.heading-display",
+  "kind": "primitive",
+  "description": "Display heading in Outfit with an emphasised (accent/italic) phrase.",
+  "props": {
+    "text": "text",
+    "emphasis": "text",
+    "level": [
+      "h1",
+      "h2",
+      "h3"
+    ]
+  },
+  "tokens": [
+    "font.family.display",
+    "font.size.cs-h1",
+    "font.size.cs-h2"
+  ],
+  "cites": [
+    "css/dream-theme.css:44"
+  ]
+}

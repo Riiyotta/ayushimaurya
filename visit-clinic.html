@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>try{if(sessionStorage.getItem('site-theme')!=='day')document.documentElement.dataset.theme='night'}catch(e){document.documentElement.dataset.theme='night'}</script>
+<title>Digital Clinic Case Study — Ayushi Maurya</title>
+<meta name="description" content="How I designed the patient experience for the Digital Clinic, across the app and the physical clinic.">
+<script>document.documentElement.classList.add('has-js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/styles.css?v=n3">
+<link rel="stylesheet" href="css/visit-clinic-v3.css?v=p1">
+<link rel="stylesheet" href="css/dream-theme.css?v=n3">
+<link rel="stylesheet" href="css/neutral.css?v=4">
+<link rel="stylesheet" href="css/accents.css?v=2">
+<link rel="stylesheet" href="css/functional.css?v=2">
+<link rel="stylesheet" href="css/cta.css?v=3">
+<link rel="stylesheet" href="css/base.css?v=32">
+<link rel="stylesheet" href="css/theme-night.css?v=2">
+<link rel="stylesheet" href="css/theme.css?v=4">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="index.html"><img src="assets/logo-ayushi-maurya-transparent.png" alt="Ayushi Maurya"></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="projects.html">My work</a>
+      <a href="resume.html">Resume</a>
+    </nav>
+    <button class="nav-menu-btn" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu">
+      <span class="bars" aria-hidden="true"><span></span><span></span></span>
+      Menu
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" data-mobile-menu data-open="false">
+  <nav class="mobile-menu-links" aria-label="Mobile">
+    <a href="resume.html">Resume</a>
+    <a href="mailto:ayushimaurya108@gmail.com">Contact</a>
+  </nav>
+  <a class="mobile-menu-cta" href="projects.html">My work →</a>
+</div>
+
+<main id="main" class="v3">
+
+  <!-- ============ HERO ============ -->
+  <section class="v3-hero v3-wrap" id="top">
+    <a class="v3-back" href="projects.html"><span aria-hidden="true">←</span> All work</a>
+    <p class="v3-kicker">Digital Clinic · 2026</p>
+    <h1 class="v3-h1">Designing a clinic visit as <em>one connected product</em></h1>
+    <p class="v3-sub">The app and in-clinic experience for the company's new clinics, covering booking, arrival, queues, diagnostics, pharmacy and follow-up.</p>
+    <div class="v3-hero-links">
+      <a class="v3-ext" href="https://getvisitapp.com/visit-clinic/" target="_blank" rel="noopener">See it live <i aria-hidden="true">↗</i></a>
+      <a class="v3-ext" href="https://www.linkedin.com/posts/getvisitapp_your-health-deserves-a-place-that-feels-easy-activity-7498346488863989760-oO1h" target="_blank" rel="noopener">See the LinkedIn post <i aria-hidden="true">↗</i></a>
+    </div>
+
+    <div class="v3-hero-journey" data-hero-journey aria-label="One visit moving through its states">
+      <div class="v3-hj-head">
+        <span class="v3-mono">VISIT 001</span>
+        <span class="v3-live"><i></i>LIVE</span>
+        <span class="v3-hj-caption v3-mono" data-hj-caption>Booked · slot confirmed</span>
+      </div>
+      <ol class="v3-hj-track">
+        <li data-cap="Booked · slot confirmed">Booked</li>
+        <li data-cap="Arriving · leave in 30 minutes">Arriving</li>
+        <li data-cap="Checked in · token T-8">Checked in</li>
+        <li data-cap="Waiting · 3 ahead, ~10 min">Waiting</li>
+        <li data-cap="Care · it's your turn, room 4">Care</li>
+        <li data-cap="Test · blood sample, room 1">Test</li>
+        <li data-cap="Collect · pharmacy counter">Collect</li>
+        <li data-cap="Continue · report + follow-up">Continue</li>
+      </ol>
+    </div>
+
+    <div class="v3-hero-intro">
+      <p>The company was opening its own clinics for the first time. Besides booking, I had to design what happens before, during and after the patient's time in the clinic.</p>
+      <p class="v3-meta-line v3-mono">2 months <span>·</span> 2 clinics <span>·</span> Lead Product Designer</p>
+    </div>
+  </section>
+
+  <!-- ============ ROLE ============ -->
+
+
+  <section class="v3-tldr v3-wrap" id="summary" aria-label="The short version">
+    <div class="v3-tldr-grid">
+      <div class="v3-tldr-cell wide">
+        <p class="v3-label">The short version</p>
+        <p class="v3-tldr-lead">The company opened its own clinics. I designed the patient's whole visit across the app and an in-clinic kiosk: booking, check-in, queues, tests, pharmacy, reports and follow-up. Live in two months.</p>
+      </div>
+      <div class="v3-tldr-cell">
+        <p class="v3-label">My role</p>
+        <p><b>Lead Product Designer</b><br>Guided 1 junior designer. Worked with 2 PMs, 4 developers, 1 backend engineer and clinic ops.</p>
+      </div>
+      <div class="v3-tldr-cell">
+        <p class="v3-label">Three key decisions</p>
+        <ol class="v3-tldr-list"><li><a href="#bet1">App check-in within 100 m, or at the desk</a></li><li><a href="#bet2">One visit, many queues underneath</a></li><li><a href="#bet3">Two timelines: consult and lab</a></li></ol>
+      </div>
+      <div class="v3-tldr-cell">
+        <p class="v3-label">Early results</p>
+        <p class="v3-tldr-nums"><b>45%</b> of clinic orders via the app<br><b>48%</b> of clinic revenue via the app<br><b>~100</b> app bookings in one day</p>
+        <p class="v3-tiny">One-day snapshot of 73 orders.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- sticky chapter nav -->
+  <nav class="v3-nav" aria-label="Case study chapters" data-chapter-nav>
+    <a href="#idea" data-nav="idea">The brief</a>
+    <a href="#bets" data-nav="bets">Key decisions</a>
+    <a href="#system" data-nav="system">The full visit</a>
+    <a href="#reality" data-nav="reality">Edge cases</a>
+    <a href="#growth" data-nav="growth">Growth</a>
+    <a href="#launch" data-nav="launch">Launch</a>
+  </nav>
+
+  <!-- ============ CHAPTER 1 · THE IDEA ============ -->
+  <div id="idea" data-chapter="idea">
+
+    <section class="v3-section v3-wrap">
+      <p class="v3-chapter"><span>01</span> The brief</p>
+      <div class="v3-split">
+        <div>
+          <h2 class="v3-h2">What changed for the company</h2>
+          <p>The company used to send patients to partner hospitals and labs. Now it was opening its own clinics, so it would run the whole visit itself.</p>
+          <p class="v3-callout-line">We had two months to turn the idea into a real product.</p>
+        </div>
+        <div class="v3-beforeafter">
+          <div class="v3-ba-row">
+            <span class="v3-label is-before">Before</span>
+            <div class="v3-ba-flow"><span class="v3-pill">Mobile app</span><i class="v3-arrow-r"></i><span class="v3-pill muted">Partner ecosystem</span></div>
+            <p class="v3-small">The company hands the patient over to a partner, and the visit happens there.</p>
+          </div>
+          <div class="v3-ba-row after">
+            <span class="v3-label accent is-after">After</span>
+            <div class="v3-ba-flow"><span class="v3-pill">Mobile app</span><i class="v3-arrow-both"></i><span class="v3-pill accent">Digital Clinic</span><i class="v3-arrow-both"></i><span class="v3-pill">Patient</span><i class="v3-arrow-both"></i><span class="v3-pill">Diagnostics</span><i class="v3-arrow-both"></i><span class="v3-pill">Pharmacy</span></div>
+            <p class="v3-small">The company runs the whole visit, so the app has to support all of it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="v3-section v3-dark">
+      <div class="v3-wrap">
+        <h2 class="v3-h2 light">Most of the visit happens <em>after</em> booking.</h2>
+                <div class="v3-floor" data-floor aria-label="Animated floor plan: one patient moves through the clinic while the app tells them where to go next">
+          <svg class="v3-floor-svg" viewBox="0 0 880 410" aria-hidden="true">
+            <rect x="40" y="36" width="840" height="300" rx="22" class="fp-walls"/>
+            <g class="fp-room" data-room="1"><rect x="60" y="280" width="160" height="96" rx="14"/><text x="76" y="310" class="fp-name">Front desk · kiosk</text><text x="76" y="330" class="fp-sub">Check in</text></g><g class="fp-room" data-room="2"><rect x="60" y="56" width="220" height="196" rx="14"/><text x="76" y="86" class="fp-name">Waiting area</text><text x="76" y="106" class="fp-sub">Live queue</text></g><g class="fp-room" data-room="3"><rect x="310" y="56" width="160" height="116" rx="14"/><text x="326" y="86" class="fp-name">Vitals</text><text x="326" y="106" class="fp-sub">Room 4</text></g><g class="fp-room" data-room="4"><rect x="490" y="56" width="180" height="116" rx="14"/><text x="506" y="86" class="fp-name">Doctor</text><text x="506" y="106" class="fp-sub">Room 4</text></g><g class="fp-room" data-room="5"><rect x="310" y="200" width="160" height="116" rx="14"/><text x="326" y="230" class="fp-name">Pathology</text><text x="326" y="250" class="fp-sub">Room 1</text></g><g class="fp-room" data-room="6"><rect x="490" y="200" width="180" height="116" rx="14"/><text x="506" y="230" class="fp-name">Radiology</text><text x="506" y="250" class="fp-sub">Room 8</text></g><g class="fp-room" data-room="7"><rect x="700" y="200" width="160" height="116" rx="14"/><text x="716" y="230" class="fp-name">Pharmacy</text><text x="716" y="250" class="fp-sub">Counter</text></g>
+            <g class="fp-door"><path d="M20 352 H60"/><text x="20" y="384" class="fp-sub">Entrance</text></g>
+            <g class="fp-exit"><path d="M780 336 V392"/><text x="796" y="384" class="fp-sub">Home →</text></g>
+            <polyline class="fp-path-all" points=""/>
+            <polyline class="fp-path-done" points=""/>
+            <g class="fp-me" data-me><circle r="16" class="fp-halo"/><circle r="9" class="fp-dot"/><text y="-22" text-anchor="middle" class="fp-tag">T-8</text></g>
+          </svg>
+          <div class="v3-floor-phone" aria-live="polite">
+            <div class="fpp-top"><span class="v3-mono">Mobile app</span><span class="v3-live"><i></i>LIVE</span></div>
+            <p class="fpp-state" data-fp-state>Arriving</p>
+            <p class="fpp-msg" data-fp-msg>Leave in 30 minutes to arrive on time</p>
+            <ol class="fpp-bar" data-fp-bar><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ol>
+          </div>
+        </div>
+        <ol class="v3-physical" aria-label="The physical clinic journey">
+          <li>Book</li><li>Arrive</li><li>Check in</li><li>Wait</li><li>Vitals</li><li>Doctor</li><li>Pathology</li><li>Radiology</li><li>Pharmacy</li><li>Go home</li>
+        </ol>
+        <div class="v3-split v3-split-tight">
+          <p class="v3-light-text">A clinic visit involves many people, rooms, queues, services and rules. The patient shouldn't have to understand how all of that works. The app should handle it and tell them where to go next.</p>
+          <p class="v3-statement light">The patient sees one visit.<br><span>The clinic runs many steps behind it.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="v3-section v3-wrap v3-pains" aria-labelledby="pains-h">
+      <div class="v3-pains-head">
+        <h2 class="v3-h2" id="pains-h">Where clinic visits usually go wrong</h2>
+        <p>Before designing anything, I listed where a typical clinic visit breaks down for the patient, stage by stage.</p>
+        <p class="v3-small">Based on the company's existing patient journeys, clinic operations and the problems the Digital Clinic was meant to fix. These are known pain points, not results from a formal study.</p>
+      </div>
+      <ol class="v3-pain-list">
+          <li><span class="v3-pain-stage v3-mono">Booking</span><p class="v3-pain-text">Real availability is unclear. You book, then wait for someone to call you back.</p><a class="v3-pain-fix" href="#follow"><span>Answered by</span>Real-time slots ↓</a></li>
+          <li><span class="v3-pain-stage v3-mono">Arriving</span><p class="v3-pain-text">No idea when to leave, or how long you'll sit in the waiting room.</p><a class="v3-pain-fix" href="#bet1"><span>Answered by</span>Leave-on-time nudge ↓</a></li>
+          <li><span class="v3-pain-stage v3-mono">Check-in</span><p class="v3-pain-text">Forms at the desk, and confusion over what insurance or your employer covers.</p><a class="v3-pain-fix" href="#ways"><span>Answered by</span>Paperless, coverage-aware entry ↓</a></li>
+          <li><span class="v3-pain-stage v3-mono">Waiting</span><p class="v3-pain-text">No idea where you are in line, so you keep asking the front desk.</p><a class="v3-pain-fix" href="#follow"><span>Answered by</span>Live queue position ↓</a></li>
+          <li><span class="v3-pain-stage v3-mono">Between rooms</span><p class="v3-pain-text">Doctor, lab, X-ray, pharmacy. Separate counters, and nobody tells you what's next.</p><a class="v3-pain-fix" href="#bet2"><span>Answered by</span>One visit, many queues ↓</a></li>
+          <li><span class="v3-pain-stage v3-mono">Tests</span><p class="v3-pain-text">You find out at the lab that the test needed fasting, and come back another day.</p><a class="v3-pain-fix" href="#reality"><span>Answered by</span>Fasting check before booking ↓</a></li>
+
+          <li><span class="v3-pain-stage v3-mono">After the visit</span><p class="v3-pain-text">Paper reports, and chasing the lab to find out if results are ready.</p><a class="v3-pain-fix" href="#bet3"><span>Answered by</span>Reports in the app ↓</a></li>
+          <li><span class="v3-pain-stage v3-mono">Ongoing care</span><p class="v3-pain-text">Once you leave, nothing reminds you of the care you may need next: a follow-up, a repeat test, a health check.</p><a class="v3-pain-fix" href="#bet3"><span>Answered by</span>Timely care nudges ↓</a></li>
+      </ol>
+    </section>
+
+    <section class="v3-section v3-wrap v3-problem" aria-labelledby="problem-h">
+      <div class="v3-problem-card">
+        <p class="v3-label">The problem we set out to solve</p>
+        <h2 class="v3-problem-statement" id="problem-h">Patients lose track of where they are, what's next and how long it will take, because a clinic visit runs on a physical system they can't see.</h2>
+        <p class="v3-problem-goal"><span>The goal</span>Make every step of the visit clear and predictable for every patient, without slowing the clinic down.</p>
+      </div>
+      <p class="v3-label v3-challenges-label">Constraints</p>
+      <ol class="v3-challenges">
+        <li><b>Three kinds of patients</b><span>Walk-ins, policyholders and corporate members arrive at the same door, with different payment and coverage.</span></li>
+        <li><b>A physical operation</b><span>Rooms, staff and several queues per visit. The app had to mirror how the clinic actually runs.</span></li>
+        <li><b>Not everyone uses apps</b><span>Patients arrive unwell, and some can't or won't use the app. The visit had to work without it.</span></li>
+        <li><b>Partners to protect</b><span>The app already lists partner hospitals and labs. The clinics had to stand out without pushing them aside.</span></li>
+        <li><b>Two months, changing requirements</b><span>Requirements were still changing, backend limits were real, and there was no clinic-specific data yet.</span></li>
+      </ol>
+    </section>
+
+
+    <section class="v3-section v3-wrap">
+      <div class="v3-split">
+        <div>
+          <h2 class="v3-h2">A brand-new product, with no data yet</h2>
+          <p>The Digital Clinic was new, so there was no clinic-specific data on patient behaviour to design from. With two months to launch, we worked in this order:</p>
+          <ol class="v3-chain"><li>A clear product hypothesis</li><li>Fast design</li><li>Feedback from clinic ops</li><li>Launch</li><li>Learn from real use</li></ol>
+          <p class="v3-callout-line">The aim was a first version good enough to launch, and set up so we could learn from it.</p>
+        </div>
+        <div class="v3-knew">
+          <div class="v3-knew-col">
+            <p class="v3-label">We knew</p>
+            <ul>
+              <li>The app's existing design patterns</li>
+              <li>Clinic business goals</li>
+              <li>Basic operational requirements</li>
+              <li>Known healthcare journey patterns</li>
+              <li>Common patterns in competitor apps</li>
+            </ul>
+          </div>
+          <div class="v3-knew-col learn">
+            <p class="v3-label accent">We had to learn</p>
+            <ul>
+              <li>How patients would actually behave inside our clinic</li>
+              <li>Where patients would still need staff help</li>
+              <li>Whether a live queue in the app would reduce uncertainty</li>
+              <li>Which features patients would actually use</li>
+              <li>What would change after launch</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="v3-section v3-wrap v3-ways" id="ways">
+      <h2 class="v3-h2 center">Patients arrive three ways,<br>then follow the same visit.</h2>
+      <div class="v3-ways-diagram" aria-label="Three entry points merge into one visit">
+        <div class="v3-ways-entries">
+          <div class="v3-entry"><p class="v3-mono">Walk-in</p><p>Needs a fast way into care.</p></div>
+          <div class="v3-entry"><p class="v3-mono">OPD / covered</p><p>Needs coverage-aware booking and payment.</p></div>
+          <div class="v3-entry"><p class="v3-mono">Self-pay</p><p>Needs a simple, direct experience.</p></div>
+        </div>
+        <svg class="v3-ways-lines" viewBox="0 0 900 120" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M150 0 C150 70, 450 50, 450 120"/><path d="M450 0 L450 120"/><path d="M750 0 C750 70, 450 50, 450 120"/>
+        </svg>
+        <div class="v3-ways-one"><span class="v3-mono">One visit</span><p>Check in → queue → vitals → doctor → tests → pharmacy → follow-up</p></div>
+      </div>
+      <p class="v3-center-note">They start differently, but once inside the clinic most of the steps are the same. So we designed <strong>one visit</strong> for everyone instead of three separate products.</p>
+    </section>
+
+    <section class="v3-section v3-tint v3-entry-sec" id="entry" aria-labelledby="entry-h">
+      <div class="v3-wrap">
+        <p class="v3-label">Entry points</p>
+        <h2 class="v3-h2" id="entry-h">Patients find the clinic inside an app they already use</h2>
+        <p class="v3-lede">The app already listed a large network of partner hospitals, doctors and labs. The new clinic had to show up first without removing those choices.</p>
+
+        <div class="v3-entry-grid">
+          <article class="v3-entry-card">
+            <p class="v3-mono v3-entry-num">01 · Inside existing booking</p>
+            <h3>Shown first in search, next to partners</h3>
+            <ul class="v3-entry-points">
+              <li><b>Doctor search:</b> the Digital Clinic leads the featured centres with a "New" tag, and a "Skip the wait!" card highlights its doctors.</li>
+              <li><b>Lab partners:</b> the clinic sits on top with same-day home collection.</li>
+              <li><b>Partners follow:</b> same card, same price layout, same booking flow.</li>
+            </ul>
+            <div class="v3-devs n2"><figure class="v3-dev m"><div class="v3-dev-frame"><img src="assets/screens/v3/search-1.webp" alt="Doctor search with the clinic leading the featured centres and a Skip the wait card" loading="lazy"></div><figcaption><b>Doctor search.</b> Clinic first, partners below.</figcaption></figure><figure class="v3-dev m"><div class="v3-dev-frame"><img src="assets/screens/v3/search-2.webp" alt="Lab partners list with the clinic on top and partner labs below" loading="lazy"></div><figcaption><b>Lab partners.</b> Same card, same flow.</figcaption></figure></div>
+          </article>
+          <article class="v3-entry-card">
+            <p class="v3-mono v3-entry-num">02 · Its own front door</p>
+            <h3>A clinic card on Home, with its own landing page</h3>
+            <ul class="v3-entry-points">
+              <li><b>Home:</b> a "Newly launched" clinic card inside the main app.</li>
+              <li><b>Clinic landing page:</b> services, "Save up to 20%", and why the clinic.</li>
+              <li><b>Booking:</b> real slots by time of day, with a free follow-up for 7 days.</li>
+            </ul>
+            <div class="v3-devs n2"><figure class="v3-dev m"><div class="v3-dev-frame"><img src="assets/screens/v3/vc-entry-points-1.webp" alt="App Home with a Newly launched clinic card" loading="lazy"></div><figcaption><b>Home.</b> "Newly launched" card.</figcaption></figure><figure class="v3-dev m"><div class="v3-dev-frame"><img src="assets/screens/v3/vc-entry-points-2.webp" alt="Clinic landing page with services and Save up to 20% offers" loading="lazy"></div><figcaption><b>Clinic landing.</b> Services + offers.</figcaption></figure></div>
+          </article>
+        </div>
+
+        <div class="v3-entry-decision">
+          <div>
+            <p class="v3-label accent">Design decision</p>
+            <h3 class="v3-h3">Top spot in search, partners still listed</h3>
+            <p>Partners are core to the business. So the clinic gets attention through its position and a clear offer, and every partner stays visible and bookable. The patient still chooses.</p>
+            <ul class="v3-why">
+              <li><b>Clinic first, partners kept.</b> The clinic is shown first. Partners are never removed.</li>
+              <li><b>Same card for everyone.</b> Same design, cashless badge and Book button, so the comparison is fair.</li>
+              <li><b>Promote what's different.</b> Only the clinic offers "Skip the wait" and "Save up to 20%".</li>
+            </ul>
+          </div>
+          <div class="v3-rank" aria-label="Illustration: the clinic moves to the top of search results while partners stay listed">
+            <p class="v3-mono v3-rank-title">Doctor search · General physician</p>
+            <ol>
+              <li class="me"><span class="v3-rank-logo">VC</span><span><b>Digital Clinic</b><em>New · Skip the wait · 2 km</em></span><i>Book</i></li>
+              <li><span class="v3-rank-logo">F</span><span><b>Fortis</b><em>Partner · cashless</em></span><i>Book</i></li>
+              <li><span class="v3-rank-logo">A</span><span><b>Apollo</b><em>Partner · cashless</em></span><i>Book</i></li>
+              <li><span class="v3-rank-logo">M</span><span><b>Max Healthcare</b><em>Partner · cashless</em></span><i>Book</i></li>
+            </ol>
+            <p class="v3-small">Illustrative. Partner names as shown in the app's featured centres.</p>
+          </div>
+        </div>
+
+        <dl class="v3-trade">
+          <div><dt>Options</dt><dd><ul><li>Show only the clinic</li><li>Mix it in, no emphasis</li><li>Lead with it, keep partners bookable</li></ul></dd></div>
+          <div><dt>Chose</dt><dd><b>Lead with the clinic, keep partners bookable</b></dd></div>
+          <div><dt>Trade-off</dt><dd>Some patients will still pick a partner. That's fine. It keeps the partner network healthy, and the clinic has to earn its bookings.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ============ CHAPTER 2 · THE BETS ============ -->
+  <div id="bets" data-chapter="bets">
+    <section class="v3-section v3-wrap v3-bets-intro">
+      <p class="v3-chapter"><span>02</span> Key decisions</p>
+      <h2 class="v3-display">Three key decisions<br>in two months.</h2>
+    </section>
+
+    <!-- BET 01 -->
+    <section class="v3-section v3-wrap v3-bet" aria-labelledby="bet1">
+      <p class="v3-bet-num v3-mono">Decision 01</p>
+      <h3 class="v3-h2" id="bet1">App check-in, only near the clinic</h3>
+
+      <ol class="v3-evo">
+        <li><span class="v3-k hyp">Hypothesis</span><h4>The idea</h4><p>Patients join the queue from home and arrive just in time, so they spend less time in the waiting room.</p></li>
+        <li class="reality"><span class="v3-k fact">Fact</span><h4>What the clinic needed</h4><p>Clinic operations needed to know that people in the queue were actually nearby. A patient who joins from home and doesn't show up holds up everyone already waiting.</p></li>
+        <li><span class="v3-k dec">Decision</span><h4>The change</h4><p>App check-in only works within 100 m of the clinic, for example from the parking lot or the café next door. Anyone can still check in at the kiosk or front desk.</p></li>
+        <li class="final"><span class="v3-k dec">Shipped</span><h4>Check-in within 100 m</h4><p>Patients are close enough for the queue to be reliable, and can still skip the desk.</p></li>
+      </ol>
+
+      <div class="v3-radius-wrap">
+        <div class="v3-radius" data-radius>
+          <div class="v3-seg" role="group" aria-label="Compare the two check-in rules">
+            <button type="button" data-radius-set="idea" aria-pressed="true">Home check-in (idea)</button>
+            <button type="button" data-radius-set="final" aria-pressed="false">100 m check-in (shipped)</button>
+          </div>
+          <svg viewBox="0 0 640 360" class="v3-radius-svg" role="img" aria-label="Map: clinic, a 100 metre check-in radius, a patient at a café inside it and a patient at home outside it">
+            <defs>
+              <pattern id="v3grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="currentColor" stroke-opacity=".07"/></pattern>
+            </defs>
+            <rect width="640" height="360" fill="url(#v3grid)"/>
+            <circle class="r-zone" cx="250" cy="190" r="110"/>
+            <text class="r-zone-label" x="250" y="70" text-anchor="middle">100 m</text>
+            <g class="r-clinic"><rect x="232" y="172" width="36" height="36" rx="8"/><path d="M250 180v20M240 190h20" stroke="#fff" stroke-width="3"/></g>
+            <text class="r-lbl" x="250" y="228" text-anchor="middle">The clinic</text>
+            <g class="r-cafe"><circle cx="318" cy="246" r="9"/><text class="r-lbl" x="334" y="250">Café next door</text></g>
+            <g class="r-home"><circle cx="560" cy="80" r="9"/><text class="r-lbl" x="545" y="60" text-anchor="end">Home · 2.5 km</text></g>
+            <path class="r-path-home" d="M560 80 C 470 90, 380 130, 268 182"/>
+            <path class="r-path-cafe" d="M318 246 C 300 230, 285 215, 268 205"/>
+            <g class="r-badge r-badge-home"><rect x="400" y="100" width="150" height="30" rx="15"/><text x="475" y="120" text-anchor="middle">In queue · arriving?</text></g>
+            <g class="r-badge r-badge-home-no"><rect x="420" y="100" width="150" height="30" rx="15"/><text x="495" y="120" text-anchor="middle">Can't check in yet</text></g>
+            <g class="r-badge r-badge-cafe"><rect x="330" y="270" width="150" height="30" rx="15"/><text x="405" y="290" text-anchor="middle">Checked in · T-8</text></g>
+          </svg>
+          <p class="v3-small v3-radius-caption" data-radius-caption>The idea: anyone can join the queue from anywhere. The clinic can't tell who is really on the way.</p>
+        </div>
+        <div class="v3-devs n2">
+          <figure class="v3-dev m"><div class="v3-dev-frame"><img src="assets/screens/v3/vc-arriving-1.webp" alt="Appointment screen: countdown, Leave in 30 minutes to arrive on time, Self check-in button" loading="lazy"></div><figcaption><b>Before arrival.</b> A nudge to leave, then check-in once nearby.</figcaption></figure>
+          <figure class="v3-dev m"><div class="v3-dev-frame"><img src="assets/screens/v3/vc-arriving-2.webp" alt="Self check-in successful: token T-8, queue number 3, estimated 10 minutes" loading="lazy"></div><figcaption><b>Checked in.</b> Token, queue position and wait time, shown once the patient checks in nearby.</figcaption></figure>
+        </div>
+      </div>
+
+      <dl class="v3-trade">
+        <div><dt>Options</dt><dd><ul><li>Check in from home</li><li>Front desk only</li><li>App check-in once nearby</li></ul></dd></div>
+        <div><dt>Chose</dt><dd><b>App check-in within 100 m, with the kiosk and front desk as other ways in</b></dd></div>
+        <div><dt>Trade-off</dt><dd>Patients can't join the queue before they leave home.</dd></div>
+      </dl>
+      <p class="v3-takeaway">Patients lost a little convenience, but the clinic got a queue it could trust.</p>
+    </section>
+
+    <!-- BET 02 -->
+    <section class="v3-section v3-tint v3-bet" aria-labelledby="bet2">
+      <div class="v3-wrap">
+        <p class="v3-bet-num v3-mono">Decision 02</p>
+        <h3 class="v3-h2" id="bet2">One visit, with many queues underneath</h3>
+        <p class="v3-lede">One visit can include the doctor, pathology, radiology, ultrasound and the pharmacy. If each were a separate booking, the patient would have to work out what to do next five times.</p>
+
+        <div class="v3-views" data-views>
+          <div class="v3-seg" role="group" aria-label="Switch between the patient's view and the clinic's view">
+            <button type="button" data-view-set="patient" aria-pressed="false">Patient view</button>
+            <button type="button" data-view-set="system" aria-pressed="true">System view</button>
+          </div>
+          <div class="v3-view-stage">
+            <div class="v3-view patient" data-view="patient" hidden>
+              <div class="v3-pv-card">
+                <p class="v3-mono">Your visit · Token T-8</p>
+                <ol class="v3-pv-steps">
+                  <li class="done">Consultation<span>Room 4</span></li>
+                  <li class="now">Blood sample<span>Room 1 · 3 ahead</span></li>
+                  <li>Chest X-ray<span>Room 8</span></li>
+                  <li>Ultrasound<span>Room 8</span></li>
+                  <li>Pharmacy<span>Counter</span></li>
+                </ol>
+                <p class="v3-pv-next">Next: go to blood sample collection room 1</p>
+              </div>
+              <p class="v3-view-note"><b>One visit.</b> The patient sees one list and one next step.</p>
+            </div>
+            <div class="v3-view system" data-view="system">
+              <div class="v3-lanes" data-lanes>
+                <div class="v3-lane" data-lane="0"><span class="v3-lane-name">Doctor · Room 4</span><div class="v3-tokens"><i>T-11</i><i>T-12</i></div></div>
+                <div class="v3-lane" data-lane="1"><span class="v3-lane-name">Pathology · Room 1</span><div class="v3-tokens"><i>T-3</i><i>T-5</i><i>T-6</i></div></div>
+                <div class="v3-lane" data-lane="2"><span class="v3-lane-name">Radiology · X-ray</span><div class="v3-tokens"><i>T-2</i></div></div>
+                <div class="v3-lane" data-lane="3"><span class="v3-lane-name">Ultrasound · Room 8</span><div class="v3-tokens"><i>T-4</i><i>T-7</i></div></div>
+                <div class="v3-lane" data-lane="4"><span class="v3-lane-name">Pharmacy · Counter</span><div class="v3-tokens"><i>T-1</i></div></div>
+                <b class="v3-me" data-me>T-8</b>
+              </div>
+              <p class="v3-view-note"><b>Many queues.</b> When a step is done, T-8 moves to the next queue. Tokens are illustrative.</p>
+            </div>
+          </div>
+        </div>
+
+        <dl class="v3-trade">
+          <div><dt>Options</dt><dd><ul><li>A separate booking per service</li><li>One visit, with queues underneath</li></ul></dd></div>
+          <div><dt>Chose</dt><dd><b>One visit</b></dd></div>
+          <div><dt>Trade-off</dt><dd>The product has to hand the patient from queue to queue at every step.</dd></div>
+        </dl>
+        <p class="v3-statement">One visit for the patient.<br><span>Many queues for the clinic.</span></p>
+
+        <div class="v3-proto-row">
+          <div>
+            <h4 class="v3-h3">Prototype: three tests in one visit</h4>
+            <p>The doctor prescribes three tests, so the patient joins three queues in one visit. After each test, the app sends them to the next room: blood sample, chest X-ray, then ultrasound. A WhatsApp update arrives as soon as the sample is collected, and the reports are added to the same visit.</p>
+          </div>
+          <figure class="v3-proto" data-proto>
+          <div class="v3-proto-phone">
+            <video muted loop playsinline preload="none" poster="assets/videos/vc-lab-queues-poster.jpg" aria-label="Prototype video: one patient moving through the blood sample, X-ray and ultrasound queues"><source src="assets/videos/vc-lab-queues.mp4" type="video/mp4"></video>
+            <button type="button" class="v3-proto-btn" aria-label="Play prototype" data-state="paused"><span aria-hidden="true"></span></button>
+          </div>
+          <figcaption><span class="v3-mono">Prototype · 0:30</span>Blood sample → X-ray → ultrasound → reports.</figcaption>
+        </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- BET 03 -->
+    <section class="v3-section v3-wrap v3-bet" aria-labelledby="bet3">
+      <p class="v3-bet-num v3-mono">Decision 03</p>
+      <h3 class="v3-h2" id="bet3">Two timelines: consult and lab</h3>
+
+      <div class="v3-continue" aria-label="Consult to follow-up, across the moment the patient goes home">
+        <div class="v3-cont-side physical"><p class="v3-mono">Physical visit · minutes</p></div>
+        <div class="v3-cont-side digital"><p class="v3-mono">Digital care · hours to days</p></div>
+        <ol class="v3-cont-line">
+          <li>Consult</li><li>Prescription</li><li class="split">Lab</li><li>Processing</li><li>Report</li><li>Follow-up</li>
+        </ol>
+        <div class="v3-cont-divider"><span>Patient goes home</span></div>
+        <span class="v3-cont-dot" aria-hidden="true"></span>
+      </div>
+
+      <dl class="v3-trade">
+        <div><dt>Options</dt><dd><ul><li>One tracker for everything</li><li>Two linked timelines</li></ul></dd></div>
+        <div><dt>Chose</dt><dd><b>Two timelines, linked by the prescription</b></dd></div>
+        <div><dt>Trade-off</dt><dd>Two trackers to keep in step, instead of one.</dd></div>
+      </dl>
+
+      <div class="v3-split v3-split-media">
+        <div>
+          <p class="v3-lede">The consult takes minutes. Lab results take hours or days. So each got its own timeline, and the prescription links them.</p>
+        </div>
+        <div class="v3-devs n2">
+          <figure class="v3-dev m"><div class="v3-dev-frame"><img src="assets/screens/v3/vc-pickup-reports-3.webp" alt="Your test report is ready to download, with a rating and consult doctor" loading="lazy"></div><figcaption><b>Hours later.</b> The report arrives in the same visit.</figcaption></figure>
+          <figure class="v3-dev m"><div class="v3-dev-frame"><img src="assets/screens/v3/vc-followup-2.webp" alt="Doctor recommends a follow-up in 3 days, free if booked within 7 days" loading="lazy"></div><figcaption><b>Days later.</b> The doctor's follow-up, ready to book.</figcaption></figure>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ CHAPTER 3 · THE SYSTEM ============ -->
+  <div id="system" data-chapter="system">
+    <section class="v3-section v3-wrap">
+      <p class="v3-chapter"><span>03</span> The full visit</p>
+      <div class="v3-proto-split">
+        <div>
+          <h2 class="v3-display">The full visit, step by step</h2>
+          <p class="v3-lede">This prototype shows one full visit: booking a doctor, checking in, the live queue, the consult, the fasting check for lab tests, checkout, the sample queue and pharmacy pickup.</p>
+          <p class="v3-small">Below, you can scroll through it screen by screen. The tracker on the side shows where the patient is.</p>
+        </div>
+        <figure class="v3-proto" data-proto>
+          <div class="v3-proto-phone">
+            <video muted loop playsinline preload="none" poster="assets/videos/vc-full-visit-poster.jpg" aria-label="Prototype video of the full clinic visit, from booking to pharmacy pickup"><source src="assets/videos/vc-full-visit.mp4" type="video/mp4"></video>
+            <button type="button" class="v3-proto-btn" aria-label="Play prototype" data-state="paused"><span aria-hidden="true"></span></button>
+          </div>
+          <figcaption><span class="v3-mono">Prototype · 1:20</span>Booking to pharmacy pickup, played at 1.5× speed.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="v3-console-section v3-wrap" data-console id="follow">
+      <aside class="v3-console" aria-live="polite">
+        <div class="v3-console-head"><span class="v3-mono">VISIT 001</span><span class="v3-live"><i></i>LIVE</span></div>
+        <ol class="v3-console-list">
+          <li data-s="0">Booked<span>Slot confirmed</span></li>
+          <li data-s="1">Arriving<span>Leave in 30 min · 2.5 km</span></li>
+          <li data-s="2">Checked in<span>Token T-8</span></li>
+          <li data-s="3">Waiting<span>3 people ahead · ~10 min</span></li>
+          <li data-s="4">Consult<span>Room 4 · prescription issued</span></li>
+          <li data-s="5">Testing<span>Pathology · Room 1</span></li>
+          <li data-s="6">Collecting<span>Pharmacy counter</span></li>
+          <li data-s="7">Report<span>Partial report ready</span></li>
+          <li data-s="8">Follow-up<span>Free within 7 days</span></li>
+        </ol>
+      </aside>
+      <div class="v3-console-steps">
+        <article class="v3-step" data-step="0">
+          <figure class="v3-dev l v3-phone"><div class="v3-dev-frame"><img src="assets/screens/v3/booking-consult-now.webp" alt="Booking Dr. Rajesh Neti: slots by day and time, 100% follow-up discount for 7 days, paid by the company, Consult Now" loading="lazy"></div></figure>
+          <div class="v3-anno"><p class="v3-mono">01 · Booked</p><dl><dt>Patient needs</dt><dd>A slot they can trust.</dd><dt>Product does</dt><dd>Real slots by day and time of day, the follow-up discount up front, and what they pay before they book.</dd></dl></div>
+        </article>
+        <article class="v3-step" data-step="1">
+          <figure class="v3-dev l v3-phone"><div class="v3-dev-frame"><img src="assets/screens/v3/vc-arriving-1.webp" alt="Appointment countdown with Leave in 30 minutes to arrive on time" loading="lazy"></div></figure>
+          <div class="v3-anno"><p class="v3-mono">02 · Arriving</p><dl><dt>Patient needs</dt><dd>To know when to leave.</dd><dt>Product does</dt><dd>"Leave in 30 minutes to arrive on time (2.5 km away)."</dd></dl><p class="v3-proves">Shows: the visit starts before the patient reaches the clinic.</p></div>
+        </article>
+        <article class="v3-step" data-step="2">
+          <figure class="v3-dev l v3-phone"><div class="v3-dev-frame"><img src="assets/screens/v3/vc-arriving-2.webp" alt="Self check-in successful with token T-8" loading="lazy"></div></figure>
+          <div class="v3-anno"><p class="v3-mono">03 · Checked in</p><dl><dt>Patient needs</dt><dd>Proof they're in.</dd><dt>Product does</dt><dd>Token, queue number and estimated wait. From the app within 100 m, or at the kiosk or front desk.</dd></dl><p class="v3-proves">Shows: patients get convenience, and the clinic keeps control of the queue.</p></div>
+        </article>
+        <article class="v3-step" data-step="3">
+          <figure class="v3-dev l v3-phone"><div class="v3-dev-frame"><img src="assets/screens/v3/vc-arriving-3.webp" alt="Live queue: 3 ahead of you, 10 minutes, your turn is coming up, vitals room 4" loading="lazy"></div></figure>
+          <div class="v3-anno"><p class="v3-mono">04 · Waiting</p><dl><dt>Patient needs</dt><dd>To stop asking the front desk.</dd><dt>Product does</dt><dd>People ahead, wait time, and "get your vitals checked" before the consult.</dd></dl><p class="v3-proves">Shows: the app tells patients what to do next while they wait.</p></div>
+        </article>
+        <article class="v3-step" data-step="4">
+          <figure class="v3-dev l v3-phone"><div class="v3-dev-frame"><img src="assets/screens/v3/vc-queue-2.webp" alt="It's your turn now: head to the consultation room, Room 4" loading="lazy"></div></figure>
+          <div class="v3-anno"><p class="v3-mono">05 · Consult</p><dl><dt>Patient needs</dt><dd>To know exactly when to go in.</dd><dt>Product does</dt><dd>"It's your turn now!" with the room to go to.</dd></dl></div>
+        </article>
+        <article class="v3-step" data-step="5">
+          <figure class="v3-dev l v3-phone"><div class="v3-dev-frame"><img src="assets/screens/v3/vc-timelines-board-1.webp" alt="Blood sample queue card, pathology room 1" loading="lazy"></div></figure>
+          <div class="v3-anno"><p class="v3-mono">06 · Testing</p><dl><dt>Patient needs</dt><dd>The right room, at the right time.</dd><dt>Product does</dt><dd>A queue card per test, with its own timeline.</dd></dl></div>
+        </article>
+        <article class="v3-step" data-step="6">
+          <figure class="v3-dev l v3-phone"><div class="v3-dev-frame"><img src="assets/screens/v3/consult-complete-pharmacy.webp" alt="Consultation complete: prescription with lab tests to book and medicines to collect at the pharmacy counter, pay at counter" loading="lazy" style="object-position:center bottom"></div></figure>
+          <div class="v3-anno"><p class="v3-mono">07 · Collecting</p><dl><dt>Patient needs</dt><dd>To know what the doctor ordered, and where to get it.</dd><dt>Product does</dt><dd>The prescription splits into lab tests to book and medicines to "Collect at the pharmacy counter", paid at the counter.</dd></dl><p class="v3-proves">Shows: the consult connects to diagnostics and pharmacy.</p></div>
+        </article>
+        <article class="v3-step" data-step="7">
+          <figure class="v3-dev l v3-phone"><div class="v3-dev-frame"><img src="assets/screens/v3/vc-pickup-reports-3.webp" alt="Your test report is ready to download" loading="lazy"></div></figure>
+          <div class="v3-anno"><p class="v3-mono">08 · Report</p><dl><dt>Patient needs</dt><dd>Results without coming back.</dd><dt>Product does</dt><dd>Partial results early, the full report when it's ready.</dd></dl><p class="v3-proves">Shows: the visit continues after the patient leaves the clinic.</p></div>
+        </article>
+        <article class="v3-step" data-step="8">
+          <figure class="v3-dev l v3-phone"><div class="v3-dev-frame"><img src="assets/screens/v3/vc-followup-2.webp" alt="A follow-up in 3 days, free if booked within 7 days" loading="lazy"></div></figure>
+          <div class="v3-anno"><p class="v3-mono">09 · Follow-up</p><dl><dt>Patient needs</dt><dd>To remember the doctor's advice.</dd><dt>Product does</dt><dd>The recommended follow-up, free within 7 days, waiting on Home.</dd></dl></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="v3-section v3-wrap">
+      <h2 class="v3-h2">App steps and clinic spaces<br><span class="v3-muted">Each step in the app matches a place in the clinic.</span></h2>
+      <p class="v3-small v3-hint">Hover or tap a column to see how a digital moment maps to the physical clinic.</p>
+      <div class="v3-layers" aria-label="Digital layer mapped to the physical clinic">
+        <div class="v3-layer-labels"><span>Patient</span><span>Digital layer</span><span>Physical layer</span></div>
+        <div class="v3-layer-grid">
+          <div class="v3-patient-line"><span>One visit</span></div>
+          <button type="button" class="v3-col"><span class="d">Booking</span><span class="p">Front desk · kiosk</span></button>
+          <button type="button" class="v3-col"><span class="d">Check-in</span><span class="p">Within 100 m · kiosk · front desk</span></button>
+          <button type="button" class="v3-col"><span class="d">Queue</span><span class="p">Waiting area · vitals</span></button>
+          <button type="button" class="v3-col"><span class="d">Prescription</span><span class="p">Doctor's room</span></button>
+          <button type="button" class="v3-col"><span class="d">Diagnostics</span><span class="p">Pathology · radiology</span></button>
+          <button type="button" class="v3-col"><span class="d">Pharmacy</span><span class="p">Pharmacy counter</span></button>
+          <button type="button" class="v3-col"><span class="d">Reports</span><span class="p">Lab, after the patient leaves</span></button>
+          <button type="button" class="v3-col"><span class="d">Follow-up</span><span class="p">Home</span></button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ============ CHAPTER 4 · REALITY ============ -->
+  <div id="reality" data-chapter="reality">
+    <section class="v3-section v3-wrap">
+      <p class="v3-chapter"><span>04</span> Edge cases</p>
+      <h2 class="v3-display">Edge cases we designed for</h2>
+
+      <div class="v3-real">
+        <div class="v3-real-row">
+          <div class="v3-real-world"><span class="v3-label">Real world</span><p>The patient is outside the clinic.</p></div>
+          <i class="v3-arrow-r big" aria-hidden="true"></i>
+          <div class="v3-real-resp"><span class="v3-label accent">Product response</span><p>App check-in won't work outside 100 m, and the app says why: "You may be outside the 100m clinic radius. Please try again." The front desk can still check them in.</p></div>
+          <figure class="v3-dev s"><div class="v3-dev-frame"><img src="assets/screens/v3/checkin-failed-full.webp" alt="Self Check-In Failed: You may be outside the 100m clinic radius. Please try again" loading="lazy" style="object-position:center bottom"></div></figure>
+        </div>
+        <div class="v3-real-row">
+          <div class="v3-real-world"><span class="v3-label">Real world</span><p>The patient hasn't fasted.</p></div>
+          <i class="v3-arrow-r big" aria-hidden="true"></i>
+          <div class="v3-real-resp">
+            <span class="v3-label accent">Product response</span>
+            <div class="v3-fast">
+              <span class="v3-pill">Fasting-required test</span><i class="v3-arrow-d"></i>
+              <span class="v3-pill q">Have you fasted?</span>
+              <div class="v3-fast-branch"><div><span class="v3-k plain">Yes</span><span class="v3-pill">Book now</span></div><div><span class="v3-k plain">No</span><span class="v3-pill">Later slot + instructions</span></div></div>
+            </div>
+          </div>
+          <figure class="v3-dev s"><div class="v3-dev-frame"><img src="assets/screens/v3/vc-lab-booking-2.webp" alt="Some tests require fasting: Are you fasting? Book now at centre" loading="lazy" style="object-position:center bottom"></div></figure>
+        </div>
+        <div class="v3-real-row">
+          <div class="v3-real-world"><span class="v3-label">Real world</span><p>The prescribed test isn't available at this centre.</p></div>
+          <i class="v3-arrow-r big" aria-hidden="true"></i>
+          <div class="v3-real-resp"><span class="v3-label accent">Product response</span><p>The patient sees what can happen today: "2 / 4 tests can be done today. MRI &amp; X-Ray are unavailable." They book the available tests now, and checkout lists the unavailable ones separately.</p></div>
+          <div class="v3-devs n2 small"><figure class="v3-dev s"><div class="v3-dev-frame"><img src="assets/screens/v3/unavailable-tests-full.webp" alt="2 of 4 tests can be done today; MRI and X-Ray are unavailable; schedule available tests now or later" loading="lazy" style="object-position:center bottom"></div></figure><figure class="v3-dev s"><div class="v3-dev-frame"><img src="assets/screens/v3/checkout-unavailable.webp" alt="Checkout listing available tests with prices and an Unavailable Tests section for Ultrasound and X-Ray" loading="lazy" style="object-position:center bottom"></div></figure></div>
+        </div>
+        <div class="v3-real-row">
+          <div class="v3-real-world"><span class="v3-label">Real world</span><p>A co-pay is required.</p></div>
+          <i class="v3-arrow-r big" aria-hidden="true"></i>
+          <div class="v3-real-resp"><span class="v3-label accent">Product response</span>
+            <div class="v3-copay"><span>Check in</span><span class="pay">Make payment</span><span>Vitals</span><span>Consult</span></div>
+            <p class="v3-small">"Please Complete Payment · Copay Payable ₹200" shows up as a step in the visit timeline, with Make Payment, before vitals. So the patient isn't surprised at the desk.</p>
+          </div>
+          <figure class="v3-dev s"><div class="v3-dev-frame"><img src="assets/screens/v3/copay.webp" alt="The visit timeline with a Please Complete Payment step, copay payable 200 rupees and a Make Payment button" loading="lazy" style="object-position:center bottom"></div></figure>
+        </div>
+      </div>
+      <p class="v3-takeaway">In each of these cases, the app had to handle what was really happening, beyond the ideal flow.</p>
+    </section>
+
+    <section class="v3-section v3-tint">
+      <div class="v3-wrap v3-split">
+        <div>
+          <h2 class="v3-h2">Patients don't need the app to check in</h2>
+          <p>Patients can check in on the app, at the kiosk or at the front desk. The kiosk and desk are there for anyone who needs help getting started. After that, the app gives more detail for the rest of the visit.</p>
+        </div>
+        <div class="v3-kiosk" aria-label="Kiosk leads into the clinic; the clinic and the app work together">
+          <div class="v3-kiosk-flow">
+            <div class="v3-kiosk-node">
+              <svg viewBox="0 0 60 96" aria-hidden="true"><rect x="8" y="4" width="44" height="58" rx="6"/><rect x="14" y="10" width="32" height="40" rx="3" class="scr"/><rect x="24" y="62" width="12" height="24"/><rect x="12" y="86" width="36" height="6" rx="3"/></svg>
+              <span class="v3-mono">Kiosk</span>
+            </div>
+            <span class="v3-or v3-mono">or</span>
+            <div class="v3-kiosk-node"><span class="v3-pill">Front desk</span></div>
+            <i class="v3-arrow-r"></i>
+            <div class="v3-kiosk-node"><span class="v3-pill accent">Clinic</span></div>
+            <i class="v3-arrow-both"></i>
+            <div class="v3-kiosk-node"><span class="v3-pill">App</span></div>
+          </div>
+          <ol class="v3-chain small"><li>Queue</li><li>Next action</li><li>Prescription</li><li>Diagnostics</li><li>Pharmacy</li><li>Reports</li><li>Follow-up</li></ol>
+          <p class="v3-small">Kiosk shown as a schematic.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ============ CHAPTER 5 · GROWTH ============ -->
+  <div id="growth" data-chapter="growth">
+    <section class="v3-section v3-wrap v3-growth" aria-labelledby="growth-h">
+      <p class="v3-chapter"><span>05</span> Business impact &amp; growth</p>
+      <div class="v3-split">
+        <div>
+          <h2 class="v3-h2" id="growth-h">Fitting offers into the visit</h2>
+          <p class="v3-lede">The clinic gave the company a new way to sell services it already offered: annual health checks, the OPD Pass, diagnostics, pharmacy and follow-ups.</p>
+          <p class="v3-callout-line">Offers should appear at the right step of the visit, without interrupting it.</p>
+        </div>
+        <ol class="v3-touchline" aria-label="Where each offer appears in the visit">
+          <li><span class="v3-mono">Booking</span><p>Health check packages under "Recommended for you &amp; your family", including dependents.</p></li>
+          <li><span class="v3-mono">In the queue</span><p>The OPD Pass, covering consults, lab tests and pharmacy at the clinic, while the patient waits.</p></li>
+          <li><span class="v3-mono">After the consult</span><p>Prescribed diagnostics and medicines, booked in a tap.</p></li>
+          <li><span class="v3-mono">After the visit</span><p>A free follow-up within 7 days, and tests suggested from the patient's last report.</p></li>
+        </ol>
+      </div>
+
+      <div class="v3-gx">
+        <div class="v3-gx-copy">
+          <h3 class="v3-h3">Where the offers show up</h3>
+          <ul class="v3-gx-list">
+            <li><b>Home:</b> discounted health check packages, plus "Add your dependents".</li>
+            <li><b>Clinic landing:</b> annual health checkups and "Save up to 20%" on every service.</li>
+            <li><b>In the queue:</b> a partner glucose-monitor offer and the OPD Pass.</li>
+          </ul>
+        </div>
+        <div class="v3-devs n3"><figure class="v3-dev m"><div class="v3-dev-frame"><img src="assets/screens/v3/vc-growth-1.webp" alt="Home with discounted health check packages and add dependents" loading="lazy"></div><figcaption><b>Home.</b> Packages + dependents.</figcaption></figure><figure class="v3-dev m"><div class="v3-dev-frame"><img src="assets/screens/v3/vc-growth-2.webp" alt="Clinic landing with annual health checkups and save up to 20%" loading="lazy"></div><figcaption><b>Clinic landing.</b> Save up to 20%.</figcaption></figure><figure class="v3-dev m"><div class="v3-dev-frame"><img src="assets/screens/v3/vc-growth-3.webp" alt="In the queue: glucose monitor offer and the OPD Pass" loading="lazy"></div><figcaption><b>In the queue.</b> The OPD Pass.</figcaption></figure></div>
+      </div>
+
+      <div class="v3-gx">
+        <div class="v3-gx-copy">
+          <h3 class="v3-h3">Selling the clinic on the package page</h3>
+          <ul class="v3-gx-list">
+            <li><b>Inside the details:</b> a "served with care" note, with zero wait time, reports in 4 hours and certified phlebotomists.</li>
+            <li><b>Know more:</b> opens a short clinic story on the same page, with a video tour, how it works in four steps, and what people say.</li>
+            <li><b>Booking stays one tap away:</b> the patient stays on the package they were looking at.</li>
+          </ul>
+        </div>
+        <figure class="v3-proto" data-proto>
+          <div class="v3-proto-phone">
+            <video muted loop playsinline preload="none" poster="assets/videos/vc-package-marketing-poster.jpg" aria-label="Prototype video: the clinic promoted inside a health check package details page"><source src="assets/videos/vc-package-marketing.mp4" type="video/mp4"></video>
+            <button type="button" class="v3-proto-btn" aria-label="Play prototype" data-state="paused"><span aria-hidden="true"></span></button>
+          </div>
+          <figcaption><span class="v3-mono">Prototype · 0:43</span>The clinic story inside a full-body checkup package.</figcaption>
+        </figure>
+      </div>
+
+      <div class="v3-gx">
+        <div class="v3-gx-copy">
+          <h3 class="v3-h3">Care that continues after the visit</h3>
+          <p>Most clinics lose touch with patients once they leave. The app keeps suggesting next steps based on the patient's own visit.</p>
+        </div>
+        <div class="v3-after" aria-label="After the visit, what the app suggests">
+          <div class="v3-after-head"><span>After the visit</span><span>What the app suggests</span></div>
+          <div class="v3-after-row"><p>Doctor asked to see you again</p><i aria-hidden="true"></i><p class="s">Free follow-up within 7 days, or a discounted one</p></div>
+          <div class="v3-after-row"><p>Lab report is ready</p><i aria-hidden="true"></i><p class="s">Download notification + consult a doctor on results</p></div>
+          <div class="v3-after-row"><p>A health risk shows up (e.g. diabetes)</p><i aria-hidden="true"></i><p class="s">Personalised suggestions, like glucose tracking</p></div>
+          <div class="v3-after-row"><p>Prescription or health need</p><i aria-hidden="true"></i><p class="s">Medicines and supplements, in a few taps</p></div>
+        </div>
+      </div>
+
+      <div class="v3-gx">
+        <div class="v3-gx-copy">
+          <h3 class="v3-h3">Making follow-ups easy to book</h3>
+          <ul class="v3-gx-list">
+            <li><b>After the consult:</b> "Book Free Follow-up Consult" sits right in the order details.</li>
+            <li><b>Doctor's recommendation:</b> "A follow-up in 3 days", free if booked within 7 days.</li>
+            <li><b>Back on Home:</b> "Free Follow-up Available", where the patient already looks.</li>
+          </ul>
+        </div>
+        <div class="v3-devs n3"><figure class="v3-dev m"><div class="v3-dev-frame"><img src="assets/screens/v3/vc-followup-1.webp" alt="Order details with Book Free Follow-up Consult" loading="lazy"></div><figcaption><b>After the consult.</b> Free follow-up.</figcaption></figure><figure class="v3-dev m"><div class="v3-dev-frame"><img src="assets/screens/v3/vc-followup-2.webp" alt="Doctor recommends a follow-up in 3 days" loading="lazy"></div><figcaption><b>Doctor's advice.</b> In 3 days.</figcaption></figure><figure class="v3-dev m"><div class="v3-dev-frame"><img src="assets/screens/v3/vc-followup-3.webp" alt="Home shows Free Follow-up Available under Your Requests" loading="lazy"></div><figcaption><b>Back on Home.</b> The reminder stays there.</figcaption></figure></div>
+      </div>
+
+      <div class="v3-gx">
+        <div class="v3-gx-copy">
+          <h3 class="v3-h3">Personalised reports</h3>
+          <p><b>Smart report:</b> highlights first, out-of-range values flagged against their range, and "Review it with Doctor."</p>
+          <p><b>For you and your family:</b> tests suggested from the last report, with the at-risk values named and a repeat reminder.</p>
+        </div>
+        <div class="v3-devs n2"><figure class="v3-dev m"><div class="v3-dev-frame"><img src="assets/screens/v3/personal-1.webp" alt="Smart report summary with highlights and flagged values" loading="lazy"></div><figcaption><b>Smart report.</b> Highlights first.</figcaption></figure><figure class="v3-dev m"><div class="v3-dev-frame"><img src="assets/screens/v3/personal-2.webp" alt="Full body packages recommended for the patient and family" loading="lazy"></div><figcaption><b>For you &amp; family.</b> From the last report.</figcaption></figure></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ CHAPTER 5 · LAUNCH ============ -->
+  <div id="launch" data-chapter="launch">
+    <section class="v3-section v3-dark v3-launch">
+      <div class="v3-wrap">
+        <p class="v3-chapter light"><span>06</span> Launch</p>
+        <h2 class="v3-display light">Launch and early results</h2>
+        <p class="v3-light-text">We went from an early concept to a live product in two months.</p>
+        <div class="v3-nums">
+          <div><b>2</b><span>clinics live in Bengaluru</span><em class="v3-k fact">Fact</em></div>
+          <div><b>~100</b><span>clinic bookings through the app in one day</span><em class="v3-k fact">Fact</em></div>
+          <div><b>45%</b><span>of clinic orders placed through the app</span><em class="v3-k fact">Snapshot</em></div>
+          <div><b>48%</b><span>of clinic revenue through the app</span><em class="v3-k fact">Snapshot</em></div>
+        </div>
+        <p class="v3-foot">Order and revenue shares are based on a one-day snapshot of 73 clinic orders. They're early signals, not a long-term impact study.</p>
+        <p class="v3-light-text strong">The early data supports linking consultation, diagnostics and pharmacy in one digital flow.</p>
+      </div>
+    </section>
+
+    <section class="v3-section v3-wrap">
+      <div class="v3-split">
+        <div>
+          <h2 class="v3-h2">What I'd want to learn next</h2>
+          <p>Version one is live. The next versions should be based on how patients and staff actually use it.</p>
+          <ul class="v3-next">
+            <li><span class="v3-k next">Next question</span>Where do patients still ask the front desk for help?</li>
+            <li><span class="v3-k next">Next question</span>Does the live queue actually make waiting less uncertain?</li>
+            <li><span class="v3-k next">Next question</span>Which parts of the visit should we improve next?</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="v3-section v3-wrap v3-reflect">
+      <h2 class="v3-h2">What I took from this project</h2>
+      <ol class="v3-reflect-list">
+        <li>A physical service changes how you design a digital product.</li>
+        <li>Working with an operational limit, instead of against it, can lead to better UX.</li>
+        <li>You don't need to be certain to ship a new product. You need a solid hypothesis, good judgement and a way to learn quickly.</li>
+        <li>The most useful screens tell the patient what happens next.</li>
+      </ol>
+    </section>
+
+    <section class="v3-final v3-wrap">
+      <p class="v3-final-big">The app had to follow the patient<br><span>through the whole clinic visit.</span></p>
+      <p class="v3-final-text">I designed the Digital Clinic around four stages: before the patient arrives, while they wait, while they move between rooms, and after they go home. The screens are only one part of that.</p>
+      <div class="v3-end-links">
+        <a class="text-link" href="projects.html">← All work</a>
+        <a class="text-link" href="mailto:ayushimaurya108@gmail.com">Talk about this project →</a>
+      </div>
+    </section>
+  </div>
+
+</main>
+
+
+<footer class="site-footer container">
+  <div class="footer-top">
+    <div>
+      <p class="footer-name">Ayushi Maurya</p>
+      <p class="footer-role">Product Designer</p>
+    </div>
+  </div>
+  <p class="footer-line">Let's work together. I'd love to hear from you.</p>
+  <nav class="footer-links" aria-label="Footer">
+    <a href="mailto:ayushimaurya108@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/ayushi-maurya-7174b71ab/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="resume.html">Resume</a>
+    <a href="projects.html">More work →</a>
+  </nav>
+  <p class="footer-meta">© <span id="year"></span> Ayushi Maurya</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/offline-consultation.js"></script>
+<script src="js/visit-clinic-v3.js?v=2"></script>
+<script src="js/theme.js?v=3"></script>
+</body>
+</html>

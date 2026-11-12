@@ -1,0 +1,69 @@
+{
+  "$description": "Scope tokens of the chaptered case-study layout (main.v3), resolved per theme.",
+  "tokens": {
+    "casestudy.accent": {
+      "themes": {
+        "night": "#9b82f5",
+        "day": "#5a3ec4"
+      },
+      "cssProperty": "--acc (case-study scope)",
+      "cite": "css/visit-clinic-v3.css:6"
+    },
+    "casestudy.accent-2": {
+      "themes": {
+        "night": "#b39ff8",
+        "day": "#6a4bd6"
+      },
+      "cssProperty": "--acc-2 (case-study scope)",
+      "cite": "css/visit-clinic-v3.css:7"
+    },
+    "casestudy.accent-tint": {
+      "themes": {
+        "night": "rgba(155, 130, 245, .14)",
+        "day": "rgba(106, 75, 214, 0.08)"
+      },
+      "cssProperty": "--acc-tint (case-study scope)",
+      "cite": "css/visit-clinic-v3.css:8"
+    },
+    "casestudy.text": {
+      "themes": {
+        "night": "#e4dde8",
+        "day": "#2c2928"
+      },
+      "cssProperty": "--ink (case-study scope)",
+      "cite": "css/visit-clinic-v3.css:9"
+    },
+    "casestudy.muted": {
+      "themes": {
+        "night": "#bdb6c7",
+        "day": "#57514d"
+      },
+      "cssProperty": "--muted (case-study scope)",
+      "cite": "css/visit-clinic-v3.css:10"
+    },
+    "casestudy.line": {
+      "themes": {
+        "night": "rgba(255, 255, 255, 0.132)",
+        "day": "rgba(56, 52, 48, 0.12)"
+      },
+      "cssProperty": "--line (case-study scope)",
+      "cite": "css/visit-clinic-v3.css:11"
+    },
+    "casestudy.paper": {
+      "themes": {
+        "night": "#19141b",
+        "day": "#fafafa"
+      },
+      "cssProperty": "--paper (case-study scope)",
+      "cite": "css/visit-clinic-v3.css:13"
+    },
+    "casestudy.tint": {
+      "themes": {
+        "night": "#19141c",
+        "day": "#f4f1fb"
+      },
+      "cssProperty": "--tint (case-study scope)",
+      "cite": "css/visit-clinic-v3.css:14"
+    }
+  }
+}

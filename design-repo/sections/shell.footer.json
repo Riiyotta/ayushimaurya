@@ -1,0 +1,118 @@
+{
+  "id": "shell.footer",
+  "title": "Site footer",
+  "description": "Owner name and role, an invitation line, contact/resume links and a copyright line; the story page uses a one-line copyright footer.",
+  "source": {
+    "id": "src.footer-site-footer-container",
+    "file": "index.html",
+    "tag": "footer",
+    "selector": "footer.site-footer.container",
+    "lines": "602-617",
+    "citation": "index.html:602-617",
+    "observedIn": [
+      "index.html:602",
+      "projects.html:155",
+      "resume.html:248",
+      "nda.html:164",
+      "claim-approval.html:106",
+      "family-ahc.html:417",
+      "hybrid-diagnostic.html:279",
+      "offline-doctor-consultation.html:633",
+      "virtual-wardrobe.html:105",
+      "visit-clinic-gift-cards.html:158",
+      "visit-clinic.html:787",
+      "wallet-ui.html:104"
+    ]
+  },
+  "semantic": {
+    "id": "shell.footer",
+    "category": "SHELL"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "full",
+    "minimal"
+  ],
+  "content": {
+    "fields": {
+      "name": {
+        "type": "text",
+        "required": false,
+        "maxWords": 2,
+        "evidence": {
+          "selector": ".footer-name",
+          "observedElements": 11,
+          "observedBlocks": 11
+        }
+      },
+      "role": {
+        "type": "text",
+        "required": false,
+        "maxWords": 2,
+        "evidence": {
+          "selector": ".footer-role",
+          "observedElements": 11,
+          "observedBlocks": 11
+        }
+      },
+      "line": {
+        "type": "text",
+        "required": false,
+        "maxWords": 9,
+        "evidence": {
+          "selector": ".footer-line",
+          "observedElements": 11,
+          "observedBlocks": 11
+        }
+      },
+      "links": {
+        "type": "links",
+        "required": false,
+        "maxWords": 3,
+        "maxItems": 4,
+        "evidence": {
+          "selector": ".footer-links a",
+          "observedElements": 44,
+          "observedBlocks": 11
+        }
+      },
+      "copyright": {
+        "type": "text",
+        "required": true,
+        "maxWords": 4,
+        "evidence": {
+          "selector": ".footer-meta, footer.foot:self",
+          "observedElements": 12,
+          "observedBlocks": 12
+        }
+      }
+    }
+  },
+  "constraints": {
+    "usedByTemplates": [
+      "template.home",
+      "template.project-index",
+      "template.resume",
+      "template.notice",
+      "template.case-study-brief",
+      "template.case-study-chaptered"
+    ]
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none"
+  },
+  "responsive": [],
+  "responsiveNote": "No breakpoint-specific rule targets the footer; its links wrap inline.",
+  "assetRoles": [],
+  "generatedAssetRoles": [],
+  "components": [
+    "primitive.text-link"
+  ],
+  "tokens": [
+    "color.text.secondary",
+    "color.border.default"
+  ]
+}

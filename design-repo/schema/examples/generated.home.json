@@ -1,0 +1,316 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "generated",
+  "template": "template.home",
+  "route": "/",
+  "theme": "night",
+  "meta": {
+    "title": "Rowan Vale, interaction designer",
+    "description": "Rowan Vale designs calm software for logistics and field-service teams. Projects, side builds and a short notebook."
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "site-nav",
+      "content": {
+        "brandMark": {
+          "role": "brand.placeholder-wordmark",
+          "src": "placeholder://wordmark/rowan-vale",
+          "mediaType": "image",
+          "alt": "Rowan Vale"
+        },
+        "navLinks": [
+          {
+            "label": "Projects",
+            "href": "projects.html",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "CV",
+            "href": "cv.html",
+            "role": "link.internal-route"
+          }
+        ],
+        "themeToggle": true
+      },
+      "motion": {
+        "pattern": "theme-crossfade",
+        "trigger": "tap",
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "section": "home.hero",
+      "variant": "name-field",
+      "content": {
+        "name": "Rowan Vale",
+        "role": "Interaction Designer",
+        "statement": "I shape calm tools for teams who juggle too many tabs.",
+        "support": "Mostly logistics and field-service software.",
+        "cta": {
+          "label": "Browse projects",
+          "href": "#work",
+          "role": "link.internal-route"
+        }
+      },
+      "motion": {
+        "pattern": "rise-in-on-load",
+        "trigger": "load",
+        "reducedMotionFallback": "static-visible"
+      },
+      "style": {
+        "headingFont": "font.family.display",
+        "accent": "color.accent.primary"
+      }
+    },
+    {
+      "section": "home.work-showcase",
+      "variant": "project-box",
+      "content": {
+        "kicker": "Selected work",
+        "heading": "Problems untangled, plus the reasoning behind each one.",
+        "hint": "Open a tile to read the short version.",
+        "filters": [
+          "Research",
+          "Systems design",
+          "Prototyping"
+        ],
+        "projects": [
+          {
+            "title": "Dispatch board for regional couriers",
+            "oneLiner": "A route planner that lets one dispatcher rebalance forty vans in minutes.",
+            "locked": false,
+            "link": {
+              "label": "Read more",
+              "href": "dispatch-board.html",
+              "role": "link.internal-route"
+            },
+            "preview": {
+              "role": "product.generated-visual",
+              "src": "generated://screens/dispatch-board",
+              "mediaType": "image"
+            }
+          },
+          {
+            "title": "Checklists for technicians underground",
+            "oneLiner": "Offline-first checklists that survive basements and patchy signal.",
+            "locked": true,
+            "link": {
+              "label": "Read more",
+              "href": "field-checklists.html",
+              "role": "link.internal-route"
+            }
+          }
+        ],
+        "moreLink": {
+          "label": "All projects",
+          "href": "projects.html",
+          "role": "link.internal-route"
+        }
+      },
+      "motion": {
+        "pattern": "box-open",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "section": "home.featured-project",
+      "variant": "media-card",
+      "content": {
+        "kicker": "Side quest",
+        "heading": "A tiny game I made for fun.",
+        "tag": "Weekend build",
+        "title": "Tile Tumble",
+        "body": "A browser puzzle where you slide coloured tiles until each row adds up to ten. I sketched it on paper, then built it over two weekends to practise motion and state.",
+        "chips": [
+          "Keyboard friendly",
+          "Solo mode",
+          "Colour-blind safe"
+        ],
+        "cta": {
+          "label": "Try the puzzle",
+          "href": "https://tile-tumble.example/",
+          "role": "link.placeholder-url"
+        },
+        "media": {
+          "role": "product.generated-visual",
+          "src": "generated://video/tile-tumble-loop",
+          "mediaType": "video",
+          "alt": "Looping clip of the puzzle"
+        }
+      },
+      "motion": {
+        "pattern": "autoplay-loop-video",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "pause-media"
+      }
+    },
+    {
+      "section": "home.skills-index",
+      "variant": "word-list",
+      "content": {
+        "label": "Things I practise",
+        "skills": [
+          {
+            "words": "Service design",
+            "link": {
+              "label": "See the dispatch board",
+              "href": "dispatch-board.html",
+              "role": "link.internal-route"
+            }
+          },
+          {
+            "words": "Field research",
+            "link": {
+              "label": "See the technician checklists",
+              "href": "field-checklists.html",
+              "role": "link.internal-route"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "reveal-on-scroll",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "section": "about.intro",
+      "variant": "photo-strip",
+      "content": {
+        "label": "A bit about me",
+        "title": "Hello, I'm Rowan.",
+        "sub": "Designer, gardener, amateur baker.",
+        "invite": "Flip through my notebook",
+        "photos": [
+          {
+            "image": {
+              "role": "person.fictional-avatar",
+              "src": "generated://avatar/rowan-garden",
+              "mediaType": "image",
+              "alt": "Illustrated portrait holding a seed tray"
+            },
+            "mood": "garden mode"
+          },
+          {
+            "image": {
+              "role": "person.fictional-avatar",
+              "src": "generated://avatar/rowan-desk",
+              "mediaType": "image",
+              "alt": "Illustrated portrait at a standing desk"
+            },
+            "mood": "desk mode"
+          }
+        ],
+        "caption": "two moods, both illustrated"
+      },
+      "motion": {
+        "pattern": "ambient-drift",
+        "trigger": "time",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "section": "about.diary",
+      "variant": "book",
+      "content": {
+        "coverTitle": "Rowan's notebook",
+        "chapters": [
+          {
+            "title": "how it started"
+          },
+          {
+            "title": "the detour"
+          }
+        ],
+        "spreads": [
+          {
+            "heading": "How it started"
+          },
+          {
+            "heading": "The detour"
+          }
+        ],
+        "paragraphs": [
+          "I grew up taking apart radios to see how the dials talked to the speakers.",
+          "A summer job sorting parcels taught me more about software than any course."
+        ],
+        "hint": "tap the cover to begin"
+      },
+      "motion": {
+        "pattern": "reveal-on-scroll",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "section": "about.closing",
+      "variant": "door",
+      "content": {
+        "kicker": "still being written",
+        "heading": "The next chapter is mostly gardening and good typography.",
+        "cta": {
+          "label": "Read my wish list",
+          "href": "#wishes",
+          "role": "link.internal-route"
+        }
+      },
+      "motion": {
+        "pattern": "ambient-drift",
+        "trigger": "time",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "full",
+      "content": {
+        "name": "Rowan Vale",
+        "role": "Interaction Designer",
+        "line": "Have a knotty workflow? Send it my way.",
+        "links": [
+          {
+            "label": "Email",
+            "href": "mailto:hello@rowan-vale.example",
+            "role": "link.placeholder-url"
+          },
+          {
+            "label": "Projects",
+            "href": "projects.html",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "CV",
+            "href": "cv.html",
+            "role": "link.internal-route"
+          }
+        ],
+        "copyright": "© Rowan Vale"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    }
+  ],
+  "overlays": [
+    {
+      "section": "utility.lock-modal",
+      "variant": "password",
+      "content": {
+        "title": "This one is private",
+        "body": "Ask me for the passphrase to continue.",
+        "submitLabel": "Open"
+      },
+      "motion": {
+        "pattern": "modal-pop",
+        "trigger": "tap",
+        "reducedMotionFallback": "instant-state-change"
+      },
+      "retrievalEligible": false
+    }
+  ]
+}

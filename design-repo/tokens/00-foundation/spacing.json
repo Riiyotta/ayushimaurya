@@ -1,0 +1,60 @@
+{
+  "$description": "4px-based spacing scale from the real --sp-* custom properties.",
+  "tokens": {
+    "space.1": {
+      "value": "0.25rem",
+      "cssProperty": "--sp-1",
+      "cite": "css/styles.css:49"
+    },
+    "space.2": {
+      "value": "0.5rem",
+      "cssProperty": "--sp-2",
+      "cite": "css/styles.css:50"
+    },
+    "space.3": {
+      "value": "0.75rem",
+      "cssProperty": "--sp-3",
+      "cite": "css/styles.css:51"
+    },
+    "space.4": {
+      "value": "1rem",
+      "cssProperty": "--sp-4",
+      "cite": "css/styles.css:52"
+    },
+    "space.5": {
+      "value": "1.5rem",
+      "cssProperty": "--sp-5",
+      "cite": "css/styles.css:53"
+    },
+    "space.6": {
+      "value": "2rem",
+      "cssProperty": "--sp-6",
+      "cite": "css/styles.css:54"
+    },
+    "space.7": {
+      "value": "3rem",
+      "cssProperty": "--sp-7",
+      "cite": "css/styles.css:55"
+    },
+    "space.8": {
+      "value": "4rem",
+      "cssProperty": "--sp-8",
+      "cite": "css/styles.css:56"
+    },
+    "space.9": {
+      "value": "6rem",
+      "cssProperty": "--sp-9",
+      "cite": "css/styles.css:57"
+    },
+    "space.10": {
+      "value": "8rem",
+      "cssProperty": "--sp-10",
+      "cite": "css/styles.css:58"
+    },
+    "space.11": {
+      "value": "11rem",
+      "cssProperty": "--sp-11",
+      "cite": "css/styles.css:59"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "primitive.video-frame",
+  "kind": "primitive",
+  "description": "Muted, looping, inline product video with a poster; paused under reduced motion.",
+  "props": {
+    "asset": "asset",
+    "poster": "asset",
+    "label": "text"
+  },
+  "tokens": [
+    "radius.card"
+  ],
+  "cites": [
+    "hybrid-diagnostic.html:66"
+  ]
+}

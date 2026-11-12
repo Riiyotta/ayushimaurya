@@ -1,0 +1,190 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "reference",
+  "template": "template.case-study-brief",
+  "route": "claim-approval.html",
+  "theme": "night",
+  "meta": {
+    "title": "AI-assisted Claim Approval Dashboard — Ayushi Maurya",
+    "description": "A dashboard that helps doctors review reimbursement claims, with AI assistance to support each decision."
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "site-nav",
+      "content": {
+        "brandMark": {
+          "role": "brand.wordmark-logo",
+          "src": "assets/logo-ayushi-maurya-transparent.png",
+          "mediaType": "image",
+          "alt": "Ayushi Maurya"
+        },
+        "navLinks": [
+          {
+            "label": "My work",
+            "href": "projects.html",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "Resume",
+            "href": "resume.html",
+            "role": "link.internal-route"
+          }
+        ],
+        "themeToggle": true
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "section": "casestudy.hero",
+      "variant": "stage",
+      "content": {
+        "backLink": {
+          "label": "All work",
+          "href": "projects.html",
+          "role": "link.internal-route"
+        },
+        "kicker": "AI Product · Completed",
+        "title": "AI-assisted dashboard for claim approval",
+        "dek": "I redesigned how doctors review reimbursement claims, with AI assistance to support each decision.",
+        "meta": [
+          {
+            "term": "Product",
+            "value": "Claim Dashboard"
+          },
+          {
+            "term": "My role",
+            "value": "UX & UI design"
+          },
+          {
+            "term": "Status",
+            "value": "Completed"
+          }
+        ],
+        "media": {
+          "role": "product.case-study-video",
+          "src": "assets/case-studies/claims/claims.mp4",
+          "mediaType": "video",
+          "alt": "Claims dashboard: totals, settlement ratio, and a claims list with insurer and document status"
+        }
+      },
+      "motion": {
+        "pattern": "reveal-on-scroll",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "section": "casestudy.chapter",
+      "variant": "plain",
+      "content": {
+        "label": "01 At a glance",
+        "heading": "From 30 minutes to 4 minutes per claim",
+        "cards": [
+          {
+            "label": "Problem",
+            "title": "Slow, manual review",
+            "text": "Claims were reviewed by hand, which caused long delays and growing backlogs."
+          },
+          {
+            "label": "Solution",
+            "title": "AI-assisted review",
+            "text": "I designed an AI-assisted claim approval dashboard for doctors."
+          },
+          {
+            "label": "Impact",
+            "title": "−87% review time",
+            "text": "Average processing time dropped from 30 minutes to 4 minutes (~87% reduction)."
+          }
+        ],
+        "gate": {
+          "heading": "See the full case study",
+          "text": "👀",
+          "ctas": [
+            {
+              "label": "Email me",
+              "href": "mailto:ayushimaurya108@gmail.com?subject=Claim%20approval%20case%20study",
+              "role": "link.source-url"
+            },
+            {
+              "label": "LinkedIn",
+              "href": "https://www.linkedin.com/in/ayushi-maurya-7174b71ab/",
+              "role": "link.source-url"
+            }
+          ]
+        }
+      },
+      "motion": {
+        "pattern": "reveal-on-scroll",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "section": "conversion.closing",
+      "variant": "thanks-cta",
+      "content": {
+        "heading": "Get in touch",
+        "text": "I'm happy to talk about this project, or about what you're building.",
+        "ctas": [
+          {
+            "label": "Next: Hybrid Diagnostic Booking",
+            "href": "hybrid-diagnostic.html",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "All projects",
+            "href": "projects.html",
+            "role": "link.internal-route"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "reveal-on-scroll",
+        "trigger": "viewport-enter",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "full",
+      "content": {
+        "name": "Ayushi Maurya",
+        "role": "Product Designer",
+        "line": "Let's work together. I'd love to hear from you.",
+        "links": [
+          {
+            "label": "Email",
+            "href": "mailto:ayushimaurya108@gmail.com",
+            "role": "link.source-url"
+          },
+          {
+            "label": "LinkedIn",
+            "href": "https://www.linkedin.com/in/ayushi-maurya-7174b71ab/",
+            "role": "link.source-url"
+          },
+          {
+            "label": "Resume",
+            "href": "resume.html",
+            "role": "link.internal-route"
+          },
+          {
+            "label": "More work",
+            "href": "projects.html",
+            "role": "link.internal-route"
+          }
+        ],
+        "copyright": "© Ayushi Maurya"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "load",
+        "reducedMotionFallback": "none"
+      }
+    }
+  ]
+}
